@@ -6,7 +6,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
-    fetch("/time", {
+    fetch("/api/time", {
       method: "GET",
       mode: "cors",
       headers: {
