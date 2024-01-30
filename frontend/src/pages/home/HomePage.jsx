@@ -1,5 +1,6 @@
 import React from "react";
 
+import NavBar from "../../components/NavBar"
 import bannerLogo from "../../assets/banner-logo.png";
 import bannerImg from "../../assets/sprites-v1.png";
 
@@ -8,6 +9,7 @@ import "./styles/home.css";
 function HomePage() {
   return (
     <div className="home">
+      <NavBar/>
       {/* <div className="home-banner">
         <img src={bannerLogo} alt="logo" className="home-banner_logo" />
         <h1 className="home-title">Evolution of a Video Game Series</h1>
