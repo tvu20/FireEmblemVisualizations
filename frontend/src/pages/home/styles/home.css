@@ -1,0 +1,91 @@
+.home {
+  background-image: url("../../../assets/gradient-background.jpg");
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.home-banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.home-banner_sprites {
+  width: 80%;
+  height: auto;
+  max-width: 1000px;
+}
+
+.home-banner_logo {
+  width: 90%;
+  max-width: 800px;
+  height: auto;
+}
+
+.home p {
+  margin: 0;
+}
+
+.home-title {
+  margin-top: -50px;
+  margin-bottom: 20px;
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+  max-width: 750px;
+}
+
+.home-subtitle {
+  font-weight: 300;
+  margin-top: 0;
+  font-size: 38px;
+} 
+
+.home-banner-v2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  /* text-align: center; */
+}
+
+.home-banner-v2_sprites {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.home-banner-v2_logo {
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+.home-v2-title {
+  width: 80%;
+  max-width: 1000px;
+  text-align: left;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  font-size: 70px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.home-v2-subtitle {
+  width: 80%;
+  max-width: 1000px;
+  font-weight: 300;
+  margin-top: 0;
+  font-size: 38px;
+}
