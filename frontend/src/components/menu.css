@@ -1,3 +1,13 @@
-.menu-hide {
-  display: none;
+.menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  transition: top 0.5s;
+  top: 0;
+  background-color: gray;
+}
+
+.menu.hide {
+  top: -150vh;
+  pointer-events: none;
 }

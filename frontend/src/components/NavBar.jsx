@@ -59,6 +59,7 @@ function NavBar(props) {
 
   return (
     <>
+      <Menu display={showLinks} />
       <nav
         className={
           "navbar"
@@ -70,7 +71,7 @@ function NavBar(props) {
       >
         {mobileMenu()}
       </nav>
-      <Menu display={showLinks} />
+      {/* <Menu display={showLinks} /> */}
       {/* {linksMenu()} */}
     </>
   );
