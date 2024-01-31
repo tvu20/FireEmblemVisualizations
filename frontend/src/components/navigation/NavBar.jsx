@@ -50,13 +50,7 @@ function NavBar(props) {
     <>
       <Menu display={showLinks} />
       <nav
-        className={
-          `navbar ${showLinks ? "hide" : ""}`
-          //     `navbar-mobile
-          //   navbar__background${
-          //     pathname === "/" && altHeader ? "--alt" : ""
-          //   }`
-        }
+        className={`navbar ${showLinks ? "hide" : ""}`}
         style={{
           background: props.color
             ? `linear-gradient(

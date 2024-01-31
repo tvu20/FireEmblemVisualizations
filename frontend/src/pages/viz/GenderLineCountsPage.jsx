@@ -5,7 +5,7 @@ import GenderLineCounts from "../../visualizations/gender-line-counts/GenderLine
 
 function GenderLineCountsPage() {
   return (
-    <div>
+    <div className="genderlinecounts">
       <VizWrapper color={{ r: 0, g: 0, b: 0 }}>
         <GenderLineCounts />
       </VizWrapper>

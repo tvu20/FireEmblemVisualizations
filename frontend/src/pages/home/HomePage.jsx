@@ -13,7 +13,7 @@ import "./styles/home.css";
 function HomePage() {
   return (
     <>
-      <NavBar />
+      <NavBar color={{ r: 253, b: 137, g: 91 }} />
       <div className="home">
         {/* <div className="home-banner">
         <img src={bannerLogo} alt="logo" className="home-banner_logo" />
