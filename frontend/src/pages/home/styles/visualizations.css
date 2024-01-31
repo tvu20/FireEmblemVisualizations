@@ -1,0 +1,26 @@
+.home-viz {
+  color: white;
+  text-align: center;
+  margin: 50px 30px;
+}
+
+.home-viz h2 {
+  font-size: 55px;
+  margin-bottom: 0;
+  font-weight: 550;
+}
+
+.home-viz h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.home-viz__button {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: rgba(253, 137, 91, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}

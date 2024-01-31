@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { getArticles } from "../../utils/pages";
+
 import footerOne from "../../assets/footer-sprites-v1.png";
 import footerTwo from "../../assets/footer-sprites-v2.png";
 import linkedin from "../../assets/linkedin.png";
@@ -12,13 +14,7 @@ import "./footer.css";
 function Footer(props) {
   const { vertical } = props;
 
-  const articles = [
-    { name: "Gender", url: "/article/gender" },
-    { name: "Relationships", url: "/article/relationships" },
-    { name: "Script", url: "/article/script" },
-    { name: "Sentiment", url: "/article/sentiment" },
-    { name: "Series", url: "/article/series" },
-  ];
+  const articles = getArticles();
 
   const createContactSection = () => {
     return (

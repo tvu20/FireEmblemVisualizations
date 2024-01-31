@@ -3,6 +3,8 @@ import React from "react";
 import NavBar from "../../components/navigation/NavBar";
 import Footer from "../../components/navigation/Footer";
 
+import Visualizations from "./Visualizations";
+
 import bannerLogo from "../../assets/banner-logo.png";
 import bannerImg from "../../assets/sprites-v1.png";
 
@@ -30,6 +32,8 @@ function HomePage() {
             className="home-banner-v2_sprites"
           />
         </div>
+
+        <Visualizations />
 
         <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
