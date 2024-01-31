@@ -20,7 +20,7 @@ footer {
 }
 
 .footer__left img {
-  max-width: 100%;
+  max-width: 95%;
   margin: 10px 0;
 }
 
@@ -44,7 +44,7 @@ footer {
 }
 
 .footer__right {
-  flex: 0 0 50%;
+  flex: 0 0 48%;
 }
 
 .footer-horizontal .footer__right {
@@ -53,7 +53,8 @@ footer {
 }
 
 .footer__right img {
-  max-width: 100%;
+  max-width: 95%;
+  margin-top: 7px;
 }
 
 .footer-horizontal .footer__right-grid {
@@ -103,6 +104,7 @@ footer {
 
 .footer__right-contact img {
   width: 23px;
+  margin-top: 0;
   margin-right: 5px;
 }
 

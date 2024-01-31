@@ -147,7 +147,7 @@ function HomePage() {
         </p>
       </div>
       <Footer vertical={false} />
-      <Footer vertical={true} />
+      {/* <Footer vertical={true} /> */}
     </>
   );
 }
