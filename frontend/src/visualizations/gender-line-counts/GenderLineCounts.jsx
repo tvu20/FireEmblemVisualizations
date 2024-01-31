@@ -15,7 +15,7 @@ function GenderLineCounts() {
         console.log(data);
       });
   }, []);
-  return <>Gender Line Count Viz</>;
+  return <div style={{ height: "100vh" }}>Gender Line Count Viz</div>;
 }
 
 export default GenderLineCounts;

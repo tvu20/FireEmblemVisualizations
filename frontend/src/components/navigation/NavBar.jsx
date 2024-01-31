@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import Menu from "./Menu";
 
@@ -8,29 +8,26 @@ import "./navbar.css";
 function NavBar(props) {
   //   const { pathname } = useLocation();
   const [showLinks, setShowLinks] = useState(false);
-  const pages = ["", "about"];
+  // const pages = ["", "about"];
 
-  const createLinks = () => {
-    return pages.map((p) => (
-      <Link
-        to={`/${p}`}
-        key={p}
-        onClick={() => {
-          window.scroll(0, 0);
-        }}
-      >
-        {p === "" ? "home" : p}
-      </Link>
-    ));
-  };
+  // const createLinks = () => {
+  //   return pages.map((p) => (
+  //     <Link
+  //       to={`/${p}`}
+  //       key={p}
+  //       onClick={() => {
+  //         window.scroll(0, 0);
+  //       }}
+  //     >
+  //       {p === "" ? "home" : p}
+  //     </Link>
+  //   ));
+  // };
 
   const mobileMenu = () => {
     return (
       <>
-        <h4
-          className={showLinks ? "hide" : ""}
-          style={{ zIndex: 3 }}
-        >
+        <h4 className={showLinks ? "hide" : ""} style={{ zIndex: 3 }}>
           Giao Vu Dinh | <b>Princeton University</b>
         </h4>
         <input
@@ -49,17 +46,6 @@ function NavBar(props) {
     );
   };
 
-  const linksMenu = () => {
-    return (
-      <nav className={`navbar__fullscreen ${!showLinks ? "hide" : ""}`}>
-        {createLinks()}
-        {/* {showFullscreenMenu && (
-          <FadeInSection delay={400}>{createFullscreenLinks()}</FadeInSection>
-        )} */}
-      </nav>
-    );
-  };
-
   return (
     <>
       <Menu display={showLinks} />
@@ -71,6 +57,16 @@ function NavBar(props) {
           //     pathname === "/" && altHeader ? "--alt" : ""
           //   }`
         }
+        style={{
+          background: props.color
+            ? `linear-gradient(
+          180deg,
+          rgba(${props.color?.r}, ${props.color?.b}, ${props.color?.g}, 1) 0%,
+          rgba(${props.color?.r}, ${props.color?.b}, ${props.color?.g}, 0.9) 45%,
+            rgba(0, 212, 255, 0) 100%
+        )`
+            : "",
+        }}
       >
         {mobileMenu()}
       </nav>
