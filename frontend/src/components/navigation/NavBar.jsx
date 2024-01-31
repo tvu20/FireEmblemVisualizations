@@ -30,18 +30,18 @@ function NavBar(props) {
         <h4 className={showLinks ? "hide" : ""} style={{ zIndex: 3 }}>
           Giao Vu Dinh | <b>Princeton University</b>
         </h4>
-        <input
+        {/* <input
           id="burger"
           type="checkbox"
           className="checkboxInput"
           checked={showLinks}
           onChange={() => setShowLinks((prevState) => !prevState)}
-        />
-        <label htmlFor="burger">
+        /> */}
+        {/* <label htmlFor="burger">
           <span></span>
           <span></span>
           <span></span>
-        </label>
+        </label> */}
       </>
     );
   };
@@ -64,6 +64,18 @@ function NavBar(props) {
       >
         {mobileMenu()}
       </nav>
+      <input
+        id="burger"
+        type="checkbox"
+        className="checkboxInput"
+        checked={showLinks}
+        onChange={() => setShowLinks((prevState) => !prevState)}
+      />
+      <label htmlFor="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       {/* <Menu display={showLinks} /> */}
       {/* {linksMenu()} */}
     </>
