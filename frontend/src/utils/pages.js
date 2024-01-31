@@ -1,54 +1,54 @@
 const visualizations = [
   {
     name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
+    url: "/viz/gender-line-counts",
     thumbnail: require("../assets/github.png"),
   },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: require("../assets/github.png"),
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
-  {
-    name: "Gender and Line Counts",
-    url: "/viz/gender-and-line-counts",
-    thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: require("../assets/github.png"),
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
+  // {
+  //   name: "Gender and Line Counts",
+  //   url: "/viz/gender-and-line-counts",
+  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
+  // },
 ];
 
 export const getArticles = () => {

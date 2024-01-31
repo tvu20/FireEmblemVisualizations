@@ -1,5 +1,6 @@
+import os
 import time
-from flask import (Flask, send_from_directory)
+from flask import (Flask, send_from_directory, json, current_app as app)
 from flask_cors import CORS
 
 app = Flask(__name__, 
@@ -26,10 +27,16 @@ def not_found(e):
 # Other
 # ---------------------------------------------
 
-@app.route('/api/time')
-def get():
-    return {'time': time.time()}
+# @app.route('/api/time')
+# def get():
+#     return {'time': time.time()}
 
-# @app.errorhandler(404)
-# def not_found(e):
-#     return render_template("index.html")
+# ---------------------------------------------
+# Routes for gender article
+# ---------------------------------------------
+
+@app.route('/api/gender/line-counts')
+def get_gender_line_counts():
+    f = open(os.path.join(app.root_path, "gender", "line_counts.json"), "r")
+    response = json.load(f)
+    return response

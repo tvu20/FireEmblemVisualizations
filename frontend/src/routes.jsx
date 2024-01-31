@@ -5,6 +5,8 @@ import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 
+import GenderLineCountsPage from "./pages/viz/GenderLineCountsPage";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,22 +21,14 @@ const router = createBrowserRouter([
         path: "/about",
         element: <AboutPage />,
       },
-      //   {
-      //     path: "/les-mis",
-      //     element: <LesMis />,
-      //   },
-      //   {
-      //     path: "/social-graphs",
-      //     element: <SocialGraphs />,
-      //   },
-      //   {
-      //     path: "/inputs",
-      //     element: <InputsPage />,
-      //   },
-      //   {
-      //     path: "/outputs",
-      //     element: <OutputsPage />,
-      //   },
+      {
+        path: "/viz",
+        element: <AboutPage />,
+      },
+      {
+        path: "/viz/gender-line-counts",
+        element: <GenderLineCountsPage />,
+      },
     ],
   },
 ]);
