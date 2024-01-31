@@ -27,7 +27,10 @@ function NavBar(props) {
   const mobileMenu = () => {
     return (
       <>
-        <h4 style={{ zIndex: 3 }}>
+        <h4
+          className={showLinks ? "hide" : ""}
+          style={{ zIndex: 3 }}
+        >
           Giao Vu Dinh | <b>Princeton University</b>
         </h4>
         <input
@@ -62,7 +65,7 @@ function NavBar(props) {
       <Menu display={showLinks} />
       <nav
         className={
-          "navbar"
+          `navbar ${showLinks ? "hide" : ""}`
           //     `navbar-mobile
           //   navbar__background${
           //     pathname === "/" && altHeader ? "--alt" : ""

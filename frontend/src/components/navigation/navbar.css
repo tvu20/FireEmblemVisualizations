@@ -7,11 +7,30 @@
   color: white;
   position: fixed;
   top: 0;
+  transition: background 0.2s;
+
+  background: linear-gradient(
+    180deg,
+    rgba(253, 137, 91, 1) 0%,
+    rgba(253, 137, 91, 0.9) 45%,
+    /* rgba(252, 102, 39, 1) 0%, rgba(253, 126, 69, 1) 0%, */
+      /* rgba(253, 126, 69, 0.85) 45%, */ /* rgba(252, 102, 39, 0.9) 45%, */
+      rgba(0, 212, 255, 0) 100%
+  );
+}
+
+.navbar.hide {
+  background: transparent;
 }
 
 .navbar h4 {
   margin-left: 30px;
   font-weight: 400;
+}
+
+.navbar h4.hide {
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 
 .navbar__fullscreen {

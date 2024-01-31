@@ -2,12 +2,13 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  transition: top 0.5s;
+  transition: opacity 0.5s;
+  /* transition: top 0.5s; */
   top: 0;
   background-color: gray;
 }
 
 .menu.hide {
-  top: -150vh;
+  opacity: 0;
   pointer-events: none;
 }
