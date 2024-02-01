@@ -27,7 +27,10 @@ function NavBar(props) {
   const mobileMenu = () => {
     return (
       <>
-        <h4 className={showLinks ? "hide" : ""} style={{ zIndex: 3 }}>
+        <h4
+          className={showLinks ? "hide" : ""}
+          style={{ zIndex: 3, color: props.navColor ? props.navColor : "" }}
+        >
           Giao Vu Dinh | <b>Princeton University</b>
         </h4>
         {/* <input
@@ -52,14 +55,12 @@ function NavBar(props) {
       <nav
         className={`navbar ${showLinks ? "hide" : ""}`}
         style={{
-          background: props.color
-            ? `linear-gradient(
-          180deg,
-          rgba(${props.color?.r}, ${props.color?.b}, ${props.color?.g}, 1) 0%,
-          rgba(${props.color?.r}, ${props.color?.b}, ${props.color?.g}, 0.9) 45%,
-            rgba(0, 212, 255, 0) 100%
-        )`
-            : "",
+          background: `linear-gradient(
+            180deg,
+            rgba(${props.color?.r}, ${props.color?.g}, ${props.color?.b}, 1) 0%,
+            rgba(${props.color?.r}, ${props.color?.g}, ${props.color?.b}, 0.9) 45%,
+              rgba(0, 212, 255, 0) 100%
+          )`,
         }}
       >
         {mobileMenu()}
@@ -72,9 +73,21 @@ function NavBar(props) {
         onChange={() => setShowLinks((prevState) => !prevState)}
       />
       <label htmlFor="burger">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span
+          style={{
+            background: props.navColor && !showLinks ? props.navColor : "",
+          }}
+        ></span>
+        <span
+          style={{
+            background: props.navColor && !showLinks ? props.navColor : "",
+          }}
+        ></span>
+        <span
+          style={{
+            background: props.navColor && !showLinks ? props.navColor : "",
+          }}
+        ></span>
       </label>
       {/* <Menu display={showLinks} /> */}
       {/* {linksMenu()} */}

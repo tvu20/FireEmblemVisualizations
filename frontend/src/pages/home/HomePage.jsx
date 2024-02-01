@@ -8,12 +8,14 @@ import Visualizations from "./Visualizations";
 import bannerLogo from "../../assets/banner-logo.png";
 import bannerImg from "../../assets/sprites-v1.png";
 
+import getColor from "../../utils/colors.js";
+
 import "./styles/home.css";
 
 function HomePage() {
   return (
     <>
-      <NavBar color={{ r: 253, b: 137, g: 91 }} />
+      <NavBar color={getColor("home")} />
       <div className="home">
         {/* <div className="home-banner">
         <img src={bannerLogo} alt="logo" className="home-banner_logo" />

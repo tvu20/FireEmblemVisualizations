@@ -6,7 +6,7 @@ import Footer from "../navigation/Footer";
 function VizWrapper(props) {
   return (
     <div className="viz-details">
-      <NavBar color={props.color} />
+      <NavBar color={props.color} navColor={props.navColor} />
       {props.children}
       <Footer />
     </div>

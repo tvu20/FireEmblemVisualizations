@@ -1,5 +1,5 @@
 .home {
-  background-image: url("../../../assets/gradient-background.jpg");
+  background-image: var(--main-gradient);
   background-repeat: no-repeat;
   min-height: 100%;
   background-position: center;
@@ -46,7 +46,7 @@
   font-weight: 300;
   margin-top: 0;
   font-size: 38px;
-} 
+}
 
 .home-banner-v2 {
   height: 100vh;

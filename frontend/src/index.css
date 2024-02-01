@@ -14,3 +14,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* background gradients/colors */
+
+:root {
+  --main-gradient: url("./assets/backgrounds/gradient-background.jpg");
+  --gender-gradient: url("./assets/backgrounds/gender.jpeg");
+}
