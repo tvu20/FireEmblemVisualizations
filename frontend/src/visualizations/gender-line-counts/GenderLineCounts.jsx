@@ -48,9 +48,7 @@ function GenderLineCounts() {
       .range(["#e41a1c", "#377eb8", "#4daf4a"]);
 
     // Normalize the data -> sum of each group must be 100!
-    console.log(data);
     const dataN = structuredClone(data);
-    console.log(dataN);
     for (const d in data) {
       let total = 0;
       for (const label of subgroups) {
@@ -67,6 +65,51 @@ function GenderLineCounts() {
     //stack the data? --> stack per subgroup
     const stackedData = d3.stack().keys(subgroups)(Object.values(dataN));
 
+    // ----------------
+    // Create a tooltip
+    // ----------------
+    var tooltip = d3
+      .select("body")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background-color", "white")
+      .style("border", "solid")
+      .style("border-width", "1px")
+      .style("border-radius", "5px")
+      .style("padding", "10px");
+
+    // Three function that change the tooltip when user hover / move / leave a cell
+    const mouseover = function (d) {
+      const subgroup = d3.select(this.parentNode).datum().key;
+      const value = d.target.__data__.data[subgroup];
+
+      //   var subgroupValue = d.data[subgroupName];
+      //   console.log(subgroupValue);
+      tooltip
+        .html("subgroup: " + subgroup + "<br>" + "Value: " + value)
+        .style("opacity", 1);
+
+      // Reduce opacity of all rect to 0.2
+      d3.selectAll(".myRect").style("opacity", 0.2);
+      // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
+      d3.selectAll("." + subgroup).style("opacity", 1);
+    };
+    const mousemove = function (d) {
+      tooltip.style("left", d.pageX + 20 + "px").style("top", d.pageY + "px");
+      //   console.log("move");
+      //   console.log(d3.pointer(this));
+      //   tooltip
+      //     .style("left", d3.pointer(this)[0] + 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      //     .style("top", d3.pointer(this)[1] + "px");
+    };
+    const mouseleave = function (d) {
+      tooltip.style("opacity", 0);
+      // Back to normal opacity: 0.8
+      d3.selectAll(".myRect").style("opacity", 0.8);
+    };
+
     // Show the bars
     svg
       .append("g")
@@ -75,9 +118,13 @@ function GenderLineCounts() {
       .data(stackedData)
       .enter()
       .append("g")
+      .attr("class", function (d) {
+        return "myRect " + d.key;
+      }) // Add a class to each subgroup: their name
       .attr("fill", function (d) {
         return color(d.key);
       })
+      .style("transition", "opacity 0.2s")
       .selectAll("rect")
       // enter a second time = loop subgroup per subgroup to add all rectangles
       .data(function (d) {
@@ -94,7 +141,14 @@ function GenderLineCounts() {
       .attr("height", function (d) {
         return y(d[0]) - y(d[1]);
       })
-      .attr("width", x.bandwidth());
+      //   .attr("subgroup", function (d) {
+      //     console.log
+      //     return d.key;
+      //   })
+      .attr("width", x.bandwidth())
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove)
+      .on("mouseleave", mouseleave);
   }, [data]);
 
   useEffect(() => {
