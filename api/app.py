@@ -50,3 +50,9 @@ def get_gender_transitions():
     f = open(os.path.join(app.root_path, "gender", "transitions.json"), "r")
     response = json.load(f)
     return response
+
+@app.route('/api/gender/char-counts')
+def get_gender_char_counts():
+    f = open(os.path.join(app.root_path, "gender", "char_counts.json"), "r")
+    response = json.load(f)
+    return response

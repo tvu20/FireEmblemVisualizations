@@ -1,0 +1,66 @@
+{
+  "FE1": {
+    "pcCounts": { "M": 41, "F": 11 },
+    "npcCounts": { "M": 26, "F": 2 }
+  },
+  "FE2": {
+    "pcCounts": { "M": 20, "F": 12 },
+    "npcCounts": { "M": 26, "F": 6 }
+  },
+  "FE3": {
+    "pcCounts": { "M": 35, "F": 11 },
+    "npcCounts": { "M": 41, "F": 6 }
+  },
+  "FE4": {
+    "pcCounts": { "M": 38, "F": 24 },
+    "npcCounts": { "M": 92, "F": 7 }
+  },
+  "FE5": {
+    "pcCounts": { "M": 37, "F": 15 },
+    "npcCounts": { "M": 48, "F": 1 }
+  },
+  "FE6": {
+    "pcCounts": { "M": 35, "F": 19 },
+    "npcCounts": { "M": 46, "F": 3 }
+  },
+  "FE7": {
+    "pcCounts": { "F": 13, "M": 31 },
+    "npcCounts": { "M": 46, "F": 3 }
+  },
+  "FE8": {
+    "pcCounts": { "F": 12, "M": 22 },
+    "npcCounts": { "M": 29, "F": 2 }
+  },
+  "FE9": {
+    "pcCounts": { "M": 32, "F": 14 },
+    "npcCounts": { "M": 46, "F": 6 }
+  },
+  "FE10": {
+    "pcCounts": { "F": 25, "M": 48 },
+    "npcCounts": { "M": 41, "F": 6 }
+  },
+  "FE11": {
+    "pcCounts": { "M": 45, "F": 14 },
+    "npcCounts": { "M": 31, "F": 2 }
+  },
+  "FE12": {
+    "pcCounts": { "M": 56, "A": 1, "F": 20 },
+    "npcCounts": { "M": 21, "F": 1 }
+  },
+  "FE13": {
+    "pcCounts": { "A": 1, "M": 22, "F": 24, "N": 1 },
+    "npcCounts": { "M": 45, "F": 2, "N": 1 }
+  },
+  "FE14": {
+    "pcCounts": { "A": 1, "M": 32, "F": 34, "N": 1 },
+    "npcCounts": { "M": 20, "F": 2 }
+  },
+  "FE15": {
+    "pcCounts": { "M": 21, "F": 13 },
+    "npcCounts": { "F": 8, "M": 33, "N": 1 }
+  },
+  "FE16": {
+    "pcCounts": { "A": 1, "F": 15, "M": 19 },
+    "npcCounts": { "F": 12, "M": 54 }
+  }
+}
