@@ -5,7 +5,7 @@ import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 
-import GenderLineCountsPage from "./pages/viz/GenderLineCountsPage";
+import GenderLineCountsPage from "./pages/viz/gender/GenderLineCountsPage";
 
 const router = createBrowserRouter([
   {

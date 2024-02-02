@@ -129,6 +129,7 @@ function GenderLineCounts() {
       .style("opacity", 0)
       .attr("class", "tooltip genderlinecounts-tooltip")
       .style("position", "absolute")
+      .style("top", 0)
       .style("background-color", "white")
       .style("border-radius", "5px")
       .style("padding", "10px");
