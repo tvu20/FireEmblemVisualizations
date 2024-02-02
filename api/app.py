@@ -1,5 +1,6 @@
 import os
 import time
+from collections import OrderedDict
 from flask import (Flask, send_from_directory, json, current_app as app)
 from flask_cors import CORS
 
@@ -7,6 +8,9 @@ app = Flask(__name__,
             static_url_path='',
             static_folder='../frontend/build',
             template_folder='../frontend/build')
+
+app.config["JSON_SORT_KEYS"] = False
+app.json.sort_keys = False
 
 CORS(app)
 

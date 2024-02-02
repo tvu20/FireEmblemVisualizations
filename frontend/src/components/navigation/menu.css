@@ -1,6 +1,6 @@
 .menu {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   transition: opacity 0.5s;
   /* transition: top 0.5s; */

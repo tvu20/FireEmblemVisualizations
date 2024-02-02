@@ -9,11 +9,13 @@ import "./genderlinecounts.css";
 
 function GenderLineCountsPage() {
   return (
-    <div className="genderlinecounts">
-      <VizWrapper color={getColor("gender")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("gender")} navColor={"#3b2708"}>
+      <div className="genderlinecounts">
+        <h1>Gender Line Counts</h1>
         <GenderLineCounts />
-      </VizWrapper>
-    </div>
+        {/* </VizWrapper> */}
+      </div>
+    </VizWrapper>
   );
 }
 
