@@ -44,3 +44,9 @@ def get_gender_line_counts():
     f = open(os.path.join(app.root_path, "gender", "line_counts.json"), "r")
     response = json.load(f)
     return response
+
+@app.route('/api/gender/transitions')
+def get_gender_transitions():
+    f = open(os.path.join(app.root_path, "gender", "transitions.json"), "r")
+    response = json.load(f)
+    return response
