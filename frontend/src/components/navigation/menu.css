@@ -1,0 +1,14 @@
+.menu {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  transition: opacity 0.5s;
+  /* transition: top 0.5s; */
+  top: 0;
+  background-color: gray;
+}
+
+.menu.hide {
+  opacity: 0;
+  pointer-events: none;
+}

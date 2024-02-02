@@ -1,11 +1,16 @@
+import os
 import time
-from flask import (Flask, send_from_directory)
+from collections import OrderedDict
+from flask import (Flask, send_from_directory, json, current_app as app)
 from flask_cors import CORS
 
 app = Flask(__name__, 
             static_url_path='',
             static_folder='../frontend/build',
             template_folder='../frontend/build')
+
+app.config["JSON_SORT_KEYS"] = False
+app.json.sort_keys = False
 
 CORS(app)
 
@@ -26,10 +31,22 @@ def not_found(e):
 # Other
 # ---------------------------------------------
 
-@app.route('/api/time')
-def get():
-    return {'time': time.time()}
+# @app.route('/api/time')
+# def get():
+#     return {'time': time.time()}
 
-# @app.errorhandler(404)
-# def not_found(e):
-#     return render_template("index.html")
+# ---------------------------------------------
+# Routes for gender article
+# ---------------------------------------------
+
+@app.route('/api/gender/line-counts')
+def get_gender_line_counts():
+    f = open(os.path.join(app.root_path, "gender", "line_counts.json"), "r")
+    response = json.load(f)
+    return response
+
+@app.route('/api/gender/transitions')
+def get_gender_transitions():
+    f = open(os.path.join(app.root_path, "gender", "transitions.json"), "r")
+    response = json.load(f)
+    return response

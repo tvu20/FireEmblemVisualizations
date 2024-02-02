@@ -1,0 +1,22 @@
+/* .genderlinecounts {
+    background: 
+} */
+
+.genderlinecounts {
+  background-image: var(--gender-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding: 80px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.genderlinecounts h1 {
+  color: #3b2708;
+}

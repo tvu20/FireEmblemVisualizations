@@ -1,0 +1,31 @@
+.viz-grid__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 50px 0;
+}
+
+.viz-grid__item {
+  padding: 20px;
+}
+
+.viz-grid__item:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.viz-grid__item a {
+  text-decoration: none;
+  color: white;
+  height: 100%;
+}
+
+.viz-grid__item img {
+  max-width: 100%;
+}
+
+.viz-grid__item h6 {
+  font-weight: 450;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 10px;
+}
