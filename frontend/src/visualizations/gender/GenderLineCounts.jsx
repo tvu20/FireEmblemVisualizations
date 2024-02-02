@@ -14,7 +14,7 @@ function GenderLineCounts() {
   useEffect(() => {
     if (!data) return;
 
-    console.log(windowWidth);
+    // console.log(windowWidth);
 
     // set the dimensions and margins of the graph
     const margin = { top: 10, right: 30, bottom: 50, left: 50 },
@@ -106,11 +106,6 @@ function GenderLineCounts() {
     //stack the data? --> stack per subgroup
     let stackedData = d3.stack().keys(subgroups)(Object.values(dataN));
 
-    console.log("stackeddata", stackedData);
-
-    console.log(stackedData[1].index);
-    console.log(stackedData[1].key);
-
     stackedData[1] = stackedData[1].filter(
       (element) => !Array.isArray(element) || element[1] - element[0] > 0.1
     );
@@ -118,7 +113,7 @@ function GenderLineCounts() {
     stackedData[1].index = 1;
     stackedData[1].key = "A";
 
-    console.log("stackeddata", stackedData);
+    // console.log("stackeddata", stackedData);
 
     // ----------------
     // Create a tooltip

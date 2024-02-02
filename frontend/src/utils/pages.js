@@ -4,6 +4,11 @@ const visualizations = [
     url: "/viz/gender-line-counts",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Gender and Character Counts",
+    url: "/viz/gender-char-counts",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",
