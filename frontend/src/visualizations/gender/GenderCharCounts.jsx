@@ -76,7 +76,7 @@ function GenderLineCounts() {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    const group = svg.append("g").attr("transform", "translate(0,0)");
+    svg.append("g").attr("transform", "translate(0,0)");
 
     const graphdata = [];
     const maxValue = { fpc: 0, npc: 0, combined: 0 };
