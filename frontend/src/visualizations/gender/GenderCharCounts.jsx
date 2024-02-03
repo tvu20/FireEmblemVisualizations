@@ -9,10 +9,49 @@ import "./gender.css";
 function GenderLineCounts() {
   const [data, setData] = useState();
   const ref = useRef();
+  const ref2 = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
   const gameTitles = getGameShortenedTitles();
 
+  // area chart
+  useEffect(() => {
+    if (!data) return;
+
+    const width = 470;
+    const height = 500;
+
+    const svg = d3
+      .select(ref.current)
+      .attr("width", width)
+      .attr("height", height);
+
+    const group = svg.append("g").attr("transform", "translate(0,0)");
+
+    const exclude = [1, 2, 3, 9, 11];
+    const combined = { M: 0, F: 0, A: 0, total: 0 };
+
+    const fpercents = {};
+
+    Object.entries(data).forEach(([key, value], index) => {
+      if (exclude.includes(index + 1)) {
+        return;
+      }
+      combined.M += value.pcs.M;
+      combined.F += value.pcs.F;
+
+      if (value.pcs.A) {
+        combined.A += value.pcs.A;
+      }
+    });
+
+    combined.total = combined.M + combined.F + combined.A;
+    combined.fpercent = (combined.F / combined.total) * 100;
+
+    console.log(combined);
+  }, [data, windowWidth, gameTitles]);
+
+  // mini graphs!
   useEffect(() => {
     if (!data) return;
 
@@ -26,13 +65,9 @@ function GenderLineCounts() {
     };
 
     const svg = d3
-      .select(ref.current)
+      .select(ref2.current)
       .attr("width", width)
       .attr("height", height);
-
-    // const group = svg
-    //   .append("g")
-    //   .attr("transform", "translate(" + 100 + "," + 0 + ")");
 
     const group = svg
       .append("g")
@@ -41,20 +76,10 @@ function GenderLineCounts() {
     const per_row = 4;
 
     Object.entries(data).forEach(([key, value], i) => {
-      console.log(`${i}: ${key} = ${value}`);
+      //   console.log(`${i}: ${key} = ${value}`);
 
       const row = Math.ceil((i + 1) / per_row);
       const col = i % per_row;
-
-      //   const row = Math.ceil(i / per_row);
-
-      // balls is number of balls total
-      // filas is number of rows total
-      // enteros is number of full rows
-      // resto is number left over on last row
-      // brack is number of balls per row
-
-      // math!
 
       //--------------------------- Distribution of each term in a 4x4 matrix
       const dots = group
@@ -72,8 +97,6 @@ function GenderLineCounts() {
       let balls_F = balls.F;
 
       const full_rows = Math.ceil((balls.M + balls_F + 1) / balls_per_row) - 1;
-
-      //   const full_rows = Math.ceil((balls.M + balls_F + 1) / balls_per_row) - 1;
 
       // male rows
       const male_rows = balls.M / balls_per_row;
@@ -213,7 +236,12 @@ function GenderLineCounts() {
       });
   }, []);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return (
+    <>
+      <svg ref={ref} style={{ border: "1px solid red" }} />
+      <svg ref={ref2} style={{ border: "1px solid red" }} />
+    </>
+  );
 }
 
 export default GenderLineCounts;

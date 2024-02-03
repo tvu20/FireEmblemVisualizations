@@ -11,6 +11,4 @@
 .menu.hide {
   opacity: 0;
   pointer-events: none;
-  /* display: none; */
-  height: 90px;
 }
