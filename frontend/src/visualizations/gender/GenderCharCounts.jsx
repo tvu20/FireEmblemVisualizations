@@ -18,6 +18,8 @@ function GenderLineCounts() {
   useEffect(() => {
     if (!data) return;
 
+    d3.selectAll("g > *").remove();
+
     // set the dimensions and margins of the graph
     var margin = { top: 10, right: 50, bottom: 30, left: 50 },
       width = 460 - margin.left - margin.right,
@@ -182,6 +184,8 @@ function GenderLineCounts() {
     const dashText = svg
       .append("text")
       //   .attr('id', 'max-indicator')
+      // .attr("x", width + 5)
+      // .attr("y", y(+maxValue.fpc) + 3)
       .attr("x", x(maxX.fpc) - 22)
       .attr("y", y(+maxValue.fpc) - 10)
       .style("fill", "#333")
@@ -200,6 +204,8 @@ function GenderLineCounts() {
   // mini graphs!
   useEffect(() => {
     if (!data) return;
+
+    // d3.selectAll("g > *").remove();
 
     const width = 470;
     const height = 500;

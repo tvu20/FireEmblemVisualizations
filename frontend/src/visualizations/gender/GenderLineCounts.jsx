@@ -14,6 +14,8 @@ function GenderLineCounts() {
   useEffect(() => {
     if (!data) return;
 
+    d3.selectAll("g > *").remove();
+
     // console.log(windowWidth);
 
     // set the dimensions and margins of the graph
