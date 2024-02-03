@@ -19,7 +19,7 @@ function GenderLineCounts() {
     if (!data) return;
 
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 100, bottom: 30, left: 30 },
+    var margin = { top: 10, right: 50, bottom: 30, left: 50 },
       width = 460 - margin.left - margin.right,
       height = 400 - margin.top - margin.bottom;
 
@@ -43,7 +43,7 @@ function GenderLineCounts() {
             .y1(function (d) {
               return y(+d[selectedGroup]);
             })
-            .curve(d3.curveCardinal)
+            .curve(d3.curveBumpX)
         )
         .attr("fill", function (d) {
           return myColor(selectedGroup);
@@ -51,6 +51,19 @@ function GenderLineCounts() {
         .attr("stroke", function (d) {
           return myColor(selectedGroup);
         });
+
+      dash
+        .transition()
+        .duration(1000)
+        .attr("y1", y(+maxValue[selectedGroup]))
+        .attr("y2", y(+maxValue[selectedGroup]));
+
+      dashText
+        .transition()
+        .duration(1000)
+        .text(maxValue[selectedGroup].toFixed(1) + "%")
+        .attr("x", x(maxX[selectedGroup]) - 22)
+        .attr("y", y(+maxValue[selectedGroup]) - 10);
     }
 
     const svg = d3
@@ -64,19 +77,25 @@ function GenderLineCounts() {
     const group = svg.append("g").attr("transform", "translate(0,0)");
 
     const graphdata = [];
+    const maxValue = { fpc: 0, npc: 0, combined: 0 };
+    const maxX = { fpc: 12.5, npc: 14, combined: 13 };
 
     Object.entries(data).forEach(([key, value], index) => {
       const pcs = Object.values(value.pcs).reduce((a, b) => a + b, 0);
       const npcs = Object.values(value.npcs).reduce((a, b) => a + b, 0);
-      const fpc = value.pcs.F / pcs;
-      const npc = value.npcs.F / npcs;
-      const combined = (value.pcs.F + value.npcs.F) / (pcs + npcs);
+      const fpc = (value.pcs.F / pcs) * 100;
+      const npc = (value.npcs.F / npcs) * 100;
+      const combined = ((value.pcs.F + value.npcs.F) / (pcs + npcs)) * 100;
       graphdata.push({
         game: gameTitles[index],
-        fpc: fpc * 100,
-        npc: npc * 100,
-        combined: combined * 100,
+        fpc,
+        npc,
+        combined,
       });
+
+      maxValue.fpc = Math.max(maxValue.fpc, fpc);
+      maxValue.npc = Math.max(maxValue.npc, npc);
+      maxValue.combined = Math.max(maxValue.combined, combined);
     });
 
     console.log(graphdata);
@@ -91,35 +110,55 @@ function GenderLineCounts() {
     var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
 
     // Add X axis --> it is a date format
-    var x = d3.scaleLinear().domain([0, 16]).range([0, width]);
+    var x = d3.scaleLinear().domain([0, 15]).range([0, width]);
+    // svg
+    //   .append("g")
+    //   .attr("transform", "translate(0," + height + ")")
+    //   .call(d3.axisBottom(x));
+
+    // Add X axis labels:
     svg
-      .append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+      .append("text")
+      .attr("text-anchor", "end")
+      .attr("x", 0 + 30)
+      .attr("y", height + margin.top + 10)
+      .text("1990");
+
+    svg
+      .append("text")
+      .attr("text-anchor", "end")
+      .attr("x", width + 10)
+      .attr("y", height + margin.top + 10)
+      .text("2019");
 
     // Add Y axis
-    var y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
-    svg.append("g").call(d3.axisLeft(y));
+    var y = d3.scaleLinear().domain([0, 70]).range([height, 0]);
+    // svg.append("g").call(d3.axisLeft(y));
+
+    svg
+      .append("rect")
+      .attr("height", height)
+      .attr("width", width)
+      .style("fill", "rgba(140, 119, 88, 0.2)");
 
     // Initialize line with group a
     var line = svg
       .append("g")
       .append("path")
+      //   .attr("transform", "translate(40,0)")
       .datum(graphdata)
       .attr(
         "d",
         d3
           .area()
           .x(function (d, index) {
-            console.log("d");
-            console.log("index");
             return x(+index);
           })
           .y0(y(0))
           .y1(function (d) {
             return y(+d.fpc);
           })
-          .curve(d3.curveCardinal)
+          .curve(d3.curveBumpX)
       )
       .attr("stroke", function (d) {
         return myColor("fpc");
@@ -128,6 +167,26 @@ function GenderLineCounts() {
         return myColor("fpc");
       })
       .style("stroke-width", 2);
+
+    // dashed line
+    const dash = svg
+      .append("line")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("y1", y(+maxValue.fpc))
+      .attr("y2", y(+maxValue.fpc))
+      .style("stroke", "#333")
+      .style("stroke-width", "1px")
+      .style("stroke-dasharray", "3 3");
+
+    const dashText = svg
+      .append("text")
+      //   .attr('id', 'max-indicator')
+      .attr("x", x(maxX.fpc) - 22)
+      .attr("y", y(+maxValue.fpc) - 10)
+      .style("fill", "#333")
+      .style("font-size", "16px")
+      .text(maxValue.fpc.toFixed(1) + "%");
 
     // When the button is changed, run the updateChart function
     d3.select("#selectButton").on("change", function (d) {
@@ -179,7 +238,6 @@ function GenderLineCounts() {
       //--------------------------- Calculate the distribution of dots: number, rows, columns, etc...
       // only using pcs right now
       const balls = value.pcs;
-      console.log(balls);
       const balls_per_row = 10;
       let balls_F = balls.F;
 
