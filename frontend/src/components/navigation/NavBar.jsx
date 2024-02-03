@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Menu from "./Menu";
 
@@ -27,12 +27,17 @@ function NavBar(props) {
   const mobileMenu = () => {
     return (
       <>
-        <h4
-          className={showLinks ? "hide" : ""}
-          style={{ zIndex: 3, color: props.navColor ? props.navColor : "" }}
-        >
-          Giao Vu Dinh | <b>Princeton University</b>
-        </h4>
+        <Link to="/">
+          <h4
+            className={showLinks ? "hide" : ""}
+            style={{
+              zIndex: 3,
+              color: props.navColor ? props.navColor : "white",
+            }}
+          >
+            Giao Vu Dinh | <b>Princeton University</b>
+          </h4>
+        </Link>
         {/* <input
           id="burger"
           type="checkbox"

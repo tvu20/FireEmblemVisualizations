@@ -18,3 +18,24 @@ export const getGameTitles = () => {
     "FE16",
   ];
 };
+
+export const getGameShortenedTitles = () => {
+  return [
+    "Blade of Light",
+    "Gaiden",
+    "Mystery",
+    "Genealogy",
+    "Thracia 776",
+    "Binding Blade",
+    "Blazing Blade",
+    "Sacred Stones",
+    "Path of Radiance",
+    "Radiant Dawn",
+    "Shadow Dragon",
+    "New Mystery",
+    "Awakening",
+    "Fates",
+    "Echoes",
+    "Three Houses",
+  ];
+};
