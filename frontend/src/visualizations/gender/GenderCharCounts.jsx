@@ -18,37 +18,124 @@ function GenderLineCounts() {
   useEffect(() => {
     if (!data) return;
 
-    const width = 470;
-    const height = 500;
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 100, bottom: 30, left: 30 },
+      width = 460 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
+
+    // A function that update the chart
+    function update(selectedGroup) {
+      // // Create new data with the selection?
+      // var dataFilter = data.map(function(d){return {time: d.time, value:d[selectedGroup]} })
+
+      line
+        .datum(graphdata)
+        .transition()
+        .duration(1000)
+        .attr(
+          "d",
+          d3
+            .area()
+            .x(function (d, index) {
+              return x(+index);
+            })
+            .y0(y(0))
+            .y1(function (d) {
+              return y(+d[selectedGroup]);
+            })
+            .curve(d3.curveCardinal)
+        )
+        .attr("fill", function (d) {
+          return myColor(selectedGroup);
+        })
+        .attr("stroke", function (d) {
+          return myColor(selectedGroup);
+        });
+    }
 
     const svg = d3
       .select(ref.current)
-      .attr("width", width)
-      .attr("height", height);
+      //   .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     const group = svg.append("g").attr("transform", "translate(0,0)");
 
-    const exclude = [1, 2, 3, 9, 11];
-    const combined = { M: 0, F: 0, A: 0, total: 0 };
-
-    const fpercents = {};
+    const graphdata = [];
 
     Object.entries(data).forEach(([key, value], index) => {
-      if (exclude.includes(index + 1)) {
-        return;
-      }
-      combined.M += value.pcs.M;
-      combined.F += value.pcs.F;
-
-      if (value.pcs.A) {
-        combined.A += value.pcs.A;
-      }
+      const pcs = Object.values(value.pcs).reduce((a, b) => a + b, 0);
+      const npcs = Object.values(value.npcs).reduce((a, b) => a + b, 0);
+      const fpc = value.pcs.F / pcs;
+      const npc = value.npcs.F / npcs;
+      const combined = (value.pcs.F + value.npcs.F) / (pcs + npcs);
+      graphdata.push({
+        game: gameTitles[index],
+        fpc: fpc * 100,
+        npc: npc * 100,
+        combined: combined * 100,
+      });
     });
 
-    combined.total = combined.M + combined.F + combined.A;
-    combined.fpercent = (combined.F / combined.total) * 100;
+    console.log(graphdata);
 
-    console.log(combined);
+    var allGroup = [
+      ["fpc", "Playable Characters"],
+      ["npc", "Non-Playable Characters"],
+      ["combined", "All Characters"],
+    ];
+
+    // A color scale: one color for each group
+    var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
+
+    // Add X axis --> it is a date format
+    var x = d3.scaleLinear().domain([0, 16]).range([0, width]);
+    svg
+      .append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+    // Add Y axis
+    var y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
+    svg.append("g").call(d3.axisLeft(y));
+
+    // Initialize line with group a
+    var line = svg
+      .append("g")
+      .append("path")
+      .datum(graphdata)
+      .attr(
+        "d",
+        d3
+          .area()
+          .x(function (d, index) {
+            console.log("d");
+            console.log("index");
+            return x(+index);
+          })
+          .y0(y(0))
+          .y1(function (d) {
+            return y(+d.fpc);
+          })
+          .curve(d3.curveCardinal)
+      )
+      .attr("stroke", function (d) {
+        return myColor("fpc");
+      })
+      .attr("fill", function (d) {
+        return myColor("fpc");
+      })
+      .style("stroke-width", 2);
+
+    // When the button is changed, run the updateChart function
+    d3.select("#selectButton").on("change", function (d) {
+      // recover the option that has been chosen
+      var selectedOption = d3.select(this).property("value");
+      // run the updateChart function with this selected option
+      update(selectedOption);
+    });
   }, [data, windowWidth, gameTitles]);
 
   // mini graphs!
@@ -203,9 +290,8 @@ function GenderLineCounts() {
         .attr("x", 5)
         .attr("y", 335)
         .text(function (d) {
-          console.log("balls", balls);
           const total = Object.values(balls).reduce((a, b) => a + b, 0);
-          console.log(Object.values(balls).reduce((a, b) => a + b, 0));
+          //   console.log(Object.values(balls).reduce((a, b) => a + b, 0));
 
           return Math.round((balls.F / total) * 10000) / 100 + "% female";
         })
@@ -238,6 +324,11 @@ function GenderLineCounts() {
 
   return (
     <>
+      <select id="selectButton">
+        <option value="fpc">Playable Characters</option>
+        <option value="npc">Non-Playable Characters</option>
+        <option value="combined">All Characters</option>
+      </select>
       <svg ref={ref} style={{ border: "1px solid red" }} />
       <svg ref={ref2} style={{ border: "1px solid red" }} />
     </>
