@@ -1,7 +1,7 @@
 import os
 import time
 from collections import OrderedDict
-from flask import (Flask, send_from_directory, json, current_app as app)
+from flask import (Flask, request, send_from_directory, json, current_app as app)
 from flask_cors import CORS
 
 app = Flask(__name__, 
@@ -56,3 +56,57 @@ def get_gender_char_counts():
     f = open(os.path.join(app.root_path, "gender", "char_counts.json"), "r")
     response = json.load(f)
     return response
+
+# ---------------------------------------------
+# Routes for supports article
+# ---------------------------------------------
+
+@app.route('/api/relationships/all-supports')
+def get_supports():
+    f = open(os.path.join(app.root_path, "relationships", "supports.json"), "r")
+    response = json.load(f)
+    return response
+
+@app.route('/api/relationships/supports')
+def get_support():
+    game = request.args.get("game")
+    print(game)
+    f = open(os.path.join(app.root_path, "relationships", "supports.json"), "r")
+    response = json.load(f)
+
+    if game not in response:
+        return "Game not found", 422
+
+    return response[game]
+
+@app.route('/api/relationships/support-list')
+def get_support_games():
+    f = open(os.path.join(app.root_path, "relationships", "supports.json"), "r")
+    response = json.load(f)
+
+    return list(response.keys())
+
+@app.route('/api/relationships/all-pairings')
+def get_pairings():
+    f = open(os.path.join(app.root_path, "relationships", "pairings.json"), "r")
+    response = json.load(f)
+    return response
+
+@app.route('/api/relationships/pairings')
+def get_pairing():
+    game = request.args.get("game")
+    print(game)
+    f = open(os.path.join(app.root_path, "relationships", "pairings.json"), "r")
+    response = json.load(f)
+
+    if game not in response:
+        return "Game not found", 422
+
+    return response[game]
+
+@app.route('/api/relationships/pairing-list')
+def get_pairing_games():
+    f = open(os.path.join(app.root_path, "relationships", "pairings.json"), "r")
+    response = json.load(f)
+
+    return list(response.keys())
