@@ -95,7 +95,7 @@ def get_pairings():
 @app.route('/api/relationships/pairings')
 def get_pairing():
     game = request.args.get("game")
-    print(game)
+    # print(game)
     f = open(os.path.join(app.root_path, "relationships", "pairings.json"), "r")
     response = json.load(f)
 
@@ -153,6 +153,18 @@ def get_longest_words():
 @app.route('/api/scripts/common-words')
 def get_common_words():
     f = open(os.path.join(app.root_path, "script", "most_common_words.json"), "r")
+    response = json.load(f)
+
+    return response
+
+# ---------------------------------------------
+# Routes for sentiment article
+# ---------------------------------------------
+
+@app.route('/api/sentiment/sentiments')
+def get_sentiments():
+    game = request.args.get("game")
+    f = open(os.path.join(app.root_path, "sentiment", "sentiments", game + ".json"), "r")
     response = json.load(f)
 
     return response
