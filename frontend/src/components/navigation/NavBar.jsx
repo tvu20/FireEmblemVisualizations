@@ -56,7 +56,7 @@ function NavBar(props) {
 
   return (
     <>
-      <Menu display={showLinks} />
+      <Menu display={showLinks} closeWindow={() => setShowLinks(false)} />
       <nav
         className={`navbar ${showLinks ? "hide" : ""}`}
         style={{
