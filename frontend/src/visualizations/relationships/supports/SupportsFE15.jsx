@@ -4,7 +4,7 @@ import * as d3 from "d3";
 import useWindowDimensions from "../../../hooks/useWindowDimensions";
 // import { getGameTitles } from "../../utils/games";
 
-function SupportsFE6() {
+function SupportsFE15() {
   const [data, setData] = useState();
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
@@ -80,7 +80,9 @@ function SupportsFE6() {
           // return isConnected(d, o) ? 1 : opacity;
         });
         textElems.style("visibility", function (o) {
-          return isConnected(d, o) ? "visible" : "hidden";
+          return isConnected(d, o) || o.index === d.srcElement.__data__.index
+            ? "visible"
+            : "hidden";
         });
         textElems.style("font-weight", function (o) {
           return o.index === d.srcElement.__data__.index ? "600" : "300";
@@ -139,10 +141,10 @@ function SupportsFE6() {
         "link",
         d3.forceLink(links).id((d) => d.id)
       )
-      .force("charge", d3.forceManyBody().strength(-100))
+      .force("charge", d3.forceManyBody().strength(-300))
       .force("center", d3.forceCenter(width / 2, height / 2))
-      // .force("x", d3.forceX(width / 2).strength(0.02))
-      // .force("y", d3.forceY(height / 2).strength(0.04))
+      .force("x", d3.forceX(width / 2).strength(0.04))
+      .force("y", d3.forceY(height / 2).strength(0.04))
       .on("tick", ticked);
 
     // append SVG to page
@@ -209,7 +211,7 @@ function SupportsFE6() {
   }, [data, windowWidth]);
 
   useEffect(() => {
-    fetch("/api/relationships/supports?game=FE6", {
+    fetch("/api/relationships/supports?game=FE15", {
       method: "GET",
       mode: "cors",
       headers: {
@@ -227,4 +229,4 @@ function SupportsFE6() {
   return <svg ref={ref} style={{ border: "1px solid red" }} />;
 }
 
-export default SupportsFE6;
+export default SupportsFE15;

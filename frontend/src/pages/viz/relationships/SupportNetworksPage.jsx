@@ -1,7 +1,7 @@
 import React from "react";
 
 import VizWrapper from "../../../components/visualizations/VizWrapper";
-import SupportsFE6 from "../../../visualizations/relationships/supports/SupportsFE6";
+import SupportsFE16 from "../../../visualizations/relationships/supports/SupportsFE16";
 
 import getColor from "../../../utils/colors";
 
@@ -13,7 +13,7 @@ function SupportNetworksPage() {
       <div className="support-networks">
         <h1>Support Networks</h1>
         <p>Some description here.</p>
-        <SupportsFE6 />
+        <SupportsFE16 />
       </div>
     </VizWrapper>
   );
