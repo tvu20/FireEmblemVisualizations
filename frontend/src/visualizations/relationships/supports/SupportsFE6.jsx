@@ -72,8 +72,21 @@ function SupportsFE6() {
         node.style("opacity", function (o) {
           return isConnected(d, o) ? 1 : opacity;
         });
+        node.attr("stroke", function (o) {
+          return o.index === d.srcElement.__data__.index ? "#fff" : "";
+        });
+        node.style("border", function (o) {
+          return o.index === d.srcElement.__data__.index
+            ? "1px solid white"
+            : "";
+          // return isConnected(d, o) ? 1 : opacity;
+        });
         textElems.style("visibility", function (o) {
           return isConnected(d, o) ? "visible" : "hidden";
+        });
+        textElems.style("font-weight", function (o) {
+          return o.index === d.srcElement.__data__.index ? "600" : "300";
+          // return isConnected(d, o) ? 1 : opacity;
         });
         link.style("stroke-opacity", (o) => {
           return o.source.index === d.srcElement.__data__.index ||
@@ -83,6 +96,7 @@ function SupportsFE6() {
         });
         if (opacity === 1) {
           node.style("opacity", 1);
+          node.attr("stroke", "none");
           textElems.style("visibility", "hidden");
           link.style("stroke-opacity", 0.3);
         }
@@ -129,12 +143,6 @@ function SupportsFE6() {
       // .force("x", d3.forceX(width / 2).strength(0.02))
       // .force("y", d3.forceY(height / 2).strength(0.04))
       .on("tick", ticked);
-
-    var tooltip = d3
-      .select("body")
-      .append("div")
-      .attr("class", "tooltip")
-      .style("opacity", 0);
 
     // append SVG to page
     const svg = d3
