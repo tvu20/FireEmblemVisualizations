@@ -151,7 +151,17 @@ function Supports(props) {
       .on("tick", ticked);
 
     if (linkConstrain)
-      simulation.force("link", d3.forceLink().links(links).strength(0.1));
+      // simulation.force("link", d3.forceLink().links(links).strength(0.1));
+      simulation.force(
+        "link",
+        d3
+          .forceLink()
+          .links(links)
+          // .id(function (d) {
+          //   return d.id;
+          // })
+          .strength(0.1)
+      );
 
     // append SVG to page
     const svg = d3

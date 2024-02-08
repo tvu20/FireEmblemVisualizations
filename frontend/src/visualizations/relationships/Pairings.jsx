@@ -5,7 +5,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 // import { getGameTitles } from "../../utils/games";
 
 function Pairings(props) {
-  const { game, constrain, linkConstrain, moreStrength } = props;
+  const { game, constrain, linkConstrain, moreStrength, sortGender } = props;
   const [data, setData] = useState();
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
@@ -177,8 +177,31 @@ function Pairings(props) {
       .force("y", constrain ? d3.forceY(height / 2).strength(0.075) : null)
       .on("tick", ticked);
 
+    const xCenter = {
+      M: 100,
+      F: 400,
+    };
+
     if (linkConstrain)
-      simulation.force("link", d3.forceLink().links(links).strength(0.1));
+      simulation.force(
+        "link",
+        d3
+          .forceLink()
+          // .links(links)
+          .id(function (d) {
+            return d.id;
+          })
+      );
+
+    if (sortGender) {
+      simulation.force(
+        "x",
+        d3.forceX().x(function (d) {
+          return xCenter[d.gender];
+        })
+        // .strength(0.075)
+      );
+    }
 
     // append SVG to page
     const svg = d3
@@ -199,7 +222,7 @@ function Pairings(props) {
       .data(links)
       .join("line")
       .attr("stroke", (d) => {
-        console.log(d);
+        // console.log(d);
         // return "#999";
         return linkColor(d.category);
       })
@@ -254,7 +277,7 @@ function Pairings(props) {
         .on("drag", dragged)
         .on("end", dragended)
     );
-  }, [data, windowWidth, constrain, linkConstrain, moreStrength]);
+  }, [data, windowWidth, constrain, linkConstrain, moreStrength, sortGender]);
 
   useEffect(() => {
     fetch(`/api/relationships/pairings?game=${game}`, {
