@@ -178,8 +178,8 @@ function Pairings(props) {
       .on("tick", ticked);
 
     const xCenter = {
-      M: 100,
-      F: 400,
+      M: width / 2 - 150,
+      F: width / 2 + 150,
     };
 
     if (linkConstrain)

@@ -46,7 +46,8 @@ function PairingsNetworksPage() {
         </select>
         <Pairings
           game={game}
-          constrain={game === "FE16" ? false : true}
+          // constrain
+          constrain={game === "FE16" && !linkConstrain ? false : true}
           moreStrength={game === "FE4-1" || game === "FE4-2" ? true : false}
           linkConstrain={linkConstrain}
           sortGender={sortGender}
