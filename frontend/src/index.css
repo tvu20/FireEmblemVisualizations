@@ -21,4 +21,5 @@ code {
   --main-color: #352c50;
   --main-gradient: url("./assets/backgrounds/gradient-background.jpg");
   --gender-gradient: url("./assets/backgrounds/gender.jpeg");
+  --relationships-gradient: url("./assets/backgrounds/relationships.jpeg");
 }
