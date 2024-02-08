@@ -6,7 +6,6 @@ import useWindowDimensions from "../../../hooks/useWindowDimensions";
 
 function SupportsFE6() {
   const [data, setData] = useState();
-  const [force, setForce] = useState("radial");
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
@@ -15,7 +14,7 @@ function SupportsFE6() {
 
     d3.selectAll("g > *").remove();
 
-    const radius = 5;
+    const radius = 7;
 
     // The force simulation mutates links and nodes, so create a copy
     // so that re-evaluating this cell produces the same result.
@@ -55,7 +54,6 @@ function SupportsFE6() {
       // console.log("d", d.source);
       linkedByIndex[`${d.source},${d.target}`] = 1;
     });
-    console.log("linked", linkedByIndex);
 
     function isConnected(a, b) {
       // console.log(a.srcElement.__data__);
@@ -138,7 +136,7 @@ function SupportsFE6() {
         "link",
         d3.forceLink(links).id((d) => d.id)
       )
-      .force("charge", d3.forceManyBody())
+      .force("charge", d3.forceManyBody().strength(-100))
       .force("center", d3.forceCenter(width / 2, height / 2))
       // .force("x", d3.forceX(width / 2).strength(0.02))
       // .force("y", d3.forceY(height / 2).strength(0.04))
@@ -160,7 +158,8 @@ function SupportsFE6() {
       .selectAll()
       .data(links)
       .join("line")
-      .attr("stroke-width", (d) => Math.sqrt(d.value));
+      .attr("stroke-width", 1.5);
+    // .attr("stroke-width", (d) => Math.sqrt(d.value));
 
     const node = svg
       .append("g")
@@ -169,7 +168,7 @@ function SupportsFE6() {
       .selectAll()
       .data(nodes)
       .join("circle")
-      .attr("r", 5)
+      .attr("r", radius)
       .attr("fill", (d) => color(d.gender))
       .on("mouseover.fade", fade(0.1))
       .on("mouseout.fade", fade(1));
@@ -180,8 +179,7 @@ function SupportsFE6() {
       .data(nodes)
       .join("text")
       .text((d) => d.id)
-      .attr("font-size", 10)
-      .attr("font-size", 10)
+      .attr("font-size", 16)
       .style("fill", "white")
       .on("mouseover.fade", fade(0.1))
       .on("mouseout.fade", fade(1));
