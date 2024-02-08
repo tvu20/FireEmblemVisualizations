@@ -1,7 +1,7 @@
 footer {
   display: flex;
   border: 1px solid black;
-  background: #352c50;
+  background: var(--main-color);
   padding: 40px 0px;
   color: white;
 }

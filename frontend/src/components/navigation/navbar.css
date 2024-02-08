@@ -14,12 +14,14 @@
     rgba(253, 137, 91, 0.9) 45%,
     rgba(252, 102, 39, 0) 100%
   );
-  transition: background 0.2s;
+
+  transition: opacity 0.5s;
+  /* transition: background 0.2s; */
 }
 
 .navbar.hide {
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.2s;
 }
 
 .navbar a {
@@ -46,7 +48,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 180px;
-  transition: top 0.5s;
+  transition: top 0.2s;
   top: 0;
 }
 
