@@ -8,6 +8,7 @@ import VizPage from "./pages/viz/VizPage";
 
 import GenderLineCountsPage from "./pages/viz/gender/GenderLineCountsPage";
 import GenderCharCountsPage from "./pages/viz/gender/GenderCharCountsPage";
+import SupportNetworksPage from "./pages/viz/relationships/SupportNetworksPage";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/gender-char-counts",
         element: <GenderCharCountsPage />,
+      },
+      {
+        path: "/viz/support-networks",
+        element: <SupportNetworksPage />,
       },
     ],
   },
