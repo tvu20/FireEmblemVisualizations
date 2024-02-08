@@ -14,6 +14,11 @@ const visualizations = [
     url: "/viz/support-networks",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Pairing Networks",
+    url: "/viz/pairings-networks",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

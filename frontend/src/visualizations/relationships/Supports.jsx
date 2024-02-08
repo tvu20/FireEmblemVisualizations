@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-import useWindowDimensions from "../../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 // import { getGameTitles } from "../../utils/games";
 
 function Supports(props) {
@@ -125,6 +125,7 @@ function Supports(props) {
       event.subject.fy = null;
     }
 
+    const margin = { top: 50, right: 50, bottom: 50, left: 50 };
     // Specify the dimensions of the chart.
     const width = 928;
     const height = 600;
@@ -155,8 +156,8 @@ function Supports(props) {
     // append SVG to page
     const svg = d3
       .select(ref.current)
-      .attr("width", width)
-      .attr("height", height)
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
       .attr("viewBox", [0, 0, width, height])
       .attr("style", "max-width: 100%; height: auto;");
 

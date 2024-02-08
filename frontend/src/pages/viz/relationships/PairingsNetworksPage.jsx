@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 
 import VizWrapper from "../../../components/visualizations/VizWrapper";
-import Supports from "../../../visualizations/relationships/Supports";
+import Pairings from "../../../visualizations/relationships/Pairings";
 
 import getColor from "../../../utils/colors";
 
 import "./relationships.css";
 
-function SupportNetworksPage() {
-  const [game, setGame] = useState("FE6");
-  const [linkConstrain, setLinkConstrain] = useState(false);
+function PairingsNetworksPage() {
+  const [game, setGame] = useState("FE4-1");
+  const [linkConstrain, setLinkConstrain] = useState(true);
   return (
     <VizWrapper color={getColor("relationships")} navColor={"white"}>
       <div className="support-networks">
-        <h1>Support Networks</h1>
+        <h1>Pairing Networks</h1>
         <p>Some description here.</p>
         <input
           type="checkbox"
@@ -25,18 +25,21 @@ function SupportNetworksPage() {
           onChange={(e) => setGame(e.target.value)}
           style={{ marginBottom: "30px" }}
         >
+          <option value="FE4-1">Genealogy, First Generation</option>
+          <option value="FE4-2">Genealogy, Second Generation</option>
           <option value="FE6">The Binding Blade</option>
           <option value="FE7">The Blazing Blade</option>
           <option value="FE8">The Sacred Stones</option>
-          <option value="FE9">Path of Radiance</option>
+          <option value="FE10">Radiant Dawn</option>
           <option value="FE13">Awakening</option>
           <option value="FE14">Fates</option>
           <option value="FE15">Echoes</option>
           <option value="FE16">Three Houses</option>
         </select>
-        <Supports
+        <Pairings
           game={game}
-          constrain={game === "FE15" || game === "FE6" ? true : false}
+          constrain={game === "FE16" ? false : true}
+          moreStrength={game === "FE4-1" || game === "FE4-2" ? true : false}
           linkConstrain={linkConstrain}
         />
       </div>
@@ -44,4 +47,4 @@ function SupportNetworksPage() {
   );
 }
 
-export default SupportNetworksPage;
+export default PairingsNetworksPage;
