@@ -28,7 +28,7 @@ function SentimentGamePage() {
           <option value="FE15">Echoes</option>
           <option value="FE16">Three Houses</option>
         </select>
-        <SentimentGame game="FE6" />
+        <SentimentGame game={game} />
       </div>
     </VizWrapper>
   );

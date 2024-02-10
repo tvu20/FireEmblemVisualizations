@@ -16,9 +16,9 @@ function SentimentGame(props) {
     d3.selectAll("g > *").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 30, right: 30, bottom: 70, left: 60 },
+    var margin = { top: 30, right: 30, bottom: 70, left: 30 },
       width = 800 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      height = 700 - margin.top - margin.bottom;
 
     const svg = d3
       .select(ref.current)
@@ -41,20 +41,20 @@ function SentimentGame(props) {
       .range([0, width])
       .domain(data.Main.map((d) => d.chapter))
       .padding(0.2);
-    svg
-      .append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x))
-      .selectAll("text")
-      .attr("transform", "translate(-10,0)rotate(-45)")
-      .style("text-anchor", "end");
+    //   .selectAll("text")
+    //   .attr("transform", "translate(-10,0)rotate(-45)")
+    //   .style("text-anchor", "end");
 
     // Add Y axis
-    var y = d3
+    var y1 = d3
       .scaleLinear()
       .domain([0, Math.max(maxPos, maxNeg)])
-      .range([height, 0]);
-    svg.append("g").call(d3.axisLeft(y));
+      .range([height / 2, 0]);
+    // svg
+    //   .append("g")
+    //   .call(d3.axisLeft(y1).tickSize(0))
+    //   .selectAll("text")
+    //   .style("visibility", "hidden");
 
     // Bars
     svg
@@ -66,13 +66,39 @@ function SentimentGame(props) {
         return x(d.chapter);
       })
       .attr("y", function (d) {
-        return y(d.positive);
+        return y1(d.positive);
       })
       .attr("width", x.bandwidth())
       .attr("height", function (d) {
-        return height - y(d.positive);
+        return height / 2 - y1(d.positive);
+      })
+      .attr("fill", "#e6ad57");
+
+    // Bars
+    svg
+      .selectAll("mybar")
+      .data(data.Main)
+      .enter()
+      .append("rect")
+      .attr("x", function (d) {
+        return x(d.chapter);
+      })
+      .attr("y", function (d) {
+        return height / 2 + 1;
+      })
+      .attr("width", x.bandwidth())
+      .attr("height", function (d) {
+        return height / 2 - y1(d.negative);
       })
       .attr("fill", "#69b3a2");
+
+    svg
+      .append("g")
+      .attr("transform", "translate(0," + height / 2 + ")")
+      .call(d3.axisBottom(x).tickSize(0))
+
+      .selectAll("text")
+      .style("visibility", "hidden");
   }, [data, windowWidth]);
 
   useEffect(() => {
