@@ -10,6 +10,7 @@ import GenderLineCountsPage from "./pages/viz/gender/GenderLineCountsPage";
 import GenderCharCountsPage from "./pages/viz/gender/GenderCharCountsPage";
 import SupportNetworksPage from "./pages/viz/relationships/SupportNetworksPage";
 import PairingsNetworksPage from "./pages/viz/relationships/PairingsNetworksPage";
+import SentimentGamePage from "./pages/viz/sentiment/SentimentGamePage";
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/pairings-networks",
         element: <PairingsNetworksPage />,
+      },
+      {
+        path: "/viz/sentiment-game",
+        element: <SentimentGamePage />,
       },
     ],
   },

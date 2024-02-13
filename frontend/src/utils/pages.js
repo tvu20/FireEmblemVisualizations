@@ -19,6 +19,11 @@ const visualizations = [
     url: "/viz/pairings-networks",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Sentiment in a Game",
+    url: "/viz/sentiment-game",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",
