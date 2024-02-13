@@ -11,6 +11,7 @@ import GenderCharCountsPage from "./pages/viz/gender/GenderCharCountsPage";
 import SupportNetworksPage from "./pages/viz/relationships/SupportNetworksPage";
 import PairingsNetworksPage from "./pages/viz/relationships/PairingsNetworksPage";
 import SentimentGamePage from "./pages/viz/sentiment/SentimentGamePage";
+import MostCommonWordsPage from "./pages/viz/script/MostCommonWordsPage";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/sentiment-game",
         element: <SentimentGamePage />,
+      },
+      {
+        path: "/viz/most-common-words",
+        element: <MostCommonWordsPage />,
       },
     ],
   },
