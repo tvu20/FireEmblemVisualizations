@@ -215,12 +215,6 @@ function GenderLineCounts() {
       .attr("game", function (d) {
         return d.data.group;
       })
-      //   .attr("y", function (d) {
-      //     return y(d[1]);
-      //   })
-      //   .attr("height", function (d) {
-      //     return y(d[0]) - y(d[1]);
-      //   })
       .attr("width", x.bandwidth())
       .on("mouseover", mouseover)
       .on("mousemove", mousemove)
