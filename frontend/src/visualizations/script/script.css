@@ -24,3 +24,21 @@
   fill: darkslategrey;
   font-weight: bold;
 } */
+
+.mostcommonwords-tooltip {
+  width: 350px;
+  padding: 20px;
+}
+
+.mostcommonwords-tooltip p {
+  margin: 0;
+}
+
+mark {
+  padding: 1px 3px;
+  margin: 2px;
+  line-height: 1;
+  display: inline-block;
+  border-radius: 2px;
+  background: #fc3;
+}

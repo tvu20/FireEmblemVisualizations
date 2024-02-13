@@ -46,6 +46,17 @@ function MostCommonWords(props) {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    var tooltip = d3
+      .select("body")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip mostcommonwords-tooltip")
+      .style("position", "absolute")
+      .style("top", 0)
+      .style("background-color", "white")
+      .style("border-radius", "5px");
+    //   .style("padding", "10px");
+
     // This function takes the output of 'layout' above and draw the words
     // Wordcloud features that are THE SAME from one word to the other can be here
     function draw(words) {
@@ -80,6 +91,7 @@ function MostCommonWords(props) {
         .classed("click-only-text", true)
         .classed("word-default", true)
         .on("mouseover", handleMouseOver)
+        .on("mousemove", handleMouseMove)
         .on("mouseout", handleMouseOut);
 
       function handleMouseOver(d, i) {
@@ -87,12 +99,38 @@ function MostCommonWords(props) {
           .classed("word-hovered", true)
           .attr("font-size", d.size + 2)
           .attr("font-weight", "bold");
+
+        let tooltipContent =
+          d.srcElement.__data__.samples.join("</p> <br /> <p>");
+
+        // const regstr = "/" + d.srcElement.__data__.text + "/gi";
+        const re = new RegExp(d.srcElement.__data__.text, "gi");
+
+        tooltipContent = tooltipContent.replace(
+          re,
+          `<mark>$&</mark>`
+          //   `<span style="background: ${textColor(
+          //     d.srcElement.__data__.pos
+          //   )}; color: white">$&</span>`
+        );
+
+        tooltip.html("<p>" + tooltipContent + "</p>").style("opacity", 1);
+
+        // tooltip
+        //   .html("<h5>" + d.srcElement.__data__.text + "</h5>")
+        //   .style("opacity", 1);
+      }
+
+      function handleMouseMove(d, i) {
+        tooltip.style("left", d.pageX + 20 + "px").style("top", d.pageY + "px");
       }
 
       function handleMouseOut(d, i) {
         d3.select(this)
           .classed("word-hovered", false)
           .attr("font-size", d.size);
+
+        tooltip.style("opacity", 0);
       }
     }
 
