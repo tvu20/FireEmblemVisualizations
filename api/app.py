@@ -157,6 +157,13 @@ def get_common_words():
 
     return response
 
+@app.route('/api/scripts/similarity')
+def get_similarity():
+    f = open(os.path.join(app.root_path, "script", "similarity.json"), "r")
+    response = json.load(f)
+
+    return response
+
 # ---------------------------------------------
 # Routes for sentiment article
 # ---------------------------------------------
