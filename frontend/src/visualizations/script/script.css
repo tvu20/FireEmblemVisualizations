@@ -35,10 +35,11 @@
 }
 
 mark {
+  font-size: 14px;
   padding: 1px 3px;
-  margin: 2px;
+  /* margin: 2px; */
   line-height: 1;
   display: inline-block;
   border-radius: 2px;
-  background: #fc3;
+  /* background: #fc3; */
 }

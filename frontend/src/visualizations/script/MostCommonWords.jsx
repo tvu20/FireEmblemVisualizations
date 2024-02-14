@@ -34,6 +34,18 @@ function MostCommonWords(props) {
       return colors[tag];
     };
 
+    const pos = (tag) => {
+      const tags = {
+        NOUN: "Noun",
+        VERB: "Verb",
+        ADJ: "Adjective",
+        ADV: "Adverb",
+        CHAR: "Character",
+        PLACE: "Place",
+      };
+      return tags[tag];
+    };
+
     // set the dimensions and margins of the graph
     var margin = { top: 30, right: 30, bottom: 70, left: 30 },
       width = 800 - margin.left - margin.right,
@@ -54,8 +66,12 @@ function MostCommonWords(props) {
       .style("position", "absolute")
       .style("top", 0)
       .style("background-color", "white")
-      .style("border-radius", "5px");
-    //   .style("padding", "10px");
+      .style("border-radius", "5px")
+      .style("font-size", "14px")
+      .style(
+        "box-shadow",
+        "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+      );
 
     // This function takes the output of 'layout' above and draw the words
     // Wordcloud features that are THE SAME from one word to the other can be here
@@ -101,24 +117,23 @@ function MostCommonWords(props) {
           .attr("font-weight", "bold");
 
         let tooltipContent =
+          `<span style="font-weight: bold; color: ${textColor(
+            d.srcElement.__data__.pos
+          )}">` +
+          pos(d.srcElement.__data__.pos).toUpperCase() +
+          "</span> <br/><br/>" +
           d.srcElement.__data__.samples.join("</p> <br /> <p>");
 
-        // const regstr = "/" + d.srcElement.__data__.text + "/gi";
         const re = new RegExp(d.srcElement.__data__.text, "gi");
 
         tooltipContent = tooltipContent.replace(
           re,
-          `<mark>$&</mark>`
-          //   `<span style="background: ${textColor(
-          //     d.srcElement.__data__.pos
-          //   )}; color: white">$&</span>`
+          `<mark style="background: ${textColor(
+            d.srcElement.__data__.pos
+          )}; color: white">$&</mark>`
         );
 
         tooltip.html("<p>" + tooltipContent + "</p>").style("opacity", 1);
-
-        // tooltip
-        //   .html("<h5>" + d.srcElement.__data__.text + "</h5>")
-        //   .style("opacity", 1);
       }
 
       function handleMouseMove(d, i) {
