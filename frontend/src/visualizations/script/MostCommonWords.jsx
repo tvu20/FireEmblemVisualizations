@@ -16,6 +16,7 @@ function MostCommonWords(props) {
     if (!data) return;
 
     d3.selectAll("g > *").remove();
+    d3.selectAll(".tooltip").remove();
 
     const s = d3
       .scaleSqrt()
