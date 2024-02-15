@@ -51,6 +51,18 @@ def get_gender_transitions():
     response = json.load(f)
     return response
 
+@app.route('/api/gender/transition')
+def get_gender_transitions_game():
+    game = request.args.get("game")
+    # print(game)
+    f = open(os.path.join(app.root_path, "gender", "transitions.json"), "r")
+    response = json.load(f)
+
+    if game not in response:
+        return "Game not found", 422
+
+    return response[game]
+
 @app.route('/api/gender/char-counts')
 def get_gender_char_counts():
     f = open(os.path.join(app.root_path, "gender", "char_counts.json"), "r")

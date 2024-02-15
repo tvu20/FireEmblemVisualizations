@@ -34,6 +34,11 @@ const visualizations = [
     url: "/viz/word-counts",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Transitions In Each Game",
+    url: "/viz/gender-transitions-game",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

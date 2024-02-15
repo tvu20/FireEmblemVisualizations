@@ -3,7 +3,8 @@
 } */
 
 .genderlinecounts,
-.gendercharcounts {
+.gendercharcounts,
+.gendertransitions {
   background-image: var(--gender-gradient);
   background-repeat: no-repeat;
   min-height: 100%;
@@ -19,7 +20,8 @@
 }
 
 .genderlinecounts h1,
-.gendercharcounts h1 {
+.gendercharcounts h1,
+.gendertransitions h1 {
   color: #3b2708;
   margin-bottom: 5px;
 }

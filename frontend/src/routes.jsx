@@ -8,6 +8,7 @@ import VizPage from "./pages/viz/VizPage";
 
 import GenderLineCountsPage from "./pages/viz/gender/GenderLineCountsPage";
 import GenderCharCountsPage from "./pages/viz/gender/GenderCharCountsPage";
+import TransitionsGamePage from "./pages/viz/gender/TransitionsGamePage";
 import SupportNetworksPage from "./pages/viz/relationships/SupportNetworksPage";
 import PairingsNetworksPage from "./pages/viz/relationships/PairingsNetworksPage";
 import SentimentGamePage from "./pages/viz/sentiment/SentimentGamePage";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/gender-char-counts",
         element: <GenderCharCountsPage />,
+      },
+      {
+        path: "/viz/gender-transitions-game",
+        element: <TransitionsGamePage />,
       },
       {
         path: "/viz/support-networks",
