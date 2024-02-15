@@ -34,9 +34,20 @@ function TransitionsGame(props) {
     const outerRadius = innerRadius + 6;
 
     // Compute a dense matrix from the weighted links in data.
-    const names = Array.from(
-      d3.union(data.flatMap((d) => [d.source, d.target]))
-    );
+    const names = [
+      "male",
+      "female",
+      Array.from(d3.union(data.flatMap((d) => [d.source, d.target]))).includes(
+        "avatar"
+      )
+        ? "avatar"
+        : "",
+      "neutral",
+      "none",
+    ];
+    // const names = Array.from(
+    //   d3.union(data.flatMap((d) => [d.source, d.target]))
+    // );
     const index = new Map(names.map((name, i) => [name, i]));
     const matrix = Array.from(index, () => new Array(names.length).fill(0));
     for (const { source, target, value } of data)
