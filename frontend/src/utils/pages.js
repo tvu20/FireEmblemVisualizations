@@ -24,6 +24,11 @@ const visualizations = [
     url: "/viz/sentiment-game",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Most Common Words",
+    url: "/viz/most-common-words",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

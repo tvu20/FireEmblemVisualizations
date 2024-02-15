@@ -23,4 +23,5 @@ code {
   --gender-gradient: url("./assets/backgrounds/gender.jpeg");
   --relationships-gradient: url("./assets/backgrounds/relationships.jpeg");
   --sentiment-gradient: url("./assets/backgrounds/sentiment.jpeg");
+  --script-gradient: url("./assets/backgrounds/script.png");
 }

@@ -1,0 +1,109 @@
+{
+  "name": "games",
+  "children:": [
+    {
+      "name": "NES",
+      "children": [
+        {
+          "name": "FE1",
+          "value": 203000
+        },
+        {
+          "name": "FE2",
+          "value": 244000
+        }
+      ]
+    },
+    {
+      "name": "SNES",
+      "children": [
+        {
+          "name": "FE3",
+          "value": 1670000
+        },
+        {
+          "name": "FE4",
+          "value": 2750000
+        },
+        {
+          "name": "FE5",
+          "value": 2530000
+        }
+      ]
+    },
+    {
+      "name": "GBA",
+      "children": [
+        {
+          "name": "FE6",
+          "value": 5330000
+        },
+        {
+          "name": "FE7",
+          "value": 10580000
+        },
+        {
+          "name": "FE8",
+          "value": 9200000
+        }
+      ]
+    },
+    {
+      "name": "GameCube",
+      "children": [
+        {
+          "name": "FE9",
+          "value": 867000000
+        }
+      ]
+    },
+    {
+      "name": "Wii",
+      "children": [
+        {
+          "name": "FE10",
+          "value": 2900000000
+        }
+      ]
+    },
+    {
+      "name": "DS",
+      "children": [
+        {
+          "name": "FE11",
+          "value": 45380000
+        },
+        {
+          "name": "FE12",
+          "value": 61310000
+        }
+      ]
+    },
+    {
+      "name": "3DS",
+      "children": [
+        {
+          "name": "FE13",
+          "value": 1000000000
+        },
+        {
+          "name": "FE14",
+          "value": 3200000000
+        },
+        {
+          "name": "FE15",
+          "value": 1600000000
+        }
+      ]
+    },
+    {
+      "name": "Switch",
+      "children": [
+        {
+          "name": "FE16",
+          "value": 11600000000
+        }
+      ]
+    }
+  ]
+}
