@@ -117,7 +117,7 @@ def get_pairing_games():
 
 @app.route('/api/scripts/word-counts')
 def get_word_counts():
-    f = open(os.path.join(app.root_path, "script", "word_counts.json"), "r")
+    f = open(os.path.join(app.root_path, "script", "nested_word_counts.json"), "r")
     response = json.load(f)
 
     return response
@@ -172,6 +172,13 @@ def get_similarity():
 def get_sentiments():
     game = request.args.get("game")
     f = open(os.path.join(app.root_path, "sentiment", "sentiments", game + ".json"), "r")
+    response = json.load(f)
+
+    return response
+
+@app.route('/api/sentiment/sentiment-curves')
+def get_sentiment_curves():
+    f = open(os.path.join(app.root_path, "sentiment", "sentiment_curves.json"), "r")
     response = json.load(f)
 
     return response
