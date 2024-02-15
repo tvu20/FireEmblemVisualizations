@@ -29,6 +29,11 @@ const visualizations = [
     url: "/viz/most-common-words",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Word Counts",
+    url: "/viz/word-counts",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

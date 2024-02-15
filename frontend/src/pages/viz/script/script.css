@@ -2,7 +2,8 @@
     background: 
 } */
 
-.mostcommonwords {
+.mostcommonwords,
+.wordcounts {
   background-image: var(--script-gradient);
   background-repeat: no-repeat;
   min-height: 100%;
@@ -17,7 +18,8 @@
   align-items: center;
 }
 
-.mostcommonwords h1 {
+.mostcommonwords h1,
+.wordcounts h1 {
   color: #3b2708;
   margin-bottom: 5px;
 }
