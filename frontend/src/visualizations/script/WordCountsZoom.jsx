@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+// import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { getGameTitleFromCode } from "../../utils/games";
 import { getGameColor } from "../../utils/colors";
 

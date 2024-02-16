@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+// import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { getGameColor } from "../../utils/colors";
 // import { getGameTitles } from "../../utils/games";
 
@@ -24,7 +24,7 @@ function WordCounts(props) {
     // Specify the chart’s dimensions.
     // const width = 928;
     // const height = 1060;
-    const color = d3.scaleSequential([8, 0], d3.interpolateMagma);
+    // const color = d3.scaleSequential([8, 0], d3.interpolateMagma);
 
     function tile(node, x0, y0, x1, y1) {
       d3.treemapBinary(node, 0, 0, width, height);
