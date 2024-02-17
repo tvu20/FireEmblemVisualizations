@@ -13,7 +13,7 @@ function PairingsNetworksPage() {
   const [sortGender, setSortGender] = useState(true);
   return (
     <VizWrapper color={getColor("relationships")} navColor={"white"}>
-      <div className="support-networks">
+      <div className="relationship-page support-networks">
         <h1>Pairing Networks</h1>
         <p>Some description here.</p>
         <p>Link Constraints</p>

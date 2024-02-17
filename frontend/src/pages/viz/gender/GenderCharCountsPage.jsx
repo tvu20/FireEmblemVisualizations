@@ -10,7 +10,7 @@ import "./gender.css";
 function GenderCharCountsPage() {
   return (
     <VizWrapper color={getColor("gender")} navColor={"#3b2708"}>
-      <div className="gendercharcounts">
+      <div className="gender-page gendercharcounts">
         <h1>Character Counts and Gender</h1>
         <p>Some description here.</p>
         <GenderCharCounts />

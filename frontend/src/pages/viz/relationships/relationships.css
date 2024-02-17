@@ -2,7 +2,7 @@
     background: 
 } */
 
-.support-networks {
+.relationship-page {
   background-image: var(--relationships-gradient);
   background-repeat: no-repeat;
   min-height: 100%;
@@ -17,11 +17,11 @@
   align-items: center;
 }
 
-.support-networks h1 {
+.relationship-page h1 {
   color: white;
   margin-bottom: 5px;
 }
 
-.support-networks p {
+.relationship-page p {
   color: white;
 }

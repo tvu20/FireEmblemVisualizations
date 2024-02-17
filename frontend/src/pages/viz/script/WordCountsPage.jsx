@@ -11,12 +11,12 @@ import "./script.css";
 function WordCountsPage() {
   const [interactive, setInteractive] = useState(true);
 
-  const width = 1000;
-  const height = 950;
+  const width = 200;
+  const height = 1000;
   const fade = 750;
   return (
     <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
-      <div className="wordcounts">
+      <div className="script-page wordcounts">
         <h1>Word Counts</h1>
         <p>Some description here.</p>
         Interactive{" "}

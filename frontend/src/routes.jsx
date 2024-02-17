@@ -12,6 +12,7 @@ import TransitionsGamePage from "./pages/viz/gender/TransitionsGamePage";
 import SupportNetworksPage from "./pages/viz/relationships/SupportNetworksPage";
 import PairingsNetworksPage from "./pages/viz/relationships/PairingsNetworksPage";
 import SentimentGamePage from "./pages/viz/sentiment/SentimentGamePage";
+import SentimentAcrossGamesPage from "./pages/viz/sentiment/SentimentAcrossGamesPage";
 import MostCommonWordsPage from "./pages/viz/script/MostCommonWordsPage";
 import WordCountsPage from "./pages/viz/script/WordCountsPage";
 
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/sentiment-game",
         element: <SentimentGamePage />,
+      },
+      {
+        path: "/viz/sentiment-across-games",
+        element: <SentimentAcrossGamesPage />,
       },
       {
         path: "/viz/most-common-words",

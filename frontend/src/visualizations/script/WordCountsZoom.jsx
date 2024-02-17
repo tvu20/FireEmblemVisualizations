@@ -32,25 +32,28 @@ function WordCountsZoom(props) {
     // const width = 928;
     // const height = 924;
 
-    // This custom tiling function adapts the built-in binary tiling function
-    // for the appropriate aspect ratio when the treemap is zoomed-in.
-    function tile(node, x0, y0, x1, y1) {
-      d3.treemapBinary(node, 0, 0, width, height);
-      for (const child of node.children) {
-        child.x0 = x0 + (child.x0 / width) * (x1 - x0);
-        child.x1 = x0 + (child.x1 / width) * (x1 - x0);
-        child.y0 = y0 + (child.y0 / height) * (y1 - y0);
-        child.y1 = y0 + (child.y1 / height) * (y1 - y0);
-      }
-    }
+    // // This custom tiling function adapts the built-in binary tiling function
+    // // for the appropriate aspect ratio when the treemap is zoomed-in.
+    // function tile(node, x0, y0, x1, y1) {
+    //   d3.treemapBinary(node, 0, 0, width, height);
+    //   for (const child of node.children) {
+    //     child.x0 = x0 + (child.x0 / width) * (x1 - x0);
+    //     child.x1 = x0 + (child.x1 / width) * (x1 - x0);
+    //     child.y0 = y0 + (child.y0 / height) * (y1 - y0);
+    //     child.y1 = y0 + (child.y1 / height) * (y1 - y0);
+    //   }
+    // }
 
     // Compute the layout.
     const hierarchy = d3
       .hierarchy(data)
       .sum((d) => d.value)
-      .sort((a, b) => b.value - a.value);
+      // .sort((a, b) => b.value - a.value);
     console.log(hierarchy);
-    const root = d3.treemap().tile(tile)(hierarchy);
+    const root = d3.treemap().tile(d3.treemapSlice)(
+      // .tile(tile)
+      hierarchy
+    );
 
     // const root = d3.treemap().tile(tile)(hierarchy);
 

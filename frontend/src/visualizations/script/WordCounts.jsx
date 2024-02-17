@@ -26,32 +26,50 @@ function WordCounts(props) {
     // const height = 1060;
     // const color = d3.scaleSequential([8, 0], d3.interpolateMagma);
 
-    function tile(node, x0, y0, x1, y1) {
-      d3.treemapBinary(node, 0, 0, width, height);
-      for (const child of node.children) {
-        child.x0 = x0 + (child.x0 / width) * (x1 - x0);
-        child.x1 = x0 + (child.x1 / width) * (x1 - x0);
-        child.y0 = y0 + (child.y0 / height) * (y1 - y0);
-        child.y1 = y0 + (child.y1 / height) * (y1 - y0);
-      }
-    }
+    // function tile(node, x0, y0, x1, y1) {
+    //   d3.treemapBinary(node, 0, 0, width, height);
+    //   for (const child of node.children) {
+    //     child.x0 = x0 + (child.x0 / width) * (x1 - x0);
+    //     child.x1 = x0 + (child.x1 / width) * (x1 - x0);
+    //     child.y0 = y0 + (child.y0 / height) * (y1 - y0);
+    //     child.y1 = y0 + (child.y1 / height) * (y1 - y0);
+    //   }
+    // }
+
+    // function tile(parent, x0, y0, x1, y1) {
+    //   var nodes = parent.children,
+    //     node,
+    //     i = -1,
+    //     n = nodes.length,
+    //     k = parent.value && (y1 - y0) / parent.value;
+
+    //   while (++i < n) {
+    //     node = nodes[i];
+    //     node.x0 = x0;
+    //     node.x1 = x1;
+    //     node.y0 = y0;
+    //     // node.y1 = y0 += node.value * k + 20;
+    //     // node.y1 = y0 += Math.max(node.value * k, 20);
+    //   }
+    // }
 
     // Create the treemap layout.
     const treemap = (data) =>
       d3
         .treemap()
-        .tile(tile)
+        .tile(d3.treemapSlice)
+        // .tile(tile)
         .size([width, height])
         .paddingOuter(3)
         .paddingTop(20)
         .paddingInner(3)
         .round(true)(
-        d3
-          .hierarchy(data)
-          .sum((d) => d.value)
-          .sort((a, b) => b.value - a.value)
+        d3.hierarchy(data).sum((d) => d.value)
+        // .sort((a, b) => b.value - a.value)
       );
     const root = treemap(data);
+
+    console.log("root", root);
 
     // Compute the layout.
     // const hierarchy = d3

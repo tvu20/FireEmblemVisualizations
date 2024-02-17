@@ -25,6 +25,11 @@ const visualizations = [
     thumbnail: require("../assets/github.png"),
   },
   {
+    name: "Sentiment Across Games",
+    url: "/viz/sentiment-across-games",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
     name: "Most Common Words",
     url: "/viz/most-common-words",
     thumbnail: require("../assets/github.png"),

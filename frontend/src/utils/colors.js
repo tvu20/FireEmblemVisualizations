@@ -47,13 +47,22 @@ export const getGameColor = (game) => {
   // };
 
   const gameColors = {
-    Switch: "#ffa4a2",
+    // Switch: "#ffa4a2",
+    // SNES: "#f4bfbe",
+    // "3DS": "#ffbcb1",
+    // GBA: "#ffaa9b",
+    // Wii: "#dc817f",
+    // GameCube: "#e89a97",
+    // DS: "#f4c0b2",
+    // NES: "#f5c9c6",
+
+    Switch: "#dc817f",
+    "3DS": "#e89a97",
+    DS: "#ffaa9b",
+    Wii: "#ffaa9b",
+    GameCube: "#ffbcb1",
+    GBA: "#f4c0b2",
     SNES: "#f4bfbe",
-    "3DS": "#ffbcb1",
-    GBA: "#ffaa9b",
-    Wii: "#dc817f",
-    GameCube: "#e89a97",
-    DS: "#f4c0b2",
     NES: "#f5c9c6",
   };
   return gameColors[game];

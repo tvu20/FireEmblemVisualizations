@@ -25,7 +25,7 @@ function TransitionsGamePage() {
   };
   return (
     <VizWrapper color={getColor("gender")} navColor={"#123622"}>
-      <div className="gendertransitions">
+      <div className="gender-page gendertransitions">
         <h1>Transitions in a Game</h1>
         <p>Some description here.</p>
         <select

@@ -21,7 +21,7 @@ function SentimentGamePage() {
   };
   return (
     <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
-      <div className="sentiment-game">
+      <div className="sentiment-page sentiment-game">
         <h1>Sentiment in a Game</h1>
         <p>Some description here.</p>
         <select

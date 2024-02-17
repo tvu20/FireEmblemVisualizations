@@ -66,3 +66,30 @@ export const getGameTitleFromCode = (tag) => {
 
   return tag;
 };
+
+export const getGameShortenedTitleFromCode = (tag) => {
+  const arr = {
+    FE1: "Blade of Light",
+    FE2: "Gaiden",
+    FE3: "Mystery of the Emblem",
+    FE4: "Genealogy",
+    FE5: "Thracia 776",
+    FE6: "Binding Blade",
+    FE7: "Blazing Blade",
+    FE8: "Sacred Stones",
+    FE9: "Path of Radiance",
+    FE10: "Radiant Dawn",
+    FE11: "Shadow Dragon",
+    FE12: "New Mystery",
+    FE13: "Awakening",
+    FE14: "Fates",
+    FE15: "Echoes",
+    FE16: "Three Houses",
+  };
+
+  if (tag in arr) {
+    return arr[tag];
+  }
+
+  return tag;
+};

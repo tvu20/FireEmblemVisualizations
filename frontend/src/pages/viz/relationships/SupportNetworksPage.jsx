@@ -12,7 +12,7 @@ function SupportNetworksPage() {
   const [linkConstrain, setLinkConstrain] = useState(false);
   return (
     <VizWrapper color={getColor("relationships")} navColor={"white"}>
-      <div className="support-networks">
+      <div className="relationship-page support-networks">
         <h1>Support Networks</h1>
         <p>Some description here.</p>
         <input
