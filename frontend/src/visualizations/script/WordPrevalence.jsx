@@ -4,6 +4,8 @@ import * as d3 from "d3";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 // import { getGameTitles } from "../../utils/games";
 
+import "./script.css";
+
 function WordPrevalence(props) {
   const { game } = props;
   const [data, setData] = useState();
@@ -13,7 +15,8 @@ function WordPrevalence(props) {
   useEffect(() => {
     if (!data) return;
 
-    d3.selectAll("g > *").remove();
+    d3.selectAll(".main-svg").remove();
+    d3.selectAll(".examples").remove();
 
     // set the dimensions and margins of the graph
     var margin = { top: 25, right: 60, bottom: 35, left: 60 };
@@ -24,6 +27,8 @@ function WordPrevalence(props) {
 
     const svg = d3
       .select(ref.current)
+      .append("svg")
+      .attr("class", "main-svg")
       .attr("width", width)
       .attr("height", height)
       .attr("viewbox", [0, 0, width, height]);
@@ -35,8 +40,21 @@ function WordPrevalence(props) {
     // ----------------
     // Create a tooltip
     // ----------------
+    // ----------------
+    // Create a tooltip
+    // ----------------
+    // var tooltip = d3
+    //   .select("body")
+    //   .append("div")
+    //   .style("opacity", 0)
+    //   .attr("class", "tooltip genderlinecounts-tooltip")
+    //   .style("position", "absolute")
+    //   .style("top", 0)
+    //   .style("background-color", "white")
+    //   .style("border-radius", "5px")
+    //   .style("padding", "10px");
     const examples = d3
-      .select("body")
+      .select(ref.current)
       .append("div")
       .attr("class", "examples")
       .style("display", "none");
@@ -47,11 +65,14 @@ function WordPrevalence(props) {
     const thresholds = 60;
     const yScaleFn = "Log";
 
-    const bins = d3
+    let bins = d3
       .bin()
       .thresholds(thresholds)
       .domain([0, domainMax])
       .value((d) => d.occurrence)(data);
+
+    bins = bins.filter((b) => b.length !== 0);
+    console.log(bins);
 
     const fmtWord = (d) => `<span class="word ${d.set}">${d.word}</span>`;
 
@@ -159,6 +180,7 @@ function WordPrevalence(props) {
     }
 
     g.append("rect")
+      .data(bins)
       .call(drawBars("transparent"))
       .on("mouseenter", (event) => {
         clearTimeout(enterTimeout);
@@ -182,10 +204,17 @@ function WordPrevalence(props) {
             .html(tooltipTemplate(bin, exampleWords));
 
           const bbox = examples.node().getBoundingClientRect();
+          console.log("bbox", bbox);
           const x_mu = (xScale(bin.x0) + xScale(bin.x1)) / 2;
+          console.log("mu", x_mu);
           const leftExtent = x_mu - bbox.width / 2 - margin.left;
           console.log("leftExtend", leftExtent);
-          const point = (leftExtent > 0 ? 0.5 : x_mu / bbox.width) * 100;
+          const point = (leftExtent > 0 ? 0.5 : x_mu / bbox.width) * 100 + 8;
+
+          console.log("bin", bin);
+          console.log("x0", xScale(bin.x0));
+
+          console.log("x1", xScale(bin.x1));
           examples
             .transition(750)
             .style(
@@ -193,19 +222,29 @@ function WordPrevalence(props) {
               `polygon(0% 0%, 100% 0%, 100% 90%, ${
                 point - 5
               }% 90%, ${point}% 100%, ${point + 5}% 90%, 0% 90%)`
-            );
-          console.log("xscale", xScale(bin.x0));
-          // .style("left", )
-          // .style(
-          //   "left",
-          //   `${
-          //     leftExtent > 0
-          //       ? xScale(bin.x0) -
-          //         bbox.width / 2 +
-          //         (xScale(bin.x1) - xScale(bin.x0)) / 2
-          //       : 0
-          //   }px`
-          // )
+            )
+
+            // .style("left", )
+            .style(
+              "left",
+              `${
+                leftExtent > 0
+                  ? xScale(bin.x0) -
+                    bbox.width / 2 +
+                    (xScale(bin.x1) - xScale(bin.x0)) / 2
+                  : 0
+                //   ? (xScale(bin.x1) + xScale(bin.x0)) / 2 -
+                //     bbox.width / 2 +
+                //     xScale(bin.x1) -
+                //     xScale(bin.x0)
+                // (xScale(bin.x1) - xScale(bin.x0))
+                //   ? xScale(bin.x0) -
+                //     bbox.width / 2 +
+                //     (xScale(bin.x1) - xScale(bin.x0)) / 2
+                // 0
+              }px`
+            )
+            .style("top", yScale(bin.length) + 100 + "px");
           // .style("top", `${yScale(bin.length) - bbox.height - 5}px`);
         }, 250);
       })
@@ -231,7 +270,7 @@ function WordPrevalence(props) {
       });
   }, [game]);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return <div ref={ref} style={{ border: "1px solid red" }} />;
 }
 
 export default WordPrevalence;
