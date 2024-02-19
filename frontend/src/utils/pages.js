@@ -44,6 +44,11 @@ const visualizations = [
     url: "/viz/gender-transitions-game",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Word Prevalence",
+    url: "/viz/word-prevalence",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

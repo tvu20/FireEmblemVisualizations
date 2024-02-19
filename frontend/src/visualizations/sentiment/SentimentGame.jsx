@@ -165,7 +165,7 @@ function SentimentGame(props) {
         return height / 2 - y1(d.positive);
       })
       .delay(function (d, i) {
-        console.log(i);
+        // console.log(i);
         return i * 100;
       });
 
@@ -209,7 +209,7 @@ function SentimentGame(props) {
         return height / 2 - y1(d.negative);
       })
       .delay(function (d, i) {
-        console.log(i);
+        // console.log(i);
         return i * 100;
       });
 

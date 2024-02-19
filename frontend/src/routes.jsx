@@ -15,6 +15,7 @@ import SentimentGamePage from "./pages/viz/sentiment/SentimentGamePage";
 import SentimentAcrossGamesPage from "./pages/viz/sentiment/SentimentAcrossGamesPage";
 import MostCommonWordsPage from "./pages/viz/script/MostCommonWordsPage";
 import WordCountsPage from "./pages/viz/script/WordCountsPage";
+import WordPrevalencePage from "./pages/viz/script/WordPrevalencePage";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/word-counts",
         element: <WordCountsPage />,
+      },
+      {
+        path: "/viz/word-prevalence",
+        element: <WordPrevalencePage />,
       },
     ],
   },
