@@ -1,5 +1,5 @@
 {
-  "AM": [
+  "Main-AzureMoon": [
     {
       "chapter": "00-AnInevitableEncounter",
       "emotions": {
@@ -254,7 +254,7 @@
       }
     }
   ],
-  "CF": [
+  "Main-CrimsonFlower": [
     {
       "chapter": "00-AnInevitableEncounter",
       "emotions": {
@@ -476,7 +476,7 @@
       }
     }
   ],
-  "VW": [
+  "Main-VerdantWind": [
     {
       "chapter": "00-AnInevitableEncounter",
       "emotions": {
