@@ -1,0 +1,34 @@
+/* FLEX ITEMS */
+
+.flex-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.flex-legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 15px 5px;
+  color: black;
+  font-weight: 500;
+}
+
+.flex-legend-item-square {
+  width: 10px;
+  height: 10px;
+  color: inherit;
+  background-color: currentColor;
+  margin-right: 5px;
+}
+
+/* .emotion-label-text {
+  stroke: white;
+  stroke-width: 0.5em;
+  fill: black;
+  paint-order: stroke;
+  stroke-linejoin: round;
+  z-index: 10;
+} */

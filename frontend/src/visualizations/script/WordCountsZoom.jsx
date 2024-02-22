@@ -45,10 +45,8 @@ function WordCountsZoom(props) {
     // }
 
     // Compute the layout.
-    const hierarchy = d3
-      .hierarchy(data)
-      .sum((d) => d.value)
-      // .sort((a, b) => b.value - a.value);
+    const hierarchy = d3.hierarchy(data).sum((d) => d.value);
+    // .sort((a, b) => b.value - a.value);
     console.log(hierarchy);
     const root = d3.treemap().tile(d3.treemapSlice)(
       // .tile(tile)
@@ -121,15 +119,10 @@ function WordCountsZoom(props) {
         .attr("clip-path", (d) => d.clipUid)
         .attr("font-weight", (d) => (d === root ? "bold" : null))
         .selectAll("tspan")
-        .data(
-          (d) => [
-            d === root ? name(d) : getGameTitleFromCode(d.data.name),
-            format(d.value) + " words",
-          ]
-          // (d === root ? name(d) : d.data.name)
-          //   .split(/(?=[A-Z][^A-Z])/g)
-          //   .concat(format(d.value))
-        )
+        .data((d) => [
+          d === root ? name(d) : getGameTitleFromCode(d.data.name),
+          format(d.value) + " words",
+        ])
         .join("tspan")
         .attr("x", 3)
         .attr(

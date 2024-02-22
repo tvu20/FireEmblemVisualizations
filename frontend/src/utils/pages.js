@@ -49,6 +49,11 @@ const visualizations = [
     url: "/viz/word-prevalence",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Emotion In a Game",
+    url: "/viz/emotion-game",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

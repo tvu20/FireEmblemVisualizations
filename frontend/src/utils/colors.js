@@ -67,3 +67,16 @@ export const getGameColor = (game) => {
   };
   return gameColors[game];
 };
+
+export const emotionColor = {
+  // joy: "#e8c33f",
+  joy: "#d19b1d",
+  sadness: "#286ab5",
+  anger: "#c92a3d",
+  fear: "#992ec7",
+  // neutral: "#4bad4e",
+  // fear: "#4bad4e",
+  // surprise: "#e38640",
+  surprise: "#419678",
+  neutral: "#adadad",
+};
