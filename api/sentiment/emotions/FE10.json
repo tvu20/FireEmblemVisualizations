@@ -198,61 +198,7 @@
         "fear": 10
       }
     },
-    {
-      "chapter": "3:10-TheHeartOfCrimea",
-      "emotions": {
-        "joy": 17,
-        "sadness": 10,
-        "anger": 43,
-        "neutral": 62,
-        "surprise": 12,
-        "fear": 6
-      }
-    },
-    {
-      "chapter": "3:11-JustCause",
-      "emotions": {
-        "joy": 15,
-        "sadness": 7,
-        "anger": 22,
-        "neutral": 79,
-        "surprise": 16,
-        "fear": 6
-      }
-    },
-    {
-      "chapter": "3:12-ThePrice",
-      "emotions": {
-        "joy": 10,
-        "sadness": 27,
-        "anger": 59,
-        "neutral": 129,
-        "surprise": 42,
-        "fear": 22
-      }
-    },
-    {
-      "chapter": "3:13-BloodContract",
-      "emotions": {
-        "joy": 21,
-        "sadness": 29,
-        "anger": 54,
-        "neutral": 117,
-        "surprise": 35,
-        "fear": 14
-      }
-    },
-    {
-      "chapter": "3:14-FromPain,Awakening",
-      "emotions": {
-        "joy": 31,
-        "sadness": 78,
-        "anger": 75,
-        "neutral": 220,
-        "surprise": 65,
-        "fear": 34
-      }
-    },
+
     {
       "chapter": "3:2-Stormclouds",
       "emotions": {
@@ -342,6 +288,61 @@
       }
     },
     {
+      "chapter": "3:10-TheHeartOfCrimea",
+      "emotions": {
+        "joy": 17,
+        "sadness": 10,
+        "anger": 43,
+        "neutral": 62,
+        "surprise": 12,
+        "fear": 6
+      }
+    },
+    {
+      "chapter": "3:11-JustCause",
+      "emotions": {
+        "joy": 15,
+        "sadness": 7,
+        "anger": 22,
+        "neutral": 79,
+        "surprise": 16,
+        "fear": 6
+      }
+    },
+    {
+      "chapter": "3:12-ThePrice",
+      "emotions": {
+        "joy": 10,
+        "sadness": 27,
+        "anger": 59,
+        "neutral": 129,
+        "surprise": 42,
+        "fear": 22
+      }
+    },
+    {
+      "chapter": "3:13-BloodContract",
+      "emotions": {
+        "joy": 21,
+        "sadness": 29,
+        "anger": 54,
+        "neutral": 117,
+        "surprise": 35,
+        "fear": 14
+      }
+    },
+    {
+      "chapter": "3:14-FromPain,Awakening",
+      "emotions": {
+        "joy": 31,
+        "sadness": 78,
+        "anger": 75,
+        "neutral": 220,
+        "surprise": 65,
+        "fear": 34
+      }
+    },
+    {
       "chapter": "4:0-ChaosNamed",
       "emotions": {
         "joy": 18,
@@ -361,6 +362,62 @@
         "neutral": 50,
         "surprise": 17,
         "fear": 5
+      }
+    },
+
+    {
+      "chapter": "4:2-SilentWorld",
+      "emotions": {
+        "joy": 16,
+        "sadness": 18,
+        "anger": 20,
+        "neutral": 67,
+        "surprise": 16,
+        "fear": 9
+      }
+    },
+    {
+      "chapter": "4:3-Distortions",
+      "emotions": {
+        "joy": 15,
+        "sadness": 21,
+        "anger": 36,
+        "neutral": 90,
+        "surprise": 34,
+        "fear": 11
+      }
+    },
+    {
+      "chapter": "4:4-Revelations",
+      "emotions": {
+        "joy": 13,
+        "sadness": 8,
+        "anger": 20,
+        "neutral": 68,
+        "surprise": 17,
+        "fear": 4
+      }
+    },
+    {
+      "chapter": "4:5-UnforgivableSin",
+      "emotions": {
+        "joy": 17,
+        "sadness": 16,
+        "anger": 56,
+        "neutral": 109,
+        "surprise": 40,
+        "fear": 11
+      }
+    },
+    {
+      "chapter": "XX-Epilogue",
+      "emotions": {
+        "joy": 13,
+        "sadness": 8,
+        "anger": 6,
+        "neutral": 51,
+        "surprise": 18,
+        "fear": 3
       }
     },
     {
@@ -416,61 +473,6 @@
         "neutral": 79,
         "surprise": 11,
         "fear": 9
-      }
-    },
-    {
-      "chapter": "4:2-SilentWorld",
-      "emotions": {
-        "joy": 16,
-        "sadness": 18,
-        "anger": 20,
-        "neutral": 67,
-        "surprise": 16,
-        "fear": 9
-      }
-    },
-    {
-      "chapter": "4:3-Distortions",
-      "emotions": {
-        "joy": 15,
-        "sadness": 21,
-        "anger": 36,
-        "neutral": 90,
-        "surprise": 34,
-        "fear": 11
-      }
-    },
-    {
-      "chapter": "4:4-Revelations",
-      "emotions": {
-        "joy": 13,
-        "sadness": 8,
-        "anger": 20,
-        "neutral": 68,
-        "surprise": 17,
-        "fear": 4
-      }
-    },
-    {
-      "chapter": "4:5-UnforgivableSin",
-      "emotions": {
-        "joy": 17,
-        "sadness": 16,
-        "anger": 56,
-        "neutral": 109,
-        "surprise": 40,
-        "fear": 11
-      }
-    },
-    {
-      "chapter": "XX-Epilogue",
-      "emotions": {
-        "joy": 13,
-        "sadness": 8,
-        "anger": 6,
-        "neutral": 51,
-        "surprise": 18,
-        "fear": 3
       }
     }
   ]

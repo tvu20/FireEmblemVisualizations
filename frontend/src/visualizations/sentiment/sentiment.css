@@ -24,6 +24,10 @@
   margin-right: 5px;
 }
 
+.emotion-label-text {
+  cursor: pointer;
+}
+
 /* .emotion-label-text {
   stroke: white;
   stroke-width: 0.5em;
@@ -32,3 +36,13 @@
   stroke-linejoin: round;
   z-index: 10;
 } */
+
+.emotion-game__label {
+  text-align: left;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.emotion-game__label h2 {
+  font-size: 20px;
+}

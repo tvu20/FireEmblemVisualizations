@@ -1,5 +1,5 @@
 import os
-from flask import (request, json)
+from flask import (request, json, jsonify)
 from application import app
 
 # ---------------------------------------------
@@ -27,11 +27,18 @@ def get_emotion_game():
     f = open(os.path.join(app.root_path, "sentiment", "emotions", game + ".json"), "r")
     response = json.load(f)
 
+    f2 = open(os.path.join(app.root_path, "sentiment", "emotion_labels.json"), "r")
+    response2 = json.load(f2)
+
     if game == "FE16":
         route = request.args.get("route")
-        return response["Main-" + route]
+        data = response["Main-" + route]
+        labels = response2[game + route]
+    else:
+        data = response["Main"]
+        labels = response2[game]
 
-    return response["Main"]
+    return {"data": data, "labels": labels}
 
 @app.route('/api/sentiment/emotions-chapter')
 def get_emotion_chapter():
