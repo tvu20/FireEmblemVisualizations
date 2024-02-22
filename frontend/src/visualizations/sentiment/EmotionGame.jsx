@@ -50,9 +50,9 @@ function EmotionGame(props) {
     d3.selectAll(".emotion-label").remove();
 
     const margin = { top: 20, right: 30, bottom: 20, left: 30 };
-    const width = 900;
+    const width = 1000;
     const height = 600;
-    const graphMargin = 30;
+    const graphMargin = 50;
 
     const svg = d3
       .select(ref.current)
@@ -199,11 +199,20 @@ function EmotionGame(props) {
       },
     ];
 
+    console.log("stackeddata", stackedData);
+
     labels.forEach((label, i) => {
+      const lHeight =
+        stackedData[0][label.chapter][0] - (includeNeutral ? 30 : 15);
+
+      // console.log(lHeight);
+      // console.log(label.height);
       svg
         .append("line")
-        .attr("y1", y(-1 * label.height))
-        .attr("y2", y(label.height))
+        .attr("y1", y(-1 * lHeight))
+        // .attr("y1", y(-1 * label.height))
+        // .attr("y2", y(lHeight))
+        .attr("y2", y(lHeight))
         // .attr("y1", y(boundaries[0]) + graphMargin)
         // .attr("y2", y(boundaries[1]) - graphMargin)
         .attr("x1", x(label.chapter))
@@ -214,14 +223,16 @@ function EmotionGame(props) {
     });
 
     labels.forEach((label, i) => {
+      const lHeight =
+        stackedData[0][label.chapter][0] - (includeNeutral ? 30 : 15);
       svg
         .append("g")
         .attr(
           "transform",
           `translate(${x(label.chapter) + 7},${
             i % 2 === 0
-              ? y(-1 * label.height) - label.translate
-              : y(label.height) + label.translate
+              ? y(lHeight) - label.translate
+              : y(-1 * lHeight) + label.translate
           })`
         )
         // .attr(
