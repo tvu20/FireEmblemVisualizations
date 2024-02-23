@@ -8,7 +8,7 @@ from application import app
 
 @app.route('/api/scripts/word-counts')
 def get_word_counts():
-    f = open(os.path.join(app.root_path, "script", "nested_word_counts.json"), "r")
+    f = open(os.path.join(app.root_path, "script", "word_counts.json"), "r")
     response = json.load(f)
 
     return response
