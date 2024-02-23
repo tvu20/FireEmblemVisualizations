@@ -149,6 +149,21 @@ function EmotionGame(props) {
 
     areas.transition().duration(600).ease(d3.easeLinear).style("opacity", 1);
 
+    svg
+      .append("line")
+      .attr("y1", height / 2)
+      .attr("y2", height / 2)
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("stroke", "#323436")
+      .style("opacity", 0)
+      .attr("stroke-width", "2")
+      .style("stroke-dasharray", "8, 10")
+      .transition()
+      .duration(600)
+      .ease(d3.easeLinear)
+      .style("opacity", 1);
+
     // // Append the horizontal axis atop the area.
     // svg.append("g").call(d3.axisBottom(x).tickSizeOuter(0));
 
