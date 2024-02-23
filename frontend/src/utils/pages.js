@@ -54,6 +54,11 @@ const visualizations = [
     url: "/viz/emotion-game",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Emotion Intensity",
+    url: "/viz/emotion-intensity",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",

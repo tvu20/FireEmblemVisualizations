@@ -62,3 +62,10 @@ def get_emotion_chapter():
         return "Chapter not found", 422
 
     return data
+
+@app.route('/api/sentiment/emotion-curves')
+def get_emotion_curves():
+    f = open(os.path.join(app.root_path, "sentiment", "emotion_curves.json"), "r")
+    response = json.load(f)
+
+    return response
