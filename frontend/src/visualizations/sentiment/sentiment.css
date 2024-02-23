@@ -46,3 +46,19 @@
 .emotion-game__label h2 {
   font-size: 20px;
 }
+
+.emotion-game__top-shelf {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+}
+
+.emotion-game__bottom-shelf {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

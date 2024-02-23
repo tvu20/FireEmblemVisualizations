@@ -84,7 +84,8 @@ function EmotionGame(props) {
     // stack
     const stackedData = d3
       .stack()
-      .offset(d3.stackOffsetSilhouette)
+      .offset(d3.stackOffsetWiggle)
+      // .offset(d3.stackOffsetSilhouette)
       .keys(keys)
       .value((d, key) => d.emotions[key])(data);
     const boundaries = findBounds(stackedData);
@@ -94,6 +95,12 @@ function EmotionGame(props) {
       .scaleLinear()
       .domain(boundaries)
       .range([height - graphMargin, graphMargin]);
+    // .append("text")
+    // .attr("x", width)
+    // .attr("y", -10)
+    // .attr("fill", "currentColor")
+    // .attr("text-anchor", "end")
+    // .text("Story progression →");
 
     // Area generator
 
@@ -259,7 +266,14 @@ function EmotionGame(props) {
   return (
     <>
       <div className="flex-legend">{showLegend()}</div>
+      <div className="emotion-game__top-shelf">
+        <p>↑ Positive valence</p>
+      </div>
       <svg ref={ref} style={{ border: "1px solid red" }} />
+      <div className="emotion-game__bottom-shelf">
+        <p>↓ Negative valence</p>
+        <p>Story progression →</p>
+      </div>
       <div className="emotion-game__label">
         <h2>{chapTitle}</h2>
         <p>{chapDesc}</p>
