@@ -13,6 +13,13 @@ def get_word_counts():
 
     return response
 
+@app.route('/api/scripts/complexity')
+def get_complexity():
+    f = open(os.path.join(app.root_path, "script", "complexity.json"), "r")
+    response = json.load(f)
+
+    return response
+
 @app.route('/api/scripts/words-per-chapter')
 def get_words_per_chapter():
     f = open(os.path.join(app.root_path, "script", "words_per_chapter.json"), "r")

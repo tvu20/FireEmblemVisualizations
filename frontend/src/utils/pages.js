@@ -59,6 +59,11 @@ const visualizations = [
     url: "/viz/emotion-intensity",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Word Complexity",
+    url: "/viz/word-complexity",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
   //   name: "Gender and Line Counts",
   //   url: "/viz/gender-and-line-counts",
