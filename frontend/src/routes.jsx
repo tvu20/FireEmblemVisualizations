@@ -20,6 +20,7 @@ import EmotionGamePage from "./pages/viz/sentiment/EmotionGamePage";
 import EmotionIntensityPage from "./pages/viz/sentiment/EmotionIntensityPage";
 import ComplexityPage from "./pages/viz/script/ComplexityPage";
 import SimilarityPage from "./pages/viz/script/SimilarityPage";
+import EmotionChapterPage from "./pages/viz/sentiment/EmotionChapterPage";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/similarity-across-media",
         element: <SimilarityPage />,
+      },
+      {
+        path: "/viz/emotion-chapter",
+        element: <EmotionChapterPage />,
       },
     ],
   },

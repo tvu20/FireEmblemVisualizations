@@ -69,6 +69,11 @@ const visualizations = [
     url: "/viz/similarity-across-media",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Emotion In A Chapter",
+    url: "/viz/emotion-chapter",
+    thumbnail: require("../assets/github.png"),
+  },
 ];
 
 export const getArticles = () => {

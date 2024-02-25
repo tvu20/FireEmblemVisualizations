@@ -61,7 +61,14 @@ def get_emotion_chapter():
     else:
         return "Chapter not found", 422
 
-    return data
+    file_content = []
+    total = 0
+    for item in data['emotions']:
+        total += data['emotions'][item]
+    for item in data['emotions']:
+        file_content.append({"label": item, "value": data['emotions'][item] / total})
+
+    return file_content
 
 @app.route('/api/sentiment/emotion-curves')
 def get_emotion_curves():
