@@ -19,6 +19,7 @@ import WordPrevalencePage from "./pages/viz/script/WordPrevalencePage";
 import EmotionGamePage from "./pages/viz/sentiment/EmotionGamePage";
 import EmotionIntensityPage from "./pages/viz/sentiment/EmotionIntensityPage";
 import ComplexityPage from "./pages/viz/script/ComplexityPage";
+import SimilarityPage from "./pages/viz/script/SimilarityPage";
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/word-complexity",
         element: <ComplexityPage />,
+      },
+      {
+        path: "/viz/similarity-across-media",
+        element: <SimilarityPage />,
       },
     ],
   },

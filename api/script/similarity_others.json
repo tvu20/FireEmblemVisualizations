@@ -1,0 +1,402 @@
+{
+  "tdidf": [
+    {
+      "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
+      "x": 0.92923315,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Gaiden",
+      "x": 0.891800447,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Mystery of the Emblem",
+      "x": 0.952865305,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Genealogy of the Holy War",
+      "x": 0.944132423,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Thracia 776",
+      "x": 0.966678264,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Binding Blade",
+      "x": 0.95985532,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Blazing Blade",
+      "x": 0.936185507,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Sacred Stones",
+      "x": 0.945613575,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Path of Radiance",
+      "x": 0.95965313,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Radiant Dawn",
+      "x": 0.964748795,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Shadow Dragon",
+      "x": 0.94081318,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: New Mystery of the Emblem",
+      "x": 0.953065824,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Awakening",
+      "x": 0.941013341,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Fates",
+      "x": 0.917273421,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Echoes",
+      "x": 0.9454284,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Three Houses",
+      "x": 1,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "War and Peace",
+      "x": 0.83,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "Pride and Prejudice",
+      "x": 0.8338206114855496,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "Declaration of Independence",
+      "x": 0.6838679118193286,
+      "group": "Other",
+      "category": "Document"
+    },
+    {
+      "name": "Hamlet",
+      "x": 0.8501467954544503,
+      "group": "Other",
+      "category": "Play"
+    },
+    {
+      "name": "The Road Not Taken",
+      "x": 0.476840842824814,
+      "group": "Other",
+      "category": "Poem"
+    },
+    {
+      "name": "The Empire Strikes Back",
+      "x": 0.7630191884577319,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "Legend of Zelda: Ocarina of Time",
+      "x": 0.9264429738344339,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Legend of Zelda: A Link To The Past",
+      "x": 0.8901059255438444,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Super Mario Bros",
+      "x": 0.8621006312852928,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Final Fantasy VII",
+      "x": 0.8510774216556357,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "x": 0.689677246475894,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "x": 0.834373286448975,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Assassin's Creed",
+      "x": 0.8350002170182037,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Barbie (2023)",
+      "x": 0.7872860873429492,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "Oppenheimer",
+      "x": 0.768840395486103,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "The Hunger Games",
+      "x": 0.8908143211938684,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "The Great Gatsby",
+      "x": 0.8243683343731589,
+      "group": "Other",
+      "category": "Novel"
+    }
+  ],
+  "jaccard": [
+    {
+      "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
+      "x": 0.140276539,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Gaiden",
+      "x": 0.099153976,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Mystery of the Emblem",
+      "x": 0.271159543,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Genealogy of the Holy War",
+      "x": 0.340362595,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Thracia 776",
+      "x": 0.331193838,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Binding Blade",
+      "x": 0.294012605,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Blazing Blade",
+      "x": 0.364672642,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: The Sacred Stones",
+      "x": 0.336609586,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Path of Radiance",
+      "x": 0.380856699,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Radiant Dawn",
+      "x": 0.408165105,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Shadow Dragon",
+      "x": 0.234098292,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: New Mystery of the Emblem",
+      "x": 0.347529481,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Awakening",
+      "x": 0.337495161,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Fates",
+      "x": 0.39008681,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem Echoes",
+      "x": 0.319062283,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "Fire Emblem: Three Houses",
+      "x": 1,
+      "group": "FE",
+      "category": "Fire Emblem"
+    },
+    {
+      "name": "War and Peace",
+      "x": 0.25294689255988845,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "Pride and Prejudice",
+      "x": 0.2568289333129864,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "Declaration of Independence",
+      "x": 0.04303023440154003,
+      "group": "Other",
+      "category": "Document"
+    },
+    {
+      "name": "Hamlet",
+      "x": 0.2113953910361096,
+      "group": "Other",
+      "category": "Play"
+    },
+    {
+      "name": "The Road Not Taken",
+      "x": 0.010369858278603527,
+      "group": "Other",
+      "category": "Poem"
+    },
+    {
+      "name": "The Empire Strikes Back",
+      "x": 0.20877817319098457,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "Legend of Zelda: Ocarina of Time",
+      "x": 0.23811462893209814,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Legend of Zelda: A Link To The Past",
+      "x": 0.12268266085059978,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Super Mario Bros",
+      "x": 0.17889668167067937,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Final Fantasy VII",
+      "x": 0.30478546447155164,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "x": 0.30754098360655735,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "x": 0.256816544912028,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Assassin's Creed",
+      "x": 0.24217601344255407,
+      "group": "Game",
+      "category": "Other game"
+    },
+    {
+      "name": "Barbie (2023)",
+      "x": 0.14739610731194108,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "Oppenheimer",
+      "x": 0.23421225485596323,
+      "group": "Other",
+      "category": "Movie script"
+    },
+    {
+      "name": "The Hunger Games",
+      "x": 0.3026295789633683,
+      "group": "Other",
+      "category": "Novel"
+    },
+    {
+      "name": "The Great Gatsby",
+      "x": 0.2414814814814815,
+      "group": "Other",
+      "category": "Novel"
+    }
+  ]
+}

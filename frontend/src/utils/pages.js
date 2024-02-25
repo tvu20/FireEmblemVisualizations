@@ -64,51 +64,11 @@ const visualizations = [
     url: "/viz/word-complexity",
     thumbnail: require("../assets/github.png"),
   },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: require("../assets/github.png"),
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
+  {
+    name: "Similarity Across Media",
+    url: "/viz/similarity-across-media",
+    thumbnail: require("../assets/github.png"),
+  },
 ];
 
 export const getArticles = () => {

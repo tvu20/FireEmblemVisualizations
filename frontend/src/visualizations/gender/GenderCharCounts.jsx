@@ -208,7 +208,7 @@ function GenderLineCounts() {
     // d3.selectAll("g > *").remove();
 
     const width = 470;
-    const height = 500;
+    const height = 600;
 
     const colors = {
       m: d3.rgb(10, 195, 215),
@@ -238,20 +238,22 @@ function GenderLineCounts() {
         .append("g")
         .style("border", "1px solid red")
         .attr("transform", function () {
-          return "translate(" + 120 * col + "," + 128 * row + ")rotate(0)";
+          return "translate(" + 120 * col + "," + 150 * row + ")rotate(0)";
         });
 
       //--------------------------- Calculate the distribution of dots: number, rows, columns, etc...
       // only using pcs right now
+
+      // I REVERSED ALL THE F AND M SO FEMALE WOULD BE ON THE BOTTOM
       const balls = value.pcs;
       const balls_per_row = 10;
-      let balls_F = balls.F;
+      let balls_F = balls.M;
 
-      const full_rows = Math.ceil((balls.M + balls_F + 1) / balls_per_row) - 1;
+      const full_rows = Math.ceil((balls.F + balls_F + 1) / balls_per_row) - 1;
 
       // male rows
-      const male_rows = balls.M / balls_per_row;
-      const male_full_rows = Math.ceil((balls.M + 1) / balls_per_row) - 1;
+      const male_rows = balls.F / balls_per_row;
+      const male_full_rows = Math.ceil((balls.F + 1) / balls_per_row) - 1;
       //   console.log(male_full_rows);
       const male_rest = Math.round((male_rows - male_full_rows) * 10);
 
@@ -269,7 +271,7 @@ function GenderLineCounts() {
             .attr("cy", 300 - r * 10)
             .attr("r", 4)
             .attr("opacity", 1)
-            .attr("fill", colors.m);
+            .attr("fill", colors.f);
         }
       }
 
@@ -281,7 +283,7 @@ function GenderLineCounts() {
           .attr("cy", 300 - male_full_rows * 10)
           .attr("r", 4)
           .attr("opacity", 1)
-          .attr("fill", colors.m);
+          .attr("fill", colors.f);
       }
 
       // female first row
@@ -292,7 +294,7 @@ function GenderLineCounts() {
           .attr("cy", 300 - male_full_rows * 10)
           .attr("r", 4)
           .attr("opacity", 1)
-          .attr("fill", colors.f);
+          .attr("fill", colors.m);
       }
 
       // female full rows
@@ -307,19 +309,34 @@ function GenderLineCounts() {
             )
             .attr("r", 4)
             .attr("opacity", 1)
-            .attr("fill", colors.f);
+            .attr("fill", colors.m);
         }
       }
 
-      // female partial row
-      for (let r = 1; r <= female_rest; r++) {
-        dots
-          .append("circle")
-          .attr("cx", r * 10)
-          .attr("cy", 300 - full_rows * 10)
-          .attr("r", 4)
-          .attr("opacity", 1)
-          .attr("fill", colors.f);
+      console.log(female_rest);
+
+      // print the last full row
+      if (female_rest === 10) {
+        for (let k = 1; k <= balls_per_row; k++) {
+          dots
+            .append("circle")
+            .attr("cx", k * 10)
+            .attr("cy", 210)
+            .attr("r", 4)
+            .attr("opacity", 1)
+            .attr("fill", colors.m);
+        }
+      } else {
+        // female partial row
+        for (let r = 1; r <= female_rest; r++) {
+          dots
+            .append("circle")
+            .attr("cx", r * 10)
+            .attr("cy", 300 - full_rows * 10)
+            .attr("r", 4)
+            .attr("opacity", 1)
+            .attr("fill", colors.m);
+        }
       }
 
       // avatar row
@@ -393,7 +410,7 @@ function GenderLineCounts() {
         <option value="npc">Non-Playable Characters</option>
         <option value="combined">All Characters</option>
       </select>
-      <svg ref={ref} style={{ border: "1px solid red" }} />
+      {/* <svg ref={ref} style={{ border: "1px solid red" }} /> */}
       <svg ref={ref2} style={{ border: "1px solid red" }} />
     </>
   );

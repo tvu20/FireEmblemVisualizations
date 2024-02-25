@@ -62,6 +62,13 @@ def get_similarity():
 
     return response
 
+@app.route('/api/scripts/similarity-others')
+def get_similarity_others():
+    f = open(os.path.join(app.root_path, "script", "similarity_others.json"), "r")
+    response = json.load(f)
+
+    return response
+
 @app.route('/api/scripts/prevalence')
 def get_prevalence():
     game = request.args.get("game")
