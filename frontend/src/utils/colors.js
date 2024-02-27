@@ -26,6 +26,7 @@ const color = {
   relationships: { r: 4, g: 46, b: 68 },
   sentiment: { r: 83, g: 172, b: 153 },
   script: { r: 225, g: 232, b: 241 },
+  characters: { r: 254, g: 166, b: 179 },
 };
 
 const getColor = (page) => {

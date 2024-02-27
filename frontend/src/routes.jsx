@@ -21,6 +21,7 @@ import EmotionIntensityPage from "./pages/viz/sentiment/EmotionIntensityPage";
 import ComplexityPage from "./pages/viz/script/ComplexityPage";
 import SimilarityPage from "./pages/viz/script/SimilarityPage";
 import EmotionChapterPage from "./pages/viz/sentiment/EmotionChapterPage";
+import CharacterBarPage from "./pages/viz/characters/CharacterBarPage";
 
 const router = createBrowserRouter([
   {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/emotion-chapter",
         element: <EmotionChapterPage />,
+      },
+      {
+        path: "/viz/character-bar",
+        element: <CharacterBarPage />,
       },
     ],
   },

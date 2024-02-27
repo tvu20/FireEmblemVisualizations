@@ -1,0 +1,19 @@
+.character-page {
+  background-image: var(--character-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding: 80px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-page h1 {
+  color: #240607;
+  margin-bottom: 5px;
+}

@@ -10,6 +10,7 @@ from routes.gender import *
 from routes.supports import *
 from routes.sentiment import *
 from routes.scripts import *
+from routes.characters import *
 
 CORS(app)
 

@@ -74,6 +74,11 @@ const visualizations = [
     url: "/viz/emotion-chapter",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Character Bar Chart",
+    url: "/viz/character-bar",
+    thumbnail: require("../assets/github.png"),
+  },
 ];
 
 export const getArticles = () => {
