@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import VizWrapper from "../../../components/visualizations/VizWrapper";
 import TransitionsGame from "../../../visualizations/gender/TransitionsGame";
 
-import { getGameShortenedTitles, getGameTitles } from "../../../utils/games";
+import {
+  getGameShortenedTitles,
+  getGameTitles,
+  getYearFromCode,
+} from "../../../utils/games";
 import getColor from "../../../utils/colors";
 
 import "./gender.css";
@@ -18,7 +22,7 @@ function TransitionsGamePage() {
     return codes.map((c, i) => {
       return (
         <option value={c} key={c}>
-          {short[i]}
+          {short[i]} ({getYearFromCode(c)})
         </option>
       );
     });
