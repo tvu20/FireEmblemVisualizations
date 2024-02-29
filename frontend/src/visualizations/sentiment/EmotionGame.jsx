@@ -23,7 +23,7 @@ function EmotionGame(props) {
 
   useEffect(() => {
     if (includeNeutral) {
-      setKeys(["anger", "fear", "sadness", "neutral", "surprise", "joy"]);
+      setKeys(["neutral", "anger", "fear", "sadness", "surprise", "joy"]);
     } else {
       setKeys(["anger", "fear", "sadness", "surprise", "joy"]);
     }
@@ -59,7 +59,7 @@ function EmotionGame(props) {
 
     // const margin = { top: 20, right: 30, bottom: 20, left: 30 };
     const width = 1000;
-    const height = 600;
+    const height = 550;
     const graphMargin = 40;
 
     const svg = d3
@@ -84,17 +84,15 @@ function EmotionGame(props) {
     // stack
     const stackedData = d3
       .stack()
-      .offset(d3.stackOffsetWiggle)
+      .offset(d3.stackOffsetNone)
       // .offset(d3.stackOffsetSilhouette)
       .keys(keys)
       .value((d, key) => d.emotions[key])(data);
     const boundaries = findBounds(stackedData);
 
     // Add Y axis
-    const y = d3
-      .scaleLinear()
-      .domain(boundaries)
-      .range([height - graphMargin, graphMargin]);
+    const y = d3.scaleLinear().domain(boundaries).range([height, graphMargin]);
+    // .range([height - graphMargin, graphMargin]);
     // .append("text")
     // .attr("x", width)
     // .attr("y", -10)
@@ -149,21 +147,6 @@ function EmotionGame(props) {
 
     areas.transition().duration(600).ease(d3.easeLinear).style("opacity", 1);
 
-    svg
-      .append("line")
-      .attr("y1", height / 2)
-      .attr("y2", height / 2)
-      .attr("x1", 0)
-      .attr("x2", width)
-      .attr("stroke", "#323436")
-      .style("opacity", 0)
-      .attr("stroke-width", "2")
-      .style("stroke-dasharray", "8, 10")
-      .transition()
-      .duration(600)
-      .ease(d3.easeLinear)
-      .style("opacity", 1);
-
     // // Append the horizontal axis atop the area.
     // svg.append("g").call(d3.axisBottom(x).tickSizeOuter(0));
 
@@ -194,8 +177,8 @@ function EmotionGame(props) {
         // // .attr("y1", y(-1 * label.height))
         // // .attr("y2", y(lHeight))
         // .attr("y2", y(lHeight))
-        .attr("y1", y(boundaries[0]) + graphMargin)
-        .attr("y2", y(boundaries[1]) - graphMargin)
+        .attr("y1", y(boundaries[0]))
+        .attr("y2", y(boundaries[1]) - graphMargin / 2)
         .attr("x1", x(label.chapter))
         .attr("x2", x(label.chapter))
         .attr("stroke", "#323436")
@@ -225,9 +208,10 @@ function EmotionGame(props) {
         // )
         .attr(
           "transform",
-          `translate(${x(label.chapter) + 7},${
-            i % 2 === 0 ? height - label.translate : label.translate
-          })`
+          `translate(${x(label.chapter) + 7}, ${label.translate})`
+          // `translate(${x(label.chapter) + 7},${
+          //   i % 2 === 0 ? height - label.translate : label.translate
+          // })`
         )
         .style("font-size", "14px")
         .style("opacity", 0)
@@ -281,12 +265,8 @@ function EmotionGame(props) {
   return (
     <>
       <div className="flex-legend">{showLegend()}</div>
-      <div className="emotion-game__top-shelf">
-        <p>↑ Positive valence</p>
-      </div>
       <svg ref={ref} style={{ border: "1px solid red" }} />
       <div className="emotion-game__bottom-shelf">
-        <p>↓ Negative valence</p>
         <p>Story progression →</p>
       </div>
       <div className="emotion-game__label">
