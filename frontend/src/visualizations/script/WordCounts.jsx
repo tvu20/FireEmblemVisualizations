@@ -202,7 +202,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-import { getGameColor } from "../../utils/colors";
+// import { getGameColor } from "../../utils/colors";
 // import { getGameTitles } from "../../utils/games";
 
 import "./script.css";
@@ -224,7 +224,7 @@ function WordCounts(props) {
     // set the dimensions and margins of the graph
     var margin = { top: 30, right: 30, bottom: 70, left: 60 },
       width = 700 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
+      height = 500 - margin.top - margin.bottom;
 
     const svg = d3
       .select(ref.current)
@@ -256,6 +256,81 @@ function WordCounts(props) {
       .call(d3.axisLeft(y))
       .call((g) => g.select(".domain").remove());
 
+    // Add a clipPath: everything out of this area won't be drawn.
+    var clip = svg
+      .append("defs")
+      .append("svg:clipPath")
+      .attr("id", "clip")
+      .append("svg:rect")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("x", 0)
+      .attr("y", 0);
+
+    // Add brushing
+    var brush = d3
+      .brushY() // Add the brush feature using the d3.brush function
+      .extent([
+        [0, 0],
+        [width, height],
+      ]) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
+      .on("end", updateBrush); // Each time the brush selection changes, trigger the 'updateChart' function
+
+    // Create the scatter variable: where both the circles and the brush take place
+    var graph = svg.append("g").attr("clip-path", "url(#clip)");
+
+    // Add the brushing
+    graph.append("g").attr("class", "brush").call(brush);
+
+    // A function that set idleTimeOut to null
+    var idleTimeout;
+    function idled() {
+      idleTimeout = null;
+    }
+
+    // A function that update the chart for given boundaries
+    function updateBrush(e) {
+      const extent = e.selection;
+
+      console.log("extent", extent);
+      // If no selection, back to initial coordinate. Otherwise, update X axis domain
+      if (!extent) {
+        if (!idleTimeout) return (idleTimeout = setTimeout(idled, 350)); // This allows to wait a little bit
+        y.domain([0, 260000]);
+      } else {
+        y.domain([y.invert(extent[1]), y.invert(extent[0])]);
+        graph.select(".brush").call(brush.move, null); // This remove the grey brush area as soon as the selection has been done
+      }
+
+      // Update axis and circle position
+      yAxis.transition().duration(1000).call(d3.axisLeft(y));
+
+      graph
+        .selectAll(".myLine")
+        .transition()
+        .duration(1000)
+        .attr("x1", function (d) {
+          return x(d.game);
+        })
+        .attr("x2", function (d) {
+          return x(d.game);
+        })
+        .attr("y1", y(0))
+        .attr("y2", function (d) {
+          return y(d.value);
+        });
+
+      graph
+        .selectAll("circle")
+        .transition()
+        .duration(1000)
+        .attr("cx", function (d) {
+          return x(d.game);
+        })
+        .attr("cy", function (d) {
+          return y(d.value);
+        });
+    }
     // svg
     //   .append("g")
     //   .append("text")
@@ -276,13 +351,9 @@ function WordCounts(props) {
       );
       xAxis.transition().duration(1000).call(d3.axisBottom(x));
 
-      // // Add Y axis
-      // y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
-      // yAxis.transition().duration(1000).call(d3.axisLeft(y));
-
       if (init) {
         // variable u: map data to existing circle
-        var j = svg.selectAll(".myLine").data(currData);
+        var j = graph.selectAll(".myLine").data(currData);
         // update lines
         j.enter()
           .append("line")
@@ -303,7 +374,7 @@ function WordCounts(props) {
           })
           .attr("stroke", "grey");
 
-        svg
+        graph
           .selectAll("line")
           .transition()
           .duration(1000)
@@ -312,7 +383,7 @@ function WordCounts(props) {
           });
 
         // variable u: map data to existing circle
-        var u = svg.selectAll("circle").data(currData);
+        var u = graph.selectAll("circle").data(currData);
         // update bars
         u.enter()
           .append("circle")
@@ -328,7 +399,7 @@ function WordCounts(props) {
           .attr("r", 8)
           .attr("fill", "#69b3a2");
 
-        svg
+        graph
           .selectAll("circle")
           .transition()
           .duration(1000)
@@ -337,7 +408,7 @@ function WordCounts(props) {
           });
       } else {
         // variable u: map data to existing circle
-        var j = svg.selectAll(".myLine").data(currData);
+        var j = graph.selectAll(".myLine").data(currData);
         // update lines
         j.enter()
           .append("line")
@@ -346,7 +417,6 @@ function WordCounts(props) {
           .transition()
           .duration(1000)
           .attr("x1", function (d) {
-            console.log(x(d.game));
             return x(d.game);
           })
           .attr("x2", function (d) {
@@ -359,7 +429,7 @@ function WordCounts(props) {
           .attr("stroke", "grey");
 
         // variable u: map data to existing circle
-        var u = svg.selectAll("circle").data(currData);
+        var u = graph.selectAll("circle").data(currData);
         // update bars
         u.enter()
           .append("circle")
@@ -377,8 +447,6 @@ function WordCounts(props) {
       }
     }
 
-    // console.log(d3.select("#word-count-checkbox"));
-
     // When the button is changed, run the updateChart function
     d3.select("#word-count-checkbox").on("change", function (d) {
       console.log("checkedChange");
@@ -390,33 +458,6 @@ function WordCounts(props) {
     });
 
     update(false, true);
-
-    // // THIS IS FOR THE BAR GRAPH!!!!
-    // svg.append("g").attr("class", "bars");
-    // const bars = svg
-    //   .select("g.bars")
-    //   .selectAll("rect")
-    //   .data(data, (d) => d.name);
-
-    // console.log(x.bandwidth());
-    // bars
-    //   .enter()
-    //   .append("rect")
-    //   .attr("fill", "steelblue")
-    //   .attr("x", (d) => x(d.game))
-    //   .attr("y", (d) => y(d.value))
-    //   .attr("height", (d) => y(0) - y(d.value))
-    //   .attr("width", 10);
-
-    // const t = d3.transition().duration(750);
-    // const delay = (d, i) => i * 30;
-
-    // bars
-    //   .transition(t)
-    //   .attr("x", (d) => x(d.name))
-    //   .delay(delay);
-
-    // return svg.node();
   }, [data, sortedData]);
 
   useEffect(() => {
@@ -430,7 +471,6 @@ function WordCounts(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setData(data);
         setSortedData([...data].sort((a, b) => b.value - a.value));
       });
