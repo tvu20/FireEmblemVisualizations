@@ -7,12 +7,16 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import "./script.css";
 
 function Complexity(props) {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState();
+
+  const [categories, setCategories] = useState(["FE", "Game", "Other"]);
+
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
-    if (!data) return;
+    if (!filteredData) return;
 
     d3.selectAll("g > *").remove();
 
@@ -91,28 +95,49 @@ function Complexity(props) {
         .style("display", "none");
     };
 
-    // Add dots
-    svg
-      .append("g")
-      .selectAll("dot")
-      .data(data) // the .filter part is just to keep a few dots on the chart, not all of them
-      .enter()
-      .append("circle")
-      .attr("cx", function (d) {
-        return x(d.x);
-      })
-      .attr("cy", function (d) {
-        return y(d.y);
-      })
-      .attr("r", 5)
-      .style("fill", (d) => color[d.group])
-      //   .style("fill", "#69b3a2")
-      //   .style("opacity", 0.3)
-      .style("stroke", "white")
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave);
-  }, [data, windowWidth]);
+    function createScatter(currData) {
+      d3.selectAll("circle").remove();
+
+      svg
+        .append("g")
+        .selectAll("dot")
+        .data(currData)
+        .enter()
+        .append("circle")
+        .attr("cx", function (d) {
+          return x(d.x);
+        })
+        .attr("cy", function (d) {
+          return y(d.y);
+        })
+        .attr("r", 5)
+        .style("fill", (d) => color[d.group])
+        //   .style("fill", "#69b3a2")
+        //   .style("opacity", 0.3)
+        .style("stroke", "white")
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave);
+    }
+
+    // // When the button is changed, run the updateChart function
+    // d3.select("#othergames-checkbox").on("change", function (d) {
+    //   console.log("checkedChange", d.target.checked);
+
+    //   if (d.target.checked) {
+    //     createScatter(data);
+    //   } else {
+    //     createScatter(data.filter((d) => d.group !== "Other"));
+    //   }
+    //   // console.log(d.target.checked);
+    //   // // recover the option that has been chosen
+    //   // var selectedOption = d3.select(this).property("value");
+    //   // run the updateChart function with this selected option
+    //   // update(d.target.checked, false);
+    // });
+
+    createScatter(filteredData);
+  }, [filteredData, windowWidth]);
 
   useEffect(() => {
     fetch(`/api/scripts/complexity`, {
@@ -130,7 +155,45 @@ function Complexity(props) {
       });
   }, []);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  useEffect(() => {
+    const filtered = data.filter((d) => categories.includes(d.group));
+
+    setFilteredData(filtered);
+  }, [categories, data]);
+
+  return (
+    <>
+      <p>Other RPG games</p>
+      <input
+        id="game-checkbox"
+        type="checkbox"
+        checked={categories.includes("Game")}
+        onChange={(e) => {
+          if (e.target.checked) {
+            setCategories((prevState) => [...prevState, "Game"]);
+          } else {
+            setCategories((prevState) => prevState.filter((d) => d !== "Game"));
+          }
+        }}
+      />
+      <p>Other media</p>
+      <input
+        id="other-checkbox"
+        type="checkbox"
+        checked={categories.includes("Other")}
+        onChange={(e) => {
+          if (e.target.checked) {
+            setCategories((prevState) => [...prevState, "Other"]);
+          } else {
+            setCategories((prevState) =>
+              prevState.filter((d) => d !== "Other")
+            );
+          }
+        }}
+      />
+      <svg ref={ref} style={{ border: "1px solid red" }} />
+    </>
+  );
 }
 
 export default Complexity;
