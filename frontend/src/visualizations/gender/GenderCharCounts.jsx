@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getGameShortenedTitles } from "../../utils/games";
+import { getGameShortenedTitles, getYearFromCode } from "../../utils/games";
 
 import "./gender.css";
 
@@ -90,6 +90,7 @@ function GenderLineCounts() {
       const combined = ((value.pcs.F + value.npcs.F) / (pcs + npcs)) * 100;
       graphdata.push({
         game: gameTitles[index],
+        code: key,
         fpc,
         npc,
         combined,
@@ -228,8 +229,6 @@ function GenderLineCounts() {
     const per_row = 4;
 
     Object.entries(data).forEach(([key, value], i) => {
-      //   console.log(`${i}: ${key} = ${value}`);
-
       const row = Math.ceil((i + 1) / per_row);
       const col = i % per_row;
 
@@ -359,7 +358,7 @@ function GenderLineCounts() {
         .attr("x", 5)
         .attr("y", 320)
         .text(function (d) {
-          return gameTitles[key];
+          return gameTitles[key] + " (" + getYearFromCode(value.code) + ")";
         })
         .attr("font-family", "Gill Sans, Century Gothic, sans-serif")
         .attr("font-size", 12)
@@ -398,7 +397,12 @@ function GenderLineCounts() {
         setData(
           Object.entries(data)
             // .slice(0, 5)
-            .map((entry) => entry[1])
+
+            .map((entry) => {
+              const e = entry[1];
+              e.code = entry[0];
+              return e;
+            })
         );
       });
   }, []);

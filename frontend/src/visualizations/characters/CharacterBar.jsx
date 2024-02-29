@@ -5,10 +5,13 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import { characterBars } from "../../utils/characters";
 
+import { getGameFromCode } from "../../utils/games";
+
 import "./characters.css";
 
 function CharacterBar(props) {
   const [data, setData] = useState();
+  const [charData, setCharData] = useState();
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
@@ -17,10 +20,8 @@ function CharacterBar(props) {
 
     d3.selectAll("g > *").remove();
 
-    // console.log(Object.keys(data));
-
     // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 10, bottom: 30, left: 10 },
+    var margin = { top: 50, right: 10, bottom: 30, left: 10 },
       width = 300 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
 
@@ -30,10 +31,15 @@ function CharacterBar(props) {
       const svg = d3
         .select(ref.current)
         .append("svg")
-        // .style("border", "1px solid red")
         .style("margin-right", "30px")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom);
+
+      svg
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + 20 + ")")
+        .append("text")
+        .text(getGameFromCode(key));
 
       const dots = svg
         .append("g")
@@ -57,15 +63,7 @@ function CharacterBar(props) {
       // full rows
       for (let r = 0; r < full_rows; r++) {
         for (let k = 1; k <= balls_per_row; k++) {
-          //   console.log(thisData[index].img);
           dots
-            //   .append("svg:image")
-            //   .attr("x", (k - 1) * 30)
-            //   .attr("y", 0 + r * 30)
-            //   .attr("width", 20)
-            //   .attr("height", 20)
-            //   .attr("xlink:href", thisData[index].img)
-            //   .attr("preserveAspectRatio", "xMidYMid slice");
             .append("rect")
             .attr("x", (k - 1) * 30)
             .attr("y", 0 + r * 30)
@@ -109,6 +107,8 @@ function CharacterBar(props) {
 
     function buttonClick(e) {
       console.log(e.srcElement.id);
+      const splits = e.srcElement.id.split("-");
+      setCharData(data[splits[0]][splits[1]]);
     }
   }, [data, windowWidth]);
 
@@ -129,11 +129,20 @@ function CharacterBar(props) {
   }, []);
 
   return (
-    <div
-      className="characters-bar__container"
-      ref={ref}
-      style={{ border: "1px solid blue" }}
-    ></div>
+    <>
+      <div
+        className="characters-bar__container"
+        ref={ref}
+        style={{ border: "1px solid blue" }}
+      ></div>
+      {charData && (
+        <div>
+          <img src={charData.img} alt={charData.name} />
+          <h1>{charData.name}</h1>
+          <p>{charData.class}</p>
+        </div>
+      )}
+    </>
   );
 }
 

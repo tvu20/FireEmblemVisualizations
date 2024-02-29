@@ -9,10 +9,9 @@ import "./characters.css";
 
 function CharacterBarPage() {
   return (
-    <VizWrapper color="white" navColor={"#240607"}>
-    {/* <VizWrapper color={getColor("characters")} navColor={"#240607"}> */}
+    <VizWrapper color={getColor("characters")} navColor={"#240607"}>
       <div className="character-page characterbar">
-        <h1>Gender Line Counts</h1>
+        <h1>Characters</h1>
         <p>Some description here.</p>
         <CharacterBar />
         {/* </VizWrapper> */}

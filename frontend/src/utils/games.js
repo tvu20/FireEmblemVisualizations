@@ -67,6 +67,29 @@ export const getGameTitleFromCode = (tag) => {
   return tag;
 };
 
+export const getGameFromCode = (tag) => {
+  const arr = {
+    FE1: "Shadow Dragon and Blade of Light",
+    FE2: "Gaiden",
+    FE3: "Mystery of the Emblem",
+    FE4: "Genealogy of the Holy War",
+    FE5: "Thracia 776",
+    FE6: "The Binding Blade",
+    FE7: "The Blazing Blade",
+    FE8: "The Sacred Stones",
+    FE9: "Path of Radiance",
+    FE10: "Radiant Dawn",
+    FE11: "Shadow Dragon",
+    FE12: "New Mystery of the Emblem",
+    FE13: "Awakening",
+    FE14: "Fates",
+    FE15: "Echoes",
+    FE16: "Three Houses",
+  };
+
+  return arr[tag];
+};
+
 export const getGameShortenedTitleFromCode = (tag) => {
   const arr = {
     FE1: "Blade of Light",
@@ -115,6 +138,29 @@ export const getEmotionCodes = () => {
     "FE16CF",
     "FE16VW",
   ];
+};
+
+export const getYearFromCode = (tag) => {
+  const arr = {
+    FE1: "1990",
+    FE2: "1992",
+    FE3: "1994",
+    FE4: "1996",
+    FE5: "1999",
+    FE6: "2002",
+    FE7: "2003",
+    FE8: "2004",
+    FE9: "2005",
+    FE10: "2007",
+    FE11: "2008",
+    FE12: "2010",
+    FE13: "2012",
+    FE14: "2015",
+    FE15: "2017",
+    FE16: "2019",
+  };
+
+  return arr[tag];
 };
 
 export const getEmotionTitles = () => {
