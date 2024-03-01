@@ -18,7 +18,7 @@ function CharacterBar(props) {
   useEffect(() => {
     if (!data) return;
 
-    d3.selectAll("g > *").remove();
+    // d3.selectAll("g > *").remove();
 
     // set the dimensions and margins of the graph
     var margin = { top: 50, right: 10, bottom: 30, left: 10 },

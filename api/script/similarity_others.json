@@ -1,402 +1,498 @@
 {
-  "tdidf": [
+  "Fire Emblem": [
     {
       "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
-      "x": 0.92923315,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.92923315,
+      "jaccard": 0.140276539,
+      "category": "Fire Emblem",
+      "year": 1990
     },
     {
       "name": "Fire Emblem Gaiden",
-      "x": 0.891800447,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.891800447,
+      "jaccard": 0.140276539,
+      "category": "Fire Emblem",
+      "year": 1992
     },
     {
       "name": "Fire Emblem: Mystery of the Emblem",
-      "x": 0.952865305,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.952865305,
+      "jaccard": 0.271159543,
+      "category": "Fire Emblem",
+      "year": 1994
     },
     {
       "name": "Fire Emblem: Genealogy of the Holy War",
-      "x": 0.944132423,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.944132423,
+      "jaccard": 0.340362595,
+      "category": "Fire Emblem",
+      "year": 1996
     },
     {
       "name": "Fire Emblem: Thracia 776",
-      "x": 0.966678264,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.966678264,
+      "jaccard": 0.331193838,
+      "category": "Fire Emblem",
+      "year": 1999
     },
     {
       "name": "Fire Emblem: The Binding Blade",
-      "x": 0.95985532,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.95985532,
+      "jaccard": 0.294012605,
+      "category": "Fire Emblem",
+      "year": 2002
     },
     {
       "name": "Fire Emblem: The Blazing Blade",
-      "x": 0.936185507,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.936185507,
+      "jaccard": 0.364672642,
+      "category": "Fire Emblem",
+      "year": 2003
     },
     {
       "name": "Fire Emblem: The Sacred Stones",
-      "x": 0.945613575,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.945613575,
+      "jaccard": 0.336609586,
+      "category": "Fire Emblem",
+      "year": 2004
     },
     {
       "name": "Fire Emblem: Path of Radiance",
-      "x": 0.95965313,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.95965313,
+      "jaccard": 0.380856699,
+      "category": "Fire Emblem",
+      "year": 2005
     },
     {
       "name": "Fire Emblem: Radiant Dawn",
-      "x": 0.964748795,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.964748795,
+      "jaccard": 0.408165105,
+      "category": "Fire Emblem",
+      "year": 2007
     },
     {
       "name": "Fire Emblem: Shadow Dragon",
-      "x": 0.94081318,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.94081318,
+      "jaccard": 0.234098292,
+      "category": "Fire Emblem",
+      "year": 2008
     },
     {
       "name": "Fire Emblem: New Mystery of the Emblem",
-      "x": 0.953065824,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.953065824,
+      "jaccard": 0.347529481,
+      "category": "Fire Emblem",
+      "year": 2010
     },
     {
       "name": "Fire Emblem Awakening",
-      "x": 0.941013341,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.941013341,
+      "jaccard": 0.337495161,
+      "category": "Fire Emblem",
+      "year": 2012
     },
     {
       "name": "Fire Emblem Fates",
-      "x": 0.917273421,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.917273421,
+      "jaccard": 0.39008681,
+      "category": "Fire Emblem",
+      "year": 2015
     },
     {
       "name": "Fire Emblem Echoes",
-      "x": 0.9454284,
-      "group": "FE",
-      "category": "Fire Emblem"
+      "tdidf": 0.9454284,
+      "jaccard": 0.319062283,
+      "category": "Fire Emblem",
+      "year": 2017
     },
     {
       "name": "Fire Emblem: Three Houses",
-      "x": 1,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "War and Peace",
-      "x": 0.83,
-      "group": "Other",
-      "category": "Novel"
-    },
-    {
-      "name": "Pride and Prejudice",
-      "x": 0.8338206114855496,
-      "group": "Other",
-      "category": "Novel"
-    },
-    {
-      "name": "Declaration of Independence",
-      "x": 0.6838679118193286,
-      "group": "Other",
-      "category": "Document"
-    },
-    {
-      "name": "Hamlet",
-      "x": 0.8501467954544503,
-      "group": "Other",
-      "category": "Play"
-    },
-    {
-      "name": "The Road Not Taken",
-      "x": 0.476840842824814,
-      "group": "Other",
-      "category": "Poem"
-    },
-    {
-      "name": "The Empire Strikes Back",
-      "x": 0.7630191884577319,
-      "group": "Other",
-      "category": "Movie script"
-    },
-    {
-      "name": "Legend of Zelda: Ocarina of Time",
-      "x": 0.9264429738344339,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Legend of Zelda: A Link To The Past",
-      "x": 0.8901059255438444,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Super Mario Bros",
-      "x": 0.8621006312852928,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Final Fantasy VII",
-      "x": 0.8510774216556357,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Red Dead Redemption 2",
-      "x": 0.689677246475894,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Phoenix Wright: Ace Attorney Trilogy",
-      "x": 0.834373286448975,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Assassin's Creed",
-      "x": 0.8350002170182037,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Barbie (2023)",
-      "x": 0.7872860873429492,
-      "group": "Other",
-      "category": "Movie script"
-    },
-    {
-      "name": "Oppenheimer",
-      "x": 0.768840395486103,
-      "group": "Other",
-      "category": "Movie script"
-    },
-    {
-      "name": "The Hunger Games",
-      "x": 0.8908143211938684,
-      "group": "Other",
-      "category": "Novel"
-    },
-    {
-      "name": "The Great Gatsby",
-      "x": 0.8243683343731589,
-      "group": "Other",
-      "category": "Novel"
+      "tdidf": 1,
+      "jaccard": 1,
+      "category": "Fire Emblem",
+      "year": 2019
     }
   ],
-  "jaccard": [
-    {
-      "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
-      "x": 0.140276539,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem Gaiden",
-      "x": 0.099153976,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Mystery of the Emblem",
-      "x": 0.271159543,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Genealogy of the Holy War",
-      "x": 0.340362595,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Thracia 776",
-      "x": 0.331193838,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: The Binding Blade",
-      "x": 0.294012605,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: The Blazing Blade",
-      "x": 0.364672642,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: The Sacred Stones",
-      "x": 0.336609586,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Path of Radiance",
-      "x": 0.380856699,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Radiant Dawn",
-      "x": 0.408165105,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Shadow Dragon",
-      "x": 0.234098292,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: New Mystery of the Emblem",
-      "x": 0.347529481,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem Awakening",
-      "x": 0.337495161,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem Fates",
-      "x": 0.39008681,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem Echoes",
-      "x": 0.319062283,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "Fire Emblem: Three Houses",
-      "x": 1,
-      "group": "FE",
-      "category": "Fire Emblem"
-    },
-    {
-      "name": "War and Peace",
-      "x": 0.25294689255988845,
-      "group": "Other",
-      "category": "Novel"
-    },
-    {
-      "name": "Pride and Prejudice",
-      "x": 0.2568289333129864,
-      "group": "Other",
-      "category": "Novel"
-    },
-    {
-      "name": "Declaration of Independence",
-      "x": 0.04303023440154003,
-      "group": "Other",
-      "category": "Document"
-    },
-    {
-      "name": "Hamlet",
-      "x": 0.2113953910361096,
-      "group": "Other",
-      "category": "Play"
-    },
-    {
-      "name": "The Road Not Taken",
-      "x": 0.010369858278603527,
-      "group": "Other",
-      "category": "Poem"
-    },
-    {
-      "name": "The Empire Strikes Back",
-      "x": 0.20877817319098457,
-      "group": "Other",
-      "category": "Movie script"
-    },
+  "Action RPG": [
     {
       "name": "Legend of Zelda: Ocarina of Time",
-      "x": 0.23811462893209814,
-      "group": "Game",
-      "category": "Other game"
+      "tdidf": 0.9264429738344339,
+      "jaccard": 0.23811462893209814,
+      "category": "Action/aventure",
+      "year": 1998
     },
     {
       "name": "Legend of Zelda: A Link To The Past",
-      "x": 0.12268266085059978,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Super Mario Bros",
-      "x": 0.17889668167067937,
-      "group": "Game",
-      "category": "Other game"
+      "tdidf": 0.8901059255438444,
+      "jaccard": 0.12268266085059978,
+      "category": "Action/aventure",
+      "year": 1991
     },
     {
       "name": "Final Fantasy VII",
-      "x": 0.30478546447155164,
-      "group": "Game",
-      "category": "Other game"
+      "tdidf": 0.8510774216556357,
+      "jaccard": 0.30478546447155164,
+      "category": "Action/adventure",
+      "year": 1997
     },
     {
       "name": "Red Dead Redemption 2",
-      "x": 0.30754098360655735,
-      "group": "Game",
-      "category": "Other game"
-    },
-    {
-      "name": "Phoenix Wright: Ace Attorney Trilogy",
-      "x": 0.256816544912028,
-      "group": "Game",
-      "category": "Other game"
+      "tdidf": 0.689677246475894,
+      "jaccard": 0.30754098360655735,
+      "category": "Action/adventure",
+      "year": 2018
     },
     {
       "name": "Assassin's Creed",
-      "x": 0.24217601344255407,
-      "group": "Game",
-      "category": "Other game"
+      "tdidf": 0.8350002170182037,
+      "jaccard": 0.24217601344255407,
+      "category": "Action/adventure",
+      "year": 2007
     },
     {
-      "name": "Barbie (2023)",
-      "x": 0.14739610731194108,
-      "group": "Other",
-      "category": "Movie script"
+      "name": "Metal Gear Solid",
+      "tdidf": 0.7481981987608947,
+      "jaccard": 0.23904658292948275,
+      "category": "Action/adventure",
+      "year": 1998
     },
     {
-      "name": "Oppenheimer",
-      "x": 0.23421225485596323,
-      "group": "Other",
-      "category": "Movie script"
+      "name": "Elden Ring",
+      "tdidf": 0.314869392392164,
+      "jaccard": 0.14107292127649113,
+      "category": "Action/adventure",
+      "year": 2022
+    },
+    {
+      "name": "Resident Evil Village",
+      "tdidf": 0.795904275827269,
+      "jaccard": 0.23218229271230675,
+      "category": "Action/adventure",
+      "year": 2021
+    },
+    {
+      "name": "Kingdom Hearts",
+      "tdidf": 0.7193293579730875,
+      "jaccard": 0.24830927626930452,
+      "category": "Action/adventure",
+      "year": 2002
+    },
+    {
+      "name": "Grand Theft Auto V",
+      "tdidf": 0.6906361695637587,
+      "jaccard": 0.09743076409743076,
+      "category": "Action/adventure",
+      "year": 2013
+    }
+  ],
+  "Prose": [
+    {
+      "name": "Little Women",
+      "tdidf": 0.8167771667657596,
+      "jaccard": 0.2687959806208505,
+      "category": "Novel",
+      "year": "1868-1869"
+    },
+    {
+      "name": "Alice In Wonderland",
+      "tdidf": 0.8255212042500829,
+      "jaccard": 0.16352631065117643,
+      "category": "Novel",
+      "year": 1865
+    },
+    {
+      "name": "Catcher in the Rye",
+      "tdidf": 0.8199466716002104,
+      "jaccard": 0.20265594314037222,
+      "category": "Novel",
+      "year": 1865
+    },
+    {
+      "name": "The Color Purple",
+      "tdidf": 0.7949934270277855,
+      "jaccard": 0.2074658425504229,
+      "category": "Novel",
+      "year": 1865
+    },
+    {
+      "name": "All The Light We Cannot See",
+      "tdidf": 0.8081140922943284,
+      "jaccard": 0.23968565815324164,
+      "category": "Novel",
+      "year": 2014
+    },
+    {
+      "name": "Anne Of Green Gables",
+      "tdidf": 0.845653521768159,
+      "jaccard": 0.2656192372943867,
+      "category": "Novel",
+      "year": 1908
+    },
+    {
+      "name": "1984",
+      "tdidf": 0.8364698333069127,
+      "jaccard": 0.29360711261642675,
+      "category": "Novel",
+      "year": 1949
+    },
+    {
+      "name": "A Wrinkle In Time",
+      "tdidf": 0.8285241147922374,
+      "jaccard": 0.2117131732641142,
+      "category": "Novel",
+      "year": 1962
+    },
+    {
+      "name": "The Tell Tale Heart",
+      "tdidf": 0.7631406290885558,
+      "jaccard": 0.055977337110481584,
+      "category": "Short story",
+      "year": 1843
+    },
+    {
+      "name": "Yellow Wallpaper",
+      "tdidf": 0.8023499019505907,
+      "jaccard": 0.10254133836422151,
+      "category": "Short story",
+      "year": 1892
+    },
+    {
+      "name": "War and Peace",
+      "tdidf": 0.83,
+      "jaccard": 0.25294689255988845,
+      "category": "Novel",
+      "year": 1867
+    },
+    {
+      "name": "Pride and Prejudice",
+      "tdidf": 0.8338206114855496,
+      "jaccard": 0.2568289333129864,
+      "category": "Novel",
+      "year": 1813
+    },
+    {
+      "name": "Declaration of Independence",
+      "tdidf": 0.6838679118193286,
+      "jaccard": 0.04303023440154003,
+      "category": "Document",
+      "year": 1776
     },
     {
       "name": "The Hunger Games",
-      "x": 0.3026295789633683,
-      "group": "Other",
-      "category": "Novel"
+      "tdidf": 0.8908143211938684,
+      "jaccard": 0.3026295789633683,
+      "category": "Novel",
+      "year": 2008
     },
     {
       "name": "The Great Gatsby",
-      "x": 0.2414814814814815,
-      "group": "Other",
-      "category": "Novel"
+      "tdidf": 0.8243683343731589,
+      "jaccard": 0.2414814814814815,
+      "category": "Novel",
+      "year": 1925
+    }
+  ],
+  "Movie Scripts": [
+    {
+      "name": "La La Land",
+      "tdidf": 0.6819779203757873,
+      "jaccard": 0.17739880427325297,
+      "category": "Movie",
+      "year": 2016
+    },
+    {
+      "name": "The Dark Knight",
+      "tdidf": 0.7735146037450541,
+      "jaccard": 0.20239754669640367,
+      "category": "Movie",
+      "year": 2008
+    },
+    {
+      "name": "Shrek",
+      "tdidf": 0.6861539365583392,
+      "jaccard": 0.14904623343032655,
+      "category": "Movie",
+      "year": 2001
+    },
+    {
+      "name": "Everything Everywhere All At Once",
+      "tdidf": 0.6571715433623433,
+      "jaccard": 0.1956419648727341,
+      "category": "Movie",
+      "year": 2022
+    },
+    {
+      "name": "Get Out",
+      "tdidf": 0.6661276584070625,
+      "jaccard": 0.17004088959808517,
+      "category": "Movie",
+      "year": 2017
+    },
+    {
+      "name": "12 Years A Slave",
+      "tdidf": 0.7941363713044136,
+      "jaccard": 0.23314711359404097,
+      "category": "Movie",
+      "year": 2013
+    },
+    {
+      "name": "The Empire Strikes Back",
+      "tdidf": 0.7630191884577319,
+      "jaccard": 0.20877817319098457,
+      "category": "Movie",
+      "year": 1980
+    },
+    {
+      "name": "Barbie (2023)",
+      "tdidf": 0.7872860873429492,
+      "jaccard": 0.14739610731194108,
+      "category": "Movie",
+      "year": 2023
+    },
+    {
+      "name": "Oppenheimer",
+      "tdidf": 0.768840395486103,
+      "jaccard": 0.23421225485596323,
+      "category": "Movie",
+      "year": 2023
+    }
+  ],
+  "Plays": [
+    {
+      "name": "The Importance Of Being Earnest",
+      "tdidf": 0.8237601279506377,
+      "jaccard": 0.18224690840494656,
+      "category": "Play",
+      "year": 1895
+    },
+    {
+      "name": "Fences",
+      "tdidf": 0.7732751419107751,
+      "jaccard": 0.1468123475124642,
+      "category": "Play",
+      "year": 1985
+    },
+    {
+      "name": "AngelsInAmerica",
+      "tdidf": 0.8130475543511979,
+      "jaccard": 0.14300769311834757,
+      "category": "Play",
+      "year": 1991
+    },
+    {
+      "name": "The Laramie Project",
+      "tdidf": 0.8394691233015102,
+      "jaccard": 0.061545423690462724,
+      "category": "Play",
+      "year": 2000
+    },
+    {
+      "name": "Hamlet",
+      "tdidf": 0.8501467954544503,
+      "jaccard": 0.2113953910361096,
+      "category": "Play",
+      "year": 1599
+    }
+  ],
+  "Strategy RPG": [
+    {
+      "name": "Final Fantasy Tactics",
+      "tdidf": 0.859006847337213,
+      "jaccard": 0.296066835633155,
+      "category": "Strategy RPG",
+      "year": 1998
+    },
+    {
+      "name": "Tactics Ogre",
+      "tdidf": 0.8909505858366323,
+      "jaccard": 0.3494126023495906,
+      "category": "Strategy RPG",
+      "year": 2010
+    },
+    {
+      "name": "Triangle Strategy",
+      "tdidf": 0.8686664229966109,
+      "jaccard": 0.18373626373626373,
+      "category": "Strategy RPG",
+      "year": 2022
+    }
+  ],
+  "FPS": [
+    {
+      "name": "Halo 2",
+      "tdidf": 0.8546127257284556,
+      "jaccard": 0.16181953765846382,
+      "category": "First Person Shooter",
+      "year": 2004
+    },
+    {
+      "name": "Call of Duty: Modern Warfare 2",
+      "tdidf": 0.6683263232132263,
+      "jaccard": 0.136986301369863,
+      "category": "First Person Shooter",
+      "year": 2009
+    },
+    {
+      "name": "Half-Life",
+      "tdidf": 0.8681445936110853,
+      "jaccard": 0.10260676650027732,
+      "category": "First Person Shooter",
+      "year": 1998
+    },
+    {
+      "name": "Borderlands 2",
+      "tdidf": 0.8041765843889256,
+      "jaccard": 0.11320135622880892,
+      "category": "Action RPG First Person Shooter",
+      "year": 2012
+    }
+  ],
+  "Puzzle/Platform": [
+    {
+      "name": "Super Paper Mario",
+      "tdidf": 0.8621006312852928,
+      "jaccard": 0.17889668167067937,
+      "category": "Puzzle/Platform",
+      "year": 2007
+    },
+    {
+      "name": "Portal",
+      "tdidf": 0.8840731034604672,
+      "jaccard": 0.09717138103161398,
+      "category": "Puzzle/Platform",
+      "year": 2007
+    },
+    {
+      "name": "Cuphead",
+      "tdidf": 0.6108276585848645,
+      "jaccard": 0.061848663343905756,
+      "category": "Puzzle/Platform",
+      "year": 2017
+    }
+  ],
+  "Fighting": [
+    {
+      "name": "Street Fighter 2",
+      "tdidf": 0.6586116879925604,
+      "jaccard": 0.02783186347497423,
+      "category": "Fighting",
+      "year": 1991
+    },
+    {
+      "name": "Mortal Kombat",
+      "tdidf": 0.7738934892498585,
+      "jaccard": 0.20868147544324434,
+      "category": "Fighting",
+      "year": 1992
+    }
+  ],
+  "Visual Novel": [
+    {
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "tdidf": 0.834373286448975,
+      "jaccard": 0.256816544912028,
+      "category": "Visual Novel",
+      "year": "2001-2003"
     }
   ]
 }

@@ -35,7 +35,8 @@ function Complexity(props) {
     const color = {
       FE: "#4281f5",
       Game: "#f2aa18",
-      Other: "#b81a29",
+      Prose: "#b81a29",
+      Script: "#b81a29",
     };
 
     // Add X axis
@@ -163,7 +164,7 @@ function Complexity(props) {
 
   return (
     <>
-      <p>Other RPG games</p>
+      <p>Other games</p>
       <input
         id="game-checkbox"
         type="checkbox"
@@ -176,17 +177,33 @@ function Complexity(props) {
           }
         }}
       />
-      <p>Other media</p>
+      <p>Prose writing</p>
       <input
         id="other-checkbox"
         type="checkbox"
-        checked={categories.includes("Other")}
+        checked={categories.includes("Prose")}
         onChange={(e) => {
           if (e.target.checked) {
-            setCategories((prevState) => [...prevState, "Other"]);
+            setCategories((prevState) => [...prevState, "Prose"]);
           } else {
             setCategories((prevState) =>
-              prevState.filter((d) => d !== "Other")
+              prevState.filter((d) => d !== "Prose")
+            );
+          }
+        }}
+      />
+
+      <p>Scripts</p>
+      <input
+        id="other-checkbox"
+        type="checkbox"
+        checked={categories.includes("Script")}
+        onChange={(e) => {
+          if (e.target.checked) {
+            setCategories((prevState) => [...prevState, "Script"]);
+          } else {
+            setCategories((prevState) =>
+              prevState.filter((d) => d !== "Script")
             );
           }
         }}

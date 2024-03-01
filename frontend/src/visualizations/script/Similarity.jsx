@@ -9,40 +9,27 @@ import "./script.css";
 function Similarity(props) {
   const [data, setData] = useState();
   const ref = useRef();
-  const ref2 = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
     if (!data) return;
 
-    d3.selectAll("g > *").remove();
+    d3.selectAll("svg").remove();
 
-    // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 30, left: 30 },
-      width = 700 - margin.left - margin.right,
-      height = 150 - margin.top - margin.bottom;
+    // // set the dimensions and margins of the graph
+    // var margin = { top: 10, right: 30, bottom: 30, left: 30 },
+    //   width = 700 - margin.left - margin.right,
+    //   height = 400 - margin.top - margin.bottom;
 
-    const svg = d3
-      .select(ref.current)
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    const div = d3.select(ref.current);
 
-    const color = {
-      FE: "#4281f5",
-      Game: "#f2aa18",
-      Other: "#b81a29",
-    };
+    var margin = { top: 30, right: 20, bottom: 30, left: 20 },
+      width = 250 - margin.left - margin.right,
+      height = 200 - margin.top - margin.bottom;
 
-    const height_one = 75;
-
-    // Add X axis
-    var x = d3.scaleLinear().domain([0, 1]).range([0, width]);
-    const xAxis = svg
-      .append("g")
-      .attr("transform", "translate(0," + height_one + ")")
-      .call(d3.axisBottom(x));
+    // ---------
+    // TOOLTIP SECTION
+    // ---------
 
     // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
     // Its opacity is set to 0: we don't see it by default.
@@ -59,29 +46,6 @@ function Similarity(props) {
       .style("position", "absolute")
       .style("top", 0);
 
-    // // Add a clipPath: everything out of this area won't be drawn.
-    // var clip = svg
-    //   .append("defs")
-    //   .append("svg:clipPath")
-    //   .attr("id", "clip")
-    //   .append("svg:rect")
-    //   .attr("width", width)
-    //   .attr("height", height)
-    //   .attr("x", 0)
-    //   .attr("y", 0);
-
-    // // Add brushing
-    // var brush = d3
-    //   .brushX() // Add the brush feature using the d3.brush function
-    //   .extent([
-    //     [0, 0],
-    //     [width, height],
-    //   ]) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
-    //   .on("end", updateChart); // Each time the brush selection changes, trigger the 'updateChart' function
-
-    // Create the scatter variable: where both the circles and the brush take place
-    var scatter = svg.append("g").attr("clip-path", "url(#clip)");
-
     // A function that change this tooltip when the user hover a point.
     // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
     var mouseover = function (d) {
@@ -95,8 +59,10 @@ function Similarity(props) {
             d.srcElement.__data__.name +
             "</h2><p><b>Type of media: </b>" +
             d.srcElement.__data__.category +
-            "</p><b>Avg words per sentence: </b>" +
-            d.srcElement.__data__.x +
+            "</p><b>Year: </b>" +
+            d.srcElement.__data__.year +
+            // "</p><b>Similarity score (out of 1): </b>" +
+            // d.srcElement.__data__.x +
             "</p>"
         )
         .style("left", d.pageX + 6 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
@@ -111,146 +77,183 @@ function Similarity(props) {
         .style("display", "none");
     };
 
-    // Add circles
-    scatter
-      .selectAll("circle")
-      .data(data.tdidf)
-      .enter()
-      .append("circle")
-      .attr("cx", function (d) {
-        return x(d.x);
-      })
-      .attr("cy", function (d) {
-        return height_one;
-        // return y(d.y);
-      })
-      .attr("r", 5)
-      .style("fill", (d) => color[d.group])
-      .style("opacity", 0.5)
-      .style("stroke", "white")
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave);
+    // ---------
+    // GRAPH SECTION
+    // ---------
 
-    // // Add the brushing
-    // scatter.append("g").attr("class", "brush").call(brush);
+    const color = {
+      "Fire Emblem": "#4281f5",
+      "Single-Player RPG": "#f2aa18",
+      Other: "#b81a29",
+    };
 
-    // // A function that set idleTimeOut to null
-    // var idleTimeout;
-    // function idled() {
-    //   idleTimeout = null;
-    // }
-
-    // // A function that update the chart for given boundaries
-    // function updateChart(e) {
-    //   // console.log(e);
-    //   const extent = e.selection;
-
-    //   // If no selection, back to initial coordinate. Otherwise, update X axis domain
-    //   if (!extent) {
-    //     if (!idleTimeout) return (idleTimeout = setTimeout(idled, 350)); // This allows to wait a little bit
-    //     x.domain([0, 1]);
-    //   } else {
-    //     x.domain([x.invert(extent[0]), x.invert(extent[1])]);
-    //     scatter.select(".brush").call(brush.move, null); // This remove the grey brush area as soon as the selection has been done
-    //   }
-
-    //   // Update axis and circle position
-    //   xAxis.transition().duration(1000).call(d3.axisBottom(x));
-    //   scatter
-    //     .selectAll("circle")
-    //     .transition()
-    //     .duration(1000)
-    //     .attr("cx", function (d) {
-    //       return x(d.x);
-    //     })
-    //     .attr("cy", height_one);
-    // }
-
-    // -------------------------
-    // SECOND GRAPH!!!
-    // -------------------------
-
-    const svg2 = d3
-      .select(ref2.current)
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    const height_one = 30;
+    const height_two = 100;
+    const bar_height = 40;
 
     // Add X axis
-    var x2 = d3.scaleLinear().domain([0, 1]).range([0, width]);
-    const xAxis2 = svg2
-      .append("g")
-      .attr("transform", "translate(0," + height_one + ")")
-      .call(d3.axisBottom(x));
+    var x = d3.scaleLinear().domain([0, 1]).range([0, width]);
 
-    // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
-    // Its opacity is set to 0: we don't see it by default.
-    var tooltip2 = d3
-      .select("body")
-      .append("div")
-      .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "1px")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("position", "absolute")
-      .style("top", 0);
+    Object.entries(data).forEach(([key, value], index) => {
+      console.log("creating svg");
+      const svg = div
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .style("border", "1px solid blue")
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var scatter2 = svg2.append("g").attr("clip-path", "url(#clip)");
+      // labels
+      svg
+        .append("text")
+        .attr("x", -2)
+        .attr("y", 0)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .attr("font-size", "18px")
+        .attr("text-anchor", "start")
+        .style("font-weight", 600)
+        .text(key);
+      svg
+        .append("text")
+        .attr("x", 45)
+        .attr("y", height_one - 7)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .attr("font-size", "14px")
+        .text("TD-IDF");
 
-    // A function that change this tooltip when the user hover a point.
-    // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-    var mouseover2 = function (d) {
-      tooltip2.style("opacity", 1).style("display", "block");
-    };
+      svg
+        .append("text")
+        .attr("x", 50)
+        .attr("y", height_two - 7)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .attr("font-size", "14px")
+        .text("Jaccard");
 
-    var mousemove2 = function (d) {
-      tooltip2
-        .html(
-          "<h2>" +
-            d.srcElement.__data__.name +
-            "</h2><p><b>Type of media: </b>" +
-            d.srcElement.__data__.category +
-            "</p><b>Avg words per sentence: </b>" +
-            d.srcElement.__data__.x +
-            "</p>"
-        )
-        .style("left", d.pageX + 6 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-        .style("top", d.pageY + 5 + "px");
-    };
+      svg
+        .append("text")
+        .attr("x", width)
+        .attr("y", height_two + bar_height + 20)
+        .attr("fill", "currentColor")
+        .attr("text-anchor", "end")
+        .attr("font-size", "12px")
+        .text("Similarity →");
 
-    // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
-    var mouseleave2 = function (d) {
-      tooltip2
-        //   .transition().duration(200)
-        .style("opacity", 0)
-        .style("display", "none");
-    };
+      // TDIDF!!!!!
 
-    // Add circles
-    scatter2
-      .selectAll("circle")
-      .data(data.jaccard)
-      .enter()
-      .append("circle")
-      .attr("cx", function (d) {
-        return x2(d.x);
-      })
-      .attr("cy", function (d) {
-        return height_one;
-        // return y(d.y);
-      })
-      .attr("r", 5)
-      .style("fill", (d) => color[d.group])
-      .style("opacity", 0.5)
-      .style("stroke", "white")
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove)
-      .on("mouseleave", mouseleave);
+      const rects = svg.append("g");
+
+      // gray bars
+      rects
+        .append("rect")
+        .attr("x", 0)
+        .attr("y", height_one)
+        .attr("width", width + 1)
+        .attr("height", bar_height)
+        .style("fill", "gray")
+        .style("opacity", 0.2);
+      rects
+        .append("rect")
+        .attr("x", 0)
+        .attr("y", height_two)
+        .attr("width", width + 1)
+        .attr("height", bar_height)
+        .style("fill", "gray")
+        .style("opacity", 0.2);
+
+      const rectsT = svg.append("g");
+
+      // Add rects for current group
+      rectsT
+        .selectAll("rect")
+        .data(value)
+        .enter()
+        .append("rect")
+        .attr("x", function (d) {
+          return x(d.tdidf);
+        })
+        .attr("y", function (d) {
+          return height_one;
+          // return y(d.y);
+        })
+        .attr("width", 2)
+        .attr("height", bar_height)
+        .style("fill", color[key])
+        .style("opacity", 0.5)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave);
+
+      // if (key !== "Fire Emblem") {
+      //   const rectsFE = svg.append("g");
+      //   // Add rects
+      //   rectsFE
+      //     .selectAll("rect")
+      //     .data(data["Fire Emblem"])
+      //     .enter()
+      //     .append("rect")
+      //     .attr("x", function (d) {
+      //       return x(d.tdidf);
+      //     })
+      //     .attr("y", function (d) {
+      //       return height_one;
+      //       // return y(d.y);
+      //     })
+      //     .attr("width", 2)
+      //     .attr("height", bar_height)
+      //     .style("fill", color["Fire Emblem"])
+      //     .style("opacity", 0.5);
+      // }
+
+      // JACCARD!!!!!
+
+      const rectsJ = svg.append("g");
+
+      // Add rects for current group
+      rectsJ
+        .selectAll("rect")
+        .data(value)
+        .enter()
+        .append("rect")
+        .attr("x", function (d) {
+          return x(d.jaccard);
+        })
+        .attr("y", function (d) {
+          return height_two;
+          // return y(d.y);
+        })
+        .attr("width", 2)
+        .attr("height", bar_height)
+        .style("fill", color[key])
+        .style("opacity", 0.5)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseleave", mouseleave);
+
+      // if (key !== "Fire Emblem") {
+      //   const rectsFE = svg.append("g");
+      //   // Add rects
+      //   rectsFE
+      //     .selectAll("rect")
+      //     .data(data["Fire Emblem"])
+      //     .enter()
+      //     .append("rect")
+      //     .attr("x", function (d) {
+      //       return x(d.jaccard);
+      //     })
+      //     .attr("y", function (d) {
+      //       return height_two;
+      //       // return y(d.y);
+      //     })
+      //     .attr("width", 2)
+      //     .attr("height", bar_height)
+      //     .style("fill", color["Fire Emblem"])
+      //     .style("opacity", 0.5);
+      // }
+    });
   }, [data, windowWidth]);
 
   useEffect(() => {
@@ -269,12 +272,7 @@ function Similarity(props) {
       });
   }, []);
 
-  return (
-    <>
-      <svg ref={ref} style={{ border: "1px solid red" }} />
-      <svg ref={ref2} style={{ border: "1px solid red" }} />
-    </>
-  );
+  return <div ref={ref} style={{ border: "1px solid red" }} />;
 }
 
 export default Similarity;

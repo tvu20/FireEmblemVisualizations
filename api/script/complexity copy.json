@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
+    "x": 7.41,
+    "y": 4.13,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1990
+  },
+  {
+    "name": "Fire Emblem Gaiden",
+    "x": 6.01,
+    "y": 4.18,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1992
+  },
+  {
+    "name": "Fire Emblem: Mystery of the Emblem",
+    "x": 7.02,
+    "y": 4.29,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1994
+  },
+  {
+    "name": "Fire Emblem: Genealogy of the Holy War",
+    "x": 6.57,
+    "y": 4.16,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1996
+  },
+  {
+    "name": "Fire Emblem: Thracia 776",
+    "x": 7.44,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1999
+  },
+  {
+    "name": "Fire Emblem: The Binding Blade",
+    "x": 6.08,
+    "y": 4.21,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2002
+  },
+  {
+    "name": "Fire Emblem: The Blazing Blade",
+    "x": 4.88,
+    "y": 4.18,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2003
+  },
+  {
+    "name": "Fire Emblem: The Sacred Stones",
+    "x": 5.83,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2004
+  },
+  {
+    "name": "Fire Emblem: Path of Radiance",
+    "x": 5.98,
+    "y": 4.21,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2005
+  },
+  {
+    "name": "Fire Emblem: Radiant Dawn",
+    "x": 6.29,
+    "y": 4.23,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2007
+  },
+  {
+    "name": "Fire Emblem: Shadow Dragon",
+    "x": 7.04,
+    "y": 4.17,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2008
+  },
+  {
+    "name": "Fire Emblem: New Mystery of the Emblem",
+    "x": 6.44,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2010
+  },
+  {
+    "name": "Fire Emblem Awakening",
+    "x": 5.52,
+    "y": 4.16,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2012
+  },
+  {
+    "name": "Fire Emblem Fates",
+    "x": 5.86,
+    "y": 4.15,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2015
+  },
+  {
+    "name": "Fire Emblem Echoes",
+    "x": 6.22,
+    "y": 4.09,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2017
+  },
+  {
+    "name": "Fire Emblem: Three Houses",
+    "x": 7.77,
+    "y": 4.3,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2019
+  },
+  {
+    "name": "War and Peace",
+    "x": 16.48,
+    "y": 4.45,
+    "group": "Other",
+    "category": "Novel",
+    "year": 1867
+  },
+  {
+    "name": "Pride and Prejudice",
+    "x": 16.91,
+    "y": 4.42,
+    "group": "Other",
+    "category": "Novel",
+    "year": 1813
+  },
+  {
+    "name": "Declaration of Independence",
+    "x": 36.94,
+    "y": 4.96,
+    "group": "Other",
+    "category": "Document",
+    "year": 1776
+  },
+  {
+    "name": "Hamlet",
+    "x": 15.76,
+    "y": 4.22,
+    "group": "Other",
+    "category": "Play",
+    "year": 1599
+  },
+  {
+    "name": "The Road Not Taken",
+    "x": 7.2,
+    "y": 3.92,
+    "group": "Other",
+    "category": "Poem",
+    "year": 1916
+  },
+  {
+    "name": "The Empire Strikes Back",
+    "x": 8.87,
+    "y": 4.27,
+    "group": "Other",
+    "category": "Movie script",
+    "year": 1980
+  },
+  {
+    "name": "Legend of Zelda: A Link To The Past",
+    "x": 6.67,
+    "y": 4.07,
+    "group": "Game",
+    "category": "Other game",
+    "year": 1991
+  },
+  {
+    "name": "Super Paper Mario",
+    "x": 6.09,
+    "y": 4.18,
+    "group": "Game",
+    "category": "Other game",
+    "year": 2007
+  },
+  {
+    "name": "Final Fantasy VII",
+    "x": 5.11,
+    "y": 4.2,
+    "group": "Game",
+    "category": "Other game",
+    "year": 1997
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "x": 7.82,
+    "y": 4.18,
+    "group": "Game",
+    "category": "Other game",
+    "year": 2018
+  },
+  {
+    "name": "Phoenix Wright: Ace Attorney Trilogy",
+    "x": 5.14,
+    "y": 4.22,
+    "group": "Game",
+    "category": "Other game",
+    "year": "2001-2003"
+  },
+  {
+    "name": "Assassin's Creed",
+    "x": 7.3,
+    "y": 4.21,
+    "group": "Game",
+    "category": "Other game",
+    "year": 2007
+  },
+  {
+    "name": "Barbie (2023)",
+    "x": 6.99,
+    "y": 3.89,
+    "group": "Other",
+    "category": "Movie script",
+    "year": 2023
+  },
+  {
+    "name": "Oppenheimer",
+    "x": 7.73,
+    "y": 4.61,
+    "group": "Other",
+    "category": "Movie script",
+    "year": 2023
+  },
+  {
+    "name": "The Hunger Games",
+    "x": 10.86,
+    "y": 4.05,
+    "group": "Other",
+    "category": "Novel",
+    "year": 2008
+  },
+  {
+    "name": "The Great Gatsby",
+    "x": 13.21,
+    "y": 4.27,
+    "group": "Other",
+    "category": "Novel",
+    "year": 1925
+  }
+]
