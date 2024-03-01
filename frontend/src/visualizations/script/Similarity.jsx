@@ -187,26 +187,26 @@ function Similarity(props) {
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave);
 
-      // if (key !== "Fire Emblem") {
-      //   const rectsFE = svg.append("g");
-      //   // Add rects
-      //   rectsFE
-      //     .selectAll("rect")
-      //     .data(data["Fire Emblem"])
-      //     .enter()
-      //     .append("rect")
-      //     .attr("x", function (d) {
-      //       return x(d.tdidf);
-      //     })
-      //     .attr("y", function (d) {
-      //       return height_one;
-      //       // return y(d.y);
-      //     })
-      //     .attr("width", 2)
-      //     .attr("height", bar_height)
-      //     .style("fill", color["Fire Emblem"])
-      //     .style("opacity", 0.5);
-      // }
+      if (key !== "Fire Emblem") {
+        const rectsFE = svg.append("g");
+        // Add rects
+        rectsFE
+          .selectAll("rect")
+          .data(data["Fire Emblem"])
+          .enter()
+          .append("rect")
+          .attr("x", function (d) {
+            return x(d.tdidf);
+          })
+          .attr("y", function (d) {
+            return height_one;
+            // return y(d.y);
+          })
+          .attr("width", 2)
+          .attr("height", bar_height)
+          .style("fill", color["Fire Emblem"])
+          .style("opacity", 0.5);
+      }
 
       // JACCARD!!!!!
 
@@ -233,26 +233,26 @@ function Similarity(props) {
         .on("mousemove", mousemove)
         .on("mouseleave", mouseleave);
 
-      // if (key !== "Fire Emblem") {
-      //   const rectsFE = svg.append("g");
-      //   // Add rects
-      //   rectsFE
-      //     .selectAll("rect")
-      //     .data(data["Fire Emblem"])
-      //     .enter()
-      //     .append("rect")
-      //     .attr("x", function (d) {
-      //       return x(d.jaccard);
-      //     })
-      //     .attr("y", function (d) {
-      //       return height_two;
-      //       // return y(d.y);
-      //     })
-      //     .attr("width", 2)
-      //     .attr("height", bar_height)
-      //     .style("fill", color["Fire Emblem"])
-      //     .style("opacity", 0.5);
-      // }
+      if (key !== "Fire Emblem") {
+        const rectsFE = svg.append("g");
+        // Add rects
+        rectsFE
+          .selectAll("rect")
+          .data(data["Fire Emblem"])
+          .enter()
+          .append("rect")
+          .attr("x", function (d) {
+            return x(d.jaccard);
+          })
+          .attr("y", function (d) {
+            return height_two;
+            // return y(d.y);
+          })
+          .attr("width", 2)
+          .attr("height", bar_height)
+          .style("fill", color["Fire Emblem"])
+          .style("opacity", 0.5);
+      }
     });
   }, [data, windowWidth]);
 

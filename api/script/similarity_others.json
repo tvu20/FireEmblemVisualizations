@@ -493,6 +493,27 @@
       "jaccard": 0.256816544912028,
       "category": "Visual Novel",
       "year": "2001-2003"
+    },
+    {
+      "name": "Steins;Gate",
+      "tdidf": 0.9028575815351613,
+      "jaccard": 0.1113929634939892,
+      "category": "Visual Novel",
+      "year": 2009
+    },
+    {
+      "name": "Doki Doki Literature Club",
+      "tdidf": 0.8094334407922796,
+      "jaccard": 0.08034498411257376,
+      "category": "Visual Novel",
+      "year": 2017
+    },
+    {
+      "name": "Danganronpa: Trigger Happy Havoc",
+      "tdidf": 0.7275013211772114,
+      "jaccard": 0.24022403258655806,
+      "category": "Visual Novel",
+      "year": 2010
     }
   ]
 }
