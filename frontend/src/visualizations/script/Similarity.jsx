@@ -83,9 +83,22 @@ function Similarity(props) {
 
     const color = {
       "Fire Emblem": "#4281f5",
-      "Single-Player RPG": "#f2aa18",
-      Other: "#b81a29",
+      Prose: "#BE3144",
+      Plays: "#FAA300",
+      "Movie Scripts": "#FAA300",
+      "First Person Shooter": "#00ad32",
+      Fighting: "#00ad32",
+      "Action RPG": "#00ad32",
+      "Strategy RPG": "#00ad32",
+      "Puzzle/Platform": "#00ad32",
+      "Visual Novel": "#00ad32",
     };
+
+    // const color = {
+    //   "Fire Emblem": "#4281f5",
+    //   "Single-Player RPG": "#f2aa18",
+    //   Other: "#b81a29",
+    // };
 
     const height_one = 30;
     const height_two = 100;
@@ -95,7 +108,6 @@ function Similarity(props) {
     var x = d3.scaleLinear().domain([0, 1]).range([0, width]);
 
     Object.entries(data).forEach(([key, value], index) => {
-      console.log("creating svg");
       const svg = div
         .append("svg")
         .attr("width", width + margin.left + margin.right)

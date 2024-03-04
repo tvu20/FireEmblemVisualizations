@@ -202,7 +202,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
-// import { getGameColor } from "../../utils/colors";
+import { getGameColor } from "../../utils/colors";
 // import { getGameTitles } from "../../utils/games";
 
 import "./script.css";
@@ -397,7 +397,8 @@ function WordCounts(props) {
             return y(0);
           })
           .attr("r", 8)
-          .attr("fill", "#69b3a2");
+          .attr("fill", (d) => getGameColor(d.console));
+        // .attr("fill", "#69b3a2");
 
         graph
           .selectAll("circle")
@@ -443,7 +444,8 @@ function WordCounts(props) {
             return y(d.value);
           })
           .attr("r", 8)
-          .attr("fill", "#69b3a2");
+          .attr("fill", (d) => getGameColor(d.console));
+        // .attr("fill", "#69b3a2");
       }
     }
 

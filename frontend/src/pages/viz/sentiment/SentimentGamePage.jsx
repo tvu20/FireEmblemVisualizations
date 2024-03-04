@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import VizWrapper from "../../../components/visualizations/VizWrapper";
 import SentimentGame from "../../../visualizations/sentiment/SentimentGame";
 
-import { getGameShortenedTitles, getGameTitles } from "../../../utils/games";
+import {
+  getGameShortenedTitles,
+  getGameTitles,
+  getYearFromCode,
+} from "../../../utils/games";
 import getColor from "../../../utils/colors";
 
 import "./sentiment.css";
@@ -16,7 +20,11 @@ function SentimentGamePage() {
     const short = getGameShortenedTitles();
 
     return codes.map((c, i) => {
-      return <option value={c}>{short[i]}</option>;
+      return (
+        <option value={c}>
+          {short[i]} ({getYearFromCode(c)})
+        </option>
+      );
     });
   };
   return (

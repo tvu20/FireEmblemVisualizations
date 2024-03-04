@@ -11,7 +11,7 @@ function ComplexityPage() {
   return (
     <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
       <div className="script-page complexity-words">
-        <h1>Complexity of Words</h1>
+        <h1>Language Complexity</h1>
         <p>Some description here.</p>
         <Complexity />
         {/* </VizWrapper> */}

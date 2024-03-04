@@ -1,66 +1,82 @@
 [
   {
     "game": "FE1",
-    "value": 8409
+    "value": 8409,
+    "console": "NES"
   },
   {
     "game": "FE2",
-    "value": 3739
+    "value": 3739,
+    "console": "NES"
   },
   {
     "game": "FE3",
-    "value": 30163
+    "value": 30163,
+    "console": "SNES"
   },
   {
     "game": "FE4",
-    "value": 80692
+    "value": 80692,
+    "console": "SNES"
   },
   {
     "game": "FE5",
-    "value": 56712
+    "value": 56712,
+    "console": "SNES"
   },
   {
     "game": "FE6",
-    "value": 53314
+    "value": 53314,
+    "console": "GBA"
   },
   {
     "game": "FE7",
-    "value": 82165
+    "value": 82165,
+    "console": "GBA"
   },
   {
     "game": "FE8",
-    "value": 59564
+    "value": 59564,
+    "console": "GBA"
   },
   {
     "game": "FE9",
-    "value": 98201
+    "value": 98201,
+    "console": "GameCube"
   },
   {
     "game": "FE10",
-    "value": 122545
+    "value": 122545,
+    "console": "Wii"
   },
   {
     "game": "FE11",
-    "value": 23397
+    "value": 23397,
+    "console": "DS"
   },
   {
     "game": "FE12",
-    "value": 65935
+    "value": 65935,
+    "console": "DS"
   },
   {
     "game": "FE13",
-    "value": 57907
+    "value": 57907,
+    "console": "3DS"
   },
   {
     "game": "FE14",
-    "value": 121081
+    "value": 121081,
+    "console": "3DS"
   },
   {
     "game": "FE15",
-    "value": 48251
+    "value": 48251,
+    "console": "3DS"
   },
   {
     "game": "FE16",
-    "value": 252967
+    "value": 252967,
+    "console": "Switch"
   }
 ]

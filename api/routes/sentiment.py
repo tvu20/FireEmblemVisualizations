@@ -76,3 +76,10 @@ def get_emotion_curves():
     response = json.load(f)
 
     return response
+
+@app.route('/api/sentiment/story-progression')
+def get_story_progression():
+    f = open(os.path.join(app.root_path, "sentiment", "story_progression.json"), "r")
+    response = json.load(f)
+
+    return response

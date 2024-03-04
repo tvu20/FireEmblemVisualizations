@@ -32,11 +32,25 @@ function Complexity(props) {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // const color = {
+    //   FE: "#4281f5",
+    //   Game: "#f2aa18",
+    //   Prose: "#872341",
+    //   Script: "#E36414",
+    // };
+
     const color = {
-      FE: "#4281f5",
-      Game: "#f2aa18",
-      Prose: "#b81a29",
-      Script: "#b81a29",
+      "Fire Emblem": "#0534e3",
+      "Short writing": "#872341",
+      Novel: "#BE3144",
+      Play: "#FAA300",
+      Movie: "#FFD23F",
+      FPS: "#8bd417",
+      Fighting: "#8bd417",
+      Action: "#0ec944",
+      Strategy: "#49b2fc",
+      "Puzzle/Platform": "#7e9e28",
+      "Visual Novel": "#7e9e28",
     };
 
     // Add X axis
@@ -112,7 +126,7 @@ function Complexity(props) {
           return y(d.y);
         })
         .attr("r", 5)
-        .style("fill", (d) => color[d.group])
+        .style("fill", (d) => color[d.category])
         //   .style("fill", "#69b3a2")
         //   .style("opacity", 0.3)
         .style("stroke", "white")

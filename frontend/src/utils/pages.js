@@ -54,13 +54,13 @@ const visualizations = [
     url: "/viz/emotion-game",
     thumbnail: require("../assets/github.png"),
   },
+  // {
+  //   name: "Emotion Intensity",
+  //   url: "/viz/emotion-intensity",
+  //   thumbnail: require("../assets/github.png"),
+  // },
   {
-    name: "Emotion Intensity",
-    url: "/viz/emotion-intensity",
-    thumbnail: require("../assets/github.png"),
-  },
-  {
-    name: "Word Complexity",
+    name: "Complexity of Language",
     url: "/viz/word-complexity",
     thumbnail: require("../assets/github.png"),
   },
@@ -77,6 +77,11 @@ const visualizations = [
   {
     name: "Character Bar Chart",
     url: "/viz/character-bar",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Story Progression",
+    url: "/viz/story-progression",
     thumbnail: require("../assets/github.png"),
   },
 ];

@@ -33,16 +33,16 @@ function PairingsNetworksPage() {
           onChange={(e) => setGame(e.target.value)}
           style={{ marginBottom: "30px" }}
         >
-          <option value="FE4-1">Genealogy, First Generation</option>
-          <option value="FE4-2">Genealogy, Second Generation</option>
-          <option value="FE6">The Binding Blade</option>
-          <option value="FE7">The Blazing Blade</option>
-          <option value="FE8">The Sacred Stones</option>
-          <option value="FE10">Radiant Dawn</option>
-          <option value="FE13">Awakening</option>
-          <option value="FE14">Fates</option>
-          <option value="FE15">Echoes</option>
-          <option value="FE16">Three Houses</option>
+          <option value="FE4-1">Genealogy, First Generation (1996)</option>
+          <option value="FE4-2">Genealogy, Second Generation (1996)</option>
+          <option value="FE6">The Binding Blade (2002)</option>
+          <option value="FE7">The Blazing Blade (2003)</option>
+          <option value="FE8">The Sacred Stones (2004)</option>
+          <option value="FE10">Radiant Dawn (2007)</option>
+          <option value="FE13">Awakening (2012)</option>
+          <option value="FE14">Fates (2015)</option>
+          <option value="FE15">Echoes (2017)</option>
+          <option value="FE16">Three Houses (2019)</option>
         </select>
         <Pairings
           game={game}

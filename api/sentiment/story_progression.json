@@ -1,0 +1,110 @@
+{
+  "FE1": {
+    "chapters": 30,
+    "midpoint": 18.5,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 6
+      },
+      {
+        "name": "II",
+        "start": 7,
+        "end": 25
+      },
+      {
+        "name": "III",
+        "start": 26,
+        "end": 30
+      }
+    ],
+    "stages": [
+      {
+        "short": "Escape",
+        "name": "Marth escapes",
+        "id": "setup",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "short": "Travel",
+        "name": "Traveling \nto Aurelis",
+        "id": "pursuit",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "short": "Retaking Altea Castle",
+        "name": "Retaking Altea castle",
+        "id": "trials",
+        "start": 7,
+        "end": 18.5
+      },
+      {
+        "short": "Creating Starlight",
+        "name": "Creating Starlight",
+        "id": "journey",
+        "start": 18.5,
+        "end": 26
+      },
+      {
+        "short": "Finale",
+        "name": "Saving Archanea",
+        "id": "finale",
+        "start": 26,
+        "end": 30
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Marth, prince of Altea, escapes when his kingdom is invaded.",
+        "start": 0.4
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Two years later, Marth sets out to recruit allies and reclaim Altea. ",
+        "start": 2
+      },
+      {
+        "name": "important meeting",
+        "id": "meeting",
+        "description": "Marth arrives in Aurelis and forms an alliance with Hardin.",
+        "start": 5
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Princess Nyna gives Marth the Fire Emblem, a treasure for the champion who will save the world.",
+        "start": 6
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Marth storms Altea castle, but discovers that his mother is dead and his sister has been captured by Gharnef.",
+        "start": 18.5
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Marth successfully assembles Starlight, the weapon needed to defeat Gharnef.",
+        "start": 25
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Marth defeats Gharnef and finally reunites with his sister, Elice.",
+        "start": 26
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Marth is advised by Nyna to seek out happiness and confesses his love to Caeda.",
+        "start": 29.6
+      }
+    ]
+  }
+}

@@ -3,7 +3,11 @@ import React, { useState } from "react";
 import VizWrapper from "../../../components/visualizations/VizWrapper";
 import EmotionGame from "../../../visualizations/sentiment/EmotionGame";
 
-import { getEmotionTitles, getEmotionCodes } from "../../../utils/games";
+import {
+  getEmotionTitles,
+  getEmotionCodes,
+  getYearFromCode,
+} from "../../../utils/games";
 import getColor from "../../../utils/colors";
 
 import "./sentiment.css";
@@ -19,7 +23,7 @@ function EmotionGamePage() {
     return codes.map((c, i) => {
       return (
         <option value={c} key={c}>
-          {short[i]}
+          {short[i]} ({getYearFromCode(c)})
         </option>
       );
     });

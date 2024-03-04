@@ -61,6 +61,7 @@ function WordPrevalence(props) {
     let enterTimeout, leaveTimeout;
 
     // can be sliders later
+    // const domainMax = 50e-5;
     const domainMax = 37e-5;
     const thresholds = 60;
     const yScaleFn = "Log";
@@ -80,9 +81,12 @@ function WordPrevalence(props) {
     <h3>Range: ${bin.x0}%&nbsp;-&nbsp;${bin.x1}%</h3>
     ${body.map(fmtWord).join("")}`;
 
+    console.log("bins", bins[bins.length - 1].x1);
+
     const xScale = d3
       .scaleLinear()
-      .domain([bins[0].x0, bins[bins.length - 1].x1])
+      .domain([0, 0.00038])
+      // .domain([bins[0].x0, bins[bins.length - 1].x1])
       .range([margin.left, width - margin.right]);
 
     // const yScale = () => {

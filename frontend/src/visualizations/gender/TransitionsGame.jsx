@@ -36,13 +36,13 @@ function TransitionsGame(props) {
       nodesPresent.includes(d.name)
     );
 
-    // const colors = {
-    //   male: d3.rgb(37, 79, 217),
-    //   female: d3.rgb(237, 88, 152),
-    //   avatar: d3.rgb(169, 103, 201),
-    //   none: d3.rgb(102, 102, 102),
-    //   neutral: d3.rgb(23, 117, 25),
-    // };
+    const colors = {
+      male: d3.rgb(37, 79, 217),
+      female: d3.rgb(237, 88, 152),
+      avatar: d3.rgb(169, 103, 201),
+      none: d3.rgb(102, 102, 102),
+      neutral: d3.rgb(23, 117, 25),
+    };
 
     const width = 928;
     const height = 600;
@@ -81,7 +81,7 @@ function TransitionsGame(props) {
       links: data.filter((d) => d.source !== "none" && d.target !== "none"),
     });
 
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+    // const color = d3.scaleOrdinal(d3.schemeCategory10);
 
     // Add definitions for all of the linear gradients.
     const gradients = defs
@@ -95,11 +95,13 @@ function TransitionsGame(props) {
     gradients
       .append("stop")
       .attr("offset", 0.0)
-      .attr("stop-color", (d) => color(d.source.category));
+      .attr("stop-color", (d) => colors[d.source.category]);
+    // .attr("stop-color", (d) => color(d.source.category));
     gradients
       .append("stop")
       .attr("offset", 1.0)
-      .attr("stop-color", (d) => color(d.target.category));
+      .attr("stop-color", (d) => colors[d.target.category]);
+    // .attr("stop-color", (d) => color(d.target.category));
 
     // Add a g.view for holding the sankey diagram.
     const view = svg.append("g").classed("view", true);
@@ -116,7 +118,8 @@ function TransitionsGame(props) {
       .attr("y", (d) => d.y0)
       .attr("height", (d) => d.y1 - d.y0)
       .attr("width", (d) => d.x1 - d.x0)
-      .attr("fill", (d) => color(d.category))
+      .attr("fill", (d) => colors[d.category])
+      // .attr("fill", (d) => color(d.category))
       .attr("opacity", 0.9);
 
     // Add titles for node hover effects.
