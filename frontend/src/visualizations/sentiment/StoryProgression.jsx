@@ -25,9 +25,9 @@ function StoryProgression(props) {
 
     d3.selectAll(".story-progression-container > svg").remove();
 
-    var margin = { top: 50, right: 10, bottom: 30, left: 10 },
-      width = 700 - margin.left - margin.right,
-      height = 180 - margin.top - margin.bottom;
+    var margin = { top: 30, right: 10, bottom: 0, left: 10 },
+      width = 800 - margin.left - margin.right,
+      height = 140 - margin.top - margin.bottom;
 
     const div = d3.select(ref.current);
 
@@ -36,7 +36,7 @@ function StoryProgression(props) {
         .append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-        .style("border", "1px solid blue")
+        // .style("border", "1px solid blue")
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -50,6 +50,13 @@ function StoryProgression(props) {
       const act_height = 30;
       const stage_height = 40;
       const moments_height = 85;
+
+      svg
+        .append("text")
+        .attr("transform", "translate(0,7)")
+        .text(key)
+        .style("font-size", "16px")
+        .style("font-weight", 500);
 
       value.acts.map((act, index) => {
         const actRect = svg
