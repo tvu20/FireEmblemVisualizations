@@ -1,14 +1,14 @@
 import React from "react";
 // import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import MobileBanner from "../MobileBanner";
 
 function Wrapper() {
-  return (
-    <>
-      {/* <NavBar /> */}
-      <Outlet />
-    </>
-  );
+  const { width } = useWindowDimensions();
+
+  console.log(width);
+  return <>{width > 750 ? <Outlet /> : <MobileBanner />}</>;
 }
 
 export default Wrapper;
