@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import VizWrapper from "../../../components/visualizations/VizWrapper";
 // import WordCountsZoom from "../../../visualizations/script/WordCountsZoom";
