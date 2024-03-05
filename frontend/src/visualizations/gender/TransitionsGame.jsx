@@ -210,6 +210,11 @@ function TransitionsGame(props) {
     }
 
     nodeRects.on("mouseover", branchAnimate).on("mouseout", branchClear);
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data]);
 
   useEffect(() => {

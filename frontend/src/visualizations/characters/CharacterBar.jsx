@@ -103,10 +103,12 @@ function CharacterBar(props) {
 
         index += 1;
       }
+
+      return null;
     });
 
     function buttonClick(e) {
-      console.log(e.srcElement.id);
+      // console.log(e.srcElement.id);
       const splits = e.srcElement.id.split("-");
       setCharData(data[splits[0]][splits[1]]);
     }

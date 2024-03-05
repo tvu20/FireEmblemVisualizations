@@ -218,7 +218,7 @@ function WordCounts(props) {
 
     d3.selectAll("g > *").remove();
 
-    console.log(data);
+    // console.log(data);
     console.log(sortedData);
 
     // set the dimensions and margins of the graph
@@ -291,8 +291,6 @@ function WordCounts(props) {
     // A function that update the chart for given boundaries
     function updateBrush(e) {
       const extent = e.selection;
-
-      console.log("extent", extent);
       // If no selection, back to initial coordinate. Otherwise, update X axis domain
       if (!extent) {
         if (!idleTimeout) return (idleTimeout = setTimeout(idled, 350)); // This allows to wait a little bit
@@ -362,7 +360,6 @@ function WordCounts(props) {
           // .transition()
           // .duration(1000)
           .attr("x1", function (d) {
-            console.log(x(d.game));
             return x(d.game);
           })
           .attr("x2", function (d) {
@@ -451,7 +448,6 @@ function WordCounts(props) {
 
     // When the button is changed, run the updateChart function
     d3.select("#word-count-checkbox").on("change", function (d) {
-      console.log("checkedChange");
       // console.log(d.target.checked);
       // // recover the option that has been chosen
       // var selectedOption = d3.select(this).property("value");

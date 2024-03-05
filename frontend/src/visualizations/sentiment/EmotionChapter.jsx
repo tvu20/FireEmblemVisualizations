@@ -79,7 +79,7 @@ function EmotionChapter(props) {
     // change(randomData());
 
     function change(data) {
-      console.log(data);
+      // console.log(data);
       /* ------- PIE SLICES -------*/
 
       const pieData = pie(data);
@@ -100,7 +100,6 @@ function EmotionChapter(props) {
         .transition()
         .duration(1000)
         .attrTween("d", function (d) {
-          console.log("i");
           this._current = this._current || d;
           const interpolate = d3.interpolate(this._current, d);
           this._current = interpolate(0);
@@ -198,7 +197,7 @@ function EmotionChapter(props) {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          change(data)
+          change(data);
         });
     });
   }, [data, windowWidth]);

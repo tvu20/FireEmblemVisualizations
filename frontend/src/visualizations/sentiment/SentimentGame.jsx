@@ -260,6 +260,11 @@ function SentimentGame(props) {
       .attr("stroke-dasharray", pathLength)
       .transition(transitionPath)
       .attr("stroke-dashoffset", 0);
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

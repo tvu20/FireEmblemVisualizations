@@ -321,8 +321,6 @@ function GenderLineCounts() {
         }
       }
 
-      console.log(female_rest);
-
       // print the last full row
       if (female_rest === 10) {
         for (let k = 1; k <= balls_per_row; k++) {

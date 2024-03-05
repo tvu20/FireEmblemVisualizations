@@ -266,6 +266,11 @@ function Similarity(props) {
           .style("opacity", 0.5);
       }
     });
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

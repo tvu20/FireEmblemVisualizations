@@ -16,7 +16,8 @@ def get_sentiments():
 
 @app.route('/api/sentiment/sentiment-curves')
 def get_sentiment_curves():
-    f = open(os.path.join(app.root_path, "sentiment", "sentiment_curves.json"), "r")
+    f = open(os.path.join(app.root_path, "sentiment", "sentiment_curves_backup.json"), "r")
+    # f = open(os.path.join(app.root_path, "sentiment", "sentiment_curves.json"), "r")
     response = json.load(f)
 
     return response

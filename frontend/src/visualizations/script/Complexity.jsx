@@ -152,6 +152,11 @@ function Complexity(props) {
     // });
 
     createScatter(filteredData);
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [filteredData, windowWidth]);
 
   useEffect(() => {

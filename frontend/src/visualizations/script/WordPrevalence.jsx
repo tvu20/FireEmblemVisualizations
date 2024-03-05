@@ -81,8 +81,6 @@ function WordPrevalence(props) {
     <h3>Range: ${bin.x0}%&nbsp;-&nbsp;${bin.x1}%</h3>
     ${body.map(fmtWord).join("")}`;
 
-    console.log("bins", bins[bins.length - 1].x1);
-
     const xScale = d3
       .scaleLinear()
       .domain([0, 0.00038])
@@ -202,23 +200,15 @@ function WordPrevalence(props) {
               word: d.word,
             }));
 
-          console.log("examplewords", exampleWords);
           examples
             .style("display", "block")
             .html(tooltipTemplate(bin, exampleWords));
 
           const bbox = examples.node().getBoundingClientRect();
-          console.log("bbox", bbox);
           const x_mu = (xScale(bin.x0) + xScale(bin.x1)) / 2;
-          console.log("mu", x_mu);
           const leftExtent = x_mu - bbox.width / 2 - margin.left;
-          console.log("leftExtend", leftExtent);
           const point = (leftExtent > 0 ? 0.5 : x_mu / bbox.width) * 100 + 8;
 
-          console.log("bin", bin);
-          console.log("x0", xScale(bin.x0));
-
-          console.log("x1", xScale(bin.x1));
           examples
             .transition(750)
             .style(
@@ -256,6 +246,11 @@ function WordPrevalence(props) {
         clearTimeout(enterTimeout);
         leaveTimeout = setTimeout(() => examples.style("display", "none"), 250);
       });
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth, game]);
 
   useEffect(() => {

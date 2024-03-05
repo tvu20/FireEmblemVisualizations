@@ -277,6 +277,11 @@ function StoryProgression(props) {
           .style("font-size", "13px");
       }
     });
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

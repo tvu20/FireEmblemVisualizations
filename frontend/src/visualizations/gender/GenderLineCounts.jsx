@@ -45,7 +45,6 @@ function GenderLineCounts() {
 
     // List of groups
     const groups = getGameTitles();
-    console.log(groups);
 
     // Add X axis
     const x = d3.scaleBand().domain(groups).range([0, width]).padding([0.25]);
@@ -241,6 +240,11 @@ function GenderLineCounts() {
         // console.log(i);
         return i * 100;
       });
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

@@ -84,11 +84,9 @@ function SentimentAcrossGames(props) {
       .attr("stroke", "#93319e")
       .attr("stroke-width", 1.9)
       .attr("d", function (d) {
-        console.log(d);
         return d3
           .line()
           .x(function (d) {
-            console.log(d);
             return x(d.x);
           })
           .y(function (d) {
