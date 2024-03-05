@@ -25,9 +25,9 @@ function EmotionIntensity(props) {
       chart_data: data[key],
     }));
 
-    const allKeys = sumstat.map(function (d) {
-      return d.key;
-    });
+    // const allKeys = sumstat.map(function (d) {
+    //   return d.key;
+    // });
     // console.log(allKeys);
 
     const svg = d3
@@ -49,10 +49,10 @@ function EmotionIntensity(props) {
     var y = d3.scaleLinear().domain([0, 1]).range([height, 0]);
     svg.append("g").call(d3.axisLeft(y));
 
-    // color palette
-    var res = sumstat.map(function (d) {
-      return d.key;
-    }); // list of group names
+    // // color palette
+    // var res = sumstat.map(function (d) {
+    //   return d.key;
+    // }); // list of group names
 
     const color = (tag) => {
       if (tag === "average") return "red";
