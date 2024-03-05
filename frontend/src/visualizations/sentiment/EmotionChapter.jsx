@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -8,10 +8,9 @@ import { emotionColor } from "../../utils/colors";
 import "./sentiment.css";
 
 function EmotionChapter(props) {
-  const { game, route, chapter } = props;
+  const { chapter } = props;
   const [data, setData] = useState();
   const ref = useRef();
-  const firstUpdate = useRef(true);
   const { width: windowWidth } = useWindowDimensions();
 
   useEffect(() => {
@@ -22,7 +21,7 @@ function EmotionChapter(props) {
     const width = 800;
     const height = width * 0.6;
 
-    const keys = ["anger", "fear", "sadness", "neutral", "surprise", "joy"];
+    // const keys = ["anger", "fear", "sadness", "neutral", "surprise", "joy"];
 
     // function randomData() {
     //   const labels = keys;

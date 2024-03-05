@@ -27,9 +27,9 @@ function SentimentAcrossGames(props) {
         chart_data: data[key],
       }));
 
-    const allKeys = sumstat.map(function (d) {
-      return d.key;
-    });
+    // const allKeys = sumstat.map(function (d) {
+    //   return d.key;
+    // });
     // console.log(allKeys);
 
     // Add an svg element for each group. The will be one beside each other and will go on the next row when no more room available

@@ -103,11 +103,11 @@ function GenderLineCounts() {
 
     console.log(graphdata);
 
-    var allGroup = [
-      ["fpc", "Playable Characters"],
-      ["npc", "Non-Playable Characters"],
-      ["combined", "All Characters"],
-    ];
+    // var allGroup = [
+    //   ["fpc", "Playable Characters"],
+    //   ["npc", "Non-Playable Characters"],
+    //   ["combined", "All Characters"],
+    // ];
 
     // A color scale: one color for each group
     const myColor = (tag) => {

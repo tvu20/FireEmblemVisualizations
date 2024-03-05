@@ -257,7 +257,7 @@ function WordCounts(props) {
       .call((g) => g.select(".domain").remove());
 
     // Add a clipPath: everything out of this area won't be drawn.
-    var clip = svg
+    svg
       .append("defs")
       .append("svg:clipPath")
       .attr("id", "clip")
@@ -406,12 +406,12 @@ function WordCounts(props) {
           });
       } else {
         // variable u: map data to existing circle
-        var j = graph.selectAll(".myLine").data(currData);
+        var k = graph.selectAll(".myLine").data(currData);
         // update lines
-        j.enter()
+        k.enter()
           .append("line")
           .attr("class", "myLine")
-          .merge(j)
+          .merge(k)
           .transition()
           .duration(1000)
           .attr("x1", function (d) {
@@ -427,11 +427,11 @@ function WordCounts(props) {
           .attr("stroke", "grey");
 
         // variable u: map data to existing circle
-        var u = graph.selectAll("circle").data(currData);
+        var l = graph.selectAll("circle").data(currData);
         // update bars
-        u.enter()
+        l.enter()
           .append("circle")
-          .merge(u)
+          .merge(l)
           .transition()
           .duration(1000)
           .attr("cx", function (d) {

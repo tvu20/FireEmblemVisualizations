@@ -163,6 +163,8 @@ function StoryProgression(props) {
           .text("  ACT " + act.name)
           .style("fill", "white")
           .style("font-size", "13px");
+
+        return null;
       });
 
       value.stages.map((stage) => {
@@ -196,6 +198,8 @@ function StoryProgression(props) {
           .style("font-size", "12px")
           .style("font-weight", 500)
           .style("cursor", "pointer");
+
+        return null;
       });
 
       value.moments.map((moment) => {
@@ -216,6 +220,8 @@ function StoryProgression(props) {
           .attr("name", moment.name)
           .attr("desc", moment.description)
           .style("cursor", "pointer");
+
+        return null;
       });
 
       const g = svg
@@ -276,6 +282,8 @@ function StoryProgression(props) {
           .style("fill", "white")
           .style("font-size", "13px");
       }
+
+      return null;
     });
 
     // removes tooltip when leaving a page
