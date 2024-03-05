@@ -10,7 +10,7 @@ import "./script.css";
 function MostCommonWordsPage() {
   return (
     <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
-      <div className="mostcommonwords">
+      <div className="script-page mostcommonwords">
         <h1>Most Common Words</h1>
         <p>Some description here.</p>
         <MostCommonWords />

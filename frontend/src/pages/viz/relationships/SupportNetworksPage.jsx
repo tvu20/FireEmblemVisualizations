@@ -12,7 +12,7 @@ function SupportNetworksPage() {
   const [linkConstrain, setLinkConstrain] = useState(false);
   return (
     <VizWrapper color={getColor("relationships")} navColor={"white"}>
-      <div className="support-networks">
+      <div className="relationship-page support-networks">
         <h1>Support Networks</h1>
         <p>Some description here.</p>
         <input
@@ -25,14 +25,14 @@ function SupportNetworksPage() {
           onChange={(e) => setGame(e.target.value)}
           style={{ marginBottom: "30px" }}
         >
-          <option value="FE6">The Binding Blade</option>
-          <option value="FE7">The Blazing Blade</option>
-          <option value="FE8">The Sacred Stones</option>
-          <option value="FE9">Path of Radiance</option>
-          <option value="FE13">Awakening</option>
-          <option value="FE14">Fates</option>
-          <option value="FE15">Echoes</option>
-          <option value="FE16">Three Houses</option>
+          <option value="FE6">The Binding Blade (2002)</option>
+          <option value="FE7">The Blazing Blade (2003)</option>
+          <option value="FE8">The Sacred Stones (2004)</option>
+          <option value="FE9">Path of Radiance (2005)</option>
+          <option value="FE13">Awakening (2012)</option>
+          <option value="FE14">Fates (2015)</option>
+          <option value="FE15">Echoes (2017)</option>
+          <option value="FE16">Three Houses (2019)</option>
         </select>
         <Supports
           game={game}

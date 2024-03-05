@@ -1,0 +1,239 @@
+{
+  "Fire Emblem": [
+    {
+      "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
+      "tdidf": 0.92923315,
+      "jaccard": 0.140276539,
+      "category": "Fire Emblem",
+      "year": 1990
+    },
+    {
+      "name": "Fire Emblem Gaiden",
+      "tdidf": 0.891800447,
+      "jaccard": 0.140276539,
+      "category": "Fire Emblem",
+      "year": 1992
+    },
+    {
+      "name": "Fire Emblem: Mystery of the Emblem",
+      "tdidf": 0.952865305,
+      "jaccard": 0.271159543,
+      "category": "Fire Emblem",
+      "year": 1994
+    },
+    {
+      "name": "Fire Emblem: Genealogy of the Holy War",
+      "tdidf": 0.944132423,
+      "jaccard": 0.340362595,
+      "category": "Fire Emblem",
+      "year": 1996
+    },
+    {
+      "name": "Fire Emblem: Thracia 776",
+      "tdidf": 0.966678264,
+      "jaccard": 0.331193838,
+      "category": "Fire Emblem",
+      "year": 1999
+    },
+    {
+      "name": "Fire Emblem: The Binding Blade",
+      "tdidf": 0.95985532,
+      "jaccard": 0.294012605,
+      "category": "Fire Emblem",
+      "year": 2002
+    },
+    {
+      "name": "Fire Emblem: The Blazing Blade",
+      "tdidf": 0.936185507,
+      "jaccard": 0.364672642,
+      "category": "Fire Emblem",
+      "year": 2003
+    },
+    {
+      "name": "Fire Emblem: The Sacred Stones",
+      "tdidf": 0.945613575,
+      "jaccard": 0.336609586,
+      "category": "Fire Emblem",
+      "year": 2004
+    },
+    {
+      "name": "Fire Emblem: Path of Radiance",
+      "tdidf": 0.95965313,
+      "jaccard": 0.380856699,
+      "category": "Fire Emblem",
+      "year": 2005
+    },
+    {
+      "name": "Fire Emblem: Radiant Dawn",
+      "tdidf": 0.964748795,
+      "jaccard": 0.408165105,
+      "category": "Fire Emblem",
+      "year": 2007
+    },
+    {
+      "name": "Fire Emblem: Shadow Dragon",
+      "tdidf": 0.94081318,
+      "jaccard": 0.234098292,
+      "category": "Fire Emblem",
+      "year": 2008
+    },
+    {
+      "name": "Fire Emblem: New Mystery of the Emblem",
+      "tdidf": 0.953065824,
+      "jaccard": 0.347529481,
+      "category": "Fire Emblem",
+      "year": 2010
+    },
+    {
+      "name": "Fire Emblem Awakening",
+      "tdidf": 0.941013341,
+      "jaccard": 0.337495161,
+      "category": "Fire Emblem",
+      "year": 2012
+    },
+    {
+      "name": "Fire Emblem Fates",
+      "tdidf": 0.917273421,
+      "jaccard": 0.39008681,
+      "category": "Fire Emblem",
+      "year": 2015
+    },
+    {
+      "name": "Fire Emblem Echoes",
+      "tdidf": 0.9454284,
+      "jaccard": 0.319062283,
+      "category": "Fire Emblem",
+      "year": 2017
+    },
+    {
+      "name": "Fire Emblem: Three Houses",
+      "tdidf": 1,
+      "jaccard": 1,
+      "category": "Fire Emblem",
+      "year": 2019
+    }
+  ],
+  "Single-Player RPG": [
+    {
+      "name": "Legend of Zelda: Ocarina of Time",
+      "tdidf": 0.9264429738344339,
+      "jaccard": 0.23811462893209814,
+      "category": "Other game",
+      "year": 1998
+    },
+    {
+      "name": "Legend of Zelda: A Link To The Past",
+      "tdidf": 0.8901059255438444,
+      "jaccard": 0.12268266085059978,
+      "category": "Other game",
+      "year": 1991
+    },
+    {
+      "name": "Super Paper Mario",
+      "tdidf": 0.8621006312852928,
+      "jaccard": 0.17889668167067937,
+      "category": "Other game",
+      "year": 2007
+    },
+    {
+      "name": "Final Fantasy VII",
+      "tdidf": 0.8510774216556357,
+      "jaccard": 0.30478546447155164,
+      "category": "Other game",
+      "year": 1997
+    },
+    {
+      "name": "Red Dead Redemption 2",
+      "tdidf": 0.689677246475894,
+      "jaccard": 0.30754098360655735,
+      "category": "Other game",
+      "year": 2018
+    },
+    {
+      "name": "Phoenix Wright: Ace Attorney Trilogy",
+      "tdidf": 0.834373286448975,
+      "jaccard": 0.256816544912028,
+      "category": "Other game",
+      "year": "2001-2003"
+    },
+    {
+      "name": "Assassin's Creed",
+      "tdidf": 0.8350002170182037,
+      "jaccard": 0.24217601344255407,
+      "category": "Other game",
+      "year": 2007
+    }
+  ],
+  "Other": [
+    {
+      "name": "War and Peace",
+      "tdidf": 0.83,
+      "jaccard": 0.25294689255988845,
+      "category": "Novel",
+      "year": 1867
+    },
+    {
+      "name": "Pride and Prejudice",
+      "tdidf": 0.8338206114855496,
+      "jaccard": 0.2568289333129864,
+      "category": "Novel",
+      "year": 1813
+    },
+    {
+      "name": "Declaration of Independence",
+      "tdidf": 0.6838679118193286,
+      "jaccard": 0.04303023440154003,
+      "category": "Document",
+      "year": 1776
+    },
+    {
+      "name": "Hamlet",
+      "tdidf": 0.8501467954544503,
+      "jaccard": 0.2113953910361096,
+      "category": "Play",
+      "year": 1599
+    },
+    {
+      "name": "The Road Not Taken",
+      "tdidf": 0.476840842824814,
+      "jaccard": 0.010369858278603527,
+      "category": "Poem",
+      "year": 1916
+    },
+    {
+      "name": "The Empire Strikes Back",
+      "tdidf": 0.7630191884577319,
+      "jaccard": 0.20877817319098457,
+      "category": "Movie script",
+      "year": 1980
+    },
+    {
+      "name": "Barbie (2023)",
+      "tdidf": 0.7872860873429492,
+      "jaccard": 0.14739610731194108,
+      "category": "Movie script",
+      "year": 2023
+    },
+    {
+      "name": "Oppenheimer",
+      "tdidf": 0.768840395486103,
+      "jaccard": 0.23421225485596323,
+      "category": "Movie script",
+      "year": 2023
+    },
+    {
+      "name": "The Hunger Games",
+      "tdidf": 0.8908143211938684,
+      "jaccard": 0.3026295789633683,
+      "category": "Novel",
+      "year": 2008
+    },
+    {
+      "name": "The Great Gatsby",
+      "tdidf": 0.8243683343731589,
+      "jaccard": 0.2414814814814815,
+      "category": "Novel",
+      "year": 1925
+    }
+  ]
+}

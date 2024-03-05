@@ -71,7 +71,10 @@ function Menu(props) {
         </div>
         <h2>Contact Me</h2>
         <div className="menu__link-collection">
-          <a style={{ textDecoration: "underline" }} href="google.com">
+          <a
+            style={{ textDecoration: "underline" }}
+            href="mailto:tgdinh@princeton.edu"
+          >
             tgdinh@princeton.edu
           </a>
         </div>

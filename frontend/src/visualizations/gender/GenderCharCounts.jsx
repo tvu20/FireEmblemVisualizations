@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getGameShortenedTitles } from "../../utils/games";
+import { getGameShortenedTitles, getYearFromCode } from "../../utils/games";
 
 import "./gender.css";
 
@@ -90,6 +90,7 @@ function GenderLineCounts() {
       const combined = ((value.pcs.F + value.npcs.F) / (pcs + npcs)) * 100;
       graphdata.push({
         game: gameTitles[index],
+        code: key,
         fpc,
         npc,
         combined,
@@ -102,14 +103,23 @@ function GenderLineCounts() {
 
     console.log(graphdata);
 
-    var allGroup = [
-      ["fpc", "Playable Characters"],
-      ["npc", "Non-Playable Characters"],
-      ["combined", "All Characters"],
-    ];
+    // var allGroup = [
+    //   ["fpc", "Playable Characters"],
+    //   ["npc", "Non-Playable Characters"],
+    //   ["combined", "All Characters"],
+    // ];
 
     // A color scale: one color for each group
-    var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
+    const myColor = (tag) => {
+      const colors = {
+        fpc: "#c93495",
+        npc: "#352280",
+        combined: "#882dbd",
+      };
+
+      return colors[tag];
+    };
+    // var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear().domain([0, 15]).range([0, width]);
@@ -208,7 +218,7 @@ function GenderLineCounts() {
     // d3.selectAll("g > *").remove();
 
     const width = 470;
-    const height = 500;
+    const height = 600;
 
     const colors = {
       m: d3.rgb(10, 195, 215),
@@ -228,8 +238,6 @@ function GenderLineCounts() {
     const per_row = 4;
 
     Object.entries(data).forEach(([key, value], i) => {
-      //   console.log(`${i}: ${key} = ${value}`);
-
       const row = Math.ceil((i + 1) / per_row);
       const col = i % per_row;
 
@@ -238,20 +246,22 @@ function GenderLineCounts() {
         .append("g")
         .style("border", "1px solid red")
         .attr("transform", function () {
-          return "translate(" + 120 * col + "," + 128 * row + ")rotate(0)";
+          return "translate(" + 120 * col + "," + 150 * row + ")rotate(0)";
         });
 
       //--------------------------- Calculate the distribution of dots: number, rows, columns, etc...
       // only using pcs right now
+
+      // I REVERSED ALL THE F AND M SO FEMALE WOULD BE ON THE BOTTOM
       const balls = value.pcs;
       const balls_per_row = 10;
-      let balls_F = balls.F;
+      let balls_F = balls.M;
 
-      const full_rows = Math.ceil((balls.M + balls_F + 1) / balls_per_row) - 1;
+      const full_rows = Math.ceil((balls.F + balls_F + 1) / balls_per_row) - 1;
 
       // male rows
-      const male_rows = balls.M / balls_per_row;
-      const male_full_rows = Math.ceil((balls.M + 1) / balls_per_row) - 1;
+      const male_rows = balls.F / balls_per_row;
+      const male_full_rows = Math.ceil((balls.F + 1) / balls_per_row) - 1;
       //   console.log(male_full_rows);
       const male_rest = Math.round((male_rows - male_full_rows) * 10);
 
@@ -269,7 +279,7 @@ function GenderLineCounts() {
             .attr("cy", 300 - r * 10)
             .attr("r", 4)
             .attr("opacity", 1)
-            .attr("fill", colors.m);
+            .attr("fill", colors.f);
         }
       }
 
@@ -281,7 +291,7 @@ function GenderLineCounts() {
           .attr("cy", 300 - male_full_rows * 10)
           .attr("r", 4)
           .attr("opacity", 1)
-          .attr("fill", colors.m);
+          .attr("fill", colors.f);
       }
 
       // female first row
@@ -292,7 +302,7 @@ function GenderLineCounts() {
           .attr("cy", 300 - male_full_rows * 10)
           .attr("r", 4)
           .attr("opacity", 1)
-          .attr("fill", colors.f);
+          .attr("fill", colors.m);
       }
 
       // female full rows
@@ -307,19 +317,32 @@ function GenderLineCounts() {
             )
             .attr("r", 4)
             .attr("opacity", 1)
-            .attr("fill", colors.f);
+            .attr("fill", colors.m);
         }
       }
 
-      // female partial row
-      for (let r = 1; r <= female_rest; r++) {
-        dots
-          .append("circle")
-          .attr("cx", r * 10)
-          .attr("cy", 300 - full_rows * 10)
-          .attr("r", 4)
-          .attr("opacity", 1)
-          .attr("fill", colors.f);
+      // print the last full row
+      if (female_rest === 10) {
+        for (let k = 1; k <= balls_per_row; k++) {
+          dots
+            .append("circle")
+            .attr("cx", k * 10)
+            .attr("cy", 210)
+            .attr("r", 4)
+            .attr("opacity", 1)
+            .attr("fill", colors.m);
+        }
+      } else {
+        // female partial row
+        for (let r = 1; r <= female_rest; r++) {
+          dots
+            .append("circle")
+            .attr("cx", r * 10)
+            .attr("cy", 300 - full_rows * 10)
+            .attr("r", 4)
+            .attr("opacity", 1)
+            .attr("fill", colors.m);
+        }
       }
 
       // avatar row
@@ -342,7 +365,7 @@ function GenderLineCounts() {
         .attr("x", 5)
         .attr("y", 320)
         .text(function (d) {
-          return gameTitles[key];
+          return gameTitles[key] + " (" + getYearFromCode(value.code) + ")";
         })
         .attr("font-family", "Gill Sans, Century Gothic, sans-serif")
         .attr("font-size", 12)
@@ -381,7 +404,12 @@ function GenderLineCounts() {
         setData(
           Object.entries(data)
             // .slice(0, 5)
-            .map((entry) => entry[1])
+
+            .map((entry) => {
+              const e = entry[1];
+              e.code = entry[0];
+              return e;
+            })
         );
       });
   }, []);

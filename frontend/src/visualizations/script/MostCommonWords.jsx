@@ -16,6 +16,7 @@ function MostCommonWords(props) {
     if (!data) return;
 
     d3.selectAll("g > *").remove();
+    d3.selectAll(".tooltip").remove();
 
     const s = d3
       .scaleSqrt()
@@ -172,6 +173,11 @@ function MostCommonWords(props) {
       //   .on("word", drawtest);
       .on("end", draw);
     layout.start();
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

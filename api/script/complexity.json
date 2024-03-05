@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Fire Emblem: Shadow Dragon and the Blade of Light",
+    "x": 7.41,
+    "y": 4.13,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1990
+  },
+  {
+    "name": "Fire Emblem Gaiden",
+    "x": 6.01,
+    "y": 4.18,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1992
+  },
+  {
+    "name": "Fire Emblem: Mystery of the Emblem",
+    "x": 7.02,
+    "y": 4.29,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1994
+  },
+  {
+    "name": "Fire Emblem: Genealogy of the Holy War",
+    "x": 6.57,
+    "y": 4.16,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1996
+  },
+  {
+    "name": "Fire Emblem: Thracia 776",
+    "x": 7.44,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 1999
+  },
+  {
+    "name": "Fire Emblem: The Binding Blade",
+    "x": 6.08,
+    "y": 4.21,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2002
+  },
+  {
+    "name": "Fire Emblem: The Blazing Blade",
+    "x": 4.88,
+    "y": 4.18,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2003
+  },
+  {
+    "name": "Fire Emblem: The Sacred Stones",
+    "x": 5.83,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2004
+  },
+  {
+    "name": "Fire Emblem: Path of Radiance",
+    "x": 5.98,
+    "y": 4.21,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2005
+  },
+  {
+    "name": "Fire Emblem: Radiant Dawn",
+    "x": 6.29,
+    "y": 4.23,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2007
+  },
+  {
+    "name": "Fire Emblem: Shadow Dragon",
+    "x": 7.04,
+    "y": 4.17,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2008
+  },
+  {
+    "name": "Fire Emblem: New Mystery of the Emblem",
+    "x": 6.44,
+    "y": 4.2,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2010
+  },
+  {
+    "name": "Fire Emblem Awakening",
+    "x": 5.52,
+    "y": 4.16,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2012
+  },
+  {
+    "name": "Fire Emblem Fates",
+    "x": 5.86,
+    "y": 4.15,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2015
+  },
+  {
+    "name": "Fire Emblem Echoes",
+    "x": 6.22,
+    "y": 4.09,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2017
+  },
+  {
+    "name": "Fire Emblem: Three Houses",
+    "x": 7.77,
+    "y": 4.3,
+    "group": "FE",
+    "category": "Fire Emblem",
+    "year": 2019
+  },
+  {
+    "name": "War and Peace",
+    "x": 16.48,
+    "y": 4.45,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1867
+  },
+  {
+    "name": "Pride and Prejudice",
+    "x": 16.91,
+    "y": 4.42,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1813
+  },
+  {
+    "name": "Declaration of Independence",
+    "x": 36.94,
+    "y": 4.96,
+    "group": "Prose",
+    "category": "Short writing",
+    "year": 1776
+  },
+  {
+    "name": "Hamlet",
+    "x": 15.76,
+    "y": 4.22,
+    "group": "Script",
+    "category": "Play",
+    "year": 1599
+  },
+  {
+    "name": "The Empire Strikes Back",
+    "x": 8.87,
+    "y": 4.27,
+    "group": "Script",
+    "category": "Movie",
+    "year": 1980
+  },
+  {
+    "name": "Legend of Zelda: A Link To The Past",
+    "x": 6.67,
+    "y": 4.07,
+    "group": "Game",
+    "category": "Action",
+    "year": 1991
+  },
+  {
+    "name": "Super Paper Mario",
+    "x": 6.09,
+    "y": 4.18,
+    "group": "Game",
+    "category": "Puzzle/Platform",
+    "year": 2007
+  },
+  {
+    "name": "Final Fantasy VII",
+    "x": 5.11,
+    "y": 4.2,
+    "group": "Game",
+    "category": "Action",
+    "year": 1997
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "x": 7.82,
+    "y": 4.18,
+    "group": "Game",
+    "category": "Action",
+    "year": 2018
+  },
+  {
+    "name": "Phoenix Wright: Ace Attorney Trilogy",
+    "x": 5.14,
+    "y": 4.22,
+    "group": "Game",
+    "category": "Visual Novel",
+    "year": "2001-2003"
+  },
+  {
+    "name": "Assassin's Creed",
+    "x": 7.3,
+    "y": 4.21,
+    "group": "Game",
+    "category": "Action",
+    "year": 2007
+  },
+  {
+    "name": "Barbie (2023)",
+    "x": 6.99,
+    "y": 3.89,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2023
+  },
+  {
+    "name": "Oppenheimer",
+    "x": 7.73,
+    "y": 4.61,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2023
+  },
+  {
+    "name": "The Hunger Games",
+    "x": 10.86,
+    "y": 4.05,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 2008
+  },
+  {
+    "name": "The Great Gatsby",
+    "x": 13.21,
+    "y": 4.27,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1925
+  },
+  {
+    "name": "Alice in Wonderland",
+    "x": 16.28,
+    "y": 4.03,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1865
+  },
+  {
+    "name": "The Great Gatsby",
+    "x": 13.21,
+    "y": 4.27,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1925
+  },
+  {
+    "name": "Catcher In The Rye",
+    "x": 10.06,
+    "y": 3.9,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1951
+  },
+  {
+    "name": "The Color Purple",
+    "x": 8.83,
+    "y": 3.97,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1982
+  },
+  {
+    "name": "All The Light We Cannot See",
+    "x": 11.55,
+    "y": 4.5,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 2014
+  },
+  {
+    "name": "Little Women",
+    "x": 18.19,
+    "y": 4.16,
+    "group": "Prose",
+    "category": "Novel",
+    "year": "1868-1869"
+  },
+  {
+    "name": "Anne of Green Gables",
+    "x": 13.82,
+    "y": 4.22,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1908
+  },
+  {
+    "name": "1984",
+    "x": 15.18,
+    "y": 4.46,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1949
+  },
+  {
+    "name": "A Wrinkle In Time",
+    "x": 9.69,
+    "y": 4.25,
+    "group": "Prose",
+    "category": "Novel",
+    "year": 1962
+  },
+  {
+    "name": "The Tell Tale Heart",
+    "x": 13.01,
+    "y": 3.88,
+    "group": "Prose",
+    "category": "Short writing",
+    "year": 1843
+  },
+  {
+    "name": "The Yellow Wallpaper",
+    "x": 15.35,
+    "y": 3.96,
+    "group": "Prose",
+    "category": "Short writing",
+    "year": 1892
+  },
+  {
+    "name": "The Importance of Being Earnest",
+    "x": 6.12,
+    "y": 4.33,
+    "group": "Script",
+    "category": "Play",
+    "year": 1895
+  },
+  {
+    "name": "Fences",
+    "x": 6.55,
+    "y": 3.63,
+    "group": "Script",
+    "category": "Play",
+    "year": 1985
+  },
+  {
+    "name": "Angels In America",
+    "x": 5.54,
+    "y": 3.92,
+    "group": "Script",
+    "category": "Play",
+    "year": 1991
+  },
+  {
+    "name": "The Laramie Project",
+    "x": 11.57,
+    "y": 4.21,
+    "group": "Script",
+    "category": "Play",
+    "year": 1991
+  },
+  {
+    "name": "La La Land",
+    "x": 6.4,
+    "y": 4.24,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2016
+  },
+  {
+    "name": "La La Land",
+    "x": 6.4,
+    "y": 4.24,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2016
+  },
+  {
+    "name": "The Dark Knight",
+    "x": 6.78,
+    "y": 4.38,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2008
+  },
+  {
+    "name": "Shrek",
+    "x": 6.61,
+    "y": 4.04,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2001
+  },
+  {
+    "name": "Everything Everywhere All At Once",
+    "x": 7.35,
+    "y": 4.31,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2022
+  },
+  {
+    "name": "Get Out",
+    "x": 6.08,
+    "y": 4.2,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2017
+  },
+  {
+    "name": "12 Years A Slave",
+    "x": 9.19,
+    "y": 4.22,
+    "group": "Script",
+    "category": "Movie",
+    "year": 2013
+  },
+  {
+    "name": "Metal Gear Solid",
+    "x": 7.5,
+    "y": 3.36,
+    "group": "Game",
+    "category": "Action",
+    "year": 1998
+  },
+  {
+    "name": "Elden Ring",
+    "x": 7.36,
+    "y": 4.81,
+    "group": "Game",
+    "category": "Action",
+    "year": 2022
+  },
+  {
+    "name": "Resident Evil Village",
+    "x": 7.76,
+    "y": 4.27,
+    "group": "Game",
+    "category": "Action",
+    "year": 2021
+  },
+  {
+    "name": "Kingdom Hearts",
+    "x": 6.55,
+    "y": 4.45,
+    "group": "Game",
+    "category": "Action",
+    "year": 2002
+  },
+  {
+    "name": "Grand Theft Auto V",
+    "x": 6.63,
+    "y": 4.15,
+    "group": "Game",
+    "category": "Action",
+    "year": 2013
+  },
+  {
+    "name": "Final Fantasy Tactics",
+    "x": 7.11,
+    "y": 4.19,
+    "group": "Game",
+    "category": "Strategy",
+    "year": 1998
+  },
+  {
+    "name": "Tactics Ogre: Let Us Cling Together",
+    "x": 6.84,
+    "y": 4.25,
+    "group": "Game",
+    "category": "Strategy",
+    "year": 2010
+  },
+  {
+    "name": "Triangle Strategy",
+    "x": 8.01,
+    "y": 4.48,
+    "group": "Game",
+    "category": "Strategy",
+    "year": 2022
+  },
+  {
+    "name": "Halo 2",
+    "x": 7.53,
+    "y": 4.26,
+    "group": "Game",
+    "category": "FPS",
+    "year": 2004
+  },
+  {
+    "name": "Halo 2",
+    "x": 7.53,
+    "y": 4.26,
+    "group": "Game",
+    "category": "FPS",
+    "year": 2004
+  },
+  {
+    "name": "Call of Duty: Modern Warfare 2",
+    "x": 6.66,
+    "y": 4.37,
+    "group": "Game",
+    "category": "FPS",
+    "year": 2009
+  },
+  {
+    "name": "Half-Life",
+    "x": 8.34,
+    "y": 4.49,
+    "group": "Game",
+    "category": "FPS",
+    "year": 1998
+  },
+  {
+    "name": "Borderlands 2",
+    "x": 7.77,
+    "y": 4.48,
+    "group": "Game",
+    "category": "FPS",
+    "year": 2012
+  },
+  {
+    "name": "Portal",
+    "x": 9.05,
+    "y": 4.54,
+    "group": "Game",
+    "category": "Puzzle/Platform",
+    "year": 2007
+  },
+  {
+    "name": "Cuphead",
+    "x": 5.56,
+    "y": 4.27,
+    "group": "Game",
+    "category": "Puzzle/Platform",
+    "year": 2017
+  },
+  {
+    "name": "Mortal Kombat",
+    "x": 7.87,
+    "y": 4.44,
+    "group": "Game",
+    "category": "Fighting",
+    "year": 1992
+  },
+  {
+    "name": "Street Fighter",
+    "x": 6.51,
+    "y": 4.16,
+    "group": "Game",
+    "category": "Fighting",
+    "year": 1991
+  }
+]

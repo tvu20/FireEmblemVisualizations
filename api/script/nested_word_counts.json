@@ -1,6 +1,6 @@
 {
-  "name": "games",
-  "children:": [
+  "name": "consoles",
+  "children": [
     {
       "name": "NES",
       "children": [

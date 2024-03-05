@@ -2,7 +2,7 @@
     background: 
 } */
 
-.sentiment-game {
+.sentiment-page {
   background-image: var(--sentiment-gradient);
   background-repeat: no-repeat;
   min-height: 100%;
@@ -17,11 +17,11 @@
   align-items: center;
 }
 
-.sentiment-game h1 {
+.sentiment-page h1 {
   color: #123622;
   margin-bottom: 5px;
 }
 
-.sentiment-game p {
+.sentiment-page p {
   color: #123622;
 }

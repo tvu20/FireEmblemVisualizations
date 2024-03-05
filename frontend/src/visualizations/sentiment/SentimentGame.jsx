@@ -165,7 +165,7 @@ function SentimentGame(props) {
         return height / 2 - y1(d.positive);
       })
       .delay(function (d, i) {
-        console.log(i);
+        // console.log(i);
         return i * 100;
       });
 
@@ -209,7 +209,7 @@ function SentimentGame(props) {
         return height / 2 - y1(d.negative);
       })
       .delay(function (d, i) {
-        console.log(i);
+        // console.log(i);
         return i * 100;
       });
 
@@ -220,6 +220,51 @@ function SentimentGame(props) {
 
       .selectAll("text")
       .style("visibility", "hidden");
+
+    const line = d3
+      .line()
+      .x(function (d) {
+        return x(d.chapter) + x.bandwidth() / 2;
+      })
+      .y(function (d) {
+        return y1(d.sentiment);
+      })
+      .curve(d3.curveBasis);
+
+    // Draw the line
+    const path = svg
+      .append("path")
+      .datum(data.Main)
+      .attr("fill", "none")
+      .attr("stroke", "black")
+      .attr("stroke-linejoin", "round")
+      .attr("stroke-linecap", "round")
+      .attr("stroke-width", 3)
+      .attr("d", line);
+    // .attr("fill", "none")
+    // .attr("stroke", "black")
+    // .attr("stroke-width", 3)
+    // .attr(
+    //   "d",
+
+    // );
+
+    const pathLength = path.node().getTotalLength();
+    const transitionPath = d3
+      .transition()
+      .ease(d3.easeSin)
+      .duration(150 * data.Main.length);
+
+    path
+      .attr("stroke-dashoffset", pathLength)
+      .attr("stroke-dasharray", pathLength)
+      .transition(transitionPath)
+      .attr("stroke-dashoffset", 0);
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getGameTitles } from "../../utils/games";
+import { getGameTitles, getYearFromCode } from "../../utils/games";
 
 import "./gender.css";
 
@@ -45,7 +45,6 @@ function GenderLineCounts() {
 
     // List of groups
     const groups = getGameTitles();
-    console.log(groups);
 
     // Add X axis
     const x = d3.scaleBand().domain(groups).range([0, width]).padding([0.25]);
@@ -143,6 +142,9 @@ function GenderLineCounts() {
         .html(
           "<h5>" +
             game +
+            " (" +
+            getYearFromCode(game) +
+            ")" +
             "</h5> Gender: <b>" +
             mapGender(subgroup) +
             "<br>" +
@@ -238,6 +240,11 @@ function GenderLineCounts() {
         // console.log(i);
         return i * 100;
       });
+
+    // removes tooltip when leaving a page
+    return () => {
+      d3.selectAll(".tooltip").remove();
+    };
   }, [data, windowWidth]);
 
   useEffect(() => {

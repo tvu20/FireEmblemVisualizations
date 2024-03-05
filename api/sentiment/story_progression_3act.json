@@ -1,0 +1,880 @@
+{
+  "3-Act Structure": {
+    "chapters": 110,
+    "midpoint": 60,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 30
+      },
+      {
+        "name": "II",
+        "start": 30,
+        "end": 95
+      },
+      {
+        "name": "III",
+        "start": 95,
+        "end": 110
+      }
+    ],
+    "stages": [
+      {
+        "short": "Setup",
+        "name": "World and hero established",
+        "id": "setup",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "short": "Incident",
+        "name": "The hero realizes their initial character motivation!",
+        "id": "pursuit",
+        "start": 10,
+        "end": 30
+      },
+      {
+        "short": "First journey",
+        "name": "The hero sets out to fulfill their goals",
+        "id": "trials",
+        "start": 30,
+        "end": 60
+      },
+      {
+        "short": "New obstacles",
+        "name": "Following a key turning point, the hero sets their sights on something new",
+        "id": "journey",
+        "start": 60,
+        "end": 95
+      },
+      {
+        "short": "Finale",
+        "name": "The hero defeats all their enemies in hierarchical order",
+        "id": "finale",
+        "start": 95,
+        "end": 110
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "First impression of our hero.",
+        "start": 1.5
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Life-changing event or catalyst for change occurs!",
+        "start": 10
+      },
+      {
+        "name": "important meeting",
+        "id": "meeting",
+        "description": "The hero meets someone important to their story.",
+        "start": 22
+      },
+      {
+        "name": "early tragedy",
+        "id": "death",
+        "description": "Tragedy befalls a valued family member of the hero.",
+        "start": 25
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "The hero sets their sights on their objective!",
+        "start": 30
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Midway turning point - hero is forced to pivot their goals.",
+        "start": 60
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Point of no return! Onward to the finale!",
+        "start": 95
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Every story needs a heart-wrenching scene before its final battle.",
+        "start": 100
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Our last glimpse of the hero!",
+        "start": 108.5
+      }
+    ]
+  },
+  "Shadow Dragon (1990, 2010)": {
+    "chapters": 30,
+    "midpoint": 18.5,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "name": "II",
+        "start": 7,
+        "end": 25
+      },
+      {
+        "name": "III",
+        "start": 25,
+        "end": 30
+      }
+    ],
+    "stages": [
+      {
+        "short": "Escape",
+        "name": "Marth escapes",
+        "id": "setup",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "short": "Travel",
+        "name": "Traveling \nto Aurelis",
+        "id": "pursuit",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "short": "Retaking Altea Castle",
+        "name": "Retaking Altea castle",
+        "id": "trials",
+        "start": 7,
+        "end": 18.5
+      },
+      {
+        "short": "Creating Starlight",
+        "name": "Creating Starlight",
+        "id": "journey",
+        "start": 18.5,
+        "end": 25
+      },
+      {
+        "short": "Finale",
+        "name": "Saving Archanea",
+        "id": "finale",
+        "start": 25,
+        "end": 30
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Marth, prince of Altea, escapes when his kingdom is invaded.",
+        "start": 0.4
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Two years later, Marth sets out to recruit allies and reclaim Altea. ",
+        "start": 2
+      },
+      {
+        "name": "important meeting",
+        "id": "meeting",
+        "description": "Marth arrives in Aurelis and forms an alliance with Hardin.",
+        "start": 6
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Princess Nyna gives Marth the Fire Emblem, a treasure for the champion who will save the world.",
+        "start": 7
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Marth storms Altea castle, but discovers that his mother is dead and his sister has been captured by Gharnef.",
+        "start": 18.5
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Marth successfully assembles Starlight, the weapon needed to defeat Gharnef.",
+        "start": 25
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Marth defeats Gharnef and finally reunites with his sister, Elice.",
+        "start": 26
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Marth is advised by Nyna to seek out happiness and confesses his love to Caeda.",
+        "start": 29.6
+      }
+    ]
+  },
+  "Thracia 776 (1999)": {
+    "chapters": 33,
+    "midpoint": 19,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "name": "II",
+        "start": 8,
+        "end": 26
+      },
+      {
+        "name": "III",
+        "start": 26,
+        "end": 33
+      }
+    ],
+    "stages": [
+      {
+        "short": "Intro",
+        "name": "Leif sets out",
+        "id": "setup",
+        "start": 0,
+        "end": 1.5
+      },
+      {
+        "short": "Munster",
+        "name": "Storming Munster",
+        "id": "pursuit",
+        "start": 1.5,
+        "end": 8
+      },
+      {
+        "short": "Tarrah",
+        "name": "Quest for Tarrah",
+        "id": "trials",
+        "start": 8,
+        "end": 19
+      },
+      {
+        "short": "Leonster",
+        "name": "Liberation of Leonster",
+        "id": "journey",
+        "start": 19,
+        "end": 26
+      },
+      {
+        "short": "Finale",
+        "name": "Return to Munster",
+        "id": "finale",
+        "start": 26,
+        "end": 33
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Years after escaping Leonster, Leif has grown up in Fiana under the care of Finn.",
+        "start": 0.4
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Leif discovers that childhood friends Nanna and Mareeta have been captured. He sets out to rescue them from Munster prison.",
+        "start": 1.5
+      },
+      {
+        "name": "early tragedy",
+        "id": "death",
+        "description": "Leif and company are forced to leave Eyvel behind as they escape Munster prison.",
+        "start": 7
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Leif and company escape Munster town and set out to raise a liberation army.",
+        "start": 8
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Leif is outmatched in a decisive battle with the empire, but is saved by Arion's arrival and flees Tarrah.",
+        "start": 19
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Leif's close advisor is killed in battle, while is army is trapped in a siege in Leonster Castle. They hold out for six months until Seliph's army arrives.",
+        "start": 26
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Leif and his mentor August reflect on the tragedies of war, while enemy boss Reinhardt prepares to confront his own sister in battle.",
+        "start": 29
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Leif and Seliph swear a vow of friendship, determined to free Jugdral from the empire's tyrrany.",
+        "start": 32.6
+      }
+    ]
+  },
+  "The Blazing Blade (2003)": {
+    "chapters": 40,
+    "midpoint": 24,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "name": "II",
+        "start": 12,
+        "end": 33
+      },
+      {
+        "name": "III",
+        "start": 33,
+        "end": 40
+      }
+    ],
+    "stages": [
+      {
+        "short": "Meet",
+        "name": "A Girl on the Plains",
+        "id": "setup",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "short": "Travel",
+        "name": "Lyn travels to Caelin",
+        "id": "pursuit",
+        "start": 2,
+        "end": 12
+      },
+      {
+        "short": "Saving Elbert",
+        "name": "Eliwood and Hector set out to save Elbert",
+        "id": "trials",
+        "start": 12,
+        "end": 24
+      },
+      {
+        "short": "Collecting weapons",
+        "name": "Eliwood, Lyn, and Hector seek out the legendary weapons to defeat Nergal.",
+        "id": "journey",
+        "start": 24,
+        "end": 33
+      },
+      {
+        "short": "Finale",
+        "name": "Defeating Nergal and the dragons",
+        "id": "finale",
+        "start": 33,
+        "end": 40
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Lyn finds an unconscious Mark on the plans of Sacae and takes him in.",
+        "start": 0.6
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Lyn discovers her true parentage: she is the lady of Caelin!",
+        "start": 2
+      },
+      {
+        "name": "important meeting",
+        "id": "meeting",
+        "description": "Lyn meets the siblings Nils and Ninian, the latter of whom is rescued by Eliwood. Lyn and Eliwood encounter each other for the first time.",
+        "start": 7.5
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Lyn reunites with her grandmother and decides to stay in Caelin.",
+        "start": 12
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Eliwood and company find Elbert in Dragon's Gate but they are too late to save him. Nergal forces Ninian to open Dragon's Gate.",
+        "start": 24
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Eliwood arrives at the Shrine of Seals and unlocks new powers; Ninian gives herself up to save her friends. ",
+        "start": 33
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Nergal tricks Eliwood into killing Ninian.",
+        "start": 34
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Eliwood and Hector vow to protect those dear to them.",
+        "start": 39.4
+      }
+    ]
+  },
+  "The Sacred Stones (2004)": {
+    "chapters": 24,
+    "midpoint": 17,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 10
+      },
+      {
+        "name": "II",
+        "start": 10,
+        "end": 20
+      },
+      {
+        "name": "III",
+        "start": 20,
+        "end": 24
+      }
+    ],
+    "stages": [
+      {
+        "short": "Escape",
+        "name": "The Fall of Renais",
+        "id": "setup",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "short": "Travel",
+        "name": "Eirika journeys to reunite with her brother",
+        "id": "pursuit",
+        "start": 2,
+        "end": 10
+      },
+      {
+        "short": "Individual journeys",
+        "name": "The twins journey individually",
+        "id": "trials",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "short": "Assemble",
+        "name": "Assembling the Sacred Stones",
+        "id": "journey",
+        "start": 17,
+        "end": 20
+      },
+      {
+        "short": "Finale",
+        "name": "Defeating Lyon and saving Magvel",
+        "id": "finale",
+        "start": 20,
+        "end": 24
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Princess Eirika escaped Renais following its invasion by Grado.",
+        "start": 0.3
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Eirika discovers that her brother Ephraim is fighting against Grado and decides to save him.",
+        "start": 2
+      },
+      {
+        "name": "important meeting",
+        "id": "meeting",
+        "description": "Eirika and Ephraim reunite at Grado.",
+        "start": 9
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Eirika and Ephraim split up to amass allies from different nations.",
+        "start": 10.2
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Eirika and Ephraim reunite in the desert, having accomplished their individual goals.",
+        "start": 17
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "The twins confront childhood friend Lyon, who tricks them into giving him the sacred stones.",
+        "start": 20
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "After his defeat, Lyon bids each of the twins farewell and tells them he loves them.",
+        "start": 23
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "In a flashback, a young Lyon tells Eirika and Ephraim that he wishes to be their friend.",
+        "start": 23.7
+      }
+    ]
+  },
+  "Path of Radiance (2005)": {
+    "chapters": 34,
+    "midpoint": 21,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 12
+      },
+      {
+        "name": "II",
+        "start": 12,
+        "end": 26
+      },
+      {
+        "name": "III",
+        "start": 26,
+        "end": 34
+      }
+    ],
+    "stages": [
+      {
+        "short": "Intro",
+        "name": "The Greil Mercenaries",
+        "id": "setup",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "short": "Escape",
+        "name": "Escaping Crimea",
+        "id": "pursuit",
+        "start": 5,
+        "end": 12
+      },
+      {
+        "short": "Seeking aid",
+        "name": "Seeking aid from Begnion",
+        "id": "trials",
+        "start": 12,
+        "end": 21
+      },
+      {
+        "short": "Marching on",
+        "name": "Marching onwards to Daein",
+        "id": "journey",
+        "start": 21,
+        "end": 26
+      },
+      {
+        "short": "Finale",
+        "name": "Defeating Daein and liberating Crimea",
+        "id": "finale",
+        "start": 26,
+        "end": 34
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "Ike trains swordfighting with his father.",
+        "start": 0.4
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Soren reveals that Daein and Crimea have gone to war. Ike encounters the secret princess of Crimea in the woods.",
+        "start": 5
+      },
+      {
+        "name": "early tragedy",
+        "id": "death",
+        "description": "Ike witnesses his father's death at the hand of the Black Knight.",
+        "start": 8
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Ike, Elincia, and the Greil Mercenaries escape Crimea.",
+        "start": 12
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Ike saves Reyson and reunites him with his sister. The herons restore Serenes Forest and Ike gains the trust of Sanaki.",
+        "start": 21
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Upon reaching Daein's capital, Ike discovers that King Ashnard is no longer there. He is then betrayed by his ally Nasir.",
+        "start": 26
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Ike defeats the man who murdered his father and reconciles with Nasir.",
+        "start": 31
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Elincia thanks Ike for his help and they walk out together to greet the people of Crimea.",
+        "start": 33.6
+      }
+    ]
+  },
+  "Fates: Birthright (2015)": {
+    "chapters": 29,
+    "midpoint": 18,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "name": "II",
+        "start": 7,
+        "end": 25.5
+      },
+      {
+        "name": "III",
+        "start": 25.5,
+        "end": 29
+      }
+    ],
+    "stages": [
+      {
+        "short": "Nohr",
+        "name": "Corrin, child of Nohr",
+        "id": "setup",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "short": "Hoshido",
+        "name": "Corrin, child of Hoshido",
+        "id": "pursuit",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "short": "Defending Hoshido",
+        "name": "Defending Hoshido",
+        "id": "trials",
+        "start": 7,
+        "end": 18
+      },
+      {
+        "short": "Marching on",
+        "name": "Marching onwards to defeat Nohr",
+        "id": "journey",
+        "start": 18,
+        "end": 25.5
+      },
+      {
+        "short": "Finale",
+        "name": "Bringing peace to the world",
+        "id": "finale",
+        "start": 25.5,
+        "end": 29
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "In a premonition, Corrin sees an impossible choice they have to make.",
+        "start": 0.3
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Corrin is kidnapped and taken to Hoshido, where they learn of their true parentage.",
+        "start": 4
+      },
+      {
+        "name": "early tragedy",
+        "id": "death",
+        "description": "Corrin's birth mother is murdered at the hands of their adoptive father.",
+        "start": 5.5
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Corrin makes the decision to side with Hoshido.",
+        "start": 7
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Upon arriving in the Ice Tribe, Corrin is betrayed by their retainer, Flora, for fighting against Nohr.",
+        "start": 18
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Corrin discovers a traitor within their midst. Leo arrives and saves Corrin, but refuses to formally join their cause.",
+        "start": 25.5
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Corrin's brother Xander accidentally kills their sister Elise before being defeated by Corrin. As his dying wish, Xander wishes Corrin to bring peace to the world.",
+        "start": 27
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Ryoma states that with the support of Corrin, they will continue bringing peace to the world.",
+        "start": 28.7
+      }
+    ]
+  },
+  "Fates: Conquest (2015)": {
+    "chapters": 29,
+    "midpoint": 18,
+    "group": 3,
+    "acts": [
+      {
+        "name": "I",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "name": "II",
+        "start": 7,
+        "end": 25.5
+      },
+      {
+        "name": "III",
+        "start": 25.5,
+        "end": 29
+      }
+    ],
+    "stages": [
+      {
+        "short": "Nohr",
+        "name": "Corrin, child of Nohr",
+        "id": "setup",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "short": "Hoshido",
+        "name": "Corrin, child of Hoshido",
+        "id": "pursuit",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "short": "Invading Hoshido",
+        "name": "Invading Hoshido",
+        "id": "trials",
+        "start": 7,
+        "end": 18
+      },
+      {
+        "short": "Marching on",
+        "name": "Marching onwards to defeat Hoshido",
+        "id": "journey",
+        "start": 18,
+        "end": 25.5
+      },
+      {
+        "short": "Finale",
+        "name": "Bringing peace to the world",
+        "id": "finale",
+        "start": 25.5,
+        "end": 29
+      }
+    ],
+    "moments": [
+      {
+        "name": "opening image",
+        "id": "image",
+        "description": "In a premonition, Corrin sees an impossible choice they have to make.",
+        "start": 0.3
+      },
+      {
+        "name": "inciting incident",
+        "id": "incident",
+        "description": "Corrin is kidnapped and taken to Hoshido, where they learn of their true parentage.",
+        "start": 4
+      },
+      {
+        "name": "early tragedy",
+        "id": "death",
+        "description": "Corrin's birth mother is murdered at the hands of their adoptive father.",
+        "start": 5.5
+      },
+      {
+        "name": "establishing quest objective",
+        "id": "key",
+        "description": "Corrin makes the decision to side with Nohr.",
+        "start": 7
+      },
+      {
+        "name": "first big threshold",
+        "id": "key",
+        "description": "Corrin rushes to Mokushu to aid their ally Kotaro, but is betrayed upon arrival.",
+        "start": 18
+      },
+      {
+        "name": "change in circumstances",
+        "id": "key",
+        "description": "Corrin confronts Ryoma, their eldest sibling. Ryoma entrusts Corrin with ending the war before committing seppuku.",
+        "start": 25.5
+      },
+      {
+        "name": "emotional final scene",
+        "id": "emotion",
+        "description": "Corrin is visited by their brother Takumi's spirit, who begs them to let him rest in peace.",
+        "start": 28
+      },
+      {
+        "name": "closing image",
+        "id": "image",
+        "description": "Xander states that with the support of Corrin, they will continue bringing peace to the world.",
+        "start": 28.7
+      }
+    ]
+  }
+}

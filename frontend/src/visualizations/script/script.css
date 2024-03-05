@@ -43,3 +43,36 @@ mark {
   border-radius: 2px;
   /* background: #fc3; */
 }
+
+.examples {
+  position: absolute;
+  padding: 10px 10px 25px 10px;
+  max-width: 250px;
+  font-family: sans-serif;
+  font-size: 12px;
+  background-color: #555;
+  font-weight: bold;
+  text-align: left;
+}
+
+.examples h3 {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  text-align: left;
+}
+
+span.word {
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 5px;
+  color: #fff;
+  margin: 2px;
+}
+
+/* span.answer {
+  background-color: ${colorScale("answer")}
+}
+
+span.wordlist {
+  background-color: ${colorScale("wordlist")}
+} */

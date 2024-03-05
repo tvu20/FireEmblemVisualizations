@@ -1,0 +1,493 @@
+{
+  "FE1": [
+    {
+      "chapter": 3,
+      "short": ["4: Arrival", "in Aurelis"],
+      "translate": 20,
+      "name": "Chapter 4: Battle in the Lea",
+      "description": "Marth finally arrives in Aurelis, but is ambushed by enemy forces."
+    },
+    {
+      "chapter": 7,
+      "short": ["4: Ambush", "at the port"],
+      "translate": 20,
+      "name": "Chapter 8: Port Warren",
+      "description": "Marth's recuperation in Port Warren is cut short when he is ambushed by enemy forces. The party is forced to flee."
+    },
+    {
+      "chapter": 10,
+      "short": ["11: Seige", "of the palace"],
+      "translate": 20,
+      "name": "Chapter 11: Knorda Market",
+      "description": "Princess Nyna recalls how her family was murdered by the empire. Marth initiates a siege of the palace."
+    },
+    {
+      "chapter": 19,
+      "short": ["20: Camus'", "defeat"],
+      "translate": 20,
+      "name": "Chapter 20: Camus the Sable",
+      "description": "Nyna tearfully recalls how Camus saved her from being executed, causing her to fall in love with him. Marth tries to convince Camus to stand down, but Camus refuses and is killed."
+    }
+  ],
+  "FE2": [
+    {
+      "chapter": 1,
+      "short": ["2: Celica", "departs"],
+      "translate": 20,
+      "name": "Chapter 2: The Pilgrimate",
+      "description": "Celica, the secret princess of Zofia, has been hiding in Novis Priory since the murder of her family. Upon hearing that the goddess Mila is dying, she departs to find answers."
+    },
+    {
+      "chapter": 2,
+      "short": ["3: Separate", "priorities"],
+      "translate": 20,
+      "name": "Chapter 3: War of Deliverance",
+      "description": "Childhood friends Alm and Celica reunite joyfully before immediately fighting about how best to proceed. They split off again with the joint goal of opening the floodgates."
+    },
+    {
+      "chapter": 3,
+      "short": ["4: Push", "into Rigel"],
+      "translate": 20,
+      "name": "Chapter 4: Land of Sorrow",
+      "description": "Alm pushes his army into Rigel to fight off the invading nation. Celica continues to look for Mila, the missing goddess."
+    }
+  ],
+  "FE3": [
+    {
+      "chapter": 3,
+      "short": ["1.4: Arrival", "in Aurelis"],
+      "translate": 20,
+      "name": "Book 1, Chapter 4: Champions of Aurelis",
+      "description": "Marth arrives in Aurelis, where the king's younger brother Hardin and the princess Nyna have been trying to fend off the invading empire. Marth's arrival brings relief and the two nations form an allyship."
+    },
+    {
+      "chapter": 20,
+      "short": ["2.1: Rebellion", "breaks out"],
+      "translate": 20,
+      "name": "Book 2, Chapter 1: The Grustian Expedition",
+      "description": "One year after Marth successfully defeats the dragon king Medeus and restores peace to the lands, a large-scale rebellion breaks out in the kingdom of Grust."
+    },
+    {
+      "chapter": 33,
+      "short": ["2.14: Waking", "the dragon"],
+      "translate": 20,
+      "name": "Book 2, Chapter 14: A Mystery Revealed",
+      "description": "Marth finally reaches the Dragon Temple, where he learns about the history of his ancestor and the Fire Emblem. He wakes the dragon Tiki, who joins his cause."
+    },
+    {
+      "chapter": 39,
+      "short": ["2.20:", "Final battle"],
+      "translate": 20,
+      "name": "Book 2, Chapter 20: Dark Emperor",
+      "description": "Marth charges the castle of Hardin, the dark emperor, and launches his final battle against him. Unless specific requirements are met for the True Ending, the game ends after this chapter."
+    }
+  ],
+  "FE4": [
+    {
+      "chapter": 5,
+      "short": ["5: Betrayal", "and execution"],
+      "translate": 20,
+      "name": "Chapter 5: Threshold of Fate",
+      "description": "Sigurd marches towards Velthomer Castle, but is betrayed and murdered by a close ally. All of his close friends and forces are executed for acts of treason."
+    }
+  ],
+  "FE5": [
+    {
+      "chapter": 4,
+      "short": ["5:", "Prison", "break"],
+      "translate": 33,
+      "name": "Chapter 4: The Dungeon",
+      "description": "Leif is defeated by imperial soldiers and brought to Munster prison. A group of rebels arrive to break Leif and others out of prison."
+    },
+    {
+      "chapter": 6,
+      "short": ["5: Losing", "Eyvel"],
+      "translate": 20,
+      "name": "Chapter 5: Mother and Child",
+      "description": "In the prison, Eyvel is forced to fight several soldiers in order to reunite with her daughter. She is eventually petrified when Leif arrives to rescue her, forcing Leif to leave her behind and escape."
+    },
+    {
+      "chapter": 16,
+      "short": ["12x: Reunions"],
+      "translate": 7,
+      "name": "Chapter 12x: Dandelion",
+      "description": "Leif and co. invade the Dandelion’s hideout. Various emotional reunions occur between members of Leif’s army and the Dandelion’s prisoners. "
+    },
+    {
+      "chapter": 25,
+      "short": ["18: Storming", "Leonster"],
+      "translate": 20,
+      "name": "Chapter 18: The Liberation of Leonster",
+      "description": "Leif and co. make their way to Leonster and storm the castle. They succeed in liberating the civlians from persecution from the empire; however, Leif learns soon after that the civilians have started a rebellion and need his help."
+    },
+    {
+      "chapter": 31,
+      "short": ["18: Killing", "civilians"],
+      "translate": 20,
+      "name": "Chapter 23: The Palace of Evil",
+      "description": "Leif and Co. approach Munster. Evil duke Raydrick orders his men to kill all the civilians who have escaped the city. "
+    }
+  ],
+  "FE6": [
+    {
+      "chapter": 7,
+      "short": ["8: Reunion", "and sad news"],
+      "translate": 20,
+      "name": "Chapter 8: Reunion",
+      "description": "Roy's troops invade Castle Ostia in order to rescue his childhood friend Lilina. Upon their reunion, Roy delivers the sad news that Lilina's father has died."
+    },
+    {
+      "chapter": 11,
+      "short": ["11: Meeting", "the resistance"],
+      "translate": 20,
+      "name": "Chapter 11: Caught in the Middle",
+      "description": "Roy’s army defends a village on the way to meet one of the resistance’s members. Elffin. Elffin tests Roy by suggesting that he is being tricked by the enemy, but is impressed by Roy’s decision making at the end of the chapter."
+    },
+    {
+      "chapter": 20,
+      "short": ["11: Storming", "the capital"],
+      "translate": 20,
+      "name": "Chapter 20: Retaking the Capital",
+      "description": "Roy’s forces march through the city and towards the castle of Etruria. Melady reunites with her brother, who accuses her of betraying her country. Roy and co. defeat the General Narcian and retake the country of Etruria."
+    }
+  ],
+  "FE7": [
+    {
+      "chapter": 7,
+      "short": ["8: Saving", "Ninian"],
+      "translate": 20,
+      "name": "Chapter 8: Reunion",
+      "description": "On the way to the castle, a boy named Nils asks Lyn to save his sister, Ninian, who has been kidnapped by the Black Fang. Eliwood appears with Ninian in his arms, having rescued her."
+    },
+    {
+      "chapter": 18,
+      "short": ["11: Castle", "falls"],
+      "translate": 20,
+      "name": "Chapter 15: Noble Lady of Caelin",
+      "description": "Eliwood learns that Castle Caelin has fallen to a surprise attack. In Caelin, Lyn escapes the castle but wants to return to rescue her grandfather. Eliwood, Hector, and Lyn meet and begin making plans to take back the castle. "
+    },
+    {
+      "chapter": 25,
+      "short": ["19: Mind", "control", "and death"],
+      "translate": 33,
+      "name": "Chapter 19: Dragon's Gate",
+      "description": "Eliwood and co. finally arrive at the Dragon’s Gate. Ninian is kidnapped by Ephidel, who then launches an attack on the party. At the end of the battle, Eliwood finds a mind-controlled Ninian and loses a close ally."
+    },
+    {
+      "chapter": 36,
+      "short": ["27: Ninian's", "sacrifice"],
+      "translate": 20,
+      "name": "Chapter 27: Cog of Destiny",
+      "description": "The party arrives at the Shrine of Seals but are attacked by members of the Black Fang. Ninian sacrifices herself to evil sorceror Nergal in exchange for her friends’ lives. "
+    },
+    {
+      "chapter": 43,
+      "short": ["31:", "Final", "stand"],
+      "translate": 33,
+      "name": "Chapter 31: Light",
+      "description": "In their final battle, the party battles evil sorceror Nergal and the Fire Dragons. A beloved character is revived while another passes away at the end of the fight. "
+    }
+  ],
+  "FE8": [
+    {
+      "chapter": 10,
+      "short": ["8x: Paths", "diverge"],
+      "translate": 20,
+      "name": "Chapter 8x: A New Journey",
+      "description": "Twins Eirika and Ephraim reunite for the first time since their kingdom was invaded. They reminisce on their childhood and decide to split up in order to ally with different neighboring countries. The player is given a choice of which twin to follow, and which storyline to take. "
+    },
+    {
+      "chapter": 13,
+      "short": ["10A: Saving", "Innes"],
+      "translate": 20,
+      "name": "Chapter 10A: A New Journey",
+      "description": "Eirika journeys to Carcino to rescue Prince Innes. Enemy soldier Glen receives orders to fight Eirika, but expresses his doubts to his brother Cormag. Despite being assaulted by enemy forces, Innes refuses to surrender his kingdom."
+    },
+    {
+      "chapter": 21,
+      "short": ["14A: Tragic", "reunion"],
+      "translate": 20,
+      "name": "Chapter 14A: Queen of White Dunes",
+      "description": "Eirika and co. invade Jehenna Hall in order to rescue Queen Ismaire. Ismaire is fatally wounded and left for dead by Caellach. Eirika’s company arrives by her side as she dies, and a member of Eirika’s party reveals that he is Ismaire’s lost son."
+    },
+    {
+      "chapter": 28.8,
+      "short": ["21:", "Love", "lost"],
+      "translate": 12,
+      "name": "Chapter 21: The Sacred Stones",
+      "description": "In a flashback, the twins say goodbye to their childhood friend Lyon, vowing to remain friends. In the present day, the company reaches Lyon, who has been corrupted by the evil Demon King. In the aftermath of the battle, Lyon tells each of the twins that he has always loved them before dying."
+    }
+  ],
+  "FE9": [
+    {
+      "chapter": 2,
+      "short": ["2: Kidnap", "and rescue"],
+      "translate": 20,
+      "name": "Chapter 2: Rescue",
+      "description": "The youngest kids of the Greil mercenaries are kidnapped by bandits. Ike and co. launch a rescue mission."
+    },
+    {
+      "chapter": 7,
+      "short": ["7: Greil's", "death"],
+      "translate": 15,
+      "name": "Chapter 7: Shades of Evil",
+      "description": "Ike's father, Greil, is challenged to a duel by an unknown knight and killed. Ike carries his body home."
+    },
+    {
+      "chapter": 11,
+      "short": ["11: Escape!"],
+      "translate": 7,
+      "name": "Chapter 11: Blood Runs Red",
+      "description": "The party attempts to escape by boat. Ike witnesses the racism and apathy of the civilians in the ocean harbour."
+    },
+    {
+      "chapter": 17,
+      "short": ["17: Saving Reyson"],
+      "translate": 20,
+      "name": "Chapter 17: Day Breaks",
+      "description": "Reyson is rescued from the evil duke Oliver. Ike discovers that Reyson's sister, Leanne, is alive."
+    },
+    {
+      "chapter": 27,
+      "short": ["27: Duel", "with Greil's", "murderer"],
+      "translate": 30,
+      "name": "Chapter 27: Moment of Fate",
+      "description": "Ike storms the castle of his enemies and kills the man who murdered his father."
+    }
+  ],
+  "FE10": [
+    {
+      "chapter": 6,
+      "short": ["1.5: Finding", "the missing prince"],
+      "translate": 20,
+      "name": "Part 1, Chapter 5: The Lost Heir",
+      "description": "Micaiah and co. journey through the Desert of Death in search of the missing heir of their nation. They meet Pelleas, who was raised as a commoner and recently discovered that he was the late king’s long-lost son. Micaiah agrees to act as a general and figurehead of the Liberation Army."
+    },
+    {
+      "chapter": 23,
+      "short": ["3.7: Despair", "and hope"],
+      "translate": 20,
+      "name": "Part 3, Chapter 7: Rivals Collide",
+      "description": "The Daein army has dealt a sudden and devastating blow to the Laguz Alliance army. As the alliance forces begin to despair, Skirmir appears before his troops and rallies them on, and Ike’s mercenaries arrives to bolster their forces. "
+    },
+    {
+      "chapter": 30,
+      "short": ["3E: Apocalypse"],
+      "translate": 7,
+      "name": "Part 3, Endgame: From Pain, Awakening",
+      "description": "Micaiah reveals the truth behind her actions and is asked to sacrifice Pelleas for the sake of their nation. Micaiah’s and Ike’s armies face off in a chaotic, violent showdown. The goddess Ashera is awakened by their actions and turns everyone to stone."
+    },
+    {
+      "chapter": 38,
+      "short": ["4E.1:", "Endgame", "begins"],
+      "translate": 33,
+      "name": "Part 4, Endgame: Rebirth (Part 1)",
+      "description": "Ike and company enter the Tower of Guidance, preparing for their final battles. They face off against the corrupt leaders of the nation of Begnion, and Micaiah frees her nation for once and for all."
+    }
+  ],
+  "FE11": [
+    {
+      "chapter": 1,
+      "short": ["P: Invasion", "and escape"],
+      "translate": 20,
+      "name": "Prologue",
+      "description": "Prince Marth is shocked to find himself surrounded by Gra soldiers, who have invaded his castle in the middle of the night. He is able to escape to a forest near his kingdom’s borders, but the rest of his family has been tragically murdered with the exception of his sister Elice, who has been taken hostage."
+    },
+    {
+      "chapter": 9,
+      "short": ["11: Seige", "of the palace"],
+      "translate": 20,
+      "name": "Chapter 11: Knorda Market",
+      "description": "Princess Nyna recalls how her family was murdered by the empire. Marth initiates a siege of the palace."
+    },
+    {
+      "chapter": 17,
+      "short": ["19: Saving", "the dragon"],
+      "translate": 20,
+      "name": "Chapter 19: Manakete Princess",
+      "description": "Marth arrives at the Fane of Raman to find the divine dragon Tiki, who has been brainwashed by the evil dragon. Bantu breaks Tiki out of her trance and recruiters her to Marth’s cause."
+    }
+  ],
+  "FE12": [
+    {
+      "chapter": 1,
+      "short": ["1P: Invasion", "and escape"],
+      "translate": 20,
+      "name": "Book 1, Prologue",
+      "description": "Prince Marth is shocked to find himself surrounded by Gra soldiers, who have invaded his castle in the middle of the night. He is able to escape to a forest near his kingdom’s borders, but the rest of his family has been tragically murdered with the exception of his sister Elice, who has been taken hostage."
+    },
+    {
+      "chapter": 32,
+      "short": ["2.1: Rebellion", "breaks out"],
+      "translate": 20,
+      "name": "Book 2, Chapter 1: The Grustian Expedition",
+      "description": "One year after Marth successfully defeats the dragon king Medeus and restores peace to the lands, a large-scale rebellion breaks out in the kingdom of Grust."
+    },
+    {
+      "chapter": 41,
+      "short": ["2.8: Confrontation", "and escape"],
+      "translate": 20,
+      "name": "Book Two, Chapter 8: Soulful Bridge",
+      "description": "At Chiasmir Bridge, Marth finally reunites with Hardin, who has been leading the invasion against Altea. Marth discovers that Hardin seems to be protected by a mysterious power, so he is forced to flee to Khadein. "
+    }
+  ],
+  "FE13": [
+    {
+      "chapter": 12,
+      "short": ["11:", "End of", "the war"],
+      "translate": 33,
+      "name": "Chapter 11: Mad King Gangrel",
+      "description": "Following a devastating loss, the Shepherds launch their final attack agains the Mad King Gangrel, bringing an end to the war between Ylisse and Plegia. "
+    },
+    {
+      "chapter": 14,
+      "short": ["13: Marth's", "identity revealed"],
+      "translate": 20,
+      "name": "Chapter 13: Of Sacred Blood",
+      "description": "Chrom and Robin meet King Validar, who they recognize as the leader of an assassination attempt. Robin discovers that Validar is their father. Chrom is ambushed and saved by “Marth,” who reveals herself to be Lucina: Chrom’s daughter from a ruined future. "
+    },
+    {
+      "chapter": 22,
+      "short": ["21: Killing", "Robin"],
+      "translate": 20,
+      "name": "Chapter 21: Five Gemstones",
+      "description": "Robin is mind-controlled by Validar into stealing the Fire Emblem. Later, Lucina confronts Robin and reveals that in her future, Robin was the one who killed her father. Lucina presents her intent to kill Robin, who may accept or refuse her judgment; in either case, Chrom intervenes and stops her from killing Robin, affirming that the bonds that they share are too strong for Validar to break."
+    }
+  ],
+  "FE14": [
+    {
+      "chapter": 3,
+      "short": ["8C: Thrown", "off a bridge"],
+      "translate": 20,
+      "name": "Conquest, Chapter 8: Journey Begins",
+      "description": "Corrin investigates an abandoned fortress on orders of her father. One of their men instigates a fight and Corrin is thrown off a bridge into a canyon. They are rescued by Lilith, who reveals herself to be a dragon and brings them to a pocket dimension. "
+    },
+    {
+      "chapter": 12,
+      "short": ["8C: Unexpected", "reunion"],
+      "translate": 20,
+      "name": "Conquest, Chapter 8: Journey Begins",
+      "description": "Corrin arrives in the Ice Tribe territory and is shocked to find Flora, a maid from their palace. Both sides are suspicious of each other, as Corrin had left Flora to defend the palace and Flora suspects Corrin of plotting to invade her village, Flora sounds the alarm in the village to attack Corrin’s army. "
+    },
+    {
+      "chapter": 32,
+      "short": ["18C: Treachery!"],
+      "translate": 7,
+      "name": "Conquest, Chapter 18: Black and White",
+      "description": "Corrin is welcomed to the city of Izumo by Izana, but is shocked to reunite with the Hoshidan royal family and discovers that Izana is actually an impostor plotting to take the Hoshidan royals captive."
+    }
+  ],
+  "FE15": [
+    {
+      "chapter": 1,
+      "short": ["1: Alm departs"],
+      "translate": 20,
+      "name": "Chapter 1: Zofia's Call",
+      "description": "Alm departs his hometown of Ram Village for Castle Zofia after hearing of an invasion from the neighboring nation, teaming up with members of the resistance."
+    },
+    {
+      "chapter": 6,
+      "short": ["4: Secret", "heritage"],
+      "translate": 20,
+      "name": "Chapter 4: Land of Sorrow (Alm)",
+      "description": "Alm pushes his army into Rigel to fight off the invading nation and discovers his secret heritage."
+    }
+  ],
+  "FE16AzureMoon": [
+    {
+      "chapter": 1,
+      "short": ["1: Choosing", "a house"],
+      "translate": 20,
+      "name": "Chapter 1: Three Houses",
+      "description": "After saving the three heirs of the three nations, Byleth is brought to the Academy as a professor and chooses which of the three houses to lead."
+    },
+    {
+      "chapter": 9,
+      "short": ["9: A dance", "and a death"],
+      "translate": 20,
+      "name": "Chapter 9: The Cause of Sorrow",
+      "description": "The academy hosts a grand ball and dancing competition. Byleth meets with someone they care about at the top of the goddess tower. While investigating the ruins of a chapel, Byleth is ambushed by demonic beasts, and witnesses the murder of their father."
+    },
+    {
+      "chapter": 11,
+      "short": ["11: Identity", "reveal"],
+      "translate": 20,
+      "name": "Chapter 11: Throne of Knowledge",
+      "description": "After gaining the power of the goddess, Byleth attempts to visit the Holy Tomb and is shocked by the invasion of the Flame Emperor. When the Flame Emperor’s identity is finally revealed, Dimitri suffers a devastating breakdown."
+    },
+    {
+      "chapter": 17,
+      "short": ["17: Turning", "point"],
+      "translate": 27,
+      "name": "Chapter 17: Blood of the Eagle and Lion",
+      "description": "Three armies meet at Gronder Field to recreate their battle from five years ago. While Dimitri and Byleth’s army emerge victorious, Dimitri is devastated by the sudden murder of a close ally. A broken Dimitri is comforted by Byleth, who asks him to forgive himself for his actions."
+    },
+    {
+      "chapter": 21,
+      "short": ["21:", "Long", "lost", "friend"],
+      "translate": 50,
+      "name": "Chapter 21: Our Chosen Paths",
+      "description": "Before the final battle, Dimitri and Byleth meet Edelgard at a neutral place, but are unable to reach an agreement about the future. Dimitri and Edelgard reminisce on their past as long-lost childhood friends. Byleth visits their father's grave."
+    }
+  ],
+  "FE16VerdantWind": [
+    {
+      "chapter": 1,
+      "short": ["1: Choosing", "a house"],
+      "translate": 20,
+      "name": "Chapter 1: Three Houses",
+      "description": "After saving the three heirs of the three nations, Byleth is brought to the Academy as a professor and chooses which of the three houses to lead."
+    },
+    {
+      "chapter": 9,
+      "short": ["9: A dance", "and a death"],
+      "translate": 20,
+      "name": "Chapter 9: The Cause of Sorrow",
+      "description": "The academy hosts a grand ball and dancing competition. Byleth meets with someone they care about at the top of the goddess tower. While investigating the ruins of a chapel, Byleth is ambushed by demonic beasts, and witnesses the murder of their father."
+    },
+    {
+      "chapter": 11,
+      "short": ["11: Identity", "reveal"],
+      "translate": 20,
+      "name": "Chapter 11: Throne of Knowledge",
+      "description": "After gaining the power of the goddess, Byleth and Claude attempt to visit the Holy Tomb and are shocked by the invasion and identity of the Flame Emperor. "
+    },
+    {
+      "chapter": 18,
+      "short": ["18: Missile", "rain"],
+      "translate": 27,
+      "name": "Chapter 18: The Golden Scheme",
+      "description": "Claude’s army infiltrates Fort Merceus by disguising themselves as Imperial soldiers and opening the gates from the inside. The Death Knight, the commander of the fort, urges Claude’s allies to flee before ballistic missiles shoot down from the sky, obliterating the force. "
+    }
+  ],
+  "FE16CrimsonFlower": [
+    {
+      "chapter": 1,
+      "short": ["1: Choosing", "a house"],
+      "translate": 20,
+      "name": "Chapter 1: Three Houses",
+      "description": "After saving the three heirs of the three nations, Byleth is brought to the Academy as a professor and chooses which of the three houses to lead."
+    },
+    {
+      "chapter": 9,
+      "short": ["9: A dance", "and a death"],
+      "translate": 20,
+      "name": "Chapter 9: The Cause of Sorrow",
+      "description": "The academy hosts a grand ball and dancing competition. Byleth meets with someone they care about at the top of the goddess tower. While investigating the ruins of a chapel, Byleth is ambushed by demonic beasts, and witnesses the murder of their father."
+    },
+    {
+      "chapter": 11,
+      "short": ["11: Identity", "reveal"],
+      "translate": 20,
+      "name": "Chapter 11: Throne of Knowledge",
+      "description": "After gaining the power of the goddess, Byleth attempts to visit the Holy Tomb and is shocked by the invasion of Edelgard, who reveals herself to be the Flame Emperor. Byleth must choose whether to stand with or fight against Edelgard."
+    },
+    {
+      "chapter": 18,
+      "short": ["18:", "Last", "stand"],
+      "translate": 27,
+      "name": "Chapter 18: Field of Revenge",
+      "description": "Edelgard and Byleth march on Tailtean Plains and face off with Dimitri, who makes his last stand against Edelgard’s invasion. Dimitri’s retainer, Dedue, sacrifices himself by turning into a Demonic Beast. Dimitri blames his family’s massacre on Edelgard before being executed by her."
+    }
+  ]
+}

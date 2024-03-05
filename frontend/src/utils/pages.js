@@ -25,55 +25,65 @@ const visualizations = [
     thumbnail: require("../assets/github.png"),
   },
   {
+    name: "Sentiment Across Games",
+    url: "/viz/sentiment-across-games",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
     name: "Most Common Words",
     url: "/viz/most-common-words",
     thumbnail: require("../assets/github.png"),
   },
+  {
+    name: "Word Counts",
+    url: "/viz/word-counts",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Transitions In Each Game",
+    url: "/viz/gender-transitions-game",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Word Prevalence",
+    url: "/viz/word-prevalence",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Emotion In a Game",
+    url: "/viz/emotion-game",
+    thumbnail: require("../assets/github.png"),
+  },
   // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
+  //   name: "Emotion Intensity",
+  //   url: "/viz/emotion-intensity",
   //   thumbnail: require("../assets/github.png"),
   // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
-  // {
-  //   name: "Gender and Line Counts",
-  //   url: "/viz/gender-and-line-counts",
-  //   thumbnail: "https://www.mathsisfun.com/data/images/bar-graph-fruit.svg",
-  // },
+  {
+    name: "Complexity of Language",
+    url: "/viz/word-complexity",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Similarity Across Media",
+    url: "/viz/similarity-across-media",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Emotion In A Chapter",
+    url: "/viz/emotion-chapter",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Character Bar Chart",
+    url: "/viz/character-bar",
+    thumbnail: require("../assets/github.png"),
+  },
+  {
+    name: "Story Progression",
+    url: "/viz/story-progression",
+    thumbnail: require("../assets/github.png"),
+  },
 ];
 
 export const getArticles = () => {
