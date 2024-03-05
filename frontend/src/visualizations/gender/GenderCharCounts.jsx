@@ -110,7 +110,16 @@ function GenderLineCounts() {
     ];
 
     // A color scale: one color for each group
-    var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
+    const myColor = (tag) => {
+      const colors = {
+        fpc: "#c93495",
+        npc: "#352280",
+        combined: "#882dbd",
+      };
+
+      return colors[tag];
+    };
+    // var myColor = d3.scaleOrdinal().domain(allGroup).range(d3.schemeSet2);
 
     // Add X axis --> it is a date format
     var x = d3.scaleLinear().domain([0, 15]).range([0, width]);
@@ -414,7 +423,7 @@ function GenderLineCounts() {
         <option value="npc">Non-Playable Characters</option>
         <option value="combined">All Characters</option>
       </select>
-      {/* <svg ref={ref} style={{ border: "1px solid red" }} /> */}
+      <svg ref={ref} style={{ border: "1px solid red" }} />
       <svg ref={ref2} style={{ border: "1px solid red" }} />
     </>
   );

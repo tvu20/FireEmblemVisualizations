@@ -235,11 +235,14 @@ function StoryProgression(props) {
   }, []);
 
   return (
-    <div
-      className="story-progression-container"
-      ref={ref}
-      style={{ border: "1px solid red" }}
-    />
+    <>
+      <div
+        className="story-progression-container"
+        ref={ref}
+        style={{ border: "1px solid red" }}
+      />
+      <div className="story-progression-information"></div>
+    </>
   );
 }
 

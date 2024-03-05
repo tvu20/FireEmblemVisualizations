@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "d3";
 
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getGameTitles } from "../../utils/games";
+import { getGameTitles, getYearFromCode } from "../../utils/games";
 
 import "./gender.css";
 
@@ -143,6 +143,9 @@ function GenderLineCounts() {
         .html(
           "<h5>" +
             game +
+            " (" +
+            getYearFromCode(game) +
+            ")" +
             "</h5> Gender: <b>" +
             mapGender(subgroup) +
             "<br>" +
