@@ -27,12 +27,70 @@ function StoryProgression(props) {
 
     d3.selectAll(".story-progression-container > svg").remove();
 
+    d3.selectAll(".tooltip").remove();
+
     var margin = { top: 30, right: 10, bottom: 0, left: 10 },
       width = 800 - margin.left - margin.right;
 
-    const div = d3.select(ref.current);
+    // ----------------
+    // Create a tooltip
+    // ----------------
+    var tooltip = d3
+      .select("body")
+      .append("div")
+      .style("opacity", 0)
+      .attr("class", "tooltip storyprogression-tooltip")
+      .style("position", "absolute")
+      .style("top", 0)
+      .style("background-color", "white")
+      .style("border-radius", "5px")
+      .style("padding", "10px")
+      .style("width", "300px");
 
-    Object.entries(data).map(([key, value], index) => {
+    // Three function that change the tooltip when user hover / move / leave a cell
+    const mouseover = function (d) {
+      const element = d.srcElement;
+      // console.log(d.srcElement.getAttribute("desc"));
+      tooltip.style("opacity", 1);
+
+      let content;
+
+      // stage
+      if (d.srcElement.getAttribute("type") === "stage") {
+        content = "<p>" + element.getAttribute("desc") + "</p>";
+      } else {
+        content =
+          "<h4>" +
+          element.getAttribute("name") +
+          "</h4>" +
+          "<p>" +
+          element.getAttribute("desc") +
+          "</p>";
+        // moment
+      }
+      // const game = d.srcElement.getAttribute("game");
+      // const subgroup = d3.select(this.parentNode).datum().key;
+      // const value = d.target.__data__.data[subgroup];
+
+      //   var subgroupValue = d.data[subgroupName];
+      //   console.log(subgroupValue);
+      tooltip.html(content).style("opacity", 1);
+    };
+    const mousemove = function (d) {
+      tooltip.style("left", d.pageX + 15 + "px").style("top", d.pageY + "px");
+      //   console.log("move");
+      //   console.log(d3.pointer(this));
+      //   tooltip
+      //     .style("left", d3.pointer(this)[0] + 90 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+      //     .style("top", d3.pointer(this)[1] + "px");
+    };
+    const mouseleave = function (d) {
+      tooltip.style("opacity", 0);
+    };
+
+    const div = d3.select(ref.current).on("mousemove", mousemove);
+
+    Object.entries(data).map(([key, value]) => {
       const height = value.guide
         ? 160 - margin.top - margin.bottom
         : 140 - margin.top - margin.bottom;
@@ -113,7 +171,9 @@ function StoryProgression(props) {
           .attr(
             "transform",
             "translate(" + x(stage.start) + "," + stage_height + ")"
-          );
+          )
+          .on("mouseover", mouseover)
+          .on("mouseleave", mouseleave);
 
         stageG
           .append("rect")
@@ -121,15 +181,21 @@ function StoryProgression(props) {
           .attr("y", 0)
           .attr("width", x(stage.end) - x(stage.start))
           .attr("height", 40)
-          .style("fill", STAGE_COLORS[stage.id]);
+          .attr("type", "stage")
+          .attr("desc", stage.name)
+          .style("fill", STAGE_COLORS[stage.id])
+          .style("cursor", "pointer");
 
         stageG
           .append("text")
           .attr("transform", "translate(" + 3 + ",30)")
           .text(stage.short)
+          .attr("type", "stage")
+          .attr("desc", stage.name)
           .style("fill", "white")
           .style("font-size", "12px")
-          .style("font-weight", 500);
+          .style("font-weight", 500)
+          .style("cursor", "pointer");
       });
 
       value.moments.map((moment) => {
@@ -138,23 +204,18 @@ function StoryProgression(props) {
           .attr(
             "transform",
             "translate(" + x(moment.start) + "," + moments_height + ")"
-          );
+          )
+          .on("mouseover", mouseover)
+          .on("mouseleave", mouseleave);
 
         g.append("svg:image")
-          .attr(
-            "xlink:href",
-            storyIcons[moment.id]
-            // "https://static.vecteezy.com/system/resources/previews/021/013/593/non_2x/key-lock-icon-on-transparent-background-free-png.png"
-          )
+          .attr("xlink:href", storyIcons[moment.id])
           .attr("height", "20px")
-          .attr("x", -10);
-
-        // const line = g
-        //   .append("rect")
-        //   .attr("x", 0)
-        //   .attr("y", 0)
-        //   .attr("width", 2)
-        //   .attr("height", 20);
+          .attr("x", -10)
+          .attr("type", "moment")
+          .attr("name", moment.name)
+          .attr("desc", moment.description)
+          .style("cursor", "pointer");
       });
 
       const g = svg
