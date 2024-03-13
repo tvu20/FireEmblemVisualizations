@@ -23,6 +23,7 @@ import SimilarityPage from "./pages/viz/script/SimilarityPage";
 import EmotionChapterPage from "./pages/viz/sentiment/EmotionChapterPage";
 import CharacterBarPage from "./pages/viz/characters/CharacterBarPage";
 import StoryProgressionPage from "./pages/viz/sentiment/StoryProgressionPage";
+import DevelopmentArticle from "./pages/articles/development/DevelopmentArticle";
 
 const router = createBrowserRouter([
   {
@@ -109,6 +110,10 @@ const router = createBrowserRouter([
       {
         path: "/viz/story-progression",
         element: <StoryProgressionPage />,
+      },
+      {
+        path: "/article/development",
+        element: <DevelopmentArticle />,
       },
     ],
   },

@@ -90,9 +90,8 @@ export const getArticles = () => {
   return [
     { name: "Gender", url: "/article/gender" },
     { name: "Relationships", url: "/article/relationships" },
-    { name: "Script", url: "/article/script" },
-    { name: "Sentiment", url: "/article/sentiment" },
-    { name: "Series", url: "/article/series" },
+    { name: "Storytelling", url: "/article/storytelling" },
+    { name: "Development", url: "/article/development" },
   ];
 };
 
