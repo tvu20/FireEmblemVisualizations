@@ -421,10 +421,12 @@
       { "source": "Merlinus", "target": "Marcus", "category": "Platonic" },
       { "source": "Renault", "target": "Isadora", "category": "Platonic" },
       { "source": "Heath", "target": "Vaida", "category": "Platonic" },
-      { "source": "Kent", "target": "Farina", "category": "Ambiguous" },
+      { "source": "Kent", "target": "Farina", "category": "Romantic" },
       { "source": "Raven", "target": "Lucius", "category": "Ambiguous" },
       { "source": "Isadora", "target": "Legault", "category": "Ambiguous" },
-      { "source": "Lyn", "target": "Florina", "category": "Ambiguous" }
+      { "source": "Lyn", "target": "Florina", "category": "Platonic" },
+      { "source": "Pent", "target": "Louise", "category": "Romantic" },
+      { "source": "Harken", "target": "Vaida", "category": "Romantic" }
     ]
   },
   "FE8": {
