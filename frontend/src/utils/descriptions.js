@@ -99,4 +99,14 @@ export const DESC = {
     description:
       "A core gameplay mechanic where a pair of playable characters can gain gameplay benefits and unlock conversations after spending time together on the battlefield.",
   },
+  RPG: {
+    name: "Role-playing game",
+    description:
+      "A game where the player assumes the role of a character in a fictional setting.",
+  },
+  IS: {
+    name: "Intelligent Systems",
+    description:
+      "A Japanese video game developer company known for publishing series such as Fire Emblem, Paper Mario, and WarioWare. ",
+  },
 };
