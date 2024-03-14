@@ -2,7 +2,7 @@ import React from "react";
 
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
-import DevScroll from "./DevScroll";
+import DevTimeline from "./DevTimeline";
 
 import "./dev.css";
 
@@ -60,29 +60,7 @@ function DevelopmentArticle() {
             </p>
           </section>
         </div>
-        <section>
-          <p>
-            In 1983, the Famicom (known as the Nintendo Entertainment System or
-            the NES in the West) was released by Nintendo as their first home
-            video game console. The NES played a large role in revitalizing the
-            video game industry in the United States following the video game
-            crash of 1983, and is considered one of the greatest video game
-            consoles of all time.{" "}
-          </p>
-          <DevScroll />
-        </section>
-
-        <section>
-          <p>
-            In 1983, the Famicom (known as the Nintendo Entertainment System or
-            the NES in the West) was released by Nintendo as their first home
-            video game console. The NES played a large role in revitalizing the
-            video game industry in the United States following the video game
-            crash of 1983, and is considered one of the greatest video game
-            consoles of all time.{" "}
-          </p>
-          <DevScroll />
-        </section>
+        <DevTimeline />
       </div>
       <Footer vertical={false} />
     </>

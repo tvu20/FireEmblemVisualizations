@@ -109,4 +109,24 @@ export const DESC = {
     description:
       "A Japanese video game developer company known for publishing series such as Fire Emblem, Paper Mario, and WarioWare. ",
   },
+  Kaga: {
+    name: "Shouzou Kaga",
+    description:
+      "A Japanese video game designer known for creating the Fire Emblem series.",
+  },
+  NGPlus: {
+    name: "New Game+",
+    description:
+      "An unlockable mode that allows the player to restart a game following completion with new features or additional story content.",
+  },
+  avatar: {
+    name: "Avatar",
+    description:
+      "A playable character created by the player with a customizable name, gender, and occasionally appearance and strengths. ",
+  },
+  casual: {
+    name: "Casual Mode",
+    description:
+      "A gameplay mode that allows the player to turn off the permadeath feature: characters that fall in battle will return in the next chapter. ",
+  },
 };
