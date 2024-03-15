@@ -5,20 +5,21 @@ import "./dev.css";
 
 function DevScroll(props) {
   const { updateYear } = props;
-  const [currentImage, setCurrentImage] = useState("")
+  const [currentImage, setCurrentImage] = useState("");
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   const onStepEnter = ({ data }) => {
     setCurrentStepIndex(data.id);
-    setCurrentImage(data.img)
+    setCurrentImage(data.img);
     updateYear(data.year);
   };
+
   return (
     <div className="dev-scroll-container">
       <div className="dev-scroller">
         <Scrollama
           onStepEnter={onStepEnter}
-          //   onStepExit={onStepExit}
+          onStepExit={props.onStepExit ? props.onStepExit : () => {}}
           progress
           //   onStepProgress={onStepProgress}
           offset="400px"

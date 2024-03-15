@@ -1,6 +1,14 @@
 .dev-article {
   background: #eee;
-  padding: 100px 20px 50px;
+  padding: 100px 0 50px;
+  /* padding: 100px 20px 50px; */
+}
+
+.dev-intro {
+  margin: 0 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dev-intro h1 {
@@ -8,14 +16,24 @@
   text-align: center;
 }
 
+.dev-intro-paragraphs {
+  max-width: 70vw;
+}
+
+.dev-timeline {
+  border: 1px solid red;
+  margin-bottom: 200px;
+  /* margin */
+}
+
 .dev-scroll-container {
-  padding: 40vh 2vw 20vh;
+  margin: 40vh 2vw 20vh;
   display: flex;
   justify-content: space-between;
 }
 
 .dev-scroll-graphic {
-  flex-basis: 60%;
+  flex-basis: 40%;
   position: sticky;
   width: 100%;
   height: 60vh;
@@ -34,7 +52,7 @@
 }
 
 .dev-scroller {
-  flex-basis: 35%;
+  flex-basis: 55%;
 }
 
 .dev-scroller-step {
@@ -47,6 +65,7 @@
   text-align: left;
   padding: 1rem;
   font-size: 20px;
+  line-height: 1.8;
   /* font-size: 1.8rem; */
   margin: 0;
 }
@@ -63,4 +82,179 @@
 
 .dev-scroller-step-quote {
   font-style: italic;
+}
+
+.dev-timeline-bar-container {
+  position: sticky;
+  top: 20px;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  transition: opacity 0.5s;
+}
+
+/* .dev-timeline-bar-container progress {
+  position: relative;
+  top: 46vh;
+  left: -46vh;
+  width: 92vh;
+  height: 10px;
+  background-color: orange;
+  transform: rotate(90deg);
+  transition: top 0.5s;
+} */
+.dev-timeline-bar-container progress {
+  position: relative;
+  top: 20px;
+  width: 80vw;
+  height: 8px;
+  transition: top 0.5s;
+  z-index: 5;
+  -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  -webkit-appearance: none;
+  background-color: #bbb;
+  border-radius: 100px;
+}
+
+.dev-timeline-progress-update {
+  top: -15vh !important;
+  transition: top 0.5s;
+}
+
+progress::-webkit-progress-value {
+  transition: all 0.5s;
+  border-radius: 100px;
+}
+
+progress.NES::-webkit-progress-value,
+.dev-timeline-dot.NES {
+  background-color: pink;
+}
+
+progress.SNES::-webkit-progress-value,
+.dev-timeline-dot.SNES {
+  background-color: red;
+}
+
+progress.GBA::-webkit-progress-value,
+.dev-timeline-dot.GBA {
+  background-color: orange;
+}
+
+progress.Wii::-webkit-progress-value,
+.dev-timeline-dot.Wii {
+  background-color: aquamarine;
+}
+
+progress.DS::-webkit-progress-value,
+.dev-timeline-dot.DS {
+  background-color: green;
+}
+
+progress.TDS::-webkit-progress-value,
+.dev-timeline-dot.TDS {
+  background-color: blue;
+}
+
+progress.Switch::-webkit-progress-value,
+.dev-timeline-dot.Switch {
+  background-color: purple;
+}
+
+.dev-timeline-point {
+  position: absolute;
+  top: -20px;
+  height: 0px;
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+.dev-timeline-dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: -15px;
+  transition: all 0.5s;
+  z-index: 5;
+  transition: background-color 0.5s;
+}
+
+.dev-timeline-background {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  top: -20px;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.9) 45%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  /* background-color: white; */
+}
+
+span.dev-scroller-category {
+  border: 2px solid black;
+  transition: 0.125s all linear;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  -webkit-box-decoration-break: clone;
+  box-shadow: -2px 2px 5px #00000020;
+  opacity: 1;
+}
+
+span.dev-scroller-category.cat-one {
+  border-color: pink;
+}
+
+span.dev-scroller-category.cat-one:hover {
+  background-color: pink;
+}
+
+span.dev-scroller-category.cat-two {
+  border-color: orange;
+}
+
+span.dev-scroller-category.cat-two:hover {
+  background-color: orange;
+}
+
+span.dev-scroller-category.cat-three {
+  border-color: greenyellow;
+}
+
+span.dev-scroller-category.cat-three:hover {
+  background-color: greenyellow;
+}
+
+.dev-section-name {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  transition: all 0.5s;
+  width: 400px;
+  padding: 30px 30px 15px 70px;
+  background-image: radial-gradient(
+    farthest-corner at 300px 300px,
+    white 0%,
+    transparent 75%
+  );
+  text-align: right;
+}
+
+.dev-section-name img {
+  width: 300px;
+  max-height: 200px;
 }

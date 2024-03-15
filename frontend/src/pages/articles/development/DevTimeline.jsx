@@ -1,35 +1,307 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
-import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 import DevScroll from "./DevScroll";
 
 import "./dev.css";
 
+const SECTIONS = {
+  NES: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/NES-Console-Set.png",
+    title: "Famicom: The Creation of the Series",
+  },
+  SNES: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/3/36/SNES-Mod1-Console-Set.png",
+    title: "Super Famicom: The Expansion of Narrative Importance",
+  },
+  GBA: {
+    img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e483edbf-4b49-42e8-a684-cdf17c4f227f/dd3c8ms-f7504566-4677-48ec-9cbf-1a736f433592.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U0ODNlZGJmLTRiNDktNDJlOC1hNjg0LWNkZjE3YzRmMjI3ZlwvZGQzYzhtcy1mNzUwNDU2Ni00Njc3LTQ4ZWMtOWNiZi0xYTczNmY0MzM1OTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.POuFaxNiHdCx684Tb0K9F9Ayfzv8TyoHBnEdbTuz7KI",
+    title: "GBA: Increasing the Reach and Accessibility of the Series",
+  },
+  Wii: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Wii_Wiimotea.png/459px-Wii_Wiimotea.png",
+    title: "GameCube and Wii: Major Graphics and Presentation Improvements",
+  },
+  DS: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/5/56/Nintendo-DS-Lite-Black-Open.png",
+    title: "Nintendo DS: The Introduction of Remakes",
+  },
+  TDS: {
+    img: "https://upload.wikimedia.org/wikipedia/commons/4/43/New-3DS-XL-Black-Transparent-Fixed.png",
+    title: "Nintendo 3DS: The Revival of the Franchise",
+  },
+  Switch: {
+    img: "https://nyko.com/cdn/shop/products/ThinCaseClearWeb1_1024x1024.png?v=1672862719",
+    title: "Nintendo Switch: Breakthrough Into the Mainstream Industry",
+  },
+};
+
 function DevTimeline() {
-  const [year, setYear] = useState(null);
+  const [year, setYear] = useState(1990);
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
+
+  const convertYear = (value) => {
+    const newValue = ((value - 1990) * 100) / 33;
+
+    return newValue;
+  };
+
   const updateYear = (value) => {
     if (value !== year) {
       setYear(value);
     }
+    if (finished === true) {
+      setFinished(false);
+    }
+    if (started === false) {
+      setStarted(true);
+    }
+    if (showTitle === false) {
+      setShowTitle(true);
+    }
+  };
+
+  const findConsole = (year) => {
+    if (year < 1994) {
+      return "NES";
+    } else if (year < 2001) {
+      return "SNES";
+    } else if (year < 2005) {
+      return "GBA";
+    } else if (year < 2008) {
+      return "Wii";
+    } else if (year < 2012) {
+      return "DS";
+    } else if (year < 2019) {
+      return "TDS";
+    } else {
+      return "Switch";
+    }
+  };
+
+  const onStepExit = ({ data, direction }) => {
+    if (data.id === "end" && direction === "down") {
+      setFinished(true);
+    } else if (data.id === "start" && direction === "up") {
+      setStarted(false);
+    } else {
+      if (finished === true) {
+        setFinished(false);
+      }
+      if (started === false) {
+        setStarted(true);
+      }
+    }
   };
 
   return (
-    <>
+    <div className="dev-timeline">
+      <div
+        className="dev-timeline-bar-container"
+        style={{ opacity: started ? 1 : 0 }}
+      >
+        <progress
+          value={convertYear(year)}
+          max="100"
+          className={`${findConsole(year)} ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+
+          // className={finished ? "dev-timeline-progress-update" : ""}
+        ></progress>
+        <div
+          className={`dev-timeline-point${
+            finished ? " dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "9vw" }}
+        >
+          <p style={{ opacity: year === 1990 ? 1 : 0 }}>1990</p>
+          <span className={`dev-timeline-dot ${findConsole(year)}`}></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "14vw", opacity: year === 1992 ? 1 : 0 }}
+        >
+          <p>1992</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "18.5vw" }}
+        >
+          <p style={{ opacity: year === 1994 ? 1 : 0 }}>1994</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 1994 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "23.5vw", opacity: year === 1996 ? 1 : 0 }}
+        >
+          <p>1996</p>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "30.5vw", opacity: year === 1999 ? 1 : 0 }}
+        >
+          <p>1999</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "35.5vw" }}
+        >
+          <p style={{ opacity: year === 2001 ? 1 : 0 }}>2001</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 2001 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "38vw", opacity: year === 2002 ? 1 : 0 }}
+        >
+          <p>2002</p>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "40vw", opacity: year === 2003 ? 1 : 0 }}
+        >
+          <p>2003</p>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "42.5vw", opacity: year === 2004 ? 1 : 0 }}
+        >
+          <p>2004</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "45.5vw" }}
+        >
+          <p style={{ opacity: year === 2005 ? 1 : 0 }}>2005</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 2005 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "50vw", opacity: year === 2007 ? 1 : 0 }}
+        >
+          <p>2007</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "53vw" }}
+        >
+          <p style={{ opacity: year === 2008 ? 1 : 0 }}>2008</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 2008 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "57vw", opacity: year === 2010 ? 1 : 0 }}
+        >
+          <p>2010</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "62.5vw" }}
+        >
+          <p style={{ opacity: year === 2012 ? 1 : 0 }}>2012</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 2012 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "69vw", opacity: year === 2015 ? 1 : 0 }}
+        >
+          <p>2015</p>
+        </div>
+        <div
+          className="dev-timeline-point"
+          style={{ left: "74vw", opacity: year === 2017 ? 1 : 0 }}
+        >
+          <p>2017</p>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          style={{ left: "79.5vw" }}
+        >
+          <p style={{ opacity: year === 2019 ? 1 : 0 }}>2019</p>
+          <span
+            className={`dev-timeline-dot ${
+              year >= 2019 ? findConsole(year) : ""
+            }`}
+          ></span>
+        </div>
+        <div
+          className={`dev-timeline-point ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+          // className="dev-timeline-point"
+          style={{ left: "88.5vw", opacity: year === 2023 ? 1 : 0 }}
+        >
+          <p>2023</p>
+        </div>
+        <div
+          className={`dev-timeline-background ${
+            finished ? "dev-timeline-progress-update" : ""
+          }`}
+        ></div>
+      </div>
       <section>
-        <p className="dev-timeline-intro">
-          In 1983, the Famicom (known as the Nintendo Entertainment System or
-          the NES in the West) was released by Nintendo as their first home
-          video game console. The NES played a large role in revitalizing the
-          video game industry in the United States following the video game
-          crash of 1983, and is considered one of the greatest video game
-          consoles of all time.{" "}
-        </p>
-        <DevScroll updateYear={updateYear}>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(1990);
+          }}
+          onStepExit={({ direction }) => {
+            if (direction === "up") {
+              setShowTitle(false);
+            }
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              In 1983, the Famicom (known as the Nintendo Entertainment System
+              or the NES in the West) was released by Nintendo as their first
+              home video game console. The NES played a large role in
+              revitalizing the video game industry in the United States
+              following the video game crash of 1983, and is considered one of
+              the greatest video game consoles of all time.{" "}
+            </p>
+          </Step>
+        </Scrollama>
+        <DevScroll updateYear={updateYear} onStepExit={onStepExit}>
           <Step
             data={{
-              id: 0,
+              id: "start",
               year: 1990,
               img: "https://images.nintendolife.com/43b03aacdb3dd/fire-emblem-shadow-dragon-and-the-blade-of-light-cover.cover_large.jpg",
             }}
@@ -62,8 +334,11 @@ function DevTimeline() {
                 The scale of the game, with 52 playable characters and over 25
                 chapters, each consisting of dialogue and a battle map, forced
                 the development team to find ways around memory storage issues
-                and compromise on the graphics and storyline, as they were
-                working with the 8-bit Famicom console.
+                and{" "}
+                <span className="dev-scroller-category cat-one">
+                  compromise on the graphics and storyline,
+                </span>{" "}
+                as they were working with the 8-bit Famicom console.
               </p>
               <p>
                 Even with compromises made, the text content in FE1 still
@@ -84,16 +359,22 @@ function DevTimeline() {
           >
             <div className="dev-scroller-step">
               <p>
-                Therefore, the game progressed in a linear fashion, with maps
-                and dialogue being unlocked as dictated by the storyline.{" "}
+                Therefore, the game{" "}
+                <span className="dev-scroller-category cat-one">
+                  progressed in a linear fashion, with maps and dialogue being
+                  unlocked as dictated by the storyline.
+                </span>{" "}
                 <Description tag="Kaga">Kaga </Description> wanted to alleviate
                 the linear feel of the campaign but was unable to do due to
                 storage limitations. Additionally, the development team had
                 originally intended to create “setpiece” graphics for key
                 moments of the story, but were forced to streamline the graphics
                 of the game due to lack of memory. The end result was a game
-                that was not visually impressive, something the developers
-                regretted later.{" "}
+                that was{" "}
+                <span className="dev-scroller-category cat-one">
+                  not visually impressive,
+                </span>{" "}
+                something the developers regretted later.{" "}
               </p>
             </div>
           </Step>
@@ -109,17 +390,20 @@ function DevTimeline() {
                 Fire Emblem <Description tag="FE2">Gaiden</Description> is
                 released as a sequel to FE1. This was the first game in the
                 series to feature gameplay between battles in the form of a
-                navigable map. <Description tag="Kaga">Kaga </Description>
+                navigable map. <Description tag="Kaga">Kaga </Description>{" "}
                 deliberately designed Gaiden to address issues with the first
                 game, removing some of the more strategic elements of gameplay
                 while adding the navigable map and more role-playing elements.{" "}
               </p>
               <p>
                 Partially in response to the memory problems faced with the
-                first game, <Description tag="IS">IS</Description> developed the
-                MMC4 chip, was used exclusively for some Fire Emblem titles.
-                This allowed the company to have a little more leeway with
-                storage in this game’s development.{" "}
+                first game, <Description tag="IS">IS</Description>{" "}
+                <span className="dev-scroller-category cat-one">
+                  developed the MMC4 chip,
+                </span>{" "}
+                which was used exclusively for some Fire Emblem titles. This
+                allowed the company to have a little more leeway with storage in
+                this game’s development.{" "}
               </p>
             </div>
           </Step>
@@ -127,13 +411,23 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          In 1990, Nintendo released the Super Famicom, or Super Nintendo
-          Entertainment System, as its second programmable home console. Among
-          other technological advancements, the console introduced advanced
-          graphics and sound capabilities and accommodated a variety of
-          enhancement chips integrated into game cartridges.
-        </p>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(1994);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              In 1990, Nintendo released the Super Famicom, or Super Nintendo
+              Entertainment System, as its second programmable home console.
+              Among other technological advancements, the console introduced
+              advanced graphics and sound capabilities and accommodated a
+              variety of enhancement chips integrated into game cartridges.
+            </p>
+          </Step>
+        </Scrollama>
         <DevScroll updateYear={updateYear}>
           <Step
             data={{
@@ -148,12 +442,17 @@ function DevTimeline() {
                 <Description tag="FE3">Mystery of the Emblem</Description> is
                 released as the third installment in the series. Due to
                 increased hardware capabilities, the team was able to improve
-                the content and graphical quality, featuring significantly more
-                depth and texture in the in-game art. The developers were able
-                to include an upgraded version of{" "}
+                the content and graphical quality,{" "}
+                <span className="dev-scroller-category cat-one">
+                  featuring significantly more depth and texture in the in-game
+                  art.
+                </span>{" "}
+                The developers were able to include an upgraded version of{" "}
                 <Description tag="FE1">FE1</Description> as well as an original
-                storyline in the game; however, due to some space limitations,
-                characters in the original version of FE1 were cut.
+                storyline in the game; however, due to some space limitations,{" "}
+                <span className="dev-scroller-category cat-one">
+                  characters in the original version of FE1 were cut.
+                </span>
               </p>
             </div>
           </Step>
@@ -172,8 +471,11 @@ function DevTimeline() {
                 as <Description tag="Kaga">Kaga</Description> felt that he had
                 completed that story and wanted to create a large-scale
                 historical drama without being confined to Archanea. The
-                development of this game played a much greater emphasis on the
-                story of the game compared to previous entries.
+                development of this game placed{" "}
+                <span className="dev-scroller-category cat-two">
+                  a much greater emphasis on the story of the game
+                </span>{" "}
+                compared to previous entries.
               </p>
             </div>
           </Step>
@@ -191,10 +493,12 @@ function DevTimeline() {
                 gameplay, which has carried on as a recurring theme in the
                 series. This was also the first game to include optional
                 conversations between characters and story driven romances, in
-                order to further develop character relationships. Additionally,
-                the scale of battle maps throughout the game was vastly
-                increased due to Kaga wanting to create a story that felt epic
-                in scope.
+                order to further develop character relationships. Additionally,{" "}
+                <span className="dev-scroller-category cat-two">
+                  the scale of battle maps throughout the game was vastly
+                  increased
+                </span>{" "}
+                due to Kaga wanting to create a story that felt epic in scope.
               </p>
             </div>
           </Step>
@@ -207,17 +511,20 @@ function DevTimeline() {
           >
             <div className="dev-scroller-step">
               <p>
-                <Description tag="FE5">Thracia 776</Description> is released.
-                Kaga took the opposite approach to this game: Since the
+                <Description tag="FE5">Thracia 776</Description> was released in
+                1999. Kaga took the opposite approach to this game: Since the
                 strategic elements of Genealogy had suffered due to the goal of
                 creating a complex, epic story,{" "}
                 <Description tag="Kaga">Kaga</Description> switched his focus to
                 the gameplay, deliberately giving characters little buildup or
                 backstory. Additional elements such as different types of
                 movement, fog of war mechanics, and increased difficulty systems
-                were included with the goal to challenge players further, while
-                the story centered around a group of scrappy rebels attempting
-                to start a revolution.
+                were included with{" "}
+                <span className="dev-scroller-category cat-two">
+                  the goal to challenge players further,
+                </span>{" "}
+                while the story centered around a group of scrappy rebels
+                attempting to start a revolution.
               </p>
             </div>
           </Step>
@@ -225,13 +532,24 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          Nintendo made a big name for themselves in the handheld consoles
-          market with the release of the GameBoy, which was the first portable
-          gaming system to sell in large quantities. The Game Boy Advance (GBA),
-          released in 2001, was the first major technological upgrade to the
-          Game Boy, providing improved hardware and graphics capabilities.
-        </p>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(2001);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              Nintendo made a big name for themselves in the handheld consoles
+              market with the release of the GameBoy, which was the first
+              portable gaming system to sell in large quantities. The Game Boy
+              Advance (GBA), released in 2001, was the first major technological
+              upgrade to the Game Boy, providing improved hardware and graphics
+              capabilities.
+            </p>
+          </Step>
+        </Scrollama>
         <DevScroll updateYear={updateYear}>
           <Step
             data={{
@@ -313,11 +631,16 @@ function DevTimeline() {
               <p>
                 Since they were creating a game for a new type of gaming
                 platform, the developers focused on making the game friendlier
-                to newcomers, lowering the difficulty and including an in-game
-                tutorial mode for the first time. One of the main issues faced
-                was the limited screen size and resolution of a portable
-                console: for this reason, the developers had to develop a new
-                art style for drawing character portraits.
+                to newcomers,{" "}
+                <span className="dev-scroller-category cat-three">
+                  lowering the difficulty and including an in-game tutorial mode
+                </span>{" "}
+                for the first time. One of the main issues faced was the limited
+                screen size and resolution of a portable console: for this
+                reason, the developers had to{" "}
+                <span className="dev-scroller-category cat-one">
+                  develop a new art style for drawing character portraits.
+                </span>
               </p>
             </div>
           </Step>
@@ -330,10 +653,12 @@ function DevTimeline() {
           >
             <div className="dev-scroller-step">
               <p>
-                The seventh entry in the series was the first game to be
-                localized in English, released as <i>Fire Emblem</i> in the
-                West. It has since been rebranded with its original Japanese
-                subtitle:{" "}
+                The seventh entry in the series was{" "}
+                <span className="dev-scroller-category cat-three">
+                  the first game to be localized in English,
+                </span>{" "}
+                released as <i>Fire Emblem</i> in the West. It has since been
+                rebranded with its original Japanese subtitle:{" "}
                 <Description tag="FE7">The Blazing Blade.</Description> Since
                 this release, all Fire Emblem games with the exception of New
                 Mystery of the Emblem{" "}
@@ -358,12 +683,19 @@ function DevTimeline() {
                 experience in order to propel Fire Emblem into becoming a major
                 series. <i>The Blazing Blade</i> was the first in the series to
                 feature a <Description tag="NGPlus">“New Game+”</Description>{" "}
-                mode, or additional content unlocked following completion of the
-                game’s story: on their second playthrough, players could opt for
-                “Hector Mode,” an alternate story route focusing on a different
+                mode, or{" "}
+                <span className="dev-scroller-category cat-two">
+                  additional content unlocked following completion of the game’s
+                  story:
+                </span>{" "}
+                on their second playthrough, players could opt for “Hector
+                Mode,” an alternate story route focusing on a different
                 protagonist. The main story of the game was preceded by “Lyn
-                Mode,” which served as a tutorial mode for new players due to
-                FE7 being the first localized game.
+                Mode,” which{" "}
+                <span className="dev-scroller-category cat-three">
+                  served as a tutorial mode for new players due to FE7 being the
+                  first localized game.
+                </span>
               </p>
             </div>
           </Step>
@@ -384,7 +716,10 @@ function DevTimeline() {
                 the first game in the series to feature optional dungeons and
                 skirmishes, allowing players to gain additional points. This was
                 another feature designed to decrease the difficulty of the
-                games, as players could overlevel units to make battles easier.
+                games, as{" "}
+                <span className="dev-scroller-category cat-three">
+                  players could overlevel units to make battles easier.
+                </span>
               </p>
             </div>
           </Step>
@@ -392,14 +727,25 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          The Fire Emblem series returned to home consoles with the Tellius
-          duology: a pair of games featuring a continuous storyline and many of
-          the same characters. The first game in the duology was released on the
-          GameCube, a home console released in 2001; the second was released as
-          a direct sequel on the Wii, released in 2006 as Nintendo’s seventh
-          generation console.
-        </p>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(2005);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              The Fire Emblem series returned to home consoles with the Tellius
+              duology: a pair of games featuring a continuous storyline and many
+              of the same characters. The first game in the duology was released
+              on the GameCube, a home console released in 2001; the second was
+              released as a direct sequel on the Wii, released in 2006 as
+              Nintendo’s seventh generation console.
+            </p>
+          </Step>
+        </Scrollama>
+
         <DevScroll updateYear={updateYear}>
           <Step
             data={{
@@ -416,8 +762,11 @@ function DevTimeline() {
                 brought many significant technological advances and features
                 that were maintained in all subsequent non-remakes in the series
                 going forwards. Notably, FE9 was the first game in the series
-                with 3D graphics and animation, full motion cutscenes, and voice
-                acting.
+                with{" "}
+                <span className="dev-scroller-category cat-one">
+                  3D graphics and animation, full motion cutscenes, and voice
+                  acting.
+                </span>
               </p>
             </div>
           </Step>
@@ -432,22 +781,29 @@ function DevTimeline() {
               <p>
                 Following the success of Fire Emblem overseas, the team decided
                 to return to development for home consoles. The new graphics
-                processor of the GameCube allowed the team to transition from 2D
-                to 3D graphics, which became one of the biggest challenges
-                challenges in development. Due to the difficulties imposed by
-                the new graphics coupled with budget and time constraints, the
-                developers opted to exclude gameplay in-between chapters in
-                favor of optional conversations between battles. One of the
-                developers said in an interview that he considered the game to
-                only be 70% complete.{" "}
+                processor of the GameCube allowed the team to{" "}
+                <span className="dev-scroller-category cat-one">
+                  transition from 2D to 3D graphics,
+                </span>{" "}
+                which became one of the biggest challenges in development. Due
+                to the difficulties imposed by the new graphics coupled with
+                budget and time constraints, the developers opted to exclude
+                gameplay in-between chapters in favor of optional conversations
+                between battles. One of the developers said in an interview that
+                he considered the game to only be 70% complete.{" "}
               </p>
               <p>
                 Ike, the protagonist, was the first in the series to not be born
                 of noble rank. This was also an addition due to the new 3D
-                features of the game: the developers wanted their protagonist to
-                be more relatable to people. Additionally, due to having to
-                design 3D models for all the characters, the character artwork
-                produced was a lot higher quality than in the past.
+                features of the game: the developers{" "}
+                <span className="dev-scroller-category cat-three">
+                  wanted their protagonist to be more relatable to people.
+                </span>{" "}
+                Additionally, due to having to design 3D models for all the
+                characters, the character artwork produced was{" "}
+                <span className="dev-scroller-category cat-one">
+                  a lot higher quality than in the past.
+                </span>
               </p>
             </div>
           </Step>
@@ -465,11 +821,14 @@ function DevTimeline() {
                 releases. The devs took advantage of the Wii’s ability to read
                 GameCube memory cards: Radiant Dawn was designed as a direct
                 sequel to <Description tag="FE9">Path of Radiance,</Description>{" "}
-                and players could transfer data from a completed Path of
-                Radiance save file to obtain in-game benefits. Apart from this,
-                the devs did not take advantage of many of the Wii’s
-                capabilities, notably the motion controls, as they felt it was
-                unnecessary to the game’s design.
+                and players could{" "}
+                <span className="dev-scroller-category cat-one">
+                  transfer data from a completed <i>Path of Radiance</i> copy to
+                  obtain in-game benefits.
+                </span>{" "}
+                Apart from this, the devs did not take advantage of many of the
+                Wii’s capabilities, notably the motion controls, as they felt it
+                was unnecessary to the game’s design.
               </p>
             </div>
           </Step>
@@ -477,14 +836,26 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          The Nintendo DS was released as a foldable handheld game console
-          produced by Nintendo in 2004, introducing distinctive new features to
-          handheld games: two LCD screens working in tandem, the bottom one
-          being a touchscreen, and support for wireless connectivity. Its
-          backward compabitibility with Game Boy Advance games, as well as its
-          strong sales, established it as the successor to the Game Boy series.
-        </p>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(2008);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              The Nintendo DS was released as a foldable handheld game console
+              produced by Nintendo in 2004, introducing distinctive new features
+              to handheld games: two LCD screens working in tandem, the bottom
+              one being a touchscreen, and support for wireless connectivity.
+              Its backward compabitibility with Game Boy Advance games, as well
+              as its strong sales, established it as the successor to the Game
+              Boy series.
+            </p>
+          </Step>
+        </Scrollama>
+
         <DevScroll updateYear={updateYear}>
           <Step
             data={{
@@ -501,12 +872,15 @@ function DevTimeline() {
                 series, <i>Shadow Dragon and the Blade of Light,</i> and marks
                 the return of the franchise to portable systems.{" "}
                 <Description tag="IS">Intelligent Systems</Description> chose to
-                develop a remake instead of a new entry so players could
-                experience gameplay and software from the early days of Fire
-                Emblem, as well as to make FE1 accessible to international
-                players. In comparing the remake to the original FE1, we can see
-                the significant progress that the franchise has made since its
-                first game: higher graphics quality, lots of quality of life
+                develop a remake instead of a new entry so{" "}
+                <span className="dev-scroller-category cat-three">
+                  players could experience gameplay and software from the early
+                  days of <i>Fire Emblem,</i>
+                </span>{" "}
+                as well as to make FE1 accessible to international players. In
+                comparing the remake to the original FE1, we can see the
+                significant progress that the franchise has made since its first
+                game: higher graphics quality, lots of quality of life
                 improvements, and the inclusion of an in-game tutorial system.
               </p>
               <p>
@@ -514,9 +888,12 @@ function DevTimeline() {
                 the creation of the game: for example, the dual-screen allowed
                 players to view character stat blocks without leaving the battle
                 map screens. Most notably, the devs took advantage of the DS’s
-                WiFi capabilities to implement online multiplayer mode, a first
-                in the franchise. Players could engage in chats with others and
-                play multiplayer matches.
+                WiFi capabilities to{" "}
+                <span className="dev-scroller-category cat-one">
+                  implement online multiplayer mode, a first in the franchise.
+                </span>{" "}
+                Players could engage in chats with others and play multiplayer
+                matches.
               </p>
             </div>
           </Step>
@@ -533,13 +910,18 @@ function DevTimeline() {
                 <Description tag="FE12">twelfth entry</Description> in the
                 series and the second remake. The major development featured in
                 this game was the inclusion of a customizable{" "}
-                <Description tag="avatar">Avatar</Description> character:
-                Players could give the avatar a custom name, gender, skillset,
-                and different outfits and haircuts. The developers added this
-                feature to give players an easier introduction to the story:
-                since they did not want to assume that players would be familiar
-                with the main protagonist Marth, they added the Avatar as an
-                easier way to connect with the world.
+                <Description tag="avatar">Avatar</Description> character:{" "}
+                <span className="dev-scroller-category cat-two">
+                  players could give the avatar a custom name, gender, skillset,
+                  and different outfits and haircuts.
+                </span>{" "}
+                The developers added this feature to give players an easier
+                introduction to the story: since they did not want to assume
+                that players would be familiar with the main protagonist Marth,
+                they added the Avatar as{" "}
+                <span className="dev-scroller-category cat-three">
+                  an easier way to connect with the world.
+                </span>
               </p>
             </div>
           </Step>
@@ -554,13 +936,15 @@ function DevTimeline() {
               <p>
                 The second major development introduced by New Mystery was{" "}
                 <Description tag="casual">“Casual Mode”:</Description> a new
-                gameplay feature to turn off permadeath, or to let players keep
-                fallen characters in battle. This was another significant step
-                in making the franchise easier and more accessible for new
-                players! The decision to create Casual Mode was very
-                contentious, as permadeath was the defining mechanic of the
-                series’ gameplay; however, positive feedback from the player
-                base convinced Nintendo and{" "}
+                gameplay feature to turn off permadeath, or to{" "}
+                <span className="dev-scroller-category cat-three">
+                  let players keep fallen characters in battle.
+                </span>{" "}
+                This was another significant step in making the franchise easier
+                and more accessible for new players! The decision to create
+                Casual Mode was very contentious, as permadeath was the defining
+                mechanic of the series’ gameplay; however, positive feedback
+                from the player base convinced Nintendo and{" "}
                 <Description tag="IS">IS</Description> to keep its inclusion.
               </p>
             </div>
@@ -569,13 +953,25 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          The Nintendo 3DS was released in 2011 as a successor to the Nintendo
-          DS, featuring backward compabitility with DS games and sharing many
-          similar features. Some of the most prominent new features included the
-          StreetPass and SpotPass modes, delivering content from the internet to
-          the consoles, and the ability to display stereoscopic 3D images.
-        </p>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(2012);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              The Nintendo 3DS was released in 2011 as a successor to the
+              Nintendo DS, featuring backward compabitility with DS games and
+              sharing many similar features. Some of the most prominent new
+              features included the StreetPass and SpotPass modes, delivering
+              content from the internet to the consoles, and the ability to
+              display stereoscopic 3D images.
+            </p>
+          </Step>
+        </Scrollama>
+
         <DevScroll updateYear={updateYear}>
           <Step
             data={{
@@ -591,8 +987,11 @@ function DevTimeline() {
                 next title failed to sell 250,000 units, it would be the end of
                 the franchise. Therefore, the thirteenth entry in the series,{" "}
                 <Description tag="FE13">Awakening,</Description> was designed as
-                a possible final entry for the series, incorporating many
-                design, story, and gameplay elements from previous games.
+                a possible final entry for the series,{" "}
+                <span className="dev-scroller-category cat-two">
+                  incorporating many design, story, and gameplay elements from
+                  previous games.
+                </span>
               </p>
             </div>
           </Step>
@@ -610,12 +1009,15 @@ function DevTimeline() {
                 they thought would be feasible technically. In particular, there
                 was a lot of difficulty with making the 3D models work with the
                 environments: notably, none of the 3D models in the game have
-                feet! Since the developers didn’t know the CPU strength, they
-                designed the models knowing that the number of character bones
-                might be limited, and therefore eliminated the bones operating
-                the ankles and feet. Later, they discovered that the CPU did
-                allow for ankles and feet, but they were too deep in the
-                development process to backtrack.
+                feet! Since the developers didn’t know the CPU strength, they{" "}
+                <span className="dev-scroller-category cat-one">
+                  designed the models knowing that the number of character bones
+                  might be limited, and therefore eliminated the bones operating
+                  the ankles and feet.
+                </span>{" "}
+                Later, they discovered that the CPU did allow for ankles and
+                feet, but they were too deep in the development process to
+                backtrack.
               </p>
             </div>
           </Step>
@@ -633,11 +1035,16 @@ function DevTimeline() {
                 units, playable or otherwise, with their own backstories and
                 unique designs. Additionally, this was the first game to feature
                 voice acting throughout instead of only during major cutscenes;
-                however, most lines were accompanied by grunts or other small
-                exclamations to evoke certain feelings. The graphical
-                capabilities of the 3DS also allowed the devs to add more unique
-                character expressions than previous games, enabling emotional
-                range in scenes.
+                <span className="dev-scroller-category cat-two">
+                  most lines were accompanied by grunts or other small
+                  exclamations to evoke certain feelings.
+                </span>{" "}
+                The graphical capabilities of the 3DS also allowed the
+                developers to{" "}
+                <span className="dev-scroller-category cat-one">
+                  add more unique character expressions than previous games,
+                </span>{" "}
+                enabling emotional range in scenes.
               </p>
             </div>
           </Step>
@@ -655,19 +1062,27 @@ function DevTimeline() {
                 <Description tag="casual">Casual Mode</Description> from{" "}
                 <Description tag="FE12">New Emblem</Description> despite
                 pushback to make the game easier to play and user-friendly. They
-                also spent a lot of time on making the UI and graphics easier
-                for players to understand.
+                also spent a lot of time on{" "}
+                <span className="dev-scroller-category cat-three">
+                  making the UI and graphics easier for players to understand.
+                </span>
               </p>
               <p>
                 Additionally, the developers were able to include more battle
                 gameplay content through various means: a new feature introduced
-                in Awakening was paralogues, a form of optional battles that
-                would allow player to learn more about the world while not
-                detracting from or lengthening the main storyline. Awakening
-                also introduced downloadable content (DLC) to the series, where
-                players could pay for extra battle maps and new classes. This
-                marks a departure from the pricing model of older games, which
-                bundled everything into a single release.
+                in Awakening was <i>paralogues,</i> a form of optional battles{" "}
+                <span className="dev-scroller-category cat-two">
+                  that would allow players to learn more about the world while
+                  not detracting from or lengthening the main storyline.
+                </span>{" "}
+                Awakening also introduced downloadable content (DLC) to the
+                series, where{" "}
+                <span className="dev-scroller-category cat-two">
+                  players could pay for extra battle maps and new gameplay
+                  features.
+                </span>{" "}
+                This marks a departure from the pricing model of older games,
+                which bundled everything into a single release.
               </p>
             </div>
           </Step>
@@ -688,9 +1103,13 @@ function DevTimeline() {
                 versions, while Revelation was released as a third DLC route.{" "}
               </p>
               <p>
-                The developers wanted to distinguish the routes of Fates through
-                gameplay as well as story: Birthright was designed as a
-                beginner-friendly route borrowing many mechanics from{" "}
+                The developers wanted to{" "}
+                <span className="dev-scroller-category cat-two">
+                  distinguish the routes of Fates through gameplay as well as
+                  story:
+                </span>{" "}
+                Birthright was designed as a beginner-friendly route borrowing
+                many mechanics from{" "}
                 <Description tag="FE13">Awakening,</Description> while Conquest
                 provided more varied objectives and complex strategic elements.
               </p>
@@ -706,14 +1125,16 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <p>
                 The most prominent new gameplay feature of Fates was the
-                inclusion of My Castle: a “home base” where players could
-                interact with members of their roster and obtain power-ups
-                through minigames. My Castle was created as an alternative
-                activity for players, allowing them to learn more about the main
-                characters outside of battle. Players could also visit other My
-                Castles through the SpotPass functionality of the 3DS.
-                Additionally, Fates was the first game in the series to feature
-                Amiibo support.
+                inclusion of My Castle: a “home base” where players could{" "}
+                <span className="dev-scroller-category cat-two">
+                  interact with members of their roster and obtain power-ups
+                  through minigames.
+                </span>{" "}
+                My Castle was created as an alternative activity for players,
+                allowing them to learn more about the main characters outside of
+                battle. Players could also visit other My Castles through the
+                SpotPass functionality of the 3DS. Additionally, Fates was the
+                first game in the series to feature Amiibo support.
               </p>
             </div>
           </Step>
@@ -748,13 +1169,19 @@ function DevTimeline() {
           >
             <div className="dev-scroller-step">
               <p>
-                Echoes introduced the turnwheel mechanic to the series: Players
-                had the ability to rewind actions during battles, making the
-                gameplay significantly more forgiving. This mechanic has been
-                featured in every game since, incorporated into the story as a
-                plot point. Additionally, Echoes was the first entry in the
-                series to feature full voice-acting in order to enhance the
-                presentation of the story.
+                Echoes introduced the <i>turnwheel</i> mechanic to the series:
+                players had{" "}
+                <span className="dev-scroller-category cat-three">
+                  the ability to rewind actions during battles, making the
+                  gameplay significantly more forgiving.
+                </span>{" "}
+                This mechanic has been featured in every game since,
+                incorporated into the story as a plot point. Additionally,
+                Echoes was the first entry in the series to feature full
+                voice-acting in order to{" "}
+                <span className="dev-scroller-category cat-two">
+                  enhance the presentation of the story.
+                </span>
               </p>
             </div>
           </Step>
@@ -762,16 +1189,28 @@ function DevTimeline() {
       </section>
 
       <section>
-        <p className="dev-timeline-intro">
-          The Nintendo Switch, released in 2017, was the first Nintendo console
-          to be classified as a hybrid console: it could either be docked for
-          home console use or used as a portable device. The Switch supports
-          online gaming through internet connectivity and video game software
-          through both physical cartridges and digital distribution via the
-          electronic shop. It is Nintendo’s best-selling home console to date
-          and the third best-selling game console of all time.
-        </p>
-        <DevScroll updateYear={updateYear}>
+        <Scrollama
+          onStepEnter={() => {
+            setShowTitle(true);
+            setYear(2019);
+          }}
+          offset="400px"
+        >
+          <Step>
+            <p className="dev-timeline-intro">
+              The Nintendo Switch, released in 2017, was the first Nintendo
+              console to be classified as a hybrid console: it could either be
+              docked for home console use or used as a portable device. The
+              Switch supports online gaming through internet connectivity and
+              video game software through both physical cartridges and digital
+              distribution via the electronic shop. It is Nintendo’s
+              best-selling home console to date and the third best-selling game
+              console of all time.
+            </p>
+          </Step>
+        </Scrollama>
+
+        <DevScroll updateYear={updateYear} onStepExit={onStepExit}>
           <Step
             data={{
               id: 0,
@@ -785,19 +1224,25 @@ function DevTimeline() {
                 was released on the Switch as the sixteenth mainline entry in
                 the series, marking the series’ return to home consoles. The
                 staff wanted to create a game that felt fresh to mark the
-                series’ development, so they heavily expanded role-playing game
-                mechanics beyond the tactical battles: in particular, the My
-                Castle system from Fates was expanded into a full navigable base
-                called the monastery, featuring minigames, character
-                interactions, and increased social aspects. Additionally, the
-                story was split into four distinct routes, providing further
-                complexity to the world and gameplay-story integration.
+                series’ development, so they{" "}
+                <span className="dev-scroller-category cat-two">
+                  heavily expanded role-playing game mechanics beyond the
+                  tactical battles:
+                </span>{" "}
+                in particular, the My Castle system from Fates was expanded into
+                a full navigable base called the monastery, featuring minigames,
+                character interactions, and increased social aspects.
+                Additionally, the story was split into four distinct routes,{" "}
+                <span className="dev-scroller-category cat-two">
+                  providing further complexity to the world and gameplay-story
+                  integration.
+                </span>
               </p>
             </div>
           </Step>
           <Step
             data={{
-              id: 1,
+              id: "end",
               year: 2023,
               img: "https://i.ytimg.com/vi/DMtDNA_kiZ4/maxresdefault.jpg",
             }}
@@ -808,26 +1253,41 @@ function DevTimeline() {
                 latest title in the series, was designed as an anniversary game
                 celebrating main characters from previous titles. One of the
                 main goals of Engage was to create a very different experience
-                from <Description tag="FE16">Three Houses,</Description> with a
-                much more simple story that could appeal to a broad audience and
-                many age-ranges as opposed to a heavy war story. Engage also
-                returned to a linear narrative structure instead of branching
-                paths, as the developers were worried that a complicated story
-                would be too overwhelming from players. Finally, 3D models were
-                heavily centered in the game’s art style due to the
-                significantly higher graphic capabilities provided on the
-                Switch: the developers almost entirely refrained from using 2D
-                artwork in games, a departure from previous games in the
+                from <Description tag="FE16">Three Houses,</Description> with{" "}
+                <span className="dev-scroller-category cat-three">
+                  a much more simple story that could appeal to a broad audience
+                  and many age-ranges
+                </span>{" "}
+                as opposed to a heavy war story. Engage also{" "}
+                <span className="dev-scroller-category cat-three">
+                  returned to a linear narrative structure instead of branching
+                  paths
+                </span>{" "}
+                as the developers were worried that a complicated story would be
+                too overwhelming from players. Finally,{" "}
+                <span className="dev-scroller-category cat-one">
+                  3D models were heavily centered in the game’s art style
+                </span>{" "}
+                due to the significantly higher graphic capabilities provided on
+                the Switch: the developers almost entirely refrained from using
+                2D artwork in games, a departure from previous games in the
                 franchise.
               </p>
             </div>
           </Step>
         </DevScroll>
       </section>
-      <div style={{ position: "fixed", right: "50px", bottom: "100px" }}>
-        {year}
+      <div
+        className="dev-section-name"
+        style={{ opacity: showTitle && !finished ? 1 : 0 }}
+      >
+        <img
+          src={SECTIONS[findConsole(year)].img}
+          alt={SECTIONS[findConsole(year)].title}
+        ></img>
+        <h3>{SECTIONS[findConsole(year)].title}</h3>
       </div>
-    </>
+    </div>
   );
 }
 
