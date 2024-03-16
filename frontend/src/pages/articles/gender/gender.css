@@ -90,8 +90,13 @@
 .gender-step-single-col {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.gender-step-single-col.half-width {
+  width: 50vw;
 }
 
 .gcc-short-col {
@@ -100,7 +105,7 @@
 
 .gender-character-tapewrapper {
   max-width: 80vw;
-  z-index: 9;
+  z-index: 5;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -117,4 +122,45 @@
   background-color: rgba(252, 222, 231, 0.8);
   font-size: 20px;
   font-weight: 500;
+}
+
+.gender-character-tapewrapper.addendum {
+  margin-top: 20px;
+  z-index: 0;
+}
+
+.gender-lord-overview {
+  padding: 15px 50px 0;
+}
+
+.gender-lordoverview-bg-container {
+  border: 1px solid blue;
+  padding: 15px 20px 0;
+  position: sticky;
+  top: 0;
+  transition: all 1s;
+}
+
+.gender-lordoverview-img-container {
+  /* border: 1px solid red; */
+  height: 15vh;
+  position: absolute;
+  /* position: absolute; */
+  /* top: 0px;
+  left: 10px; */
+  transition: all 1.5s;
+}
+
+.gender-lordoverview-img-container.glo-step-2 {
+  top: 50px;
+  left: 100px;
+}
+
+.gender-lordoverview-img-container img {
+  height: 100%;
+}
+
+.glo-gender-M.glo-step-3,
+.glo-gender-A.glo-step-3 {
+  opacity: 0.2;
 }

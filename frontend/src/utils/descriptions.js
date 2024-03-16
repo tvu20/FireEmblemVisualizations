@@ -139,4 +139,9 @@ export const DESC = {
     description:
       "A free-to-play tactical RPG mobile game for Android and iOS decives. Released by Nintendo in 2017 as a spin-off of the Fire Emblem series featuring its characters. ",
   },
+  lord: {
+    name: "Lord",
+    description:
+      "Each game in the series has at least one Lord character, who typically assumes the role of a King within chess, causing a Game Over upon dying in battle and having the strongest active contributions to the game's story.",
+  },
 };
