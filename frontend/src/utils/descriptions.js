@@ -129,4 +129,9 @@ export const DESC = {
     description:
       "A gameplay mode that allows the player to turn off the permadeath feature: characters that fall in battle will return in the next chapter. ",
   },
+  boss: {
+    name: "Boss",
+    description:
+      "A type of enemy unit that functions as the commander of an enemy army. Typically appears as minor or major antagonists in the story and are more difficult to beat in battle.",
+  },
 };

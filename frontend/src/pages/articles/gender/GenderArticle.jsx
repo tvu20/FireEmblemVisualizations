@@ -2,77 +2,30 @@ import React from "react";
 
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
-import DevTimeline from "./DevTimeline";
 
-import "./dev.css";
+import "./gender.css";
+import CharacterCounts from "./CharacterCounts";
 
-function DevelopmentArticle() {
+function GenderArticle() {
   return (
     <>
-      <div className="dev-article">
-        <div className="dev-intro">
-          <h1>The Development of the Fire Emblem Series</h1>
-          <section className="dev-intro-paragraphs">
+      <div className="gender-article">
+        <div className="gender-intro">
+          <h1>The Evolution of Gender Representation Throughout the Series</h1>
+          <section className="gender-intro-paragraphs">
             <p>
-              Though Fire Emblem was not the first game in the tactical{" "}
-              <Description tag="RPG">RPG</Description> genre, it is considered
-              by many historians to be the franchise that set the archetype for
-              the whole genre, establishing core gameplay elements that are
-              still used in many tactical RPGs today.{" "}
-            </p>
-            <p>
-              The main gameplay loop of each game revolves around individual
-              battles between the player’s team of characters and enemy{" "}
-              <Description tag="NPC">non-playable characters</Description> on
-              grid-based maps. Similar to a game of chess, you control
-              specialized units that can move across grid squares and defeat the
-              other team’s units; however, all the pieces have individualized
-              appearances, stats, and backstories. Each game also features a
-              storyline and cast of characters similar to most role-playing
-              games, with an emphasis on medieval fantasy settings and wars.
-            </p>
-
-            <p>
-              One of the most notably unique aspects of gameplay in Fire Emblem
-              is the <Description tag="permadeath">permadeath</Description>{" "}
-              system: characters who die in battle are unusable for the rest of
-              the game, and story-wise they are either killed off or left as
-              non-playable characters if they are too important to die.
-            </p>
-          </section>
-          <section>
-            <p>
-              In this article, I will provide an overview of the most
-              significant changes over time in the mechanics, features, and
-              development cycles of the games in the series. Each of these
-              significant changes can be attributed to one of the three
-              categories:{" "}
-            </p>
-            <ol style={{ lineHeight: 2 }}>
-              <li>
-                <span className="dev-scroller-category cat-one">
-                  Technological advancements
-                </span>
-              </li>
-              <li>
-                <span className="dev-scroller-category cat-two">
-                  Gameplay-story integration
-                </span>
-              </li>
-              <li>
-                <span className="dev-scroller-category cat-three">
-                  Player friendliness and ease
-                </span>
-              </li>
-            </ol>
-            <p>
-              By tracking these different levels of progress, we can see how
-              each of these categories contributes to the development philosophy
-              throughout the series’ history!
+              Gender representation in video games is a widely studied topic in
+              the field of entertainment media, as video games have historically
+              been heavily male-dominated. Previous research on game content has
+              also shown that female characters are often portrayed differently
+              from male characters, but in story and in gameplay mechanics. In
+              this article, I will examine the evolution of how women have been
+              portrayed in the Fire Emblem series’ 20+ year history, and whether
+              there has been a significant change in gender representation.
             </p>
           </section>
         </div>
-        <DevTimeline />
+        <CharacterCounts />
         <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
@@ -117,4 +70,4 @@ function DevelopmentArticle() {
   );
 }
 
-export default DevelopmentArticle;
+export default GenderArticle;

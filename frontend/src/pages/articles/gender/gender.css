@@ -1,0 +1,120 @@
+.gender-article {
+  background: #fcdee7;
+  padding: 100px 0 50px;
+  /* padding: 100px 20px 50px; */
+}
+
+.gender-intro {
+  margin: 0 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gender-intro h1 {
+  margin: 0px;
+  text-align: center;
+}
+
+.gender-intro-paragraphs {
+  max-width: 70vw;
+}
+
+.gender-character-bg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 20px 0;
+  position: sticky;
+  top: 0;
+}
+
+.gender-character-counts {
+  padding: 15px 50px 0;
+}
+
+.gender-character-image-container {
+  height: 24vh;
+  width: calc(100% * (1 / 4) - 10px - 1px);
+  /* margin: 10px 0; */
+  /* flex: 0 0 21%; */
+  /* margin: 10px 20px; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+.gender-character-image-container img {
+  margin-top: 5px;
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.gender-character-image-container p {
+  margin: 10px 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gcc-step-1,
+#gcc-game-12.gcc-step-2,
+#gcc-game-13.gcc-step-2,
+#gcc-game-15.gcc-step-2,
+#gcc-game-11.gcc-step-3,
+#gcc-game-12.gcc-step-3,
+#gcc-game-13.gcc-step-3,
+#gcc-game-15.gcc-step-3,
+#gcc-game-12.gcc-step-4,
+#gcc-game-13.gcc-step-4,
+#gcc-game-1.gcc-npc-step-5,
+#gcc-game-14.gcc-npc-step-5,
+#gcc-game-0.gcc-npc-step-6,
+#gcc-game-3.gcc-npc-step-6,
+#gcc-game-4.gcc-npc-step-6,
+#gcc-game-5.gcc-npc-step-6,
+#gcc-game-6.gcc-npc-step-6,
+#gcc-game-7.gcc-npc-step-6,
+#gcc-game-10.gcc-npc-step-6,
+#gcc-game-11.gcc-npc-step-6,
+#gcc-game-12.gcc-npc-step-6,
+#gcc-game-13.gcc-npc-step-6 {
+  opacity: 1;
+}
+
+.gender-step-single-col {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gcc-short-col {
+  height: 50vh;
+}
+
+.gender-character-tapewrapper {
+  max-width: 80vw;
+  z-index: 9;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 2;
+}
+
+.gender-character-tapewrapper span {
+  padding: 14px 0 11px;
+  box-shadow: 15px 0 transparent, -15px 0 transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: rgba(252, 222, 231, 0.8);
+  font-size: 20px;
+  font-weight: 500;
+}

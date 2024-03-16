@@ -253,6 +253,7 @@ function GenderLineCounts() {
       // only using pcs right now
 
       // I REVERSED ALL THE F AND M SO FEMALE WOULD BE ON THE BOTTOM
+      // const balls = value.npcs;
       const balls = value.pcs;
       const balls_per_row = 10;
       let balls_F = balls.M;
