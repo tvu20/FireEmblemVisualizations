@@ -134,4 +134,9 @@ export const DESC = {
     description:
       "A type of enemy unit that functions as the commander of an enemy army. Typically appears as minor or major antagonists in the story and are more difficult to beat in battle.",
   },
+  FEH: {
+    name: "Fire Emblem Heroes",
+    description:
+      "A free-to-play tactical RPG mobile game for Android and iOS decives. Released by Nintendo in 2017 as a spin-off of the Fire Emblem series featuring its characters. ",
+  },
 };

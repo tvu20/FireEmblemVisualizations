@@ -24,6 +24,58 @@ function GenderArticle() {
               there has been a significant change in gender representation.
             </p>
           </section>
+          <details>
+            <summary>
+              Before we start, here are a few important disclaimers.
+            </summary>
+            Fire Emblem <Description tag="FE17">Engage</Description> is not
+            included in this article due to the game's script not being
+            available online at the time data for this article was collected.{" "}
+            <br />
+            This article primarily discusses the role of the gender binary
+            within the series. There have been a few characters in the series’
+            history whose gender identity has not been within the margins of the
+            gender binary:
+            <ul>
+              <li>
+                Kyza was originally introduced with he/him pronouns in their
+                original appearance in{" "}
+                <Description tag="FE10">Radiant Dawn.</Description> There were
+                hints in the script that the character could be read as a
+                transgender female character, although a lot of these
+                characteristics were shared with offensive gay male stereotypes
+                in Japanese entertainment culture at the time. In recent years,
+                they were localized using gender-neutral pronouns in{" "}
+                <Description tag="FEH">Fire Emblem Heroes</Description>. In this
+                article, which analyzes data from the scripts of each mainline
+                game, Kyza is included in the male statistic due to being
+                originally localized as male and categorized as such within the
+                game’s code, but they are now known as a gender-neutral
+                character.
+              </li>
+              <li>
+                Brammimond is a character in{" "}
+                <Description tag="FE7">The Blazing Blade</Description> that does
+                not identify with any specific gender or personality, instead
+                mirroring the personality and voice of the person speaking with
+                them. They are not included in the statistics of this article
+                due to not being a playable or enemy unit.
+              </li>
+              <li>
+                Limstella is a character in{" "}
+                <Description tag="FE7">The Blazing Blade</Description> that is
+                meant to be the manifestation of perfect power and beauty. Since
+                they are essentially an essence/construct rather than an actual
+                character, they are also not included in the statistics of this
+                article.{" "}
+              </li>
+            </ul>
+            Apart from these characters, there are no other explicitly
+            transgender, non-binary, or gender non-conforming characters within
+            the series at this point in time. Hopefully in the future the series
+            will improve further in their representation of diverse gender
+            identities!
+          </details>
         </div>
         <CharacterCounts />
         <p>
