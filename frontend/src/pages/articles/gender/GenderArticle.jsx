@@ -6,6 +6,7 @@ import Description from "../../../components/articles/Description";
 import "./gender.css";
 import CharacterCounts from "./CharacterCounts";
 import LordsOverview from "./LordsOverview";
+import FemaleLords from "./FemaleLords";
 
 function GenderArticle() {
   return (
@@ -88,6 +89,8 @@ function GenderArticle() {
           </p>
         </div>
         <LordsOverview />
+
+        <FemaleLords />
         <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the

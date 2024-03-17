@@ -164,3 +164,28 @@
 .glo-gender-A.glo-step-3 {
   opacity: 0.2;
 }
+
+/* FEMALE LORDS SECTION */
+
+.female-lords-horizontal-scroll {
+  border: 1px solid blue;
+  width: 100%;
+  height: 90vh;
+
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+.female-lords-item {
+  border: 1px solid red;
+  box-sizing: border-box;
+  padding: 1rem;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
