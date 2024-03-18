@@ -11,10 +11,19 @@
   --col-three: 75vw;
   --col-four: 85vw;
 
+  --last-col-one: 60vw;
+  --last-col-two: 70vw;
+  --last-col-three: 80vw;
+
   --male-row-one: 5vh;
   --male-row-two: 15vh;
   --male-row-three: 25vh;
   --male-row-four: 35vh;
+
+  --male-col-one: 60vw;
+  --male-col-two: 66.6vw;
+  --male-col-three: 73.3vw;
+  --male-col-four: 80vw;
 
   --female-row-one: 50vh;
   --female-row-two: 60vh;
@@ -23,6 +32,10 @@
 }
 
 /* FIRST STEP */
+
+.glo-step-1 {
+  filter: grayscale(1);
+}
 
 #gender-lord-Marth.glo-step-1 {
   top: var(--row-one);
@@ -126,79 +139,79 @@
 
 #gender-lord-Edelgard.glo-step-1 {
   top: var(--row-six);
-  left: var(--col-one);
+  left: var(--last-col-one);
 }
 
 #gender-lord-Dimitri.glo-step-1 {
   top: var(--row-six);
-  left: var(--col-two);
+  left: var(--last-col-two);
 }
 
 #gender-lord-Claude.glo-step-1 {
   top: var(--row-six);
-  left: var(--col-three);
+  left: var(--last-col-three);
 }
 
 /* REMAINING STEPs */
 
 #gender-lord-Marth {
   top: var(--male-row-one);
-  left: var(--col-one);
+  left: var(--male-col-one);
 }
 
 #gender-lord-Alm {
   top: var(--male-row-one);
-  left: var(--col-two);
+  left: var(--male-col-two);
 }
 
 #gender-lord-Celica {
   top: var(--female-row-one);
-  left: var(--col-one);
+  left: var(--male-col-one);
 }
 
 #gender-lord-Sigurd {
   top: var(--male-row-one);
-  left: var(--col-three);
+  left: var(--male-col-three);
 }
 
 #gender-lord-Seliph {
   top: var(--male-row-one);
-  left: var(--col-four);
+  left: var(--male-col-four);
 }
 
 #gender-lord-Leif {
   top: var(--male-row-two);
-  left: var(--col-one);
+  left: var(--male-col-one);
 }
 
 #gender-lord-Roy {
   top: var(--male-row-two);
-  left: var(--col-two);
+  left: var(--male-col-two);
 }
 
 #gender-lord-Eliwood {
   top: var(--male-row-two);
-  left: var(--col-three);
+  left: var(--male-col-three);
 }
 
 #gender-lord-Lyn {
   top: var(--female-row-one);
-  left: var(--col-two);
+  left: var(--male-col-two);
 }
 
 #gender-lord-Hector {
   top: var(--male-row-two);
-  left: var(--col-four);
+  left: var(--male-col-four);
 }
 
 #gender-lord-Eirika {
   top: var(--female-row-one);
-  left: var(--col-three);
+  left: var(--male-col-three);
 }
 
 #gender-lord-Ephraim {
   top: var(--male-row-three);
-  left: var(--col-one);
+  left: var(--male-col-one);
 }
 
 #gender-lord-Ike {
@@ -208,12 +221,12 @@
 
 #gender-lord-Micaiah {
   top: var(--female-row-one);
-  left: var(--col-four);
+  left: var(--male-col-four);
 }
 
 #gender-lord-Kris {
   top: var(--avatar-row);
-  left: var(--col-one);
+  left: var(--male-col-one);
 }
 
 #gender-lord-Chrom {
@@ -223,32 +236,32 @@
 
 #gender-lord-Robin {
   top: var(--avatar-row);
-  left: var(--col-two);
+  left: var(--male-col-two);
 }
 
 #gender-lord-Lucina {
   top: var(--female-row-two);
-  left: var(--col-one);
+  left: var(--male-col-two);
 }
 
 #gender-lord-Corrin {
   top: var(--avatar-row);
-  left: var(--col-three);
+  left: var(--male-col-three);
 }
 
 #gender-lord-Byleth {
   top: var(--avatar-row);
-  left: var(--col-four);
+  left: var(--male-col-four);
 }
 
 #gender-lord-Edelgard {
   top: var(--female-row-two);
-  left: var(--col-two);
+  left: var(--male-col-three);
 }
 
 #gender-lord-Dimitri {
   top: var(--male-row-three);
-  left: var(--col-four);
+  left: var(--male-col-four);
 }
 
 #gender-lord-Claude {

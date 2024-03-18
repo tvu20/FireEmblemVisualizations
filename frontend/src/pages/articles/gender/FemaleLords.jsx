@@ -184,6 +184,40 @@ function FemaleLords() {
           </div>
         </section>
       </div>
+      <div>
+        <p>
+          So there are two definitively top-billed female lords in the series,
+          out of the seven available: Micaiah from{" "}
+          <Description tag="FE10">Radiant Dawn</Description> and Eirika from{" "}
+          <Description tag="FE8">Sacred Stones</Description>. When looking at
+          in-game content, all other female lords are arguably less prominent or
+          neglected in their game compared to other male lords. However, several
+          more female lords have been favored in promotional and post-game
+          content: Lyn from <Description tag="FE7">Blazing Blade</Description>{" "}
+          and Lucina from <Description tag="FE13">Awakening</Description> have
+          become the faces of their games in most featured content and have
+          retroactively become the most popular lords in their games, while
+          Edelgard from <Description tag="FE16">Three Houses</Description> is
+          one of the most recognizable characters in the series and widely
+          discussed when examining the game’s narrative content.
+        </p>
+        <p>
+          Additionally, the inclusion of the{" "}
+          <Description tag="avatar">avatar</Description> has significantly
+          improved the series’ female representation: every mainline game in the
+          series following the inclusion of the first avatar in{" "}
+          <Description tag="FE12">New Mystery</Description> has had the option
+          to follow a female lord. Additionally, if we don’t consider remakes,
+          every single game in the franchise since{" "}
+          <Description tag="FE7">Blazing Blade</Description> has featured a
+          female or optionally female lord with the exception of{" "}
+          <Description tag="FE9">Path of Radiance.</Description> However,{" "}
+          <i>Path of Radiance’s</i> sequel,{" "}
+          <Description tag="FE10">Radiant Dawn</Description>, prominently
+          features Micaiah as the main lord, so every “narrative” of the
+          franchise since has had a representative female lord.{" "}
+        </p>
+      </div>
     </>
   );
 }

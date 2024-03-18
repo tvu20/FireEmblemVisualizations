@@ -6,8 +6,7 @@ import Description from "../../../components/articles/Description";
 import "./gender.css";
 import "./lordsoverview.css";
 
-import { genderCharCounts, lordsOverview } from "../../../utils/images";
-import { gameFullTitles } from "../../../utils/games";
+import { lordsOverview } from "../../../utils/images";
 
 function LordsOverview() {
   const [step, setStep] = useState("1");

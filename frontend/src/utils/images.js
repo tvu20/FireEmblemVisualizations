@@ -39,6 +39,8 @@ import edelgard from "../assets/gender/edelgard.png";
 import dimitri from "../assets/gender/dimitri.png";
 import claude from "../assets/gender/claude.png";
 
+import nyna from "../assets/gender/nyna.png";
+
 export const genderCharCounts = [
   gcc1,
   gcc2,
@@ -173,5 +175,86 @@ export const lordsOverview = [
     name: "Claude",
     img: claude,
     gender: "M",
+  },
+];
+
+export const femaleMainCharacters = [
+  {
+    name: "Caeda",
+    img: nyna,
+    cat: "love",
+    princess: "Y",
+  },
+  {
+    name: "Nyna",
+    img: nyna,
+    cat: "",
+    princess: "Y",
+  },
+  {
+    name: "Altena",
+    img: nyna,
+    cat: "",
+    princess: "Y",
+  },
+  {
+    name: "Eyvel",
+    img: nyna,
+    cat: "family",
+    princess: "N",
+  },
+  {
+    name: "Guinivere",
+    img: nyna,
+    cat: "",
+    princess: "Y",
+  },
+  {
+    name: "Ninian",
+    img: nyna,
+    cat: "love",
+    princess: "N",
+  },
+  {
+    name: "L'Arachel",
+    img: nyna,
+    cat: "",
+    princess: "Y",
+  },
+  {
+    name: "Titania",
+    img: nyna,
+    cat: "family",
+    princess: "N",
+  },
+  {
+    name: "Elincia",
+    img: nyna,
+    cat: "",
+    princess: "Y",
+  },
+  {
+    name: "Katarina",
+    img: nyna,
+    cat: "love",
+    princess: "N",
+  },
+  {
+    name: "Lissa",
+    img: nyna,
+    cat: "family",
+    princess: "Y",
+  },
+  {
+    name: "Azura",
+    img: nyna,
+    cat: "family",
+    princess: "Y",
+  },
+  {
+    name: "Rhea",
+    img: nyna,
+    cat: "family",
+    princess: "N",
   },
 ];

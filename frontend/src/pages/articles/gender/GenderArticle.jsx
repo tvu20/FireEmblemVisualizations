@@ -7,6 +7,8 @@ import "./gender.css";
 import CharacterCounts from "./CharacterCounts";
 import LordsOverview from "./LordsOverview";
 import FemaleLords from "./FemaleLords";
+import FemaleMainChars from "./FemaleMainChars";
+import GenderPartThree from "./GenderPartThree";
 
 function GenderArticle() {
   return (
@@ -78,6 +80,39 @@ function GenderArticle() {
             will improve further in their representation of diverse gender
             identities!
           </details>
+          <section className="gender-intro-paragraphs">
+            <p>
+              In this article, we will examine the representation of gender
+              throughout the series using four metrics:
+              <ol style={{ lineHeight: 2 }}>
+                <li>
+                  <span className="gender-scroller-category cat-one">
+                    Quantity of Appearances: Has the representation of female
+                    characters increased across the series?
+                  </span>
+                </li>
+                <li>
+                  <span className="gender-scroller-category cat-two">
+                    Quality of Appearances: Have female characters become more
+                    important throughout the series?
+                  </span>
+                </li>
+                <li>
+                  <span className="gender-scroller-category cat-three">
+                    Gameplay Integration: How have female characters been
+                    represented in gameplay?
+                  </span>
+                </li>
+                <li>
+                  <span className="gender-scroller-category cat-three">
+                    Relationships: How have interactions between female
+                    characters evolved over the series, and can they exist
+                    outside of their relationships with men?
+                  </span>
+                </li>
+              </ol>
+            </p>
+          </section>
         </div>
         <CharacterCounts />
         <div className="gender-article-section-intro">
@@ -91,6 +126,10 @@ function GenderArticle() {
         <LordsOverview />
 
         <FemaleLords />
+
+        <FemaleMainChars />
+
+        <GenderPartThree />
         <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the

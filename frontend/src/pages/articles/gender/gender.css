@@ -29,7 +29,8 @@
   top: 0;
 }
 
-.gender-character-counts {
+.gender-character-counts,
+.gender-female-mainchars {
   padding: 15px 50px 0;
 }
 
@@ -134,7 +135,8 @@
 }
 
 .gender-lordoverview-bg-container {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  height: 0px;
   padding: 15px 20px 0;
   position: sticky;
   top: 0;
@@ -188,4 +190,49 @@
   scroll-snap-align: start;
   text-align: center;
   position: relative;
+}
+
+.gender-femalemain-bg-container {
+  border: 1px solid red;
+  position: sticky;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  transition: all 1.5s;
+}
+
+.gender-femalemain-image-container {
+  /* border: 1px solid blue; */
+  width: 80px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.gender-femalemain-image-container img {
+  margin-top: 5px;
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.gender-femalemain-image-container p {
+  margin: 10px 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gfm-step-2,
+.gfm-step-3,
+.gfm-step-4 {
+  opacity: 0.2;
+}
+
+.gfm-family.gfm-step-2,
+.gfm-love.gfm-step-3,
+.gfm-princess.gfm-step-4 {
+  opacity: 1;
 }

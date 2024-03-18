@@ -144,4 +144,9 @@ export const DESC = {
     description:
       "Each game in the series has at least one Lord character, who typically assumes the role of a King within chess, causing a Game Over upon dying in battle and having the strongest active contributions to the game's story.",
   },
+  class: {
+    name: "Class",
+    description:
+      "Each character belongs to a class that determines their abilities, fighting style, and role in combat. All characters belong to a starting class upon first joining the player’s army, but can evolve to different classes over time.",
+  },
 };
