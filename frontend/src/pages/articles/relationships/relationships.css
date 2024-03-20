@@ -106,3 +106,60 @@
 .rel-scroller-step:last-child {
   margin-bottom: 0;
 }
+
+.rel-scroll-popup-container {
+  border: 1px solid green;
+  position: sticky;
+  width: 50vw;
+  height: 0;
+  padding-left: 50vw;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rel-scroll-popup {
+  border: 1px solid yellow;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  width: 35vw;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.rel-scroll-popup.visible {
+  opacity: 1;
+  transition: opacity 1s;
+  /* display: block; */
+  /* max-height: auto;
+  opacity: 1;
+  padding: 30px;
+  transition: max-height 0ms 0ms, opacity 400ms 0ms; */
+  /* 
+  transition: transform 1s;
+  transform: translateX(0); */
+}
+
+/* .rel-scroll-popup.visible {
+  display: block;
+  animation: fade_in_show 0.5s;
+}
+
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+.rel-scroll-popup-label {
+  margin: 0;
+  font-size: 15px;
+  text-decoration: underline;
+}

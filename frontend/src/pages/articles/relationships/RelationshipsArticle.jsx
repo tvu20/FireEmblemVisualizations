@@ -5,6 +5,7 @@ import Description from "../../../components/articles/Description";
 
 import "./relationships.css";
 import SocialNetworks from "./SocialNetworks";
+import PairingNetworks from "./PairingNetworks";
 
 function RelationshipsArticle() {
   return (
@@ -58,6 +59,8 @@ function RelationshipsArticle() {
         </div>
 
         <SocialNetworks />
+
+        <PairingNetworks />
         <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
