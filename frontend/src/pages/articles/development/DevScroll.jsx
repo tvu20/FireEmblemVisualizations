@@ -29,7 +29,11 @@ function DevScroll(props) {
         </Scrollama>
       </div>
       <div className="dev-scroll-graphic">
-        <img src={currentImage} alt="FE" />
+        <img
+          src={currentImage}
+          alt="FE"
+          style={{ opacity: currentImage ? 1 : 0 }}
+        />
         {/* <p>{currentStepIndex}</p> */}
       </div>
     </div>

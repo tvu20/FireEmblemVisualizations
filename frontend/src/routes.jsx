@@ -25,6 +25,7 @@ import CharacterBarPage from "./pages/viz/characters/CharacterBarPage";
 import StoryProgressionPage from "./pages/viz/sentiment/StoryProgressionPage";
 import DevelopmentArticle from "./pages/articles/development/DevelopmentArticle";
 import GenderArticle from "./pages/articles/gender/GenderArticle";
+import RelationshipsArticle from "./pages/articles/relationships/RelationshipsArticle";
 
 const router = createBrowserRouter([
   {
@@ -119,6 +120,10 @@ const router = createBrowserRouter([
       {
         path: "/article/gender",
         element: <GenderArticle />,
+      },
+      {
+        path: "/article/relationships",
+        element: <RelationshipsArticle />,
       },
     ],
   },

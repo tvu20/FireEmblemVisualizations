@@ -154,7 +154,7 @@ function Pairings(props) {
     const linkColor = (category) => {
       if (category === "Romantic") return "#eb2d43";
       else if (category === "Related") return "#edd642";
-      else if (category === "Ambiguous") return "white";
+      else if (category === "Ambiguous") return "purple";
       else return "#16b588";
     };
 

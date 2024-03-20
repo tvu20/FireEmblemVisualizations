@@ -41,6 +41,19 @@ import claude from "../assets/gender/claude.png";
 
 import nyna from "../assets/gender/nyna.png";
 
+import s1 from "../assets/relationships/fe6-supports.png";
+import s2 from "../assets/relationships/fe6-roy-supports.png";
+import s3 from "../assets/relationships/fe7-supports.png";
+import s4 from "../assets/relationships/fe7-eliwood-supports.png";
+import s5 from "../assets/relationships/fe8-supports.png";
+import s6 from "../assets/relationships/fe8-eirika-supports.png";
+import s7 from "../assets/relationships/fe9-supports.png";
+import s8 from "../assets/relationships/fe9-ike-supports.png";
+import s9 from "../assets/relationships/fe13-supports.png";
+import s10 from "../assets/relationships/fe14-supports.png";
+import s11 from "../assets/relationships/fe15-supports.png";
+import s12 from "../assets/relationships/fe16-supports.png";
+
 export const genderCharCounts = [
   gcc1,
   gcc2,
@@ -257,4 +270,19 @@ export const femaleMainCharacters = [
     cat: "family",
     princess: "N",
   },
+];
+
+export const supportImages = [
+  s1,
+  s2,
+  s3,
+  s4,
+  s5,
+  // s6,
+  s7,
+  // s8,
+  s9,
+  s10,
+  s11,
+  s12,
 ];
