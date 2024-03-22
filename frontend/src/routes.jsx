@@ -26,6 +26,7 @@ import StoryProgressionPage from "./pages/viz/sentiment/StoryProgressionPage";
 import DevelopmentArticle from "./pages/articles/development/DevelopmentArticle";
 import GenderArticle from "./pages/articles/gender/GenderArticle";
 import RelationshipsArticle from "./pages/articles/relationships/RelationshipsArticle";
+import StorytellingArticle from "./pages/articles/storytelling/StorytellingArticle";
 
 const router = createBrowserRouter([
   {
@@ -124,6 +125,10 @@ const router = createBrowserRouter([
       {
         path: "/article/relationships",
         element: <RelationshipsArticle />,
+      },
+      {
+        path: "/article/storytelling",
+        element: <StorytellingArticle />,
       },
     ],
   },

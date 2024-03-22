@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Scrollama } from "react-scrollama";
 
-import { supportImages } from "../../../utils/images";
+import { pairingImages } from "../../../utils/pairings";
 
 import "./relationships.css";
 
 import legend from "../../../assets/relationships/legend-full.png";
+import temp from "../../../assets/relationships/fe7-eliwood-supports.png";
 import PairingPopups from "./PairingPopups";
 
 function PairScroll(props) {
@@ -14,7 +15,7 @@ function PairScroll(props) {
 
   const onStepEnter = ({ data }) => {
     setCurrentStepIndex(data);
-    setCurrentImage(supportImages[data - 1]);
+    setCurrentImage(pairingImages[data] || temp);
     // setCurrentImage(data.img);
   };
   //   console.log(currentStepIndex);

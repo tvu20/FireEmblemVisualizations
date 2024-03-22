@@ -108,7 +108,7 @@
 }
 
 .rel-scroll-popup-container {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   position: sticky;
   width: 50vw;
   height: 0;

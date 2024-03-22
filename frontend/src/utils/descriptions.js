@@ -149,4 +149,9 @@ export const DESC = {
     description:
       "Each character belongs to a class that determines their abilities, fighting style, and role in combat. All characters belong to a starting class upon first joining the player’s army, but can evolve to different classes over time.",
   },
+  DLC: {
+    name: "Downloadable Content (DLC)",
+    description:
+      "Additional content for an already released video game, distributed through the game's publisher.",
+  },
 };

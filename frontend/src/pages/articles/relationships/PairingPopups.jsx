@@ -5,6 +5,8 @@ import Description from "../../../components/articles/Description";
 
 function PairingPopups(props) {
   const { id } = props;
+
+  const temp = 0;
   return (
     <>
       <div className="rel-scroll-popup-container">
@@ -94,7 +96,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 8 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 10 ? "visible" : ""}`}>
           <p>
             Hector succeeded his brother as the marquess of Ostia, but the pain
             of his brother’s death weighed heavily on him. His beloved Lyn gave
@@ -114,7 +116,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 9 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 11 ? "visible" : ""}`}>
           <p>
             The merchant Merlinus began working for Eliwood. He and Marcus were
             fast friends, and when Marcus became the head of military training,
@@ -136,7 +138,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 10 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 12 ? "visible" : ""}`}>
           <p>
             Farina: We sure do seem to be bumping into each other a lot lately…
             Especially considering how uncomfortable we both find it being
@@ -170,7 +172,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 11 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 13 ? "visible" : ""}`}>
           <p>
             Eliwood: If it is too hard for you to talk about, I will not force
             you. Just… if you ever feel able, tell me then.
@@ -199,7 +201,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 12 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 15 ? "visible" : ""}`}>
           <p>
             Raven: Some day when this war is over, I’ll go searching for the
             truth. And I’ll pay Ostia back for my suspicions in full.{" "}
@@ -222,10 +224,6 @@ function PairingPopups(props) {
           <p>Raven: My case in point. </p>
           <p>Lucius: Wait– Wait! Lord Raymond!</p>
           <p className="rel-scroll-popup-label">Raven and Lucius' A-Support</p>
-        </div>
-      </div>
-      <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 13 ? "visible" : ""}`}>
           <p>
             After the conflict, Raven revealed his past to Hector. Hector
             offered to rebuild Raven’s home, but Raven refused. He and Lucius
@@ -238,7 +236,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 14 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 16 ? "visible" : ""}`}>
           <p>
             Renault: And that is the greatest pain of all… The pain of doubt. If
             I dispelled this doubt, I could free you from your pain. But then
@@ -262,7 +260,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 15 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 18 ? "visible" : ""}`}>
           <p>
             Upon their return to Renais, Eirika and Seth were wed, with the
             blessings of Ephraim and all of the Knights of Renais. The tale of
@@ -281,10 +279,19 @@ function PairingPopups(props) {
           <p className="rel-scroll-popup-label">
             Eirika and Forde's paired ending
           </p>
+          <p>
+            Following the war, Tana and Eirika remained the best of friends.
+            They visited one another when time permitted, and as they grew
+            older, their children shared a bond of friendship as close as Eirika
+            and Tana themselves did.
+          </p>
+          <p className="rel-scroll-popup-label">
+            Eirika and Tana's paired ending
+          </p>
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 15 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${temp === 18 ? "visible" : ""}`}>
           <p>
             Following the war, Tana and Eirika remained the best of friends.
             They visited one another when time permitted, and as they grew
@@ -306,7 +313,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 16 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 20 ? "visible" : ""}`}>
           <p>
             Heather: Well... It looks uphill battle to fight. I bet I can help
             out.
@@ -325,7 +332,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 17 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 21 ? "visible" : ""}`}>
           <p>
             Elincia governed Crimea with resolve and a deep love for her people.
             Her reign was remembered as a golden age.
@@ -346,7 +353,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 18 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 22 ? "visible" : ""}`}>
           <p>
             Once he saw stability returned, Ike left on a journey to lands still
             unknown. He was never seen again.
@@ -369,7 +376,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 19 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 23 ? "visible" : ""}`}>
           <p>
             Soren: Once I had learned to speak and behave like other people, I
             wandered Crimea for several years. Then I finally found you.
@@ -402,7 +409,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 20 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 25 ? "visible" : ""}`}>
           <p>
             Chrom: There's a war going on, and people are suffering. I can't
             ignore them. I won't.
@@ -443,7 +450,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 21 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 26 ? "visible" : ""}`}>
           <p>
             Chrom: Robin... I'm in love with you. I have been from the very
             first moment I laid eyes on you. I just didn't realize it until the
@@ -484,7 +491,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 22 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 29 ? "visible" : ""}`}>
           <p>
             Niles: Given two people with equally complex histories... What do
             you think would happen if they joined to create a new future
@@ -518,7 +525,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 23 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 30 ? "visible" : ""}`}>
           <p>
             Corrin: To be honest...I've enjoyed having you around...pretty much
             all of the time.
@@ -553,7 +560,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 24 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 33 ? "visible" : ""}`}>
           <p>Valbar: You're awful quiet there, Leon. Something on your mind?</p>
           <p>
             Leon: Just realizing I've been a fool for feeling sorry for myself.
@@ -576,7 +583,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 1 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 34 ? "visible" : ""}`}>
           <p>
             Kamui: What would you do if Valbar ended up being the opposite of
             your ideal?
@@ -607,7 +614,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 25 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 37 ? "visible" : ""}`}>
           <p>
             Edelgard: I don't know what the future holds, but...come what may,
             will you stay by my side? You chose to protect me at the Holy Tomb.
@@ -634,7 +641,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 26 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${temp === 26 ? "visible" : ""}`}>
           <p>
             They achieved much in their time together, and it is said that they
             were sometimes spotted leaving the palace to privately enjoy the
@@ -647,7 +654,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 27 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 38 ? "visible" : ""}`}>
           <p>
             When Byleth took on the role of archbishop in Rhea's place, he
             devoted himself to official business as the new leader of the Church
@@ -663,7 +670,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 28 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 39 ? "visible" : ""}`}>
           <p>
             The Mittelfrank Opera Company was on the brink of collapse until two
             of its star songstresses, Manuela and Dorothea, returned to the
@@ -679,7 +686,7 @@ function PairingPopups(props) {
         </div>
       </div>
       <div className="rel-scroll-popup-container">
-        <div className={`rel-scroll-popup ${id === 29 ? "visible" : ""}`}>
+        <div className={`rel-scroll-popup ${id === 40 ? "visible" : ""}`}>
           <p>
             After quitting the Knights of Seiros, Catherine and Shamir set out
             on a lifelong journey together. The pair were inseparable as they
