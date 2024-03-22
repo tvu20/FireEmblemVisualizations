@@ -4,6 +4,7 @@ import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 
 import "./storytelling.css";
+import EmotionLabels from "./EmotionLabels";
 
 function StorytellingArticle() {
   return (
@@ -71,6 +72,8 @@ function StorytellingArticle() {
             the most important moments are in each game’s narrative.
           </p>
         </div>
+
+        <EmotionLabels />
 
         <div className="story-article-section-intro">
           <h2>Part 4: Storytelling Structure</h2>

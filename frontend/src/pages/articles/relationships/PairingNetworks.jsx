@@ -9,7 +9,6 @@ import "./relationships.css";
 function PairingNetworks() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
 
   const onStepExit = ({ data, direction }) => {
     if (data.id === "end" && direction === "down") {
