@@ -34,7 +34,11 @@ h3 {
 a.highlight {
   color: inherit;
   text-decoration: none;
-  background-image: linear-gradient(180deg, transparent 0, pink 0);
+  background-image: linear-gradient(
+    180deg,
+    transparent 0,
+    var(--description-color) 0
+  );
   background-repeat: no-repeat;
   background-position: 0 1.125rem;
   transition: background-position 0.08s ease-out;

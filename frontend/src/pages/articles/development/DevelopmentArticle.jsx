@@ -10,7 +10,7 @@ function DevelopmentArticle() {
   return (
     <>
       <div className="dev-article">
-        <div className="dev-intro">
+        <div className="dev-intro banner">
           <h1>The Development of the Fire Emblem Series</h1>
           <section className="dev-intro-paragraphs">
             <p>
@@ -44,7 +44,10 @@ function DevelopmentArticle() {
               non-playable characters if they are too important to die.
             </p>
           </section>
-          <section>
+        </div>
+
+        <div className="dev-intro">
+          <section className="dev-intro-paragraphs">
             <p>
               In this article, I will provide an overview of the most
               significant changes over time in the mechanics, features, and
@@ -76,8 +79,9 @@ function DevelopmentArticle() {
             </p>
           </section>
         </div>
+
         <DevTimeline />
-        <p>
+        {/* <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
           number of characters, words, sentences or paragraphs, and hit
@@ -114,7 +118,7 @@ function DevelopmentArticle() {
           lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
           2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
           GENERATORS SHARE THE LOREM WA SAI
-        </p>
+        </p> */}
       </div>
       <Footer vertical={false} />
     </>

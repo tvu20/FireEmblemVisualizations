@@ -23,7 +23,6 @@ function DevScroll(props) {
           progress
           //   onStepProgress={onStepProgress}
           offset="400px"
-          debug
         >
           {props.children}
         </Scrollama>
