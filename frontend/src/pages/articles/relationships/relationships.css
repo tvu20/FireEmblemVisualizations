@@ -1,8 +1,17 @@
 .rel-article {
-  background: #082040;
-  color: #edf6ff;
+  background-image: var(--relationships-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* background: #082040; */
+  color: #c6d0d8;
   padding: 100px 0 50px;
   /* padding: 100px 20px 50px; */
+
+  --description-color: #385f83;
 }
 
 .rel-intro {
@@ -12,18 +21,42 @@
   align-items: center;
 }
 
+.rel-intro.banner {
+  min-height: 80vh;
+  text-align: center;
+}
+
 .rel-intro h1 {
-  margin: 0px;
+  padding: 0 20px;
+  margin: 50px 0 0px;
   text-align: center;
 }
 
 .rel-intro-paragraphs {
   max-width: 70vw;
+  margin-top: 50px;
 }
 
 .rel-timeline {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin-bottom: 200px;
+}
+
+.rel-timeline-intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.rel-timeline-intro.left-aligned {
+  text-align: left;
+}
+
+.rel-timeline-intro p,
+.rel-timeline-intro h2 {
+  max-width: 70vw;
 }
 
 .rel-scroll-container {
@@ -38,7 +71,7 @@
 } */
 
 .rel-scroll-graphic {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   position: sticky;
   width: 100%;
   height: 100vh;
@@ -86,8 +119,8 @@
 
 .rel-scroller-step {
   width: 40vw;
-  border: 1px solid yellow;
-  background: rgba(0, 0, 0, 0.3);
+  /* border: 1px solid yellow;
+  background: rgba(0, 0, 0, 0.3); */
   margin: 0 auto 300px auto;
   /* margin: 100px 0; */
   padding: 40px 0;
@@ -107,6 +140,33 @@
   margin-bottom: 0;
 }
 
+.rel-tapewrapper {
+  max-width: 80vw;
+  z-index: 5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  /* text-align: center; */
+  line-height: 2;
+}
+
+.rel-tapewrapper span {
+  padding: 14px 10px 11px;
+  box-shadow: 15px 0 transparent, -15px 0 transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: rgba(0, 31, 58, 0.8);
+  font-size: 18px;
+  /* font-weight: 500; */
+  /* text-align: left; */
+}
+
+.rel-tapewrapper.addendum {
+  margin-top: 20px;
+  z-index: 0;
+}
+
 .rel-scroll-popup-container {
   /* border: 1px solid green; */
   position: sticky;
@@ -121,30 +181,32 @@
 }
 
 .rel-scroll-popup {
-  border: 1px solid yellow;
-  background: rgba(255, 255, 255, 0.8);
+  /* border: 1px solid yellow; */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
   color: black;
   width: 35vw;
-  padding: 30px;
+  padding: 20px 35px;
   opacity: 0;
   transition: opacity 0.5s;
+}
+
+.rel-scroll-popup p {
+  margin: 15px 0;
+  line-height: 1.3;
 }
 
 .rel-scroll-popup.visible {
   opacity: 1;
   transition: opacity 1s;
-  /* display: block; */
-  /* max-height: auto;
-  opacity: 1;
-  padding: 30px;
-  transition: max-height 0ms 0ms, opacity 400ms 0ms; */
-  /* 
-  transition: transform 1s;
-  transform: translateX(0); */
 }
 
 .rel-scroll-popup-label {
-  margin: 0;
+  margin: 0 0 20px !important;
   font-size: 15px;
   text-decoration: underline;
+  font-family: "Ibarra Real Nova", serif;
+  color: #97327e;
+  font-weight: 600;
 }

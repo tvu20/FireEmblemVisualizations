@@ -11,9 +11,9 @@ function RelationshipsArticle() {
   return (
     <>
       <div className="rel-article">
-        <div className="rel-intro">
+        <div className="rel-intro banner">
           <h1>
-            The Evolution of Character Relationships and Queer Representation
+            The Evolution of CHARACTER RELATIONSHIPS and QUEER REPRESENTATION
           </h1>
           <section className="rel-intro-paragraphs">
             <p>

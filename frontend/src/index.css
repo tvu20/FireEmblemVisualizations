@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Figtree", "Inter", sans-serif;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h3 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+}
+
+a.highlight {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 0, pink 0);
+  background-repeat: no-repeat;
+  background-position: 0 1.125rem;
+  transition: background-position 0.08s ease-out;
+}
+
+a.highlight:hover {
+  background-position: 0;
 }
 
 code {
@@ -19,10 +53,12 @@ code {
 
 :root {
   --main-color: #352c50;
-  --main-gradient: url("./assets/backgrounds/gradient-background.jpg");
-  --gender-gradient: url("./assets/backgrounds/gender.jpeg");
-  --relationships-gradient: url("./assets/backgrounds/relationships.jpeg");
-  --sentiment-gradient: url("./assets/backgrounds/sentiment.jpeg");
+  --main-gradient: url("./assets/backgrounds/gradient-background.PNG");
+  --gender-gradient: url("./assets/backgrounds/gender.PNG");
+  /* --gender-gradient: url("./assets/backgrounds/gender.jpeg"); */
+  --relationships-gradient: url("./assets/backgrounds/relationships.PNG");
+  --sentiment-gradient: url("./assets/backgrounds/sentiment.PNG");
   --script-gradient: url("./assets/backgrounds/script.png");
-  --character-gradient: url("./assets/backgrounds/character.svg");
+  --character-gradient: url("./assets/backgrounds/character.PNG");
+  --box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
 }

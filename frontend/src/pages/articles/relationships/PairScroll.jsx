@@ -43,7 +43,6 @@ function PairScroll(props) {
           //   onStepExit={props.onStepExit ? props.onStepExit : () => {}}
           progress
           offset="400px"
-          debug
         >
           {props.children}
         </Scrollama>

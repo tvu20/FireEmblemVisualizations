@@ -1,7 +1,34 @@
 .gender-article {
-  background: #fcdee7;
+  background-image: var(--gender-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* background: #fcdee7; */
   padding: 100px 0 50px;
   /* padding: 100px 20px 50px; */
+  color: #301a1e;
+
+  --description-color: #c88eed;
+}
+
+.gender-article-section-intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.gender-article-section-intro.left-aligned {
+  text-align: left;
+}
+
+.gender-article-section-intro h2,
+.gender-article-section-intro p {
+  max-width: 70vw;
 }
 
 .gender-intro {
@@ -11,13 +38,30 @@
   align-items: center;
 }
 
+.gender-intro.banner {
+  min-height: 80vh;
+  text-align: center;
+}
+
 .gender-intro h1 {
-  margin: 0px;
+  padding: 0 20px;
+  margin: 50px 0 0px;
+  text-align: center;
+}
+
+.gender-intro details {
+  width: 70vw;
+  text-align: left;
+}
+
+.gender-intro summary {
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .gender-intro-paragraphs {
   max-width: 70vw;
+  margin-top: 50px;
 }
 
 .gender-character-bg-container {
@@ -35,6 +79,7 @@
 }
 
 .gender-character-image-container {
+  font-family: "Ibarra Real Nova", serif;
   height: 24vh;
   width: calc(100% * (1 / 4) - 10px - 1px);
   /* margin: 10px 0; */
@@ -116,11 +161,11 @@
 }
 
 .gender-character-tapewrapper span {
-  padding: 14px 0 11px;
+  padding: 14px 10px 11px;
   box-shadow: 15px 0 transparent, -15px 0 transparent;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background-color: rgba(252, 222, 231, 0.8);
+  background-color: rgba(255, 226, 228, 0.8);
   font-size: 20px;
   font-weight: 500;
 }
@@ -169,8 +214,18 @@
 
 /* FEMALE LORDS SECTION */
 
+.female-lords-explanation {
+  text-align: center;
+  margin: 0px;
+}
+
+.female-lords-explanation p {
+  position: relative;
+  top: 90px;
+}
+
 .female-lords-horizontal-scroll {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 100%;
   height: 90vh;
 
@@ -182,18 +237,81 @@
 }
 
 .female-lords-item {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   box-sizing: border-box;
   padding: 1rem;
-  min-width: 100vw;
-  height: 100vh;
+  min-width: 80vw;
+  /* height: 100vh; */
   scroll-snap-align: start;
   text-align: center;
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.female-lords-card {
+  width: 85%;
+  background-color: white;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  text-align: left;
+  padding: 50px 40px;
+
+  display: flex;
+}
+
+.female-lords-detail {
+  flex: 65%;
+}
+
+.female-lords-detail h3 {
+  font-family: "Yeseva One", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 35px;
+  margin: 0;
+  color: #873363;
+}
+
+.female-lords-detail h4 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.female-lords-detail h5 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #873363;
+  margin: 0;
+}
+
+.female-lords-detail p {
+  font-size: 14px;
+}
+
+.female-lords-images {
+  flex: 35%;
+  height: 100%;
+  /* width: 35%; */
+  margin-left: 30px;
+}
+
+.female-lords-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .gender-femalemain-bg-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: sticky;
   top: 30px;
   display: flex;

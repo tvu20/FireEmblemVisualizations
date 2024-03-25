@@ -14,8 +14,8 @@ function GenderArticle() {
   return (
     <>
       <div className="gender-article">
-        <div className="gender-intro">
-          <h1>The Evolution of Gender Representation Throughout the Series</h1>
+        <div className="gender-intro banner">
+          <h1>The Evolution of GENDER REPRESENTATION Throughout the Series</h1>
           <section className="gender-intro-paragraphs">
             <p>
               Gender representation in video games is a widely studied topic in
@@ -35,6 +35,7 @@ function GenderArticle() {
             Fire Emblem <Description tag="FE17">Engage</Description> is not
             included in this article due to the game's script not being
             available online at the time data for this article was collected.{" "}
+            <br />
             <br />
             This article primarily discusses the role of the gender binary
             within the series. There have been a few characters in the series’
@@ -80,6 +81,9 @@ function GenderArticle() {
             will improve further in their representation of diverse gender
             identities!
           </details>
+        </div>
+
+        <div className="gender-intro">
           <section className="gender-intro-paragraphs">
             <p>
               In this article, we will examine the representation of gender
@@ -87,25 +91,25 @@ function GenderArticle() {
               <ol style={{ lineHeight: 2 }}>
                 <li>
                   <span className="gender-scroller-category cat-one">
-                    Quantity of Appearances: Has the representation of female
-                    characters increased across the series?
+                    <b>Quantity of Appearances:</b> Has the representation of
+                    female characters increased across the series?
                   </span>
                 </li>
                 <li>
                   <span className="gender-scroller-category cat-two">
-                    Quality of Appearances: Have female characters become more
-                    important throughout the series?
+                    <b>Quality of Appearances:</b> Have female characters become
+                    more important throughout the series?
                   </span>
                 </li>
                 <li>
                   <span className="gender-scroller-category cat-three">
-                    Gameplay Integration: How have female characters been
+                    <b>Gameplay Integration:</b> How have female characters been
                     represented in gameplay?
                   </span>
                 </li>
                 <li>
                   <span className="gender-scroller-category cat-three">
-                    Relationships: How have interactions between female
+                    <b>Relationships:</b> How have interactions between female
                     characters evolved over the series, and can they exist
                     outside of their relationships with men?
                   </span>
@@ -113,6 +117,13 @@ function GenderArticle() {
               </ol>
             </p>
           </section>
+        </div>
+
+        <div className="gender-article-section-intro">
+          <h2>Part 1: Quantity of appearances</h2>
+          <p>
+            Has the actual quantity of female characters changed across games?
+          </p>
         </div>
         <CharacterCounts />
         <div className="gender-article-section-intro">
@@ -130,82 +141,6 @@ function GenderArticle() {
         <FemaleMainChars />
 
         <GenderPartThree />
-        <p>
-          LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
-          Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
-          number of characters, words, sentences or paragraphs, and hit
-          generate! GENERATED LOREM IPSUM 3 PARAGRAPHS COPY Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque
-          viverra mauris in aliquam. Aliquam vestibulum morbi blandit cursus
-          risus at ultrices. Id semper risus in hendrerit. Vitae tortor
-          condimentum lacinia quis vel. Duis convallis convallis tellus id
-          interdum. Ullamcorper sit amet risus nullam. In hendrerit gravida
-          rutrum quisque non tellus orci. Placerat vestibulum lectus mauris
-          ultrices eros in cursus. Vestibulum sed arcu non odio euismod. Tellus
-          in hac habitasse platea dictumst vestibulum rhoncus. Scelerisque purus
-          semper eget duis at tellus at urna. Nisi est sit amet facilisis magna.
-          Elit ullamcorper dignissim cras tincidunt lobortis. Porta non pulvinar
-          neque laoreet suspendisse interdum consectetur. Accumsan sit amet
-          nulla facilisi morbi tempus iaculis urna id. Faucibus pulvinar
-          elementum integer enim neque volutpat ac. Eget gravida cum sociis
-          natoque penatibus et. Ullamcorper eget nulla facilisi etiam dignissim
-          diam. Nulla malesuada pellentesque elit eget. Justo eget magna
-          fermentum iaculis eu non diam phasellus vestibulum. Dolor sit amet
-          consectetur adipiscing elit duis tristique. Purus faucibus ornare
-          suspendisse sed nisi lacus sed viverra tellus. Feugiat in ante metus
-          dictum at tempor commodo ullamcorper a. Mauris ultrices eros in cursus
-          turpis massa tincidunt. Felis bibendum ut tristique et egestas quis
-          ipsum. A cras semper auctor neque. At varius vel pharetra vel turpis
-          nunc. Vel facilisis volutpat est velit egestas dui id ornare arcu. Eu
-          tincidunt tortor aliquam nulla facilisi. Vestibulum mattis ullamcorper
-          velit sed ullamcorper. Etiam dignissim diam quis enim lobortis. Dis
-          parturient montes nascetur ridiculus mus. At in tellus integer feugiat
-          scelerisque varius morbi enim nunc. Habitant morbi tristique senectus
-          et netus et malesuada fames ac. Amet mattis vulputate enim nulla
-          aliquet porttitor lacus. Justo nec ultrices dui sapien eget. Quam
-          lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
-          2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
-          GENERATORS SHARE THE LOREM WA SAI
-        </p>
-        <p>
-          LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
-          Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
-          number of characters, words, sentences or paragraphs, and hit
-          generate! GENERATED LOREM IPSUM 3 PARAGRAPHS COPY Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque
-          viverra mauris in aliquam. Aliquam vestibulum morbi blandit cursus
-          risus at ultrices. Id semper risus in hendrerit. Vitae tortor
-          condimentum lacinia quis vel. Duis convallis convallis tellus id
-          interdum. Ullamcorper sit amet risus nullam. In hendrerit gravida
-          rutrum quisque non tellus orci. Placerat vestibulum lectus mauris
-          ultrices eros in cursus. Vestibulum sed arcu non odio euismod. Tellus
-          in hac habitasse platea dictumst vestibulum rhoncus. Scelerisque purus
-          semper eget duis at tellus at urna. Nisi est sit amet facilisis magna.
-          Elit ullamcorper dignissim cras tincidunt lobortis. Porta non pulvinar
-          neque laoreet suspendisse interdum consectetur. Accumsan sit amet
-          nulla facilisi morbi tempus iaculis urna id. Faucibus pulvinar
-          elementum integer enim neque volutpat ac. Eget gravida cum sociis
-          natoque penatibus et. Ullamcorper eget nulla facilisi etiam dignissim
-          diam. Nulla malesuada pellentesque elit eget. Justo eget magna
-          fermentum iaculis eu non diam phasellus vestibulum. Dolor sit amet
-          consectetur adipiscing elit duis tristique. Purus faucibus ornare
-          suspendisse sed nisi lacus sed viverra tellus. Feugiat in ante metus
-          dictum at tempor commodo ullamcorper a. Mauris ultrices eros in cursus
-          turpis massa tincidunt. Felis bibendum ut tristique et egestas quis
-          ipsum. A cras semper auctor neque. At varius vel pharetra vel turpis
-          nunc. Vel facilisis volutpat est velit egestas dui id ornare arcu. Eu
-          tincidunt tortor aliquam nulla facilisi. Vestibulum mattis ullamcorper
-          velit sed ullamcorper. Etiam dignissim diam quis enim lobortis. Dis
-          parturient montes nascetur ridiculus mus. At in tellus integer feugiat
-          scelerisque varius morbi enim nunc. Habitant morbi tristique senectus
-          et netus et malesuada fames ac. Amet mattis vulputate enim nulla
-          aliquet porttitor lacus. Justo nec ultrices dui sapien eget. Quam
-          lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
-          2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
-          GENERATORS SHARE THE LOREM WA SAI
-        </p>
       </div>
       <Footer vertical={false} />
     </>

@@ -1,25 +1,37 @@
+body {
+  --description-color: red;
+}
+
 .description__container {
   display: inline-block;
   position: relative;
   /* font-weight: 600; */
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  text-decoration-color: #3d6fe3;
+  /* text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: #3d6fe3; */
   /* border-bottom: 1px dotted #666; */
   text-align: left;
   cursor: pointer;
 }
 
-/* .description__container span {
-  background-image: linear-gradient(180deg, transparent 0, pink 0);
+.description__container span {
+  padding: 0px !important;
+}
+
+.description__container span {
+  background-image: linear-gradient(
+    180deg,
+    transparent 0,
+    var(--description-color) 0
+  );
   background-repeat: no-repeat;
-  background-position: 0 1.125rem;
+  background-position: 0 1.15rem;
   transition: background-position 0.08s ease-out;
 }
 
 .description__container span:hover {
   background-position: 0;
-} */
+}
 
 .description__container .description__hover-box {
   min-width: 200px;
@@ -35,7 +47,7 @@
   position: absolute;
   z-index: 9;
   box-sizing: border-box;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--box-shadow);
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.8s;
@@ -65,13 +77,14 @@
   left: 50%;
   transform: translate(-50%, 50%) rotate(45deg);
   background-color: #ffffff;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--box-shadow);
 }
 
 .description__hover-box h3 {
   font-size: 20px !important;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 8px;
+  color: #10258f;
 }
 
 .description__hover-box p {

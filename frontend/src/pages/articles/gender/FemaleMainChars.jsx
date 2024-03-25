@@ -65,7 +65,6 @@ function FemaleMainChars() {
           onStepEnter={onStepEnter}
           onStepExit={onStepExit}
           offset="400px"
-          debug
         >
           <Step data={1}>
             <div className="gender-step-single-col">

@@ -26,7 +26,7 @@ function GenderPartThree() {
       <div className="gender-article-section-intro">
         <h3>GRAPH GOES HERE!!!!!!</h3>
       </div>
-      <div className="gender-article-section-intro">
+      <div className="gender-article-section-intro left-aligned">
         <p>
           Here are some interesting takeaways from this graph:
           <ul>

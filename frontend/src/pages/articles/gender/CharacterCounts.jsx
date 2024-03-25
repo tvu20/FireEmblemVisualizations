@@ -57,7 +57,7 @@ function CharacterCounts() {
         <div className="gender-character-bg-container">
           {createPCBackground()}
         </div>
-        <Scrollama onStepEnter={onStepEnter} offset="400px" debug>
+        <Scrollama onStepEnter={onStepEnter} offset="400px">
           <Step data={1}>
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
@@ -116,11 +116,14 @@ function CharacterCounts() {
         </div>
       </div>
 
-      <section className="gender-character-counts">
+      <section
+        className="gender-character-counts"
+        style={{ marginBottom: "100px" }}
+      >
         <div className="gender-character-bg-container">
           {createNPCBackground()}
         </div>
-        <Scrollama onStepEnter={onStepEnter} offset="400px" debug>
+        <Scrollama onStepEnter={onStepEnter} offset="400px">
           <Step data={5}>
             <div className="gender-step-single-col gcc-short-col">
               <div className="gender-character-tapewrapper">

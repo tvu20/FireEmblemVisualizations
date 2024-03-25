@@ -1,5 +1,11 @@
 .dev-article {
-  background: #eee;
+  background-image: var(--script-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background: #eee; */
   padding: 100px 0 50px;
   /* padding: 100px 20px 50px; */
 }
@@ -253,6 +259,7 @@ span.dev-scroller-category.cat-three:hover {
     transparent 75%
   );
   text-align: right;
+  pointer-events: none;
 }
 
 .dev-section-name img {

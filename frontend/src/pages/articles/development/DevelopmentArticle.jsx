@@ -17,8 +17,12 @@ function DevelopmentArticle() {
               Though Fire Emblem was not the first game in the tactical{" "}
               <Description tag="RPG">RPG</Description> genre, it is considered
               by many historians to be the franchise that set the archetype for
-              the whole genre, establishing core gameplay elements that are
-              still used in many tactical RPGs today.{" "}
+              the whole genre,{" "}
+              <a className="highlight" href="https://google.com">
+                establishing core gameplay elements that are still used in many
+                tactical RPGs today
+              </a>
+              .{" "}
             </p>
             <p>
               The main gameplay loop of each game revolves around individual
