@@ -5,7 +5,7 @@ import Description from "../../../components/articles/Description";
 
 import "./gender.css";
 
-import { genderCharCounts } from "../../../utils/images";
+import { genderCharCounts, genderNPCCounts } from "../../../utils/images";
 import { gameFullTitles } from "../../../utils/games";
 
 function CharacterCounts() {
@@ -36,14 +36,14 @@ function CharacterCounts() {
   const createNPCBackground = () => {
     return (
       <>
-        {genderCharCounts.map((src, index) => {
+        {genderNPCCounts.map((src, index) => {
           return (
             <div
               id={`gcc-game-${index}`}
               className={`gender-character-image-container gcc-npc-step-${step}`}
             >
               <img src={src} alt={index} />
-              {/* <p>{gameFullTitles[index]}</p> */}
+              <p>{gameFullTitles[index]}</p>
             </div>
           );
         })}

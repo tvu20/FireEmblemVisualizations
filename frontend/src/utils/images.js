@@ -15,6 +15,23 @@ import gcc14 from "../assets/gender/fe14.png";
 import gcc15 from "../assets/gender/fe15.png";
 import gcc16 from "../assets/gender/fe16.png";
 
+import npc1 from "../assets/gender/npc1.png";
+import npc2 from "../assets/gender/npc2.png";
+import npc3 from "../assets/gender/npc3.png";
+import npc4 from "../assets/gender/npc4.png";
+import npc5 from "../assets/gender/npc5.png";
+import npc6 from "../assets/gender/npc6.png";
+import npc7 from "../assets/gender/npc7.png";
+import npc8 from "../assets/gender/npc8.png";
+import npc9 from "../assets/gender/npc9.png";
+import npc10 from "../assets/gender/npc10.png";
+import npc11 from "../assets/gender/npc11.png";
+import npc12 from "../assets/gender/npc12.png";
+import npc13 from "../assets/gender/npc13.png";
+import npc14 from "../assets/gender/npc14.png";
+import npc15 from "../assets/gender/npc15.png";
+import npc16 from "../assets/gender/npc16.png";
+
 import marth from "../assets/gender/marth.png";
 import alm from "../assets/gender/alm.png";
 import celica from "../assets/gender/celica.png";
@@ -39,7 +56,19 @@ import edelgard from "../assets/gender/edelgard.png";
 import dimitri from "../assets/gender/dimitri.png";
 import claude from "../assets/gender/claude.png";
 
+import caeda from "../assets/gender/caeda.png";
 import nyna from "../assets/gender/nyna.png";
+import altena from "../assets/gender/altena.png";
+import eyvel from "../assets/gender/eyvel.png";
+import guinivere from "../assets/gender/guinivere.png";
+import ninian from "../assets/gender/ninian.png";
+import larachel from "../assets/gender/larachel.png";
+import titania from "../assets/gender/titania.png";
+import elincia from "../assets/gender/elincia.png";
+import katarina from "../assets/gender/katarina.png";
+import lissa from "../assets/gender/lissa.png";
+import azura from "../assets/gender/azura.png";
+import rhea from "../assets/gender/rhea.png";
 
 import s1 from "../assets/relationships/fe6-supports.png";
 import s2 from "../assets/relationships/fe6-roy-supports.png";
@@ -71,6 +100,25 @@ export const genderCharCounts = [
   gcc14,
   gcc15,
   gcc16,
+];
+
+export const genderNPCCounts = [
+  npc1,
+  npc2,
+  npc3,
+  npc4,
+  npc5,
+  npc6,
+  npc7,
+  npc8,
+  npc9,
+  npc10,
+  npc11,
+  npc12,
+  npc13,
+  npc14,
+  npc15,
+  npc16,
 ];
 
 export const lordsOverview = [
@@ -194,7 +242,7 @@ export const lordsOverview = [
 export const femaleMainCharacters = [
   {
     name: "Caeda",
-    img: nyna,
+    img: caeda,
     cat: "love",
     princess: "Y",
   },
@@ -206,67 +254,67 @@ export const femaleMainCharacters = [
   },
   {
     name: "Altena",
-    img: nyna,
+    img: altena,
     cat: "",
     princess: "Y",
   },
   {
     name: "Eyvel",
-    img: nyna,
+    img: eyvel,
     cat: "family",
     princess: "N",
   },
   {
     name: "Guinivere",
-    img: nyna,
+    img: guinivere,
     cat: "",
     princess: "Y",
   },
   {
     name: "Ninian",
-    img: nyna,
+    img: ninian,
     cat: "love",
     princess: "N",
   },
   {
     name: "L'Arachel",
-    img: nyna,
+    img: larachel,
     cat: "",
     princess: "Y",
   },
   {
     name: "Titania",
-    img: nyna,
+    img: titania,
     cat: "family",
     princess: "N",
   },
   {
     name: "Elincia",
-    img: nyna,
+    img: elincia,
     cat: "",
     princess: "Y",
   },
   {
     name: "Katarina",
-    img: nyna,
+    img: katarina,
     cat: "love",
     princess: "N",
   },
   {
     name: "Lissa",
-    img: nyna,
+    img: lissa,
     cat: "family",
     princess: "Y",
   },
   {
     name: "Azura",
-    img: nyna,
+    img: azura,
     cat: "family",
     princess: "Y",
   },
   {
     name: "Rhea",
-    img: nyna,
+    img: rhea,
     cat: "family",
     princess: "N",
   },

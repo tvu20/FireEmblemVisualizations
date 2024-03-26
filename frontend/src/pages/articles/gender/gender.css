@@ -313,7 +313,7 @@
 .gender-femalemain-bg-container {
   /* border: 1px solid red; */
   position: sticky;
-  top: 30px;
+  top: 50px;
   display: flex;
   justify-content: center;
   transition: all 1.5s;
@@ -331,9 +331,9 @@
 
 .gender-femalemain-image-container img {
   margin-top: 5px;
-  width: 80%;
-  height: 70%;
-  object-fit: contain;
+  /* width: 80%; */
+  height: 60%;
+  object-fit: cover;
   object-position: bottom;
 }
 

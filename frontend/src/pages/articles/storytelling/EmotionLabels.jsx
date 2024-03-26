@@ -3,9 +3,11 @@ import { Step } from "react-scrollama";
 
 import Description from "../../../components/articles/Description";
 import EmotionLabelScroll from "./EmotionLabelScroll";
+import EmotionTrajectory from "./EmotionTrajectory";
+
+import graph from "../../../assets/storytelling/sentiment-graph-full.png";
 
 import "./storytelling.css";
-import EmotionTrajectory from "./EmotionTrajectory";
 
 function EmotionLabels() {
   const [started, setStarted] = useState(false);
@@ -285,7 +287,42 @@ function EmotionLabels() {
             in each chapter to create a map of how the overall sentiment in
             dialogue changes across each chapter.
           </p>
-          {/* GRAPH HERE!!! */}
+        </div>
+        <div className="story-sentiment-graph-full">
+          <img src={graph} alt="sentiment graph" />
+        </div>
+        <div className="story-timeline-intro left-aligned">
+          <p>
+            This is an example of a sentiment curve, taken from{" "}
+            <Description tag="FE9">Path of Radiance</Description>. This game's
+            sentiment curve is heavily skewed negative, as are the curves for
+            the rest of the games. This makes sense for a series about wars -
+            there are very few points in time where there are more positive than
+            negative dialogue lines.
+          </p>
+          <p>
+            There are a few points where many games will display a peak in
+            emotional statements, both when looking at positive and negative
+            quantities. The most common story points are the end of the first
+            third of the narrative, the midpoint of the story, and the
+            final/final few chapters.
+          </p>
+          <p>
+            Using the data from the emotion and sentiment curves, we can
+            identify what the key moments are in each story. It is particularly
+            easy to pinpoint which parts of the game are the most significant
+            because each game is broken down into many story chapters!
+          </p>
+          <details>
+            <summary>A short note before we continue</summary>
+            For the rest of this analysis, we have excluded data from{" "}
+            <Description tag="FE2">Gaiden</Description> and{" "}
+            <Description tag="FE15">Echoes</Description> due to both games
+            having a unique narrative structure of only 5 acts. However, if we
+            look at the storylines of these games without sentiment data, we can
+            still see patterns from the rest of the series reflected within the
+            Gaiden storyline.
+          </details>
         </div>
       </section>
     </div>

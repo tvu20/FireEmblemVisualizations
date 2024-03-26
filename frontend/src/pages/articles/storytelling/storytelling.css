@@ -106,7 +106,7 @@
 
 .story-timeline {
   /* border: 1px solid red; */
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .story-timeline-intro {
@@ -122,8 +122,14 @@
 }
 
 .story-timeline-intro p,
-.story-timeline-intro h2 {
+.story-timeline-intro h2,
+.story-timeline-intro details {
   max-width: 70vw;
+}
+
+.story-timeline-intro summary {
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .story-scroller-step {
@@ -278,4 +284,16 @@
   font-family: "Ibarra Real Nova", serif;
   margin-top: 25px;
   color: #10258f;
+}
+
+.story-sentiment-graph-full {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.story-sentiment-graph-full img {
+  width: 100%;
+  max-width: 1200px;
+  object-fit: contain;
 }
