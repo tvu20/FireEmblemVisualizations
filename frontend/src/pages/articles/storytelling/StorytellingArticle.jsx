@@ -10,7 +10,7 @@ function StorytellingArticle() {
   return (
     <>
       <div className="story-article">
-        <div className="story-intro">
+        <div className="story-intro banner">
           <h1>Narrative Style and Storytelling in the Fire Emblem Series</h1>
           <section className="story-intro-paragraphs">
             <p>

@@ -31,7 +31,6 @@ function EmotionLabelScroll(props) {
           onStepExit={onStepExit}
           progress
           offset="400px"
-          debug
         >
           {props.children}
         </Scrollama>
