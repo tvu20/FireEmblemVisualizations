@@ -22,6 +22,10 @@
   padding: 100px 0 80px;
 }
 
+.gender-article-section-intro ul {
+  margin: 0;
+}
+
 .gender-article-section-intro.left-aligned {
   text-align: left;
 }
@@ -353,4 +357,53 @@
 .gfm-love.gfm-step-3,
 .gfm-princess.gfm-step-4 {
   opacity: 1;
+}
+
+.gender-line-tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-line-tabs-titles {
+  width: 80vw;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gender-line-tab-content {
+  width: 80vw;
+  /* background-color: #f5f5f5; */
+  padding: 5px;
+  margin: 0;
+}
+
+.gender-line-tab-content img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.gender-line-tab-title {
+  /* font-family: "Ibarra Real Nova", serif; */
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: var(--box-shadow); */
+  display: inline-block;
+  padding: 10px 15px;
+  /* color: #c7c6c2; */
+  cursor: pointer;
+  margin: 0 8px 10px;
+  /* margin-left: 1px; */
+  box-sizing: border-box;
+}
+
+.gender-line-tab-title--active {
+  background-color: #f5f5f5;
+  color: #873363;
+  font-weight: 700;
 }

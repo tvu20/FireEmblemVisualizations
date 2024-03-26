@@ -10,6 +10,9 @@ import FemaleLords from "./FemaleLords";
 import FemaleMainChars from "./FemaleMainChars";
 import GenderPartThree from "./GenderPartThree";
 
+import linefull from "../../../assets/gender/line-full.png";
+import LineTabs from "./LineTabs";
+
 function GenderArticle() {
   return (
     <>
@@ -126,6 +129,47 @@ function GenderArticle() {
           </p>
         </div>
         <CharacterCounts />
+
+        <div className="gender-article-section-intro left-aligned">
+          <p>
+            Do we see the same general upwards trend when analyzing line counts?
+            Upon first glance, it seems that there is not a significant upwards
+            trend in female line counts; however, there are several factors to
+            consider:
+          </p>
+        </div>
+
+        <LineTabs />
+
+        <div
+          className="gender-article-section-intro left-aligned"
+          style={{ paddingTop: "20px" }}
+        >
+          <p>
+            <ul>
+              <li>
+                When removing the line count data for games that are remakes of
+                early titles, there is actually a visible downwards trend in the
+                number of male spoken lines per game and a visible equalization
+                between the number of male and female lines.{" "}
+              </li>
+              <li>
+                New Mystery introduces the Avatar, which can either be a male or
+                female character. If we only examine the total percentages of
+                spoken lines throughout each game with the inclusion of the
+                avatar’s lines, the percentage of female lines does not
+                significantly increase; however, if we remove the avatar data,
+                there is a trend of equalization between the percentage of male
+                and female lines, and this trend is quite consistent among
+                original titles in the series.{" "}
+              </li>
+            </ul>
+          </p>
+          <p>
+            So when just evaluating the quantity of female appearances, there is
+            a visible improvement overall.{" "}
+          </p>
+        </div>
         <div className="gender-article-section-intro">
           <h2>Part 2: Quality of appearances</h2>
           <p>
