@@ -1,0 +1,324 @@
+.sentiment-curves-bg-container {
+  position: sticky;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: all 1.5s;
+
+  --row-one: 10vh;
+  --row-two: 30vh;
+  --row-three: 50vh;
+  --col-one: 10vw;
+  --col-two: 30vw;
+  --col-three: 50vw;
+  --col-four: 70vw;
+
+  --new-col-one: 5vw;
+  --new-col-two: 30vw;
+  --new-col-three: 55vw;
+  --new-col-four: 80vw;
+
+  --mid-col-one: 5vw;
+  --mid-col-two: 55vw;
+}
+
+.sentiment-curve-img-container {
+  width: 15vw;
+  position: absolute;
+  transition: all 1.5s;
+  top: 50vh;
+  left: 50vw;
+  opacity: 0;
+}
+
+.sentiment-curve-img-container img,
+.sentiment-curve-big-container img,
+.sentiment-curve-mid-container img {
+  width: 100%;
+  transition: all 1.5s;
+}
+
+.sentiment-curve-big-container {
+  width: 70vw;
+  position: absolute;
+  transition: all 1.5s;
+  top: 0vh;
+  left: 15vw;
+  opacity: 0;
+}
+
+.sentiment-curve-mid-container {
+  width: 40vw;
+  position: absolute;
+  transition: all 1.5s;
+  top: 0vh;
+  left: 25vw;
+  opacity: 0;
+}
+
+.sentiment-curve-dottedline {
+  border-left: 3px dotted black;
+  height: 70vh;
+  position: absolute;
+  transition: all 1s;
+  top: 2.5vh;
+  opacity: 0;
+}
+
+/* FIRST + THIRD STEP */
+
+#senti-1.senti-step-1,
+#senti-1.senti-step-3 {
+  top: var(--row-one);
+  left: var(--col-one);
+  opacity: 1;
+}
+
+#senti-3.senti-step-1,
+#senti-3.senti-step-3 {
+  top: var(--row-one);
+  left: var(--col-two);
+  opacity: 1;
+}
+
+#senti-4.senti-step-1,
+#senti-4.senti-step-3 {
+  top: var(--row-one);
+  left: var(--col-three);
+  opacity: 1;
+}
+
+#senti-5.senti-step-1,
+#senti-5.senti-step-3 {
+  top: var(--row-one);
+  left: var(--col-four);
+  opacity: 1;
+}
+
+#senti-6.senti-step-1,
+#senti-6.senti-step-3 {
+  top: var(--row-two);
+  left: var(--col-one);
+  opacity: 1;
+}
+
+#senti-7.senti-step-1,
+#senti-7.senti-step-3 {
+  top: var(--row-two);
+  left: var(--col-two);
+  opacity: 1;
+}
+#senti-8.senti-step-1,
+#senti-8.senti-step-3 {
+  top: var(--row-two);
+  left: var(--col-three);
+  opacity: 1;
+}
+#senti-9.senti-step-1,
+#senti-9.senti-step-3 {
+  top: var(--row-two);
+  left: var(--col-four);
+  opacity: 1;
+}
+
+#senti-10.senti-step-1,
+#senti-10.senti-step-3 {
+  top: var(--row-three);
+  left: var(--col-one);
+  opacity: 1;
+}
+
+#senti-13.senti-step-1,
+#senti-13.senti-step-3 {
+  top: var(--row-three);
+  left: var(--col-two);
+  opacity: 1;
+}
+#senti-14b.senti-step-1,
+#senti-14c.senti-step-1,
+#senti-14b.senti-step-3,
+#senti-14c.senti-step-3 {
+  top: var(--row-three);
+  left: var(--col-three);
+  opacity: 1;
+}
+#senti-16.senti-step-1,
+#senti-16.senti-step-3 {
+  top: var(--row-three);
+  left: var(--col-four);
+  opacity: 1;
+}
+
+/* SECOND STEP */
+#senti-fullgraph.senti-step-2 {
+  opacity: 1;
+}
+
+/* FOURTH STEP */
+#senti-1.senti-step-4 {
+  top: var(--row-one);
+  left: var(--new-col-three);
+  opacity: 1;
+}
+
+#senti-3.senti-step-4 {
+  top: var(--row-one);
+  left: var(--new-col-one);
+  opacity: 1;
+}
+
+#senti-4.senti-step-4 {
+  top: var(--row-one);
+  left: var(--new-col-four);
+  opacity: 1;
+}
+
+#senti-5.senti-step-4 {
+  top: var(--row-one);
+  left: var(--new-col-two);
+  opacity: 1;
+}
+
+#senti-6.senti-step-4 {
+  top: var(--row-two);
+  left: var(--new-col-one);
+  opacity: 1;
+}
+
+#senti-7.senti-step-4 {
+  top: var(--row-two);
+  left: var(--new-col-three);
+  opacity: 1;
+}
+#senti-8.senti-step-4 {
+  top: var(--row-three);
+  left: var(--new-col-three);
+  opacity: 1;
+}
+#senti-9.senti-step-4 {
+  top: var(--row-two);
+  left: var(--new-col-two);
+  opacity: 1;
+}
+
+#senti-10.senti-step-4 {
+  top: var(--row-two);
+  left: var(--new-col-four);
+  opacity: 1;
+}
+
+#senti-13.senti-step-4 {
+  top: var(--row-three);
+  left: var(--new-col-one);
+  opacity: 1;
+}
+#senti-14b.senti-step-4,
+#senti-14c.senti-step-4 {
+  top: var(--row-three);
+  left: var(--new-col-two);
+  opacity: 1;
+}
+#senti-16.senti-step-4 {
+  top: var(--row-three);
+  left: var(--new-col-four);
+  opacity: 1;
+}
+
+/* BIG CATEGORIES */
+#senti-cat1.senti-step-5 {
+  opacity: 1;
+}
+#senti-cat2.senti-step-6 {
+  opacity: 1;
+}
+#senti-cat3.senti-step-7 {
+  opacity: 1;
+}
+#senti-cat4.senti-step-8 {
+  opacity: 1;
+}
+
+/* all together! */
+#senti-category-1.senti-step-9 {
+  opacity: 1;
+  top: 0vh;
+  left: var(--mid-col-one);
+}
+#senti-category-2.senti-step-9 {
+  opacity: 1;
+  top: 0vh;
+  left: var(--mid-col-two);
+}
+#senti-category-3.senti-step-9 {
+  opacity: 1;
+  top: 50vh;
+  left: var(--mid-col-one);
+}
+#senti-category-4.senti-step-9 {
+  opacity: 1;
+  top: 50vh;
+  left: var(--mid-col-two);
+}
+
+/* GROUPED! */
+
+#senti-category-1.senti-step-10 {
+  opacity: 1;
+  top: 0vh;
+  left: var(--mid-col-two);
+}
+#senti-category-2.senti-step-10 {
+  opacity: 1;
+  top: 0vh;
+  left: var(--mid-col-one);
+}
+#senti-category-3.senti-step-10 {
+  opacity: 1;
+  top: 50vh;
+  left: var(--mid-col-one);
+}
+#senti-category-4.senti-step-10 {
+  opacity: 1;
+  top: 50vh;
+  left: var(--mid-col-two);
+}
+
+#senti-3act.senti-step-11 {
+  opacity: 1;
+}
+
+#senti-3actex.senti-step-12 {
+  opacity: 1;
+}
+
+#senti-4act.senti-step-13 {
+  opacity: 1;
+}
+
+#senti-4actex.senti-step-14 {
+  opacity: 1;
+}
+
+/* dotted lines */
+#dotted-1 {
+  left: 25vw;
+}
+#dotted-2,
+#dotted-4 {
+  left: 50vw;
+}
+#dotted-3 {
+  left: 75vw;
+}
+
+#dotted-1.senti-step-4,
+#dotted-2.senti-step-4,
+#dotted-3.senti-step-4 {
+  opacity: 1;
+}
+
+#dotted-4.senti-step-10 {
+  opacity: 1;
+  height: 90vh;
+  top: -2vh;
+}

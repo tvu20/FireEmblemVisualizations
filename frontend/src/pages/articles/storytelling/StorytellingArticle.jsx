@@ -2,9 +2,13 @@ import React from "react";
 
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
+import WritingTabs from "./WritingTabs";
+import NarrativeCards from "./NarrativeCards";
 
 import "./storytelling.css";
 import EmotionLabels from "./EmotionLabels";
+import CategoryTabs from "./CategoryTabs";
+import StoryCategories from "./StoryCategories";
 
 function StorytellingArticle() {
   return (
@@ -50,13 +54,70 @@ function StorytellingArticle() {
           </p>
         </div>
 
+        <WritingTabs />
+
         <div className="story-article-section-intro">
+          <p>
+            These metrics suggest to us that while the overall complexity of the
+            writing structure has increased over the series, the actual reading
+            level and writing style has not significantly changed. In this way,
+            the series has maintained a degree of consistency in its writing to
+            be able to continuously appeal to its core fans.
+          </p>
+        </div>
+
+        <div className="story-article-section-intro left-aligned">
           <h2>Part 2: In Context With Other Media</h2>
           <p>
             Fire Emblem has carved out a very consistent niche for itself: most
             of the writing and localization style has stayed very consistent
             across the series, but it also is very similar to many other games
             in the role-playing video game genre!
+          </p>
+          <p>
+            Here is the readibility graph revisited, but this time you can
+            display the readibility scores of some other pieces of media! They
+            fall into three categories: other games, other scripts, and other
+            pieces of prose writing. Feel free to use the toggles to display the
+            different categories!
+          </p>
+        </div>
+        <div className="story-article-section-intro left-aligned">
+          <p>
+            The readibility scores of all the Fire Emblem games fall within a
+            single cluster, which is shared with some other well-known
+            roleplaying games such as Assassin’s Creed and Final Fantasy VII.
+            Additionally, we see strong similarities with other script-based
+            texts such as movie scripts, while prose writing falls on
+            drastically different areas of the readibility axes. From this graph
+            we can see that the style of media, rather than the time released or
+            story genre, has the largest influence in readibility metrics.{" "}
+          </p>
+          <p>
+            We continue to see the consistency across Fire emblem games when
+            examining writing similarity in comparison with other pieces of
+            media. I used two common metrics for measuring the similarity of two
+            pieces of writing: TD-IDF, which determines the similarity of
+            important terms in a document, and Jaccard, which measures the
+            direct overlap of unique words between two bodies of text.
+          </p>
+        </div>
+
+        <div className="story-article-section-intro left-aligned">
+          <p>
+            The TF-IDF results in particular display the similarity between
+            games: each game in the series is over 85% similar in TD-IDF metrics
+            compared to the newest game, Three Houses, which is significantly
+            higher than all other non-Fire Emblem entries. These results show
+            that while there may have been changes in specific word choices or
+            language usage throughout the series, the overall
+            writing/localization style has stayed very consistent, likely to
+            cater to the franchise’s audience. Consistency in story/narration
+            may be one of the main reasons why the series has maintained a core
+            group of fans over time. We can also notice that localization teams
+            have been very intentionally consistent across the franchise: even
+            though two different companies have been involved in localization,
+            there is no significant difference in the writing styles used.
           </p>
         </div>
 
@@ -84,6 +145,10 @@ function StorytellingArticle() {
           </p>
         </div>
 
+        <StoryCategories />
+
+        {/* <CategoryTabs /> */}
+
         <div className="story-article-section-intro">
           <h2>Part 5: Complexity of Narrative and Target Demographic</h2>
           <p>
@@ -93,45 +158,7 @@ function StorytellingArticle() {
             Let’s see exactly why this is, based on the developers’ intentions.
           </p>
         </div>
-
-        <p>
-          LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
-          Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
-          number of characters, words, sentences or paragraphs, and hit
-          generate! GENERATED LOREM IPSUM 3 PARAGRAPHS COPY Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque
-          viverra mauris in aliquam. Aliquam vestibulum morbi blandit cursus
-          risus at ultrices. Id semper risus in hendrerit. Vitae tortor
-          condimentum lacinia quis vel. Duis convallis convallis tellus id
-          interdum. Ullamcorper sit amet risus nullam. In hendrerit gravida
-          rutrum quisque non tellus orci. Placerat vestibulum lectus mauris
-          ultrices eros in cursus. Vestibulum sed arcu non odio euismod. Tellus
-          in hac habitasse platea dictumst vestibulum rhoncus. Scelerisque purus
-          semper eget duis at tellus at urna. Nisi est sit amet facilisis magna.
-          Elit ullamcorper dignissim cras tincidunt lobortis. Porta non pulvinar
-          neque laoreet suspendisse interdum consectetur. Accumsan sit amet
-          nulla facilisi morbi tempus iaculis urna id. Faucibus pulvinar
-          elementum integer enim neque volutpat ac. Eget gravida cum sociis
-          natoque penatibus et. Ullamcorper eget nulla facilisi etiam dignissim
-          diam. Nulla malesuada pellentesque elit eget. Justo eget magna
-          fermentum iaculis eu non diam phasellus vestibulum. Dolor sit amet
-          consectetur adipiscing elit duis tristique. Purus faucibus ornare
-          suspendisse sed nisi lacus sed viverra tellus. Feugiat in ante metus
-          dictum at tempor commodo ullamcorper a. Mauris ultrices eros in cursus
-          turpis massa tincidunt. Felis bibendum ut tristique et egestas quis
-          ipsum. A cras semper auctor neque. At varius vel pharetra vel turpis
-          nunc. Vel facilisis volutpat est velit egestas dui id ornare arcu. Eu
-          tincidunt tortor aliquam nulla facilisi. Vestibulum mattis ullamcorper
-          velit sed ullamcorper. Etiam dignissim diam quis enim lobortis. Dis
-          parturient montes nascetur ridiculus mus. At in tellus integer feugiat
-          scelerisque varius morbi enim nunc. Habitant morbi tristique senectus
-          et netus et malesuada fames ac. Amet mattis vulputate enim nulla
-          aliquet porttitor lacus. Justo nec ultrices dui sapien eget. Quam
-          lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
-          2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
-          GENERATORS SHARE THE LOREM WA SAI
-        </p>
+        <NarrativeCards />
       </div>
       <Footer vertical={false} />
     </>

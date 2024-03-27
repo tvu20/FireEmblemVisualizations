@@ -117,7 +117,7 @@ function EmotionTrajectory(props) {
           <img src={emotionGraph[4]} alt="img1" />
           <div
             className="story-scroll-emotion-card"
-            style={{ left: "60vw", top: "-200px" }}
+            style={{ left: "60.5vw", top: "-200px" }}
           >
             <h4>Chapter 27: Moment of Fate</h4>
             <p>

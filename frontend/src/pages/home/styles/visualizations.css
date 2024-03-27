@@ -12,7 +12,8 @@
 
 .home-viz h3 {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
+  font-family: "Figtree", sans-serif;
 }
 
 .home-viz__button {
