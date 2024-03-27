@@ -22,11 +22,11 @@
 
 const color = {
   home: { r: 253, g: 137, b: 91 },
-  gender: { r: 241, g: 223, b: 120 },
-  relationships: { r: 4, g: 46, b: 68 },
-  sentiment: { r: 83, g: 172, b: 153 },
+  gender: { r: 255, g: 201, b: 230 },
+  relationships: { r: 0, g: 26, b: 48 },
+  sentiment: { r: 112, g: 214, b: 188 },
   script: { r: 225, g: 232, b: 241 },
-  characters: { r: 254, g: 166, b: 179 },
+  characters: { r: 245, g: 197, b: 229 },
 };
 
 const getColor = (page) => {
@@ -48,23 +48,23 @@ export const getGameColor = (game) => {
   // };
 
   const gameColors = {
-    // Switch: "#ffa4a2",
+    // Switch: "#dc817f",
+    // "3DS": "#e89a97",
+    // DS: "#ffaa9b",
+    // Wii: "#ffaa9b",
+    // GameCube: "#ffbcb1",
+    // GBA: "#f4c0b2",
     // SNES: "#f4bfbe",
-    // "3DS": "#ffbcb1",
-    // GBA: "#ffaa9b",
-    // Wii: "#dc817f",
-    // GameCube: "#e89a97",
-    // DS: "#f4c0b2",
     // NES: "#f5c9c6",
 
-    Switch: "#dc817f",
-    "3DS": "#e89a97",
-    DS: "#ffaa9b",
-    Wii: "#ffaa9b",
-    GameCube: "#ffbcb1",
-    GBA: "#f4c0b2",
-    SNES: "#f4bfbe",
-    NES: "#f5c9c6",
+    Switch: "#734b89",
+    "3DS": "#4c4b94",
+    DS: "#417d8f",
+    Wii: "#77a04a",
+    GameCube: "#77a04a",
+    GBA: "#dcbb28",
+    SNES: "#a1683b",
+    NES: "#6f1f2f",
   };
   return gameColors[game];
 };

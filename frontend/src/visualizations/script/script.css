@@ -46,33 +46,37 @@ mark {
 
 .examples {
   position: absolute;
+  top: 0;
   padding: 10px 10px 25px 10px;
   max-width: 250px;
   font-family: sans-serif;
-  font-size: 12px;
-  background-color: #555;
+  font-size: 13px;
+  background-color: white;
   font-weight: bold;
   text-align: left;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  line-height: 1.4 !important;
 }
 
 .examples h3 {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  margin: 10px 5px;
+  font-family: var(--font-ibarra);
+  color: #10258f;
+  border-bottom: 1px solid black;
   text-align: left;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 span.word {
   display: inline-block;
   padding: 0 5px;
   border-radius: 5px;
-  color: #fff;
+  color: black;
   margin: 2px;
 }
 
-/* span.answer {
-  background-color: ${colorScale("answer")}
+.tooltip-title {
+  font-family: var(--font-ibarra);
 }
-
-span.wordlist {
-  background-color: ${colorScale("wordlist")}
-} */

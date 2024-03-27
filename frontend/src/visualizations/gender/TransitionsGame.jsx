@@ -37,11 +37,11 @@ function TransitionsGame(props) {
     );
 
     const colors = {
-      male: d3.rgb(37, 79, 217),
-      female: d3.rgb(237, 88, 152),
-      avatar: d3.rgb(169, 103, 201),
+      male: d3.rgb(60, 138, 186),
+      female: d3.rgb(201, 93, 136),
+      avatar: d3.rgb(230, 173, 76),
       none: d3.rgb(102, 102, 102),
-      neutral: d3.rgb(23, 117, 25),
+      neutral: d3.rgb(44, 130, 46),
     };
 
     const width = 928;
@@ -234,7 +234,7 @@ function TransitionsGame(props) {
       });
   }, [game]);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return <svg ref={ref} />;
 }
 
 export default TransitionsGame;

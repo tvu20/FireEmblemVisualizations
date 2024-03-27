@@ -13,11 +13,11 @@ function SentimentGame(props) {
   useEffect(() => {
     if (!data) return;
 
-    d3.selectAll("g > *").remove();
+    d3.selectAll(".sentimentinagame").remove();
 
     // set the dimensions and margins of the graph
-    var margin = { top: 30, right: 30, bottom: 70, left: 30 },
-      width = 800 - margin.left - margin.right,
+    var margin = { top: 0, right: 30, bottom: 30, left: 30 },
+      width = Math.min(windowWidth * 0.85, 1000) - margin.left - margin.right,
       height = 700 - margin.top - margin.bottom;
 
     const svg = d3
@@ -25,6 +25,7 @@ function SentimentGame(props) {
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")
+      .attr("class", "sentimentinagame")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     let maxPos = 0,
@@ -41,50 +42,26 @@ function SentimentGame(props) {
       .select("body")
       .append("div")
       .style("opacity", 0)
-      .attr("class", "tooltip genderlinecounts-tooltip")
-      .style("position", "absolute")
-      .style("top", 0)
-      .style("background-color", "white")
-      .style("border-radius", "5px")
-      .style("padding", "10px");
+      .attr("class", "tooltip sentiment-tooltip");
 
     // Three function that change the tooltip when user hover / move / leave a cell
     const mouseover = function (d) {
       const chapter = d.srcElement.getAttribute("chapter");
       const idx = d.srcElement.getAttribute("idx");
 
-      // const subgroup = d3.select(this.parentNode).datum().key;
-      // const value = d.target.__data__.data[subgroup];
-
-      //   var subgroupValue = d.data[subgroupName];
-      //   console.log(subgroupValue);
       tooltip
         .html(
           "<h5>" +
             chapter +
             "</h5>" +
-            "<p>Positive: " +
+            "<b>Positive:</b> " +
             data.Main[idx].positive +
-            "</p>" +
-            "<p>Negative: " +
+            " lines<br/>" +
+            "<b>Negative:</b> " +
             data.Main[idx].negative +
-            "</p>"
-          //   "</h5> Gender: <b>" +
-          //   mapGender(subgroup) +
-          //   "<br>" +
-          //   Math.round(value * 10) / 10 +
-          //   "%</b> of lines"
+            " lines"
         )
         .style("opacity", 1);
-
-      // // Reduce opacity of all rect to 0.2
-      //   d3.selectAll(".myRect").style("opacity", 0.2);
-      //   d3.selectAll(".myRect").style("opacity", 0.1);
-      // // Highlight all rects of this subgroup with opacity 0.8. It is possible to select them since they have a specific class = their name.
-      //   d3.selectAll("." + chapter).style("opacity", 1);
-      // d3.selectAll("." + subgroup).attr("fill", function (d) {
-      //   return highlightColor(d.key);
-      // });
     };
     const mousemove = function (d) {
       tooltip.style("left", d.pageX + 20 + "px").style("top", d.pageY + "px");
@@ -96,11 +73,6 @@ function SentimentGame(props) {
     };
     const mouseleave = function (d) {
       tooltip.style("opacity", 0);
-      // Back to normal opacity: 0.8
-      //   d3.selectAll(".myRect").attr("fill", function (d) {
-      //   return color(d.key);
-      // });
-      //   d3.selectAll(".myRect").style("opacity", 1);
     };
 
     // X axis
@@ -142,7 +114,7 @@ function SentimentGame(props) {
       .attr("height", function (d) {
         return height / 2 - y1(0);
       })
-      .attr("fill", "#e6ad57")
+      .attr("fill", "#eab767")
       .attr("chapter", function (d) {
         return d.chapter;
       })
@@ -283,7 +255,7 @@ function SentimentGame(props) {
       });
   }, [game]);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return <svg ref={ref} />;
 }
 
 export default SentimentGame;

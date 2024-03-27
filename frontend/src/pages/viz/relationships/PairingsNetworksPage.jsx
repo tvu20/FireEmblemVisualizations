@@ -13,25 +13,14 @@ function PairingsNetworksPage() {
   const [sortGender, setSortGender] = useState(true);
   return (
     <VizWrapper color={getColor("relationships")} navColor={"white"}>
-      <div className="relationship-page support-networks">
+      <div className="article relationship-page support-networks">
         <h1>Pairing Networks</h1>
-        <p>Some description here.</p>
-        <p>Link Constraints</p>
-        <input
-          type="checkbox"
-          checked={linkConstrain}
-          onChange={(e) => setLinkConstrain((prevState) => !prevState)}
-        />
-        <p>Organize by Gender</p>
-        <input
-          type="checkbox"
-          checked={sortGender}
-          onChange={(e) => setSortGender((prevState) => !prevState)}
-        />
+        <p>Visualize the support relationships social networks in each game.</p>
         <select
+          className="select-dropdown"
           value={game}
           onChange={(e) => setGame(e.target.value)}
-          style={{ marginBottom: "30px" }}
+          style={{ marginBottom: "10px" }}
         >
           <option value="FE4-1">Genealogy, First Generation (1996)</option>
           <option value="FE4-2">Genealogy, Second Generation (1996)</option>
@@ -44,6 +33,25 @@ function PairingsNetworksPage() {
           <option value="FE15">Echoes (2017)</option>
           <option value="FE16">Three Houses (2019)</option>
         </select>
+        <span
+          className="checkbox-label networks-checkbox"
+          style={{ marginBottom: "0px" }}
+        >
+          <input
+            type="checkbox"
+            checked={linkConstrain}
+            onChange={(e) => setLinkConstrain((prevState) => !prevState)}
+          />{" "}
+          Link constraints
+        </span>
+        <span className="checkbox-label networks-checkbox">
+          <input
+            type="checkbox"
+            checked={sortGender}
+            onChange={(e) => setSortGender((prevState) => !prevState)}
+          />{" "}
+          Organize by Gender
+        </span>
         <Pairings
           game={game}
           // constrain
@@ -52,6 +60,41 @@ function PairingsNetworksPage() {
           linkConstrain={linkConstrain}
           sortGender={sortGender}
         />
+        <p>
+          One of the staple mechanics of the Fire Emblem series is the ability
+          to pair off characters at the end of the games, often resulting in
+          “paired ending” screens where two characters will share a
+          happily-ever-after (or… not) following the conclusion of the main
+          story. While the pairing mechanic initially was reserved for romantic
+          couples, over the series’ history it has expanded to include familial
+          relationships, platonic relationships, and even some that are less
+          clear-cut. While often associated with the Support game mechanic, not
+          all characters that share Supports can necessarily end up together.
+          <br />
+          <br />
+          This series of network graphs illustrates the available paired endings
+          between characters in each game where the pairing mechanic is
+          available. Select a game in the dropdown menu to visualize its
+          relationships. These graphs are modeled off of social network graphs,
+          with each node (dot) of the graph representing a character and links
+          between nodes representing the presence of a support between two
+          characters. Color of the node represents the gender of the character -
+          pink and blue for female and male, and yellow for Avatar
+          (customizable) characters. The link color corresponds to the type of
+          relationship - early games only feature romantic (red/pink)
+          relationships, while starting from Blazing Blade (2007) other
+          categories of relationships are available: platonic (green), familial
+          (yellow), and ambiguously platonic/romantic (purple).
+          <br />
+          <br />
+          Hover over any node to better visualize supports for a certain
+          character, or drag nodes around to view different angles of the graph.
+          And for some different viewing experiences, check the first box to see
+          what the graph looks like with normalized links (each link between
+          characters must remain the same length!), and the second box to group
+          character nodes based on gender (this makes it easier to see
+          relationships between same-gender vs different-gender pairings!).
+        </p>
       </div>
     </VizWrapper>
   );

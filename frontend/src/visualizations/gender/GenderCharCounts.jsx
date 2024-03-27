@@ -244,7 +244,7 @@ function GenderLineCounts() {
       //--------------------------- Distribution of each term in a 4x4 matrix
       const dots = group
         .append("g")
-        .style("border", "1px solid red")
+        // .style("border", "1px solid red")
         .attr("transform", function () {
           return "translate(" + 120 * col + "," + 150 * row + ")rotate(0)";
         });
@@ -416,15 +416,21 @@ function GenderLineCounts() {
   }, []);
 
   return (
-    <>
-      <select id="selectButton">
-        <option value="fpc">Playable Characters</option>
-        <option value="npc">Non-Playable Characters</option>
-        <option value="combined">All Characters</option>
-      </select>
-      <svg ref={ref} style={{ border: "1px solid red" }} />
-      <svg ref={ref2} style={{ border: "1px solid red" }} />
-    </>
+    <div className="gendercharcounts-container">
+      <div className="gendercharcounts-leftchart">
+        <select
+          id="selectButton"
+          className="select-dropdown"
+          style={{ marginLeft: "50px" }}
+        >
+          <option value="fpc">Playable Characters</option>
+          <option value="npc">Non-Playable Characters</option>
+          <option value="combined">All Characters</option>
+        </select>
+        <svg ref={ref} />
+      </div>
+      <svg className="gendercharcounts-rightchart" ref={ref2} />
+    </div>
   );
 }
 

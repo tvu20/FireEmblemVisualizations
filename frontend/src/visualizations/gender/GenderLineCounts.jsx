@@ -16,11 +16,8 @@ function GenderLineCounts() {
 
     d3.selectAll("g > *").remove();
 
-    // console.log(windowWidth);
-
-    // set the dimensions and margins of the graph
     const margin = { top: 10, right: 30, bottom: 50, left: 50 },
-      width = Math.min(windowWidth * 0.85, 1200) - margin.left - margin.right,
+      width = Math.min(windowWidth * 0.85, 1000) - margin.left - margin.right,
       height = 550 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
@@ -58,35 +55,32 @@ function GenderLineCounts() {
     svg
       .selectAll("text")
       .attr("transform", "translate(0,10)")
-      //   .style("text-anchor", "end")
       .style("font-size", 14)
       .style("font-weight", 400)
       .style("font-family", "Inter");
-    //   .call(d3.axisBottom(x).tickSizeOuter(0));
 
     // Add Y axis
     const y = d3.scaleLinear().domain([0, 100]).range([height, 0]);
-    // svg.append("g").call(d3.axisLeft(y));
 
     // color palette = one color per subgroup
     const color = d3
       .scaleOrdinal()
       .domain(subgroups)
-      .range(["#d64d7b", "#8e6cb8", "rgba(106, 163, 204, 0.2)"]);
+      .range(["#c37795", "#e9bb6c", "rgba(90, 148, 185, 0.2)"]);
 
     // color palette = one color per subgroup
     const highlightColor = d3
       .scaleOrdinal()
       .domain(subgroups)
-      .range(["#d64d7b", "#8e6cb8", "#6aa3cc"]);
+      .range(["#c37795", "#e9bb6c", "#5a94b9"]);
 
     const lowlightColor = d3
       .scaleOrdinal()
       .domain(subgroups)
       .range([
-        "rgba(214, 77, 123, 0.2)",
-        "rgba(121, 82, 168, 0.2)",
-        "rgba(106, 163, 204, 0.2)",
+        "rgba(195, 119, 149, 0.2)",
+        "rgba(233, 187, 108, 0.2)",
+        "rgba(90, 148, 185, 0.2)",
       ]);
 
     // Normalize the data -> sum of each group must be 100!
@@ -114,8 +108,6 @@ function GenderLineCounts() {
     stackedData[1].index = 1;
     stackedData[1].key = "A";
 
-    // console.log("stackeddata", stackedData);
-
     // ----------------
     // Create a tooltip
     // ----------------
@@ -123,12 +115,7 @@ function GenderLineCounts() {
       .select("body")
       .append("div")
       .style("opacity", 0)
-      .attr("class", "tooltip genderlinecounts-tooltip")
-      .style("position", "absolute")
-      .style("top", 0)
-      .style("background-color", "white")
-      .style("border-radius", "5px")
-      .style("padding", "10px");
+      .attr("class", "tooltip genderlinecounts-tooltip");
 
     // Three function that change the tooltip when user hover / move / leave a cell
     const mouseover = function (d) {

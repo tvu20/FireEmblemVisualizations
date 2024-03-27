@@ -65,4 +65,5 @@ code {
   --script-gradient: url("./assets/backgrounds/script.png");
   --character-gradient: url("./assets/backgrounds/character.PNG");
   --box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  --font-ibarra: "Ibarra Real Nova", serif;
 }

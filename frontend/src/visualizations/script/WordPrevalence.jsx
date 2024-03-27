@@ -20,10 +20,8 @@ function WordPrevalence(props) {
 
     // set the dimensions and margins of the graph
     var margin = { top: 25, right: 60, bottom: 35, left: 60 };
-    const width = 800;
-    const height = 500;
-    //   width = 800 - margin.left - margin.right,
-    //   height = 700 - margin.top - margin.bottom;
+    const width = Math.min(windowWidth * 0.85, 1000);
+    const height = Math.max(width * 0.6, 500);
 
     const svg = d3
       .select(ref.current)
@@ -32,10 +30,6 @@ function WordPrevalence(props) {
       .attr("width", width)
       .attr("height", height)
       .attr("viewbox", [0, 0, width, height]);
-    //   .attr("width", width + margin.left + margin.right)
-    //   .attr("height", height + margin.top + margin.bottom)
-    //   .append("g")
-    //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // ----------------
     // Create a tooltip

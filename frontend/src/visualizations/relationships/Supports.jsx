@@ -132,9 +132,9 @@ function Supports(props) {
 
     // Specify the color scale.
     const color = (gender) => {
-      if (gender === "M") return "#1f77b4";
-      else if (gender === "F") return "#e377c2";
-      else return "white";
+      if (gender === "M") return "#377dab";
+      else if (gender === "F") return "#ad617c";
+      else return "#c19a57";
     };
 
     // Create a simulation with several forces.
