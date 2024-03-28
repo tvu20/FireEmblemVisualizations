@@ -5,13 +5,14 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .flex-legend-item {
   display: flex;
   align-items: center;
   font-size: 12px;
-  margin: 0 15px 5px;
+  margin: 15px 15px 5px;
   color: black;
   font-weight: 500;
 }
@@ -58,9 +59,10 @@
   font-size: 12px;
   font-weight: 500;
   text-align: left;
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-end;
+  padding: 0 20vw;
 }
 
 /* path.slice{
@@ -72,4 +74,34 @@ polyline {
   stroke: black;
   stroke-width: 2px;
   fill: none;
+}
+
+.emotion-chapter-selects {
+  display: flex;
+}
+
+.emotion-chapter-selects span {
+  margin-right: 25px;
+}
+
+.emotion-chapter-selects select {
+  margin-bottom: 5px;
+}
+
+.select-button {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+  font-size: 15px;
+  border-width: 1px;
+}
+
+.story-progression-container {
+  width: 900px;
+}
+
+@media (max-width: 900px) {
+  .story-progression-container {
+    width: 650px;
+  }
 }

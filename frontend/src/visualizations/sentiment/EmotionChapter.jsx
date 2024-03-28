@@ -35,7 +35,6 @@ function EmotionChapter(props) {
       .attr("viewBox", [0, 0, width, height])
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; border: 1px solid red")
       .attr("id", "the-chart");
 
     const g = svg.append("g");
@@ -222,7 +221,7 @@ function EmotionChapter(props) {
 
   return (
     <>
-      <button id="selectButton" disabled={!chapter}>
+      <button className="select-button" id="selectButton" disabled={!chapter}>
         Submit
       </button>
       {/* <select id="selectButton">
@@ -230,7 +229,7 @@ function EmotionChapter(props) {
         <option value="npc">Non-Playable Characters</option>
         <option value="combined">All Characters</option>
       </select> */}
-      <svg ref={ref} style={{ border: "1px solid red" }} />
+      <svg ref={ref} />
     </>
   );
 }

@@ -30,7 +30,7 @@ function StoryProgression(props) {
     d3.selectAll(".tooltip").remove();
 
     var margin = { top: 30, right: 10, bottom: 0, left: 10 },
-      width = 800 - margin.left - margin.right;
+      width = (windowWidth < 900 ? 650 : 900) - margin.left - margin.right;
 
     // ----------------
     // Create a tooltip
@@ -39,13 +39,7 @@ function StoryProgression(props) {
       .select("body")
       .append("div")
       .style("opacity", 0)
-      .attr("class", "tooltip storyprogression-tooltip")
-      .style("position", "absolute")
-      .style("top", 0)
-      .style("background-color", "white")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("width", "300px");
+      .attr("class", "tooltip storyprogression-tooltip");
 
     // Three function that change the tooltip when user hover / move / leave a cell
     const mouseover = function (d) {
@@ -57,15 +51,13 @@ function StoryProgression(props) {
 
       // stage
       if (d.srcElement.getAttribute("type") === "stage") {
-        content = "<p>" + element.getAttribute("desc") + "</p>";
+        content = element.getAttribute("desc");
       } else {
         content =
           "<h4>" +
           element.getAttribute("name") +
           "</h4>" +
-          "<p>" +
-          element.getAttribute("desc") +
-          "</p>";
+          element.getAttribute("desc");
         // moment
       }
       // const game = d.srcElement.getAttribute("game");
@@ -310,12 +302,11 @@ function StoryProgression(props) {
 
   return (
     <>
+      <div className="story-progression-container" ref={ref} />
       <div
-        className="story-progression-container"
-        ref={ref}
-        style={{ border: "1px solid red" }}
-      />
-      <div className="story-progression-information"></div>
+        className="story-progression-information"
+        style={{ marginBottom: "50px" }}
+      ></div>
     </>
   );
 }

@@ -71,13 +71,13 @@ export const getGameColor = (game) => {
 
 export const emotionColor = {
   // joy: "#e8c33f",
-  joy: "#d19b1d",
-  sadness: "#286ab5",
-  anger: "#c92a3d",
-  fear: "#992ec7",
+  joy: "#f0d681",
+  sadness: "#6690bb",
+  anger: "#c16c6c",
+  fear: "#8d62ae",
   // neutral: "#4bad4e",
   // fear: "#4bad4e",
   // surprise: "#e38640",
-  surprise: "#419678",
-  neutral: "#adadad",
+  surprise: "#7fb37d",
+  neutral: "rgba(199, 199, 199, 0.8)",
 };

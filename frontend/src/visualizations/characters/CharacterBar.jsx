@@ -70,7 +70,7 @@ function CharacterBar(props) {
             .attr("width", 20)
             .attr("height", 20)
             .attr("id", `${key}-${index}-${thisData[index].name}`)
-            .style("border", "1px solid red")
+            // .style("border", "1px solid red")
             .style("opacity", 0)
             .style("cursor", "pointer")
             .on("click", buttonClick);
@@ -88,7 +88,7 @@ function CharacterBar(props) {
           .attr("width", 20)
           .attr("height", 20)
           .attr("id", `${key}-${index}-${thisData[index].name}`)
-          .style("border", "1px solid red")
+          // .style("border", "1px solid red")
           .style("opacity", 0)
           .style("cursor", "pointer")
           .on("click", buttonClick);
@@ -131,20 +131,25 @@ function CharacterBar(props) {
   }, []);
 
   return (
-    <>
+    <div className="characterbar-box">
       <div
         className="characters-bar__container"
         ref={ref}
-        style={{ border: "1px solid blue" }}
+        // style={{ border: "1px solid blue" }}
       ></div>
-      {charData && (
-        <div>
-          <img src={charData.img} alt={charData.name} />
-          <h1>{charData.name}</h1>
-          <p>{charData.class}</p>
-        </div>
-      )}
-    </>
+      <div className="charInfo">
+        {charData && (
+          <>
+            <img src={charData.img} alt={charData.name} />
+            <h1>{charData.name}</h1>
+            <p>{charData.class}</p>
+          </>
+        )}
+        {!charData && (
+          <p>Select a character to have their information appear here.</p>
+        )}
+      </div>
+    </div>
   );
 }
 

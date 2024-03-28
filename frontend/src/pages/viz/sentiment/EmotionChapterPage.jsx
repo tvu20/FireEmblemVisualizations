@@ -55,49 +55,64 @@ function EmotionChapterPage() {
 
   return (
     <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
-      <div className="sentiment-page emotion-game">
+      <div className="article sentiment-page emotion-game">
         <h1>Emotions in a Game</h1>
-        <p>Some description here.</p>
-        <select
-          id="emotion-select-game"
-          value={game}
-          onChange={(e) => {
-            setGame(e.target.value);
-            setRoute("");
-          }}
-          style={{ marginBottom: "30px" }}
-        >
-          <option value="" key="default">
-            -
-          </option>
-          {createGameSelect()}
-        </select>
-        <select
-          id="emotion-select-route"
-          value={route}
-          onChange={(e) => {
-            setRoute(e.target.value);
-            setChapter("");
-          }}
-          style={{ marginBottom: "30px" }}
-        >
-          <option value="" key="default">
-            -
-          </option>
-          {createRouteSelect()}
-        </select>
-        <select
-          id="emotion-select-chapter"
-          value={chapter}
-          onChange={(e) => setChapter(e.target.value)}
-          style={{ marginBottom: "30px" }}
-        >
-          <option value="" key="default">
-            -
-          </option>
-          {createChapSelect()}
-        </select>
+        <p>See the distribution of emotion in a single chapter.</p>
+        <div className="emotion-chapter-selects">
+          <span>
+            Game:{" "}
+            <select
+              className="select-dropdown"
+              id="emotion-select-game"
+              value={game}
+              onChange={(e) => {
+                setGame(e.target.value);
+                setRoute("");
+              }}
+            >
+              <option value="" key="default">
+                -
+              </option>
+              {createGameSelect()}
+            </select>
+          </span>
+          <span>
+            Route:{" "}
+            <select
+              className="select-dropdown"
+              id="emotion-select-route"
+              value={route}
+              onChange={(e) => {
+                setRoute(e.target.value);
+                setChapter("");
+              }}
+            >
+              <option value="" key="default">
+                -
+              </option>
+              {createRouteSelect()}
+            </select>
+          </span>
+          <span>
+            Chapter:{" "}
+            <select
+              className="select-dropdown"
+              id="emotion-select-chapter"
+              value={chapter}
+              onChange={(e) => setChapter(e.target.value)}
+            >
+              <option value="" key="default">
+                -
+              </option>
+              {createChapSelect()}
+            </select>
+          </span>
+        </div>
         <EmotionChapter chapter={chapter} />
+        <p>
+          Input a particular chapter from a game in the franchise to see its
+          distribution of emotions across dialogue lines!{" "}
+        </p>
       </div>
     </VizWrapper>
   );

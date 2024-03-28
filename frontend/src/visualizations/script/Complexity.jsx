@@ -22,7 +22,7 @@ function Complexity(props) {
 
     // set the dimensions and margins of the graph
     var margin = { top: 10, right: 30, bottom: 30, left: 60 },
-      width = 700 - margin.left - margin.right,
+      width = Math.min(windowWidth * 0.85, 900) - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
 
     const svg = d3
@@ -70,14 +70,7 @@ function Complexity(props) {
       .select("body")
       .append("div")
       .style("opacity", 0)
-      .attr("class", "tooltip")
-      .style("background-color", "white")
-      .style("border", "solid")
-      .style("border-width", "1px")
-      .style("border-radius", "5px")
-      .style("padding", "10px")
-      .style("position", "absolute")
-      .style("top", 0);
+      .attr("class", "tooltip");
 
     // A function that change this tooltip when the user hover a point.
     // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
@@ -90,13 +83,12 @@ function Complexity(props) {
         .html(
           "<h2>" +
             d.srcElement.__data__.name +
-            "</h2><p><b>Type of media: </b>" +
+            "</h2><b>Type of media: </b>" +
             d.srcElement.__data__.category +
-            "</p><b>Avg words per sentence: </b>" +
+            "<br/><b>Avg words per sentence: </b>" +
             d.srcElement.__data__.x +
-            "</p><b>Avg word length: </b>" +
-            d.srcElement.__data__.y +
-            "</p>"
+            "<br/><b>Avg word length: </b>" +
+            d.srcElement.__data__.y
         )
         .style("left", d.pageX + 6 + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
         .style("top", d.pageY + 5 + "px");
@@ -183,51 +175,63 @@ function Complexity(props) {
 
   return (
     <>
-      <p>Other games</p>
-      <input
-        id="game-checkbox"
-        type="checkbox"
-        checked={categories.includes("Game")}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCategories((prevState) => [...prevState, "Game"]);
-          } else {
-            setCategories((prevState) => prevState.filter((d) => d !== "Game"));
-          }
-        }}
-      />
-      <p>Prose writing</p>
-      <input
-        id="other-checkbox"
-        type="checkbox"
-        checked={categories.includes("Prose")}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCategories((prevState) => [...prevState, "Prose"]);
-          } else {
-            setCategories((prevState) =>
-              prevState.filter((d) => d !== "Prose")
-            );
-          }
-        }}
-      />
+      <div className="complexity-checkboxes">
+        <span className="checkbox-label " style={{ marginBottom: "0px" }}>
+          <input
+            id="game-checkbox"
+            type="checkbox"
+            checked={categories.includes("Game")}
+            onChange={(e) => {
+              if (e.target.checked) {
+                setCategories((prevState) => [...prevState, "Game"]);
+              } else {
+                setCategories((prevState) =>
+                  prevState.filter((d) => d !== "Game")
+                );
+              }
+            }}
+          />{" "}
+          Other Games
+        </span>
 
-      <p>Scripts</p>
-      <input
-        id="other-checkbox"
-        type="checkbox"
-        checked={categories.includes("Script")}
-        onChange={(e) => {
-          if (e.target.checked) {
-            setCategories((prevState) => [...prevState, "Script"]);
-          } else {
-            setCategories((prevState) =>
-              prevState.filter((d) => d !== "Script")
-            );
-          }
-        }}
-      />
-      <svg ref={ref} style={{ border: "1px solid red" }} />
+        <span className="checkbox-label " style={{ marginBottom: "0px" }}>
+          <input
+            id="other-checkbox"
+            type="checkbox"
+            checked={categories.includes("Prose")}
+            onChange={(e) => {
+              if (e.target.checked) {
+                setCategories((prevState) => [...prevState, "Prose"]);
+              } else {
+                setCategories((prevState) =>
+                  prevState.filter((d) => d !== "Prose")
+                );
+              }
+            }}
+          />{" "}
+          Prose Writing
+        </span>
+
+        <span className="checkbox-label" style={{ marginBottom: "0px" }}>
+          <input
+            id="other-checkbox"
+            type="checkbox"
+            checked={categories.includes("Script")}
+            onChange={(e) => {
+              if (e.target.checked) {
+                setCategories((prevState) => [...prevState, "Script"]);
+              } else {
+                setCategories((prevState) =>
+                  prevState.filter((d) => d !== "Script")
+                );
+              }
+            }}
+          />{" "}
+          Other scripts
+        </span>
+      </div>
+
+      <svg ref={ref} />
     </>
   );
 }
