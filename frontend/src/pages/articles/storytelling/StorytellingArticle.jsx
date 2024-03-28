@@ -9,6 +9,8 @@ import "./storytelling.css";
 import EmotionLabels from "./EmotionLabels";
 import CategoryTabs from "./CategoryTabs";
 import StoryCategories from "./StoryCategories";
+import Complexity from "../../../visualizations/script/Complexity";
+import Similarity from "../../../visualizations/script/Similarity";
 
 function StorytellingArticle() {
   return (
@@ -82,7 +84,20 @@ function StorytellingArticle() {
             different categories!
           </p>
         </div>
-        <div className="story-article-section-intro left-aligned">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Complexity />
+        </div>
+
+        <div
+          className="story-article-section-intro left-aligned"
+          style={{ paddingTop: "20px" }}
+        >
           <p>
             The readibility scores of all the Fire Emblem games fall within a
             single cluster, which is shared with some other well-known
@@ -102,8 +117,19 @@ function StorytellingArticle() {
             direct overlap of unique words between two bodies of text.
           </p>
         </div>
-
-        <div className="story-article-section-intro left-aligned">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Similarity />
+        </div>
+        <div
+          className="story-article-section-intro left-aligned"
+          style={{ paddingTop: "10px" }}
+        >
           <p>
             The TF-IDF results in particular display the similarity between
             games: each game in the series is over 85% similar in TD-IDF metrics

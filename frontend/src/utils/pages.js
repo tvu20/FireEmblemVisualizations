@@ -1,88 +1,100 @@
+import glc from "../assets/viz/glc.png";
+import gcc from "../assets/viz/gcc.png";
+import supports from "../assets/viz/supports.png";
+import pairings from "../assets/viz/pairings.png";
+import sentibar from "../assets/viz/sentibar.png";
+import senticurve from "../assets/viz/senticurve.png";
+import mcw from "../assets/viz/mcw.png";
+import wordcounts from "../assets/viz/wordcounts.png";
+import trans from "../assets/viz/trans.png";
+import prev from "../assets/viz/prev.png";
+import steam from "../assets/viz/steam.png";
+import comp from "../assets/viz/comp.png";
+import similarity from "../assets/viz/similarity.png";
+import pie from "../assets/viz/pie.png";
+import bar from "../assets/viz/bar.png";
+import story from "../assets/viz/story.png";
+
 const visualizations = [
   {
     name: "Gender and Line Counts",
     url: "/viz/gender-line-counts",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: glc,
   },
   {
     name: "Gender and Character Counts",
     url: "/viz/gender-char-counts",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: gcc,
   },
   {
     name: "Support Networks",
     url: "/viz/support-networks",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: supports,
   },
   {
     name: "Pairing Networks",
     url: "/viz/pairings-networks",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: pairings,
   },
   {
     name: "Sentiment in a Game",
     url: "/viz/sentiment-game",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: sentibar,
   },
   {
     name: "Sentiment Across Games",
     url: "/viz/sentiment-across-games",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: senticurve,
   },
   {
     name: "Most Common Words",
     url: "/viz/most-common-words",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: mcw,
   },
   {
     name: "Word Counts",
     url: "/viz/word-counts",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: wordcounts,
   },
   {
     name: "Transitions In Each Game",
     url: "/viz/gender-transitions-game",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: trans,
   },
   {
     name: "Word Prevalence",
     url: "/viz/word-prevalence",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: prev,
   },
   {
     name: "Emotion In a Game",
     url: "/viz/emotion-game",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: steam,
   },
-  // {
-  //   name: "Emotion Intensity",
-  //   url: "/viz/emotion-intensity",
-  //   thumbnail: require("../assets/github.png"),
-  // },
   {
     name: "Complexity of Language",
     url: "/viz/word-complexity",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: comp,
   },
   {
     name: "Similarity Across Media",
     url: "/viz/similarity-across-media",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: similarity,
   },
   {
     name: "Emotion In A Chapter",
     url: "/viz/emotion-chapter",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: pie,
   },
   {
     name: "Character Bar Chart",
     url: "/viz/character-bar",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: bar,
   },
   {
     name: "Story Progression",
     url: "/viz/story-progression",
-    thumbnail: require("../assets/github.png"),
+    thumbnail: story,
   },
 ];
 

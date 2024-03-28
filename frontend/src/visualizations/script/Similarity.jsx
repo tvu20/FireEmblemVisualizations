@@ -14,7 +14,7 @@ function Similarity(props) {
   useEffect(() => {
     if (!data) return;
 
-    d3.selectAll("svg").remove();
+    d3.selectAll(".similarity-container > svg").remove();
 
     // // set the dimensions and margins of the graph
     // var margin = { top: 10, right: 30, bottom: 30, left: 30 },

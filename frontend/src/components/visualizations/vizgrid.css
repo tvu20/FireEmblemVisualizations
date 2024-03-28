@@ -6,6 +6,7 @@
 
 .viz-grid__item {
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .viz-grid__item:hover {

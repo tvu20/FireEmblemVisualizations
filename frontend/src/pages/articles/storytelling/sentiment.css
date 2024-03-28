@@ -8,18 +8,18 @@
   --row-one: 10vh;
   --row-two: 30vh;
   --row-three: 50vh;
-  --col-one: 10vw;
-  --col-two: 30vw;
-  --col-three: 50vw;
-  --col-four: 70vw;
+  --col-one: 12vw;
+  --col-two: 32vw;
+  --col-three: 52vw;
+  --col-four: 72vw;
 
   --new-col-one: 5vw;
   --new-col-two: 30vw;
   --new-col-three: 55vw;
   --new-col-four: 80vw;
 
-  --mid-col-one: 5vw;
-  --mid-col-two: 55vw;
+  --mid-col-one: 10vw;
+  --mid-col-two: 60vw;
 }
 
 .sentiment-curve-img-container {
@@ -32,23 +32,30 @@
 }
 
 .sentiment-curve-img-container img,
-.sentiment-curve-big-container img,
-.sentiment-curve-mid-container img {
+.sentiment-curve-big-container img {
   width: 100%;
+  /* height: 100%; */
+  transition: all 1.5s;
+}
+
+.sentiment-curve-mid-container img {
+  /* width: 100%; */
+  height: 100%;
   transition: all 1.5s;
 }
 
 .sentiment-curve-big-container {
-  width: 70vw;
+  width: 60vw;
+  /* height: 60vh; */
   position: absolute;
   transition: all 1.5s;
   top: 0vh;
-  left: 15vw;
+  left: 20vw;
   opacity: 0;
 }
 
 .sentiment-curve-mid-container {
-  width: 40vw;
+  height: 40vh;
   position: absolute;
   transition: all 1.5s;
   top: 0vh;

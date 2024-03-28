@@ -18,7 +18,7 @@ function Complexity(props) {
   useEffect(() => {
     if (!filteredData) return;
 
-    d3.selectAll("g > *").remove();
+    d3.selectAll(".complexity-svg > *").remove();
 
     // set the dimensions and margins of the graph
     var margin = { top: 10, right: 30, bottom: 30, left: 60 },
@@ -231,7 +231,7 @@ function Complexity(props) {
         </span>
       </div>
 
-      <svg ref={ref} />
+      <svg className="complexity-svg" ref={ref} />
     </>
   );
 }
