@@ -220,10 +220,15 @@ function GenderLineCounts() {
     const width = 470;
     const height = 600;
 
+    // const colors = {
+    //   m: d3.rgb(10, 195, 215),
+    //   f: d3.rgb(227, 123, 168),
+    //   a: d3.rgb(169, 103, 201),
+    // };
     const colors = {
-      m: d3.rgb(10, 195, 215),
-      f: d3.rgb(227, 123, 168),
-      a: d3.rgb(169, 103, 201),
+      m: d3.rgb(90,148,185),
+      f: d3.rgb(195,120,150),
+      a: d3.rgb(233,187,108),
     };
 
     const svg = d3

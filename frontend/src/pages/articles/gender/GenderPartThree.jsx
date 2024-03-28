@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Description from "../../../components/articles/Description";
 
 import "./gender.css";
+import ClassesTimeline from "../../../visualizations/gender/ClassesTimeline";
 
 function GenderPartThree() {
   return (
@@ -23,10 +24,19 @@ function GenderPartThree() {
           evolved or stayed the same.
         </p>
       </div>
-      <div className="gender-article-section-intro">
-        <h3>GRAPH GOES HERE!!!!!!</h3>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <ClassesTimeline />
       </div>
-      <div className="gender-article-section-intro left-aligned">
+      <div
+        className="gender-article-section-intro left-aligned"
+        style={{ paddingTop: "30px" }}
+      >
         <p>
           Here are some interesting takeaways from this graph:
           <ul>

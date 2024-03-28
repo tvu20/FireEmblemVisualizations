@@ -14,6 +14,7 @@ import similarity from "../assets/viz/similarity.png";
 import pie from "../assets/viz/pie.png";
 import bar from "../assets/viz/bar.png";
 import story from "../assets/viz/story.png";
+import cl from "../assets/viz/classes.png";
 
 const visualizations = [
   {
@@ -95,6 +96,11 @@ const visualizations = [
     name: "Story Progression",
     url: "/viz/story-progression",
     thumbnail: story,
+  },
+  {
+    name: "Timeline of Classes",
+    url: "/viz/classes-timeline",
+    thumbnail: cl,
   },
 ];
 
