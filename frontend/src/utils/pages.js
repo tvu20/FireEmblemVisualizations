@@ -102,6 +102,11 @@ const visualizations = [
     url: "/viz/classes-timeline",
     thumbnail: cl,
   },
+  {
+    name: "Transitions Across the Series",
+    url: "/viz/transitions",
+    thumbnail: trans,
+  },
 ];
 
 export const getArticles = () => {

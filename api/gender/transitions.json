@@ -32,8 +32,6 @@
     { "source": "Neutral first", "target": "Male second", "value": 15 },
     { "source": "none", "target": "none", "value": 15 },
     { "source": "Female first", "target": "Female second", "value": 16 },
-    { "source": "Male first", "target": "Avatar second", "value": 7 },
-    { "source": "Avatar first", "target": "Male second", "value": 7 },
     { "source": "Female first", "target": "Neutral second", "value": 1 },
     { "source": "Neutral first", "target": "Female second", "value": 1 }
   ],

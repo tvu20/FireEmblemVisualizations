@@ -1,0 +1,43 @@
+.gt-curve {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.gt-step-1#gt-0 {
+  opacity: 0.55;
+}
+
+.gt-step-1#gt-1 {
+  opacity: 0.55;
+}
+
+.gt-step-1#gt-2 {
+  opacity: 0.55;
+}
+
+.gt-step-2.gender-transitions-img-container {
+  left: -150px;
+}
+
+.gt-step-2#gt-3 {
+  opacity: 0.55;
+}
+
+.gt-step-3#gt-1,
+.gt-step-3#gt-2 {
+  opacity: 0.55;
+}
+
+.gt-step-4#gt-0,
+.gt-step-4#gt-3 {
+  opacity: 0.55;
+}
+
+.gt-step-3.gender-transitions-img-container,
+.gt-step-4.gender-transitions-img-container {
+  left: -400px;
+}
+
+.gt-step-5.gender-transitions-img-container {
+  left: -1200px;
+}

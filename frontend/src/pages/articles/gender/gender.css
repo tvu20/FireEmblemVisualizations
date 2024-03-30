@@ -407,3 +407,37 @@
   color: #873363;
   font-weight: 700;
 }
+
+.gender-transitions-bg-container {
+  /* border: 1px solid red; */
+  position: sticky;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  transition: all 1.5s;
+  /* overflow-x: hidden; */
+  overflow-x: scroll;
+}
+
+.gender-transitions-img-container {
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  left: 0px;
+  transition: 1s all;
+}
+
+.gender-transitions-image {
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  height: 100vh;
+  left: 0px;
+  transition: 1s all;
+}
+
+.gender-transitions {
+  padding: 15px 0 0;
+}

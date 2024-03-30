@@ -28,6 +28,8 @@ import GenderArticle from "./pages/articles/gender/GenderArticle";
 import RelationshipsArticle from "./pages/articles/relationships/RelationshipsArticle";
 import StorytellingArticle from "./pages/articles/storytelling/StorytellingArticle";
 import ClassesPage from "./pages/viz/gender/ClassesPage";
+import WhatIsFEPage from "./pages/about/WhatIsFEPage";
+import TransitionsFullPage from "./pages/viz/gender/TransitionsFullPage";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutPage />,
+      },
+      {
+        path: "/what-is-fe",
+        element: <WhatIsFEPage />,
       },
       {
         path: "/viz",
@@ -134,6 +140,10 @@ const router = createBrowserRouter([
       {
         path: "/article/storytelling",
         element: <StorytellingArticle />,
+      },
+      {
+        path: "/viz/transitions",
+        element: <TransitionsFullPage />,
       },
     ],
   },

@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    { "name": "1-M/M", "display": "Male to Male", "depth": 0 },
+    { "name": "1-M/F", "display": "Male to Female", "depth": 0 },
+    { "name": "1-F/M", "display": "Female to Male", "depth": 0 },
+    { "name": "1-F/F", "display": "Female to Female", "depth": 0 },
+    { "name": "2-M/M", "display": "Male to Male", "depth": 1 },
+    { "name": "2-M/F", "display": "Male to Female", "depth": 1 },
+    { "name": "2-F/M", "display": "Female to Male", "depth": 1 },
+    { "name": "2-F/F", "display": "Female to Female", "depth": 1 }
+  ],
+  "links": [{ "source": "1-MM", "target": "none", "value": 89 }]
+}

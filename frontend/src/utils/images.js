@@ -83,6 +83,15 @@ import s10 from "../assets/relationships/fe14-supports.png";
 import s11 from "../assets/relationships/fe15-supports.png";
 import s12 from "../assets/relationships/fe16-supports.png";
 
+import mm from "../assets/gender/mm.png";
+import mf from "../assets/gender/mf.png";
+import fm from "../assets/gender/fm.png";
+import ff from "../assets/gender/ff.png";
+import am from "../assets/gender/am.png";
+import ma from "../assets/gender/ma.png";
+import af from "../assets/gender/af.png";
+import fa from "../assets/gender/fa.png";
+
 export const genderCharCounts = [
   gcc1,
   gcc2,
@@ -334,3 +343,5 @@ export const supportImages = [
   s11,
   s12,
 ];
+
+export const transitionImages = [mm, mf, fm, ff, ma, am, fa, af];

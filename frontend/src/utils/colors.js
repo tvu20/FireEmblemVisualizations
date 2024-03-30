@@ -27,6 +27,7 @@ const color = {
   sentiment: { r: 112, g: 214, b: 188 },
   script: { r: 225, g: 232, b: 241 },
   characters: { r: 245, g: 197, b: 229 },
+  menu: { r: 39, g: 31, b: 63 },
 };
 
 const getColor = (page) => {
