@@ -83,7 +83,9 @@ function Complexity(props) {
         .html(
           "<h2>" +
             d.srcElement.__data__.name +
-            "</h2><b>Type of media: </b>" +
+            " (" +
+            d.srcElement.__data__.year +
+            ")</h2><b>Type of media: </b>" +
             d.srcElement.__data__.category +
             "<br/><b>Avg words per sentence: </b>" +
             d.srcElement.__data__.x +

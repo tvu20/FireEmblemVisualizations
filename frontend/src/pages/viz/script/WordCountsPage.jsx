@@ -23,12 +23,12 @@ function WordCountsPage() {
         )} */}
         {/* </VizWrapper> */}
         <p>
-          The Fire Emblem franchise has spanned over 20 years and various
+          The <i>Fire Emblem</i> franchise has spanned over 20 years and various
           generations of Nintendo consoles. As hardware restrictions have
           changed and the video gaming industry has developed, how have the word
           counts across games in the series evolved? This graph displays the
           number of words present in the main dialogue script of each game, with
-          each game being color-coded by its console.
+          each game being color-coded by its console era.
           <br />
           <br />
           Check the box to order the graph either chronologically or by word

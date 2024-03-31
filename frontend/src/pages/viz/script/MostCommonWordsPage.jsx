@@ -22,8 +22,8 @@ function MostCommonWordsPage() {
           colored according to what part of speech it is, with character and
           place names from the franchise being distinguished as particular types
           of words as well. Hover over any word to learn more about its
-          categorization and see a sample of sentences it’s used in throughout
-          the series!
+          categorization and see a sample of sentences using it throughout the
+          series!
         </p>
         {/* </VizWrapper> */}
       </div>

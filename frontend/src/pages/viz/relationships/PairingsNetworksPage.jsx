@@ -6,6 +6,7 @@ import Pairings from "../../../visualizations/relationships/Pairings";
 import getColor from "../../../utils/colors";
 
 import "./relationships.css";
+import Description from "../../../components/articles/Description";
 
 function PairingsNetworksPage() {
   const [game, setGame] = useState("FE4-1");
@@ -61,15 +62,16 @@ function PairingsNetworksPage() {
           sortGender={sortGender}
         />
         <p>
-          One of the staple mechanics of the Fire Emblem series is the ability
-          to pair off characters at the end of the games, often resulting in
-          “paired ending” screens where two characters will share a
-          happily-ever-after (or… not) following the conclusion of the main
-          story. While the pairing mechanic initially was reserved for romantic
-          couples, over the series’ history it has expanded to include familial
-          relationships, platonic relationships, and even some that are less
-          clear-cut. While often associated with the Support game mechanic, not
-          all characters that share Supports can necessarily end up together.
+          One of the staple mechanics of the <i>Fire Emblem</i> series is the
+          ability to pair off characters, often resulting in “paired ending”
+          screens where two characters will share a happily-ever-after (or not)
+          following the conclusion of the main story. While the pairing mechanic
+          initially was reserved for romantic couples, over the series’ history
+          it has expanded to include familial relationships, platonic
+          relationships, and even some that are less clear-cut. While often
+          associated with the{" "}
+          <Description tag="support">Support game mechanic</Description>, not
+          all characters that share supports can necessarily end up together.
           <br />
           <br />
           This series of network graphs illustrates the available paired endings
@@ -78,13 +80,17 @@ function PairingsNetworksPage() {
           relationships. These graphs are modeled off of social network graphs,
           with each node (dot) of the graph representing a character and links
           between nodes representing the presence of a support between two
-          characters. Color of the node represents the gender of the character -
-          pink and blue for female and male, and yellow for Avatar
+          characters. The color of the node represents the gender of the
+          character - pink and blue for female and male, and yellow for Avatar
           (customizable) characters. The link color corresponds to the type of
           relationship - early games only feature romantic (red/pink)
-          relationships, while starting from Blazing Blade (2007) other
-          categories of relationships are available: platonic (green), familial
-          (yellow), and ambiguously platonic/romantic (purple).
+          relationships, while other categories of relationships are available
+          from{" "}
+          <Description tag="FE7">
+            <i>The Blazing Blade</i>
+          </Description>{" "}
+          onwards: platonic (green), familial (yellow), and ambiguously
+          platonic/romantic (purple).
           <br />
           <br />
           Hover over any node to better visualize supports for a certain

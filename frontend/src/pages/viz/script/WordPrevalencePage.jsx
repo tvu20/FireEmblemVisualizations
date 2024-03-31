@@ -45,16 +45,25 @@ function WordPrevalencePage() {
         </select>
         <WordPrevalence game={game} />
         <p>
-          How much of Fire Emblem dialogue is made up of incredibly normal
-          words, those you would hear in daily life and easily define, compared
-          to wildly obscure terms or game-specific language? These histograms
-          shows the distribution of word prevalence for each game in the series.
+          How much of <i>Fire Emblem</i> dialogue is made up of incredibly
+          common words that you would hear in daily life compared to wildly
+          obscure terms or game-specific language? These histograms shows the
+          distribution of word prevalence for each game in the series.
           <br />
           <br />
-          Word prevalence is measured by cross-referencing the words in the game
-          scripts with the Google Books Ngram Corpus. Select a game from the
-          dropdown to see its word prevalence data, and hover over any bucket in
-          the histogram to see a list of sample words in the bucket!
+          Word prevalence is measured by{" "}
+          <a
+            href="https://tamu.libguides.com/c.php?g=1269483&p=9417812"
+            className="highlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cross-referencing the words in the game scripts with the Google
+            Books Ngram Corpus.
+          </a>{" "}
+          Select a game from the dropdown to see its word prevalence data, and
+          hover over any bucket in the histogram to see a list of sample words
+          in the bucket!
         </p>
       </div>
     </VizWrapper>

@@ -127,6 +127,9 @@ export const getGameShortenedTitleFromCode = (tag) => {
     FE14: "Fates",
     FE15: "Echoes",
     FE16: "Three Houses",
+    FE14B: "Fates: Birthright",
+    FE14C: "Fates: Conquest",
+    FE16A: "Three Houses (Azure Moon)",
   };
 
   if (tag in arr) {
@@ -177,6 +180,9 @@ export const getYearFromCode = (tag) => {
     FE14: "2015",
     FE15: "2017",
     FE16: "2019",
+    FE16AM: "2019",
+    FE16CF: "2019",
+    FE16VW: "2019",
   };
 
   return arr[tag];

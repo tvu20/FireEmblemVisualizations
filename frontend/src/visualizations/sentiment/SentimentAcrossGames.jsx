@@ -91,7 +91,7 @@ function SentimentAcrossGames(props) {
         return getGameShortenedTitleFromCode(d.key);
       })
       .attr("font-family", "Gill Sans, Century Gothic, sans-serif")
-      .attr("font-size", 14)
+      .attr("font-size", 13.5)
       .attr("opacity", 1)
       .style("fill", "black");
     // .style("fill", "#123622");

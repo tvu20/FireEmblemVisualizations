@@ -14,7 +14,7 @@ import "./sentiment.css";
 
 function EmotionGamePage() {
   const [game, setGame] = useState("FE6");
-  const [includeNeutral, setIncludeNeutral] = useState(true);
+  const [includeNeutral, setIncludeNeutral] = useState(false);
 
   const createSelect = () => {
     const codes = getEmotionCodes();
@@ -58,10 +58,17 @@ function EmotionGamePage() {
           In addition to traditional polarity sentiment analysis, I wanted to
           study how an emotion classification model could be trained to label
           data from a particular medium or genre. I trained a BERT model to
-          label dialogue lines with one of five Ekman emotions (joy, sadness,
-          anger, surprise, and fear) or with the neutral label, achieving 75%
-          accuracy. I used to resulting predictor to label each dialogue line
-          across the series.
+          label dialogue lines with one of{" "}
+          <a
+            href="https://www.paulekman.com/universal-emotions/"
+            className="highlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            five Ekman emotions (joy, sadness, anger, surprise, and fear)
+          </a>{" "}
+          or with the neutral label, achieving 75% accuracy. The resulting
+          predictor was used to label each dialogue line across the series.
           <br />
           <br />
           This steamgraph represents the distribution of emotions across

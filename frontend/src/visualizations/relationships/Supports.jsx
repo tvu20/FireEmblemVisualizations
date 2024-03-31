@@ -242,7 +242,7 @@ function Supports(props) {
       });
   }, [game]);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return <svg ref={ref} />;
 }
 
 export default Supports;

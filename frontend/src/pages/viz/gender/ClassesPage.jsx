@@ -12,6 +12,7 @@ import getColor from "../../../utils/colors";
 
 import "./gender.css";
 import ClassesTimeline from "../../../visualizations/gender/ClassesTimeline";
+import Description from "../../../components/articles/Description";
 
 function ClassesPage() {
   return (
@@ -25,15 +26,17 @@ function ClassesPage() {
 
         <ClassesTimeline />
         <p style={{ marginTop: "50px" }}>
-          One of the most notable gameplay mechanics in the battle portions of
-          fire emblem games is the class system: each character is able to
-          obtain a “class” that determines their abilities in battle, fighting
-          style, and role in combat. While some classes are accessible to all,
-          some classes can only be obtained by units of specific genders or even
-          by only a certain character. While new weapons and abilities have been
-          introduced over time, there are a set of core classes and archetypes
-          that have been maintained over the course of the series. We can see
-          the most prominently featured classes across the series in this graph.
+          One of the most notable gameplay mechanics in the battle portions of{" "}
+          <i>Fire Emblem</i> games is the{" "}
+          <Description tag="class">class system</Description>: each character is
+          able to obtain a “class” that determines their abilities in battle,
+          fighting style, and role in combat. While some classes are accessible
+          to all, some classes can only be obtained by units of specific genders
+          or even by only a certain character. While new weapons and abilities
+          have been introduced over time, there are a set of core classes and
+          archetypes that have been maintained over the course of the series. We
+          can see the most prominently featured classes across the series in
+          this graph.
           <br />
           <br />
           Each line of the graph represents the history of a single recurring

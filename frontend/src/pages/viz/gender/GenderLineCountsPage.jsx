@@ -6,6 +6,7 @@ import GenderLineCounts from "../../../visualizations/gender/GenderLineCounts";
 import getColor from "../../../utils/colors";
 
 import "./gender.css";
+import Description from "../../../components/articles/Description";
 
 function GenderLineCountsPage() {
   return (
@@ -19,13 +20,18 @@ function GenderLineCountsPage() {
         <GenderLineCounts />
         {/* </VizWrapper> */}
         <p>
-          How has the distribution of lines across genders changed across the
-          franchise’s history? In this area bar chart, you can see the line
-          percentages of each gender displayed for each game, with games on the
-          right being more recent. From FE12 onwards brings the introduction of
-          the Avatar character - a customizable player stand-in unit that can
-          appear either in their male or female incarnation. Hover over each bar
-          to see the line distribution percentage for a particular game.
+          How has the distribution of lines among genders changed across the
+          series’ history? In this area chart, you can see the line percentages
+          of each gender displayed for each game, with games on the right being
+          more recent. From{" "}
+          <Description tag="FE12">
+            <i>New Mystery</i>
+          </Description>{" "}
+          onwards brings the introduction of the{" "}
+          <Description tag="avatar">Avatar character</Description> - a
+          customizable player stand-in unit that can appear either in their male
+          or female incarnation. Hover over each bar to see the line
+          distribution percentage for a particular game.
         </p>
       </div>
     </VizWrapper>

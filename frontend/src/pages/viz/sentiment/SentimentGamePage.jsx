@@ -45,14 +45,30 @@ function SentimentGamePage() {
         </select>
         <SentimentGame game={game} />
         <p>
-          Sentiment Analysis is a popular topic in the field of Natural Language
-          Processing, but most models have been trained on general data taken
-          from social media posts or daily conversations rather than media- and
-          genre- specific dialogue. After training a BERT model to categorize
-          dialogue lines across the corpus of Fire Emblem dialogue as conveying
-          positive, negative, or neutral emotion with 81% accuracy, I used the
-          model to predict the sentiment of each line of every chapter of each
-          game.
+          Sentiment Analysis is a popular topic in the field of{" "}
+          <a
+            href="https://www.ibm.com/topics/natural-language-processing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlight"
+          >
+            Natural Language Processing
+          </a>
+          , but most models have been trained on general data taken from social
+          media posts or daily conversations rather than media- and genre-
+          specific dialogue. After{" "}
+          <a
+            href="https://www.tensorflow.org/text/tutorials/classify_text_with_bert"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="highlight"
+          >
+            training a BERT model
+          </a>{" "}
+          to categorize dialogue lines across the corpus of <i>Fire Emblem</i>{" "}
+          dialogue as conveying positive, negative, or neutral emotion with 81%
+          accuracy, I used the model to predict the sentiment of each line of
+          every chapter of each game.
           <br />
           <br />
           The following bar graphs represent the polarity (positive/negative
@@ -62,11 +78,11 @@ function SentimentGamePage() {
           horizontal line represent the quantity of lines with positive emotions
           and bars below the line represent lines with negative emotions.
           Additionally, the curved line represents the overall sentiment journey
-          taken throughout a game - a lower value at a certain position of the
+          taken throughout a game - a lower value at a certain position on the
           graph means that the overall sentiment at that point in time was more
-          negative than at another point. You may notice that for almost all
-          chapters, the emotions present skew heavily negative - this is to be
-          expected for a series of games about wars!
+          negative. You might notice that for almost all games, the sentiment
+          curve skews heavily negative - this is to be expected for a series of
+          games about wars!
         </p>
       </div>
     </VizWrapper>

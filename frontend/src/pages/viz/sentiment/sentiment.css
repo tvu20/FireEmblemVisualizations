@@ -15,6 +15,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  --description-color: #dab26e;
 }
 
 .sentiment-page h1 {

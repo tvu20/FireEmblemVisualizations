@@ -25,8 +25,8 @@ function SentimentAcrossGamesPage() {
         </div>
         <p>
           How does sentiment change over the course of a game? Are there
-          similarities in the most positive or negative points in each game?
-          Each small multiple represents the sentiment trajectory of a game as
+          patterns in the sentiment curves throughout the series? Each small
+          multiple chart represents the sentiment trajectory of a game as
           tracked by the number of positive lines compared with the number of
           negative lines. A negative value means a lower overall sentiment and
           vice versa. There is also a combined graph with the average curve of
