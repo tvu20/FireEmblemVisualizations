@@ -44,11 +44,10 @@ function PairingPopups(props) {
       </div>
       <div className="rel-scroll-popup-container">
         <div className={`rel-scroll-popup ${id === 6 ? "visible" : ""}`}>
-          <p>Lilina: Roy... I'm sorry about the other day.</p>
-          <p>Roy: The other day?</p>
           <p>
-            Lilina: I was on some nostalgia trip, remember? We're in a war... Of
-            course things won't be the same...
+            Lilina: Roy... I'm sorry about the other day. I was on some
+            nostalgia trip, remember? We're in a war... Of course things won't
+            be the same...
           </p>
           <p>Roy: Well, some things will.</p>
           <p>Lilina: Like what?</p>
@@ -425,9 +424,9 @@ function PairingPopups(props) {
           <p>Robin: ...Probably not.</p>
           <p>
             Chrom: You see? And it's not just you, Robin. It's everyone like
-            you. I know going out there exposes me to danger, and I haven't
-            always been careful. But it's a risk I'm willing to take in order to
-            connect with the people. To forge bonds.
+            you. I know going out there exposes me to danger, but it's a risk
+            I'm willing to take in order to connect with the people. To forge
+            bonds.
           </p>
           <p>Robin: Bonds? Between who?</p>
           <p>
@@ -454,14 +453,9 @@ function PairingPopups(props) {
           <p>
             Chrom: Robin... I'm in love with you. I have been from the very
             first moment I laid eyes on you. I just didn't realize it until the
-            last little while.
-          </p>
-          <p>Robin: ......</p>
-          <p>
-            Chrom: Look, I know this is sudden. But I'm not trying to force you
-            into a decision, believe me. Whatever your answer, I shall abide by
-            it—no matter how painful. And come what may, we'll always be
-            friends. That I promise.
+            last little while. Whatever your answer, I shall abide by it—no
+            matter how painful. And come what may, we'll always be friends. That
+            I promise.
           </p>
           <p>
             Robin: This is... I'm sorry, Chrom, but this is impossible. The

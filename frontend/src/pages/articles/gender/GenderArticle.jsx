@@ -18,17 +18,34 @@ function GenderArticle() {
     <>
       <div className="gender-article">
         <div className="gender-intro banner">
-          <h1>The Evolution of GENDER REPRESENTATION Throughout the Series</h1>
+          <h1>The Evolution of Gender Representation Throughout the Series</h1>
           <section className="gender-intro-paragraphs">
             <p>
               Gender representation in video games is a widely studied topic in
-              the field of entertainment media, as video games have historically
-              been heavily male-dominated. Previous research on game content has
-              also shown that female characters are often portrayed differently
-              from male characters, but in story and in gameplay mechanics. In
-              this article, I will examine the evolution of how women have been
-              portrayed in the Fire Emblem series’ 20+ year history, and whether
-              there has been a significant change in gender representation.
+              the field of entertainment media, as video games have{" "}
+              <a
+                href="https://magazine.swe.org/gaming-sidebar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="highlight"
+              >
+                historically been heavily male-dominated.
+              </a>{" "}
+              Previous research on game content has also shown that female
+              characters are often{" "}
+              <a
+                href="https://www.edhec.edu/en/research-and-faculty/edhec-vox/gender-stereotypes-in-video-game-narratives"
+                className="highlight"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                portrayed differently from male characters, both in story and in
+                gameplay mechanics
+              </a>
+              . In this article, I will examine the evolution of how women have
+              been portrayed in the <i>Fire Emblem</i> series’ 20+ year history,
+              and whether there has been a significant change in gender
+              representation.
             </p>
           </section>
           <details>
@@ -148,27 +165,30 @@ function GenderArticle() {
           <p>
             <ul>
               <li>
-                When removing the line count data for games that are remakes of
-                early titles, there is actually a visible downwards trend in the
-                number of male spoken lines per game and a visible equalization
-                between the number of male and female lines.{" "}
+                <Description tag="FE12">
+                  <i>New Mystery of the Emblem</i>
+                </Description>{" "}
+                introduces the <Description tag="avatar">Avatar</Description>,
+                which can present as either male or female. If we examine the
+                total percentages of spoken lines throughout each game including
+                those attributed to the avatar, the percentage of female lines
+                does not significantly increase. However, if we remove the
+                avatar data, there is a trend of equalization between the
+                percentage of male and female lines, and this trend is quite
+                consistent among original titles in the series.{" "}
               </li>
               <li>
-                New Mystery introduces the Avatar, which can either be a male or
-                female character. If we only examine the total percentages of
-                spoken lines throughout each game with the inclusion of the
-                avatar’s lines, the percentage of female lines does not
-                significantly increase; however, if we remove the avatar data,
-                there is a trend of equalization between the percentage of male
-                and female lines, and this trend is quite consistent among
-                original titles in the series.{" "}
+                When removing the games that are remakes of earlier titles, the
+                amount of lines spoken by male and female characters displays a
+                trend of equalizing over time.
               </li>
             </ul>
           </p>
-          <p>
+          {/* <p>
+            So we 
             So when just evaluating the quantity of female appearances, there is
             a visible improvement overall.{" "}
-          </p>
+          </p> */}
         </div>
         <div className="gender-article-section-intro">
           <h2>Part 2: Quality of appearances</h2>

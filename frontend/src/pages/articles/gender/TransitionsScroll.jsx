@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
 import transitionsGray from "../../../assets/gender/transitions-bg.PNG";
+import Description from "../../../components/articles/Description";
 
 import "./gender.css";
 import "./transitions.css";
@@ -134,18 +135,7 @@ function TransitionsScroll() {
               src={transitionsGray}
               alt={"tester"}
             />
-            {/* <img
-              className={`gender-transitions-image gt-gray gt-step-${step}`}
-              src={transitionsGray}
-              alt={"tester"}
-            /> */}
             {createBackground()}
-            {/* <img
-              className={`gender-transitions-image gt-bars gt-step-${step}`}
-              src={transitionsBars}
-              alt={"tester"}
-            />{" "}
-            */}{" "}
           </div>
         </div>
         <Scrollama
@@ -157,12 +147,15 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  In Shadow Dragon and the Blade of Light, there were no
-                  female-female transitions, meaning that that there was not a
-                  single pair of subsequent dialogue lines between two female
-                  characters in the entire game. Male-female and female-male
-                  transitions occupied over 75% of the total transitions, with
-                  male-male taking the remainder.
+                  In{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>
+                  , there were no F-F transitions, meaning that that there was
+                  not a single pair of subsequent dialogue lines between two
+                  female characters in the entire game. M-F and F-M transitions
+                  occupied over 75% of the total transitions, with M-M taking
+                  the remainder.
                 </span>
               </div>
             </div>
@@ -171,12 +164,14 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  Gaiden is the first game to feature two female characters
-                  talking to each other. However, the amount of female-female
-                  transitions is still abysmally low compared to all of the
-                  other major categories: it is a third the amount of male-male
-                  transitions and occupies only 10% of all the transitions in
-                  the game.
+                  <Description tag="FE2">
+                    <i>Gaiden</i>
+                  </Description>{" "}
+                  is the first game to feature two female characters talking to
+                  each other. However, the amount of F-F transitions is still
+                  abysmally low compared to all of the other major categories:
+                  it is a third the amount of M-M transitions and occupies only
+                  10% of all the transitions in the game.
                 </span>
               </div>
             </div>
@@ -185,11 +180,17 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  For the next series of games, spanning from Mystery of the
-                  Emblem to Shadow Dragon, the transitions are generally split
-                  50:50 between single-gender (male-male, female-female)
-                  transitions and multiple gender (male-female, female-male)
-                  transitions.
+                  For the next series of games, spanning from{" "}
+                  <Description tag="FE3">
+                    <i>Mystery of the Emblem</i>
+                  </Description>{" "}
+                  to{" "}
+                  <Description tag="FE11">
+                    <i>Shadow Dragon</i>
+                  </Description>
+                  , the transitions are generally split 50:50 between
+                  single-gender (M-M, F-F) transitions and multiple gender (M-F,
+                  F-M) transitions.
                 </span>
               </div>
             </div>
@@ -198,9 +199,8 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  Within the multiple gender transitions, the split is fairly
-                  equal between male-female and female-male transitions
-                  throughout these games.
+                  Within the multi-gender transitions, the split is fairly equal
+                  between M-F and F-M transitions throughout these games.
                 </span>
               </div>
             </div>
@@ -209,11 +209,13 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  However, when looking at the single-gender transitions, the
-                  amount of male-male transitions completely dwarfs the amount
-                  of female-female. Radiant Dawn, the game with the closest
-                  ratio, still has three times the amount of male-male
-                  transitions as female-female.
+                  However, when looking at single-gender transitions, the amount
+                  of M-M transitions dwarfs the amount of F-F.{" "}
+                  <Description tag="FE10">
+                    <i>Radiant Dawn</i>
+                  </Description>
+                  , the game with the closest ratio, still has three times the
+                  amount of M-M transitions as F-F.
                 </span>
               </div>
             </div>
@@ -222,14 +224,20 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  New Mystery introduced the presence of the Avatar, a character
-                  that could present in male or female forms depending on the
-                  player. The amount of male-female and female-male transitions
-                  shrunk to accommodate this, but male-male transitions
-                  continued to dominate the game. Since New Mystery was a remake
-                  of an early title in the series, the majority of the game's
-                  dialogue was still taken from the heavily male-dominant
-                  transitions of FE1.
+                  <Description tag="FE12">
+                    <i>New Mystery</i>
+                  </Description>{" "}
+                  introduced the <Description tag="avatar">Avatar</Description>,
+                  a character that could present in male or female forms
+                  depending on the player. The amount of M-F and F-M transitions
+                  shrunk to accommodate this, but M-M transitions continued to
+                  dominate the game. Since <i>New Mystery</i> was a remake of an
+                  early title in the series, the majority of the game's dialogue
+                  was still taken from the heavily male-dominant transitions of{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>
+                  .
                 </span>
               </div>
             </div>
@@ -241,8 +249,16 @@ function TransitionsScroll() {
                   The importance of the avatar character has increased as they
                   have been featured in subsequent games. While avatar
                   transitions only made up less than a third of all transitions
-                  in New Mystery and Awakening, by fates, avatar transitions had
-                  increased to over 50% of all transitions.
+                  in <i>New Mystery</i> and{" "}
+                  <Description tag="FE13">
+                    <i>Awakening</i>
+                  </Description>
+                  , avatar transitions had increased to over 50% of all
+                  transitions in{" "}
+                  <Description tag="FE14">
+                    <i>Fates</i>
+                  </Description>
+                  .
                 </span>
               </div>
             </div>
@@ -252,13 +268,12 @@ function TransitionsScroll() {
               <div className="gender-character-tapewrapper">
                 <span>
                   We also start to see the effects of the avatar on other
-                  transition categories: Awakening was the first game in the
-                  series where the amount of female-female transitions was over
-                  half the amount of male-male, as all the transition
-                  percentages shrunk to accommodate for avatar dialogue. We see
-                  further equalization of the male-male, male-female,
-                  female-male, and female-female transitions in Fates, where the
-                  amount of each was within 10% of the others.
+                  transition categories: <i>Awakening</i> was the first game in
+                  the series where the amount of F-F transitions was over half
+                  the amount of M-M, as all the transition percentages shrunk to
+                  accommodate for avatar dialogue. We see further equalization
+                  of the M-M, M-F, F-M, and F-F transitions in <i>Fates</i>,
+                  where the amount of each was within 10% of the others.
                 </span>
               </div>
             </div>
@@ -268,15 +283,14 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  Over time, the presence of the avatar has caused the
-                  percentages of each transition category to equalize. In New
-                  Mystery, the first game featuring the avatar, male-male
-                  transitions still dominated the dialogue; however, by Fates,
-                  all eight transition categories are within 10% of each other,
-                  with avatar transitions comprising over 50% of all transitions
-                  in the game. If we count the avatar as (optionally) female,
-                  Fates is the first game in the series where there are more
-                  transitions featuring female characters than without.
+                  In <i>New Mystery</i>, the first game featuring the avatar,
+                  M-M transitions still dominate the dialogue.However, by{" "}
+                  <i>Fates</i>, all eight transition categories are within 10%
+                  of each other, with avatar transitions comprising over 50% of
+                  all transitions in the game. If we count the avatar as
+                  (optionally) female, <i>Fates</i> is the first game in the
+                  series where there are more transitions featuring female
+                  characters than without.
                 </span>
               </div>
             </div>
@@ -285,11 +299,14 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  We see a return to previous form in Echoes - since it is a
-                  fairly faithful adaptation of Gaiden, a very early game in the
-                  series, male-led transitions once again dominate the dialogue
-                  in the game - female-female transitions only make up 5% of the
-                  entire script!
+                  We see a return to the previous pattern in{" "}
+                  <Description tag="FE15">
+                    <i>Echoes</i>
+                  </Description>
+                  , since it is an adaptation of <i>Gaiden</i>, a very early
+                  game in the series. Male-led transitions once again dominate
+                  the dialogue in the game; F-F transitions only make up 5% of
+                  the entire script!
                 </span>
               </div>
             </div>
@@ -298,10 +315,13 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  However, the return of the avatar in Three Houses brings the
-                  equalization of transition categories again: the percentages
-                  of all eight transition variants within the game's script are
-                  within 5% of each other.
+                  The return of the avatar in{" "}
+                  <Description tag="FE16">
+                    <i>Three Houses</i>
+                  </Description>{" "}
+                  brings the equalization of transition categories again: the
+                  percentages of all eight transition variants within the game's
+                  script are within 5% of each other.
                 </span>
               </div>
             </div>
@@ -310,14 +330,10 @@ function TransitionsScroll() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  While the vast majority of dialogue transitions in games
-                  throughout the series have been male-dominated, the
-                  introduction of the avatar in recent games has led to a
-                  greater equalization of transition types. As the series
-                  continues to move towards the model of centralizing the avatar
-                  in the story while highlighting more female characters in the
-                  script, we will hopefully continue to see the amount of
-                  female-led transitions improve in future games.
+                  As the series continues to favor the model of centralizing the
+                  avatar in the story while highlighting more female characters
+                  in the script, we will hopefully continue to see the amount of
+                  female-led transitions grow in future games.
                 </span>
               </div>
             </div>

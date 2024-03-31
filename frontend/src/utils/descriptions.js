@@ -12,7 +12,7 @@ export const DESC = {
   FE3: {
     name: "Mystery of the Emblem",
     description:
-      "The third game in the series, released in 1994. Japan-exclusive title on the Super Famicom (SNES). Retelling and sequel of FE1.",
+      "The third game in the series, released in 1994. Japan-exclusive title on the Super Famicom (SNES). Retelling and sequel of Shadow Dragon and the Blade of Light (1990).",
   },
   FE4: {
     name: "Genealogy of the Holy War",
@@ -52,12 +52,12 @@ export const DESC = {
   FE11: {
     name: "Shadow Dragon",
     description:
-      "The eleventh game in the series, released in 2008. Released in Japan and in the West on the NintendoDS. Remake of FE1.",
+      "The eleventh game in the series, released in 2008. Released in Japan and in the West on the NintendoDS. Remake of Shadow Dragon and the Blade of Light (1990).",
   },
   FE12: {
     name: "New Mystery of the Emblem",
     description:
-      "The twelfth game in the series, released in 2010. Japan-exclusive title on the NintendoDS. Remake of FE3.",
+      "The twelfth game in the series, released in 2010. Japan-exclusive title on the NintendoDS. Remake of Mystery of the Emblem (1994).",
   },
   FE13: {
     name: "Awakening",
@@ -72,7 +72,7 @@ export const DESC = {
   FE15: {
     name: "Echoes: Shadows of Valentia",
     description:
-      "The fifteenth game in the series, released in 2017. Released in Japan and in the West on the Nintendo3DS. Remake of FE2.",
+      "The fifteenth game in the series, released in 2017. Released in Japan and in the West on the Nintendo3DS. Remake of Gaiden (1992).",
   },
   FE16: {
     name: "Three Houses",

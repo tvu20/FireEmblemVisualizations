@@ -11,17 +11,17 @@ function GenderPartThree() {
       <div className="gender-article-section-intro">
         <h2>Part 3: Representation in Gameplay</h2>
         <p>
-          One of the most notable gameplay mechanics in the battle portions of
-          fire emblem games is the <Description tag="class">class</Description>{" "}
-          system: each character is able to obtain a “class” that determines
-          their abilities in battle, fighting style, and role in combat. While
-          some classes are accessible to all, some classes can only be obtained
-          by units of specific genders or even by only a certain character.
-          While new weapons and abilities have been introduced over time, there
-          are a set of core classes and archetypes that have been maintained
-          over the course of the series. We can see the most prominently
-          featured classes across the series in this graph and how they have
-          evolved or stayed the same.
+          One of the most notable gameplay mechanics in the battle portions of{" "}
+          <i>Fire Emblem</i> games is the{" "}
+          <Description tag="class">class</Description> system: each character is
+          able to obtain a “class” that determines their abilities in battle,
+          fighting style, and role in combat. While some classes are accessible
+          to all, some classes can only be obtained by units of specific genders
+          or even by only a certain character. While new weapons and abilities
+          have been introduced over time, there are a set of core classes and
+          archetypes that have been maintained over the course of the series. We
+          can see the most prominently featured classes across the series in
+          this graph and how they have evolved or stayed the same.
         </p>
       </div>
       <div
@@ -52,15 +52,18 @@ function GenderPartThree() {
               feature more gender neutral classes.{" "}
             </li>
             <li>
-              Certain weapon types have historically more commonly been wielded
-              by certain genders. For example, Dancer has been an exclusively
-              female class for a long time, while many axe classes have
-              historically been male-only.{" "}
+              Certain weapon types have more commonly been wielded by certain
+              genders. For example, Dancer has been an exclusively female class
+              for a long time, while many axe classes have historically been
+              male-only.{" "}
             </li>
             <li>
               Pegasi have historically been linked to female-only classes, with
-              the first male pegasus riders only appearing in Fates (known as
-              Sky Knights instead).
+              the first male pegasus riders only appearing in{" "}
+              <Description tag="FE14">
+                <i>Fates</i>
+              </Description>{" "}
+              (known as Sky Knights instead).
             </li>
           </ul>
         </p>

@@ -61,10 +61,10 @@ function LordsOverview() {
           <div className="gender-step-single-col half-width">
             <div className="gender-character-tapewrapper">
               <span>
-                In the Fire Emblem series, the most important protagonists of
-                each game are known as the{" "}
+                In the <i>Fire Emblem</i> series, the most important
+                protagonists of each game are known as the{" "}
                 <Description tag="lord">Lords</Description>: characters that
-                force a game over when they die and have the strongest active
+                cause a game over when they die and have the strongest active
                 contributions to the game’s story.
               </span>
             </div>
@@ -84,14 +84,14 @@ function LordsOverview() {
                 female lords and 4{" "}
                 <Description tag="avatar">avatars</Description>. Excluding
                 duplicates across multiple games, there have been 13 unique male
-                lords compared to 6 unique female lords and 4 avatars.
+                lords, 6 unique female lords, and 4 avatars.
               </span>
             </div>
             <div className="gender-character-tapewrapper addendum">
               <span>
-                This means that every single game in the series has the option
-                of a male protagonist, while only 9 (slightly over half) of the
-                games has the option of a female protagonist!
+                Every single game in the series has the option of a male
+                protagonist, while only 9 (slightly over half) of the games has
+                the option of a female protagonist!
               </span>
             </div>
           </div>

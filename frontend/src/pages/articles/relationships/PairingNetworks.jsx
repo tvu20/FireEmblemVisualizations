@@ -31,38 +31,61 @@ function PairingNetworks() {
         <h2>Part 2: Pairing Networks</h2>
         <p>
           We will now turn to the representation of paired endings throughout
-          the series, and with it, the growing inclusion of LGBTQ+ romantic
-          content over the years. Paired endings represented the culmination of
-          the player’s efforts to build supports between characters: character
-          pairs could obtain up to three supports with increasing closeness,
-          known as C-, B-, and A- supports respectively. Certain character pairs
-          would receive a special ending description during the game’s credits
-          sequence describing how their endings matched up with each other.ering
-          algorithms, we can start to understand which sets of characters are
-          most closely linked and analyze the overall structures of the social
-          networks.
+          the series, and with it, the growing inclusion of queer romantic
+          content over the years. Paired endings represent the culmination of
+          the player’s efforts to build supports between characters. Character
+          pairs can obtain up to three support levels with increasing closeness,
+          known as C, B, and A supports respectively, and certain character
+          pairs can receive a special ending description during the game’s
+          credits sequence describing how their endings match up with each
+          other.
         </p>
         <p>
-          In this section, I will examine the network graphs between the
-          possible paired endings of each game in the series with this mechanic.
-          Notably, not all paired endings are romantic: many of them represent
-          other types of relationships, such as platonic or familial. While many
-          explicitly state the category in which they belong either through the
-          preceding support conversations or in the ending descriptions, there
-          are a few that lend themselves to varying interpretations. In
-          particular, there are various same-sex relationships throughout the
-          series that don’t explicitly discuss romance within the supports or
-          endings, but are implied to not be platonic to varying degrees.
+          This section examines the network graphs between the possible paired
+          endings of each game in the series with this mechanic. Notably, not
+          all paired endings are romantic: many of them represent other types of
+          relationships, such as platonic or familial. While most pairings
+          explicitly state the category in which they belong either in support
+          conversations or ending descriptions, there are a few that lend
+          themselves to different interpretations. In particular, there are
+          various same-sex relationships throughout the series that don’t
+          explicitly discuss romance within the supports or endings, but are
+          implied to not be platonic to varying degrees.
         </p>
         <p>
           The ambiguity of same-sex relationships and the presence of queer
-          coding within subtext has been an important topic studied by scholars
-          of queer history in media representation; many pieces of media
-          released during the timespan of Fire Emblem hinted at queer
-          relationships without explicitly confirming them in order to bypass
-          censorship issues while still providing queer fans relationships to
-          latch on to. In examining the text of Fire Emblem, we can identify if
-          - and when - the writers of various games may have attempted to do the
+          coding within subtext{" "}
+          <a
+            href="https://journals.sagepub.com/doi/full/10.1177/1329878X221077851"
+            className="highlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            has been an important topic studied by scholars of queer history in
+            media representation
+          </a>
+          ; many pieces of media released during the timespan of{" "}
+          <i>Fire Emblem</i>{" "}
+          <a
+            href="https://soar.suny.edu/bitstream/handle/20.500.12648/11725/6334_Lily_Urbank.pdf?sequence=1"
+            className="highlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hinted at queer relationships without explicitly confirming
+          </a>{" "}
+          them in order to bypass censorship issues while still providing queer
+          fans relationships to latch on to,{" "}
+          <a
+            href="https://intersectionsmagazine.org/post/the-art-of-queer-coding-in-mainland-china-part-one-the-untamed-chiu-yi-rachel-ngai"
+            className="highlight"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            a practice common in East Asian media
+          </a>
+          . In examining the text of<i> Fire Emblem</i>, we can identify if -
+          and when - the writers of various games may have attempted to do the
           same.
         </p>
       </section>
@@ -72,7 +95,9 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  <Description tag="FE4">Genealogy of the Holy War</Description>{" "}
+                  <Description tag="FE4">
+                    <i>Genealogy of the Holy War</i>
+                  </Description>{" "}
                   is the first game in the series to introduce inter-character
                   romances through the Love system: while character pairs did
                   not receive distinct ending descriptions, they could either
@@ -90,14 +115,13 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   This is an example of a special ending conversation between
-                  two characters who the player has formed a romance between.
-                  Notably in this conversation, the two characters do not
-                  explicitly declare their love for each other, but express that
-                  their greatest desire is to stay by each other’s side. This is
-                  a recurring trend that we will see in many supports going
-                  forwards - <i>Fire Emblem</i> loves having romantic endings
-                  where the characters desire to stay together after the war
-                  ends.
+                  two characters who have formed a romance in <i>Genealogy</i>.
+                  In this conversation, the two characters do not explicitly
+                  declare their love for each other, but express that their
+                  greatest desire is to stay by each other’s side. This is a
+                  recurring trend that we will see in many supports going
+                  forwards - <i>Fire Emblem</i> commonly highlights two
+                  characters' desire to stay together in romantic endings.
                 </span>
               </div>
             </div>
@@ -111,13 +135,8 @@ function PairingNetworks() {
                   characters being able to romance everyone else. The two
                   distinct pairs on either side of the large cluster represent
                   two pairings that are necessary for the advancement of the
-                  plot. In the second network graph, link constraints have been
-                  applied, meaning that the link length between each pair of two
-                  nodes in the network must be the same link. This allows for a
-                  better visualization of the individual relationships in the
-                  graph. We can notice that every relationship is romantic
-                  (represented by red lines), and always between a male and
-                  female character.
+                  plot. Every relationship is romantic (represented by red
+                  lines), and always between a male and female character.
                 </span>
               </div>
             </div>
@@ -127,7 +146,7 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   <Description tag="FE6">
-                    Fire Emblem: The Binding Blade
+                    <i>The Binding Blade</i>
                   </Description>{" "}
                   is the first entry in the series with a fully realized support
                   system with unlockable conversation tiers and paired endings.
@@ -146,11 +165,11 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   To denote a paired ending, the female character’s ending
-                  description card changes to include her relationship with Roy;
-                  notably, this always includes an explicit mention of marriage.
-                  Here is an example: Lilina, the main female character in{" "}
-                  <i>Binding Blade</i>, has a different ending depending on if
-                  she is married to Roy.
+                  description card in <i>Binding Blade</i> changes to include
+                  her relationship with Roy; notably, this always includes a
+                  mention of marriage. Here is an example: Lilina, a prominent
+                  character in <i>Binding Blade</i>, has a different ending
+                  depending on if she is married to Roy.
                 </span>
               </div>
             </div>
@@ -159,21 +178,23 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  <i>The Binding Blade</i> was the first game in the series to
-                  feature conversations that could be unlocked by reaching
-                  higher levels of supports between characters. We can see the
-                  development in the relationship between two characters through
-                  these conversations: for example, here is Roy and Lilina's
+                  <i>The Binding Blade</i> was the first game to feature
+                  conversations that could be unlocked by reaching higher levels
+                  of supports between characters. We can see the development in
+                  the relationship between two characters through these
+                  conversations: for example, here is Roy and Lilina's
                   conversation preceding their married ending.
                 </span>
               </div>
               <div className="rel-tapewrapper addendum">
                 <span>
                   Similar to the ending conversation in{" "}
-                  <Description tag="FE4">Genealogy</Description>, Roy and Lilina
-                  do not explicitly declare their love for each other, but they
-                  express the desire to stay together for the rest of their
-                  lives.{" "}
+                  <Description tag="FE4">
+                    <i>Genealogy</i>
+                  </Description>
+                  , Roy and Lilina do not explicitly declare their love for each
+                  other, but they express the desire to stay together for the
+                  rest of their lives.{" "}
                 </span>
               </div>
             </div>
@@ -195,17 +216,16 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   <Description tag="FE7">
-                    Fire Emblem: The Blazing Blade{" "}
+                    <i>The Blazing Blade</i>{" "}
                   </Description>{" "}
-                  introduced non-explicitly romantic paired endings to the
-                  series: for the first time, players could unlock paired
-                  endings for platonic or other types of relationships. Looking
-                  at the social network graph, we can see that more clear
-                  clusters between groups of people have started to form.
-                  However, romantic relationships still make up the vast
-                  majority of endings, and every female character that has a
-                  platonic option also has at least one romantic option to
-                  pursue.
+                  introduced non-romantic paired endings to the series: for the
+                  first time, players could unlock paired endings for different
+                  types of relationships. Looking at the social network graph,
+                  we can see that more clear clusters between groups of people
+                  have started to form. However, romantic relationships still
+                  make up the vast majority of endings, and every female
+                  character that has a platonic option also has at least one
+                  romantic option to pursue.
                 </span>
               </div>
             </div>
@@ -217,9 +237,9 @@ function PairingNetworks() {
                   For example, Lyn, the primary female protagonist of the game,
                   is able to have a paired ending with Florina, another
                   prominent female character in the game. However, the ending
-                  explicitly mentions that the two shared a lifelong friendship,
-                  while every other paired ending featuring one of the two
-                  mentioned romantic love or marriage in some form.
+                  states that the two shared a lifelong friendship, while every
+                  other paired ending featuring one of the two mentioned
+                  romantic love or marriage in some form.
                 </span>
               </div>
             </div>
@@ -229,16 +249,16 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   In contrast to the previous title, where only one character's
-                  ending card was changed, the ending cards of both characters
-                  in a pairing were replaced with a specific "paired" ending
-                  card, describing their lives together.
+                  ending card was changed, ending cards in <i>Blazing Blade</i>{" "}
+                  for both characters in a pairing were replaced with a specific
+                  "paired" ending card, describing their lives together.
                 </span>
               </div>
               <div className="rel-tapewrapper addendum">
                 <span>
                   Here we also see the first example of a romantic paired ending
                   where the characters do not end up together at the end of the
-                  story - Harken and Vaide, despite loving each other, part ways
+                  story - Harken and Vaida, despite loving each other, part ways
                   due to their different lives.
                 </span>
               </div>
@@ -281,8 +301,8 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  On the other hand, some supports show a very explicit
-                  confession of love.
+                  On the other hand, some supports depict a clear confession of
+                  love.
                 </span>
               </div>
             </div>
@@ -296,8 +316,7 @@ function PairingNetworks() {
                   the series. Both of these pairings are between two men, and
                   both explicitly mention friendship in their paired ending
                   cards. However, one of these pairings exhibits some patterns
-                  seen in other romantic support conversations, which we can see
-                  in their A-rank conversation.
+                  seen in other romantic pairs.
                 </span>
               </div>
             </div>
@@ -307,14 +326,14 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  In this conversation, Raven explicitly states that he will
-                  never marry and will be content with just having Lucius by his
-                  side. This mirrors the conversation dynamic that we have
-                  already seen between other established romantic pairings. In
-                  the paired ending, while it does not explicitly state that the
-                  two entered a relationship, there is a notable lack of any
-                  mention of wives or other partners for the two; additionally,
-                  they are the only possible paired options for each other.
+                  In their A-support conversation, Raven explicitly states that
+                  he will never marry and will be content with just having
+                  Lucius by his side. This mirrors the dynamic that we have
+                  already seen between established romantic pairings. In their
+                  paired ending, while not explicitly stating that the two
+                  entered a relationship, there is a notable lack of any mention
+                  of wives or other partners for the two; additionally, they are
+                  the only possible paired options for each other.
                 </span>
               </div>
             </div>
@@ -334,13 +353,16 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  In <Description tag="FE8">Sacred Stones</Description>,
-                  platonic endings are much more heavily featured than in
-                  previous games, both in relationships between two characters
-                  of the same or different genders. We also see the character
-                  relationships grow more interconnected: most characters are
-                  part of the same large branching cluster, with only a few
-                  individuals on the outside.
+                  In{" "}
+                  <Description tag="FE8">
+                    <i>Sacred Stones</i>
+                  </Description>
+                  , platonic endings are much more heavily featured than in
+                  previous games, both in same-gender and multiple-gender
+                  pairings. We also see that character relationships have become
+                  more interconnected: most characters are part of the same
+                  large branching cluster, with only a few individuals on the
+                  outside.
                 </span>
               </div>
             </div>
@@ -351,10 +373,10 @@ function PairingNetworks() {
                 <span>
                   Here are three paired endings belonging to Eirika, one of the
                   main protagonists, showcasing different dynamics: in one she
-                  is married to a male character, in a second she received a
+                  is married to a male character, in a second she receives a
                   platonic paired ending with another male character, and in the
                   last she receives a platonic paired ending with a female
-                  friend. Unlike the previous paired ending with Raven and
+                  character. Unlike the previous paired ending with Raven and
                   Lucius, here we see mention of both Eirika and Tana's
                   marriages and children.
                 </span>
@@ -366,13 +388,27 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   The Tellius duology, comprised of{" "}
-                  <Description tag="FE9">Path of Radiance</Description> and{" "}
-                  <Description tag="FE10">Radiant Dawn</Description>, became the
-                  subject of controversy and speculation among its players soon
-                  after its release: there was heavy debate over whether the
-                  writers had intended on providing queer subtext for various
-                  characters in the duology, including the main protagonist.
-                  Let’s break it down!
+                  <Description tag="FE9">
+                    <i>Path of Radiance</i>
+                  </Description>{" "}
+                  and{" "}
+                  <Description tag="FE10">
+                    <i>Radiant Dawn</i>
+                  </Description>
+                  , became the{" "}
+                  <a
+                    href="https://www.koopatv.org/2023/06/ike-from-fire-emblem-is-not-gay.html#:~:text=A%20portion%20of%20the%20Fire,Ike%20is%20his%20whole%20world."
+                    className="highlight"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    subject of intense controversy and speculation among its
+                    players
+                  </a>{" "}
+                  soon after its release: there was heavy debate over whether
+                  the writers had intended on providing queer subtext for
+                  various characters in the duology, including the main
+                  protagonist. Let’s break it down!
                 </span>
               </div>
             </div>
@@ -381,11 +417,19 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  Firstly, although this is not reflected in a paired ending,{" "}
+                  Firstly, although not reflected in a paired ending,{" "}
                   <Description tag="FE10">Radiant Dawn</Description> features
-                  who is often considered to be the series’ first explicitly
-                  lesbian character, Heather, which was confirmed by the writers
-                  in an interview.
+                  who is often{" "}
+                  <a
+                    href="https://cohost.org/AlexisSara/post/3425637-diving-into-heather"
+                    className="highlight"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    considered to be the series’ first explicitly lesbian
+                    character , Heather
+                  </a>
+                  .
                 </span>
               </div>
             </div>
@@ -399,10 +443,12 @@ function PairingNetworks() {
                   either zero, one, or two paired endings, and each paired
                   ending in the game is between a male and a female character
                   barring one important exception. <i>Radiant Dawn</i> applies{" "}
-                  <Description tag="FE6">Binding Blade</Description>’s approach
-                  of changing one character's ending to mention the other,
-                  although this time the gender of the changed character’s
-                  ending varies.
+                  <Description tag="FE6">
+                    <i>Binding Blade</i>
+                  </Description>
+                  ’s approach of changing one character's ending to mention the
+                  other, although this time the gender of the changed
+                  character’s ending varies.
                 </span>
               </div>
             </div>
@@ -424,38 +470,42 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  Ike’s pairing with Soren has various other aspects throughout
-                  the duology that position it as a romantic pairing: it is
-                  comparable to other favored romantic pairings with main
-                  protagonists such as Roy/Lilina and Eliwood/Ninian:
-                  <ul>
-                    <li>
-                      <span>
-                        Their A-support conversation in{" "}
-                        <Description tag="FE9">Path of Radiance</Description> is
-                        confirmed to have occurred, since Ike knows information
-                        in <Description tag="FE10">Radiant Dawn</Description>{" "}
-                        that he only learned in that conversation.
-                      </span>
-                    </li>
-                    <li>
-                      <span>
-                        If you transfer their A-support to RD and keep their
-                        A-support, you can unlock a secret scene before the
-                        final battle revealing their childhood meeting.
-                      </span>
-                    </li>
-                    <li>
-                      <span>
-                        Soren's A-support dialogue Ike in{" "}
-                        <i>Path of Radiance</i> follows the notable trend across
-                        multiple titles in the series of romantic ending
-                        dialogues emphasizing the desire to stay by each other’s
-                        sides.
-                      </span>
-                    </li>
-                  </ul>
+                  Ike’s pairing with Soren has various aspects that hint at a
+                  romantic pairing, particularly similar to other favored
+                  romantic pairings with main protagonists such as Roy/Lilina
+                  and Eliwood/Ninian:
                 </span>
+                <ul>
+                  <li>
+                    <span>
+                      Their A-support conversation in{" "}
+                      <Description tag="FE9">
+                        <i>Path of Radiance</i>
+                      </Description>{" "}
+                      is confirmed to have occurred, since Ike knows information
+                      in{" "}
+                      <Description tag="FE10">
+                        <i>Radiant Dawn</i>
+                      </Description>{" "}
+                      that he only learned in that conversation.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      If you transfer their A-support to <i>Radiant Dawn</i> and
+                      keep their A-support, you can unlock a secret scene before
+                      the final battle revealing their first meeting.
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      Soren's A-support dialogue with Ike in{" "}
+                      <i>Path of Radiance</i> follows the trend across multiple
+                      titles in the series of romantic ending dialogues
+                      emphasizing the desire to stay by each other’s sides.
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </Step>
@@ -463,16 +513,20 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  Fire Emblem <Description tag="FE13">Awakening</Description>{" "}
+                  <Description tag="FE13">
+                    <i>Awakening</i>
+                  </Description>{" "}
                   marked the return of the children system from{" "}
-                  <Description tag="FE4">Genealogy</Description>, and thus the
-                  return of every character being able to marry every character
-                  barring particular exceptions. <i>Awakening</i> is one of the
-                  games in the series with the least explicitly queer content:
-                  characters can only marry those of the opposite gender, and
-                  even Robin (the <Description tag="avatar">Avatar</Description>
-                  ) is only able to romance characters of the opposite gender
-                  chosen for them.
+                  <Description tag="FE4">
+                    <i>Genealogy</i>
+                  </Description>
+                  , and thus the return of every character being able to marry
+                  every character barring narrative exceptions. <i>Awakening</i>{" "}
+                  is one of the games in the series with the least explicitly
+                  queer content: characters can only marry those of the opposite
+                  gender, and even Robin (the{" "}
+                  <Description tag="avatar">Avatar</Description>) is only able
+                  to romance characters of the opposite gender.
                 </span>
               </div>
             </div>
@@ -513,11 +567,11 @@ function PairingNetworks() {
                   remarkably similar to the supports network, with one
                   exception: the <Description tag="avatar">Avatar</Description>{" "}
                   is now divided into two different nodes representing the two
-                  character genders, creating a dual major cluster structure
-                  tied together by two Avatar central points and various other
-                  one-off relationships. With few exceptions, every character
-                  can marry every other character of a different gender,
-                  resulting in this highly interconnected graph.
+                  character genders, creating a dual cluster structure tied
+                  together by two Avatar central nodes and various other one-off
+                  relationships. With few exceptions, every character can marry
+                  every other character of a different gender, resulting in this
+                  highly interconnected graph.
                 </span>
               </div>
             </div>
@@ -526,15 +580,18 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  In 2015, <Description tag="FE14">Fates</Description> became
-                  the first game in the franchise to feature the inclusion of
-                  explicitly queer paired endings between characters. While the
-                  general structure of the pairing networks was similar to its
-                  predecessor, with most characters being able to romance all
-                  peers of a different gender, the{" "}
+                  In 2015,{" "}
+                  <Description tag="FE14">
+                    <i>Fates</i>
+                  </Description>{" "}
+                  became the first game in the series to feature the inclusion
+                  of explicitly queer paired endings between characters. While
+                  the general structure of the pairing networks was similar to
+                  its predecessor, with most characters being able to romance
+                  all peers of a different gender, the{" "}
                   <Description tag="FE14">Avatar</Description> (Corrin)
-                  character was given the ability to romance two particular
-                  characters regardless of gender presentation.
+                  character was given the ability to romance two characters
+                  regardless of gender presentation.
                 </span>
               </div>
             </div>
@@ -545,7 +602,7 @@ function PairingNetworks() {
                 <span>
                   Unlike in <i>Awakening</i>,{" "}
                   <Description tag="FE14">Corrin</Description>'s highest ranking
-                  support conversations with the two characters Niles and Rhajat
+                  support conversations with characters Niles and Rhajat
                   remained the same despite Corrin's gender. Here is Niles'
                   S-support conversation with both Male and Female Corrin.
                 </span>
@@ -582,15 +639,17 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   <Description tag="FE15">
-                    Echoes: Shadows of Valentia
+                    <i>Echoes: Shadows of Valentia</i>
                   </Description>{" "}
                   heavily updated the character relationships in its predecessor{" "}
-                  <Description tag="FE2">Gaiden</Description>, adding character
-                  supports and paired endings lacking from the original version.
-                  This was the first game in the series to feature a queer
-                  romantic interest between two non-main characters: one of the
-                  characters from the original game was rewritten to be queer in
-                  his support conversations.
+                  <Description tag="FE2">
+                    <i>Gaiden</i>
+                  </Description>
+                  , adding supports and paired endings lacking from the original
+                  version. This was the first game in the series to feature a
+                  queer romantic interest between two non-main characters: one
+                  of the characters from the original game was rewritten to be
+                  queer in his support conversations.
                 </span>
               </div>
             </div>
@@ -623,9 +682,12 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  Finally, <Description tag="FE16">Three Houses</Description>{" "}
+                  Finally,{" "}
+                  <Description tag="FE16">
+                    <i>Three Houses</i>
+                  </Description>{" "}
                   provides an earnest, if still somewhat flawed and lacking,
-                  attempt at representation! This game has the highest
+                  attempt at representation. This game has the highest
                   proportion of platonic paired endings to romantic paired
                   endings, as well as many endings that are worded ambiguously
                   enough to fall into either category. Unlike other entries in
@@ -640,8 +702,8 @@ function PairingNetworks() {
               <div className="rel-tapewrapper">
                 <span>
                   The majority of same-sex romantic relationships in the game
-                  feature the <Description tag="avatar">avatar</Description>,{" "}
-                  Byleth, and another character in the game. While Female Byleth
+                  feature the <Description tag="avatar">avatar</Description>{" "}
+                  Byleth and another character in the game. While Female Byleth
                   is able to marry five female characters, Male Byleth only has
                   one male marriage option in the base game and two more in the
                   form of <Description tag="DLC">DLC</Description>.
@@ -676,9 +738,12 @@ function PairingNetworks() {
             <div className="rel-scroller-step">
               <div className="rel-tapewrapper">
                 <span>
-                  Like <Description tag="FE15">Echoes</Description>,{" "}
-                  <i>Three Houses</i> also features a few romantic paired
-                  endings between characters not involving any of the main{" "}
+                  Like{" "}
+                  <Description tag="FE15">
+                    <i>Echoes</i>
+                  </Description>
+                  , <i>Three Houses</i> also features a few queer romantic
+                  pairings between characters not involving any of the main{" "}
                   <Description tag="lord">lords</Description>. All of these
                   pairings are exclusively between two female characters.
                 </span>
@@ -699,13 +764,19 @@ function PairingNetworks() {
                 <span>
                   In particular, the second example shown here between Linhardt
                   and Caspar mirrors Ike and Soren's paired ending from{" "}
-                  <Description tag="FE10">Radiant Dawn</Description>.
+                  <Description tag="FE10">
+                    <i>Radiant Dawn</i>
+                  </Description>
+                  .
                 </span>
               </div>
             </div>
           </Step>
           <Step data={41}>
-            <div className="rel-scroller-step">
+            <div
+              className="rel-scroller-step"
+              style={{ paddingBottom: "100px" }}
+            >
               <div className="rel-tapewrapper">
                 <span>
                   Structurally, <i>Three Houses</i>' network graph is an

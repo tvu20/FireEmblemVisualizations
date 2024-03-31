@@ -13,32 +13,30 @@ function RelationshipsArticle() {
       <div className="rel-article">
         <div className="rel-intro banner">
           <h1>
-            The Evolution of CHARACTER RELATIONSHIPS and QUEER REPRESENTATION
+            The Evolution of Character Relationships and Queer Representation
           </h1>
           <section className="rel-intro-paragraphs">
             <p>
               How do people form connections? The social structures and networks
               created by a series of individual relationships between people
               play an essential part of how we navigate the world today, but can
-              often be difficult to visualize and understand. For this reason,
-              we love imagining relationships between our favorite characters -
-              instead of the shallow, quantity-based, and commodified
-              connections that can manifest in real life, fictional pairings
-              allow us to imagine the close bonds between characters that we
-              love.
+              often be difficult to visualize and understand. Imagining the
+              fictional relationships between our favorite characters allows us
+              to both immerse ourselves in the world of the story and to explore
+              relationship and human dynamics that we may not fully understand
+              in real life.
             </p>
             <p>
               This is the philosophy behind the{" "}
               <Description tag="support">Support</Description> mechanics in the
-              Fire Emblem franchise: since each game has a large cast of
-              playable characters, the franchise uses the Support system to
-              present private conversations between pairs of characters in an
-              effort to keep players engaged with the characters of their
-              choosing while being an important strategic element of the battle
-              system. If characters spend enough time on the battlefield
-              together, they will unlock a “Support”, which will initiate a
-              conversation between them building their relationship while
-              providing gameplay bonuses.
+              <i>Fire Emblem</i> franchise: since each game has a large cast of
+              playable characters, the franchise uses the Support system to show
+              private conversations between pairs of characters in an effort to
+              keep players engaged with characters of their choosing while being
+              an important strategic element of the gameplay. If characters
+              spend enough time on the battlefield together, they will unlock a
+              “Support”, which will initiate a conversation between them and
+              provide gameplay bonuses.
             </p>
             <p>
               The specifics of the Support system have changed over the
@@ -49,11 +47,11 @@ function RelationshipsArticle() {
               where they will ride off into the sunset as dictated by the game’s
               ending credits. Additionally, not all pairings are romantically
               inclined: some are between siblings, or close friends, or… perhaps
-              worded so ambiguously the audience can’t tell? In this article, I
-              will explore the various types of social networks present in the
-              series; examining how these relationships between characters have
-              changed over time and the evolution of same-sex pairing
-              representation.
+              worded ambiguously so the audience can imagine it themselves. In
+              this article, I will explore the various types of social networks
+              present in the series: examining how relationships between
+              characters have changed over time and the evolution of same-sex
+              pairing representation.
             </p>
           </section>
         </div>

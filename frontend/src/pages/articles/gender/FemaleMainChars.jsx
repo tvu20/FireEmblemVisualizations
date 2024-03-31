@@ -78,8 +78,8 @@ function FemaleMainChars() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  Out of these women, five of them are considered as family
-                  members to a main lord in their own games.
+                  Out of these women, five of them are considered as family by a
+                  main lord in their own games.
                 </span>
               </div>
             </div>
@@ -88,8 +88,8 @@ function FemaleMainChars() {
             <div className="gender-step-single-col">
               <div className="gender-character-tapewrapper">
                 <span>
-                  Out of these women, three of them are considered primary love
-                  interests to the main lord.
+                  Out of these women, three of them are primary love interests
+                  for a male lord.
                 </span>
               </div>
             </div>

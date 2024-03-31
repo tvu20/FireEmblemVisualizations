@@ -14,6 +14,13 @@ function GenderPartFour() {
           quantity of transitions between each type of character gender, we can
           examine the evolution of female-led transitions throughout the series.
         </p>
+        <p>
+          In this section, we will examine the frequency and distribution of
+          transitions across three character categories: male, female, and
+          avatar. The transitions will be denoted with letters to represent the
+          character category and in order of speaker: for example, M-F
+          represents a male-female transition.
+        </p>
       </div>
 
       <TransitionsScroll />

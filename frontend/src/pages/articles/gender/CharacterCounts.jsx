@@ -83,7 +83,7 @@ function CharacterCounts() {
                 <span>
                   Each original entry in the series following{" "}
                   <Description tag="FE12">
-                    New Mystery of the Emblem
+                    <i>New Mystery of the Emblem</i>
                   </Description>{" "}
                   featured an <Description tag="avatar">Avatar</Description>{" "}
                   character who could potentially also count as female
@@ -98,8 +98,13 @@ function CharacterCounts() {
                 <span>
                   This means that if a female avatar is selected, players can
                   actually achieve a roster of over 50% female characters in{" "}
-                  <Description tag="FE14">Fates</Description> and{" "}
-                  <Description tag="FE13">Awakening.</Description>
+                  <Description tag="FE14">
+                    <i>Fates</i>
+                  </Description>{" "}
+                  and{" "}
+                  <Description tag="FE13">
+                    <i>Awakening.</i>
+                  </Description>
                 </span>
               </div>
             </div>
@@ -129,9 +134,8 @@ function CharacterCounts() {
               <div className="gender-character-tapewrapper">
                 <span>
                   The maximum percentage of female NPCs within any single game
-                  is 19.5%, attributed to{" "}
-                  <Description tag="FE15">Echoes</Description>. The next highest
-                  percentage (18.75%) belongs to{" "}
+                  is 19.5% in <Description tag="FE15">Echoes</Description>. The
+                  next highest percentage (18.75%) belongs to{" "}
                   <Description tag="FE2">Gaiden,</Description> the original
                   version of <i>Echoes.</i> Both games feature a significant
                   subplot with a female enemy faction.
@@ -144,8 +148,8 @@ function CharacterCounts() {
               <div className="gender-character-tapewrapper">
                 <span>
                   Over half of the remaining games have female NPC percentages
-                  of below 10%, which has remained consistent over time. This
-                  number is so low because the majority of NPCs within each game
+                  of below 10%, and this has remained consistent over time. This
+                  number is so low because the majority of NPCs
                   are <Description tag="boss">bosses</Description> or other
                   enemy characters, and most bosses across the series are male.
                 </span>
