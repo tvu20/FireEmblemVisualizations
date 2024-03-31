@@ -1,16 +1,12 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
-import Description from "../../../components/articles/Description";
-
 import transitionsGray from "../../../assets/gender/transitions-bg.PNG";
-import transitionsBars from "../../../assets/gender/transitions-bars.png";
 
 import "./gender.css";
 import "./transitions.css";
 
-import { femaleMainCharacters, transitionImages } from "../../../utils/images";
-import { gameFullTitles } from "../../../utils/games";
+import { transitionImages } from "../../../utils/images";
 
 function TransitionsScroll() {
   const [step, setStep] = useState("0");

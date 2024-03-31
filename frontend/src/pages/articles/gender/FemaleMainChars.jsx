@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Scrollama, Step } from "react-scrollama";
 
-import Description from "../../../components/articles/Description";
-
 import "./gender.css";
 
 import { femaleMainCharacters } from "../../../utils/images";
-import { gameFullTitles } from "../../../utils/games";
 
 function FemaleMainChars() {
   const [step, setStep] = useState("");

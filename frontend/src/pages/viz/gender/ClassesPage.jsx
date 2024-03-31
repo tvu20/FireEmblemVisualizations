@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import VizWrapper from "../../../components/visualizations/VizWrapper";
-import TransitionsGame from "../../../visualizations/gender/TransitionsGame";
 
-import {
-  getGameShortenedTitles,
-  getGameTitles,
-  getYearFromCode,
-} from "../../../utils/games";
 import getColor from "../../../utils/colors";
 
 import "./gender.css";

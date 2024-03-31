@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-
-import Description from "../../../components/articles/Description";
+import React from "react";
 
 import "./gender.css";
-import ClassesTimeline from "../../../visualizations/gender/ClassesTimeline";
 import TransitionsScroll from "./TransitionsScroll";
 
 function GenderPartFour() {
