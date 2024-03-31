@@ -83,14 +83,27 @@ import s10 from "../assets/relationships/fe14-supports.png";
 import s11 from "../assets/relationships/fe15-supports.png";
 import s12 from "../assets/relationships/fe16-supports.png";
 
-import mm from "../assets/gender/mm.png";
-import mf from "../assets/gender/mf.png";
-import fm from "../assets/gender/fm.png";
-import ff from "../assets/gender/ff.png";
-import am from "../assets/gender/am.png";
-import ma from "../assets/gender/ma.png";
-import af from "../assets/gender/af.png";
-import fa from "../assets/gender/fa.png";
+import t1 from "../assets/gender/transitions-1.PNG";
+import t2 from "../assets/gender/transitions-2.PNG";
+import t3 from "../assets/gender/transitions-3.PNG";
+import t4 from "../assets/gender/transitions-4.PNG";
+import t5 from "../assets/gender/transitions-5.PNG";
+import t6 from "../assets/gender/transitions-6.PNG";
+import t7 from "../assets/gender/transitions-7.PNG";
+import t8 from "../assets/gender/transitions-8.PNG";
+import t9 from "../assets/gender/transitions-9.PNG";
+import t10 from "../assets/gender/transitions-10.PNG";
+import tnew from "../assets/gender/transitions-new.PNG";
+import tall from "../assets/gender/transitions-all.PNG";
+
+// import mm from "../assets/gender/mm.png";
+// import mf from "../assets/gender/mf.png";
+// import fm from "../assets/gender/fm.png";
+// import ff from "../assets/gender/ff.png";
+// import am from "../assets/gender/am.png";
+// import ma from "../assets/gender/ma.png";
+// import af from "../assets/gender/af.png";
+// import fa from "../assets/gender/fa.png";
 
 export const genderCharCounts = [
   gcc1,
@@ -344,4 +357,19 @@ export const supportImages = [
   s12,
 ];
 
-export const transitionImages = [mm, mf, fm, ff, ma, am, fa, af];
+// export const transitionImages = [mm, mf, fm, ff, ma, am, fa, af];
+
+export const transitionImages = [
+  t1,
+  t2,
+  t3,
+  t4,
+  t5,
+  t6,
+  t7,
+  t8,
+  t9,
+  t10,
+  tall,
+  tnew,
+];

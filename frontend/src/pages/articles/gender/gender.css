@@ -22,8 +22,10 @@
   padding: 100px 0 80px;
 }
 
-.gender-article-section-intro ul {
+.gender-article-section-intro ul,
+.gender-article-section-intro li {
   margin: 0;
+  font-size: 18px;
 }
 
 .gender-article-section-intro.left-aligned {
@@ -409,35 +411,37 @@
 }
 
 .gender-transitions-bg-container {
-  /* border: 1px solid red; */
   position: sticky;
   height: 100vh;
-  top: 0px;
+  top: 30px;
   left: 0px;
   display: flex;
   justify-content: center;
   transition: all 1.5s;
-  /* overflow-x: hidden; */
   overflow-x: scroll;
 }
 
 .gender-transitions-img-container {
-  position: absolute;
-  top: 0px;
-  height: 100vh;
-  left: 0px;
+  position: relative;
+  /* position: absolute; */
+  /* top: 0px; */
+  width: 90vw;
+  /* height: 100vh; */
+  /* left: 0px; */
   transition: 1s all;
 }
 
 .gender-transitions-image {
-  height: 100%;
+  width: 100%;
+  /* height: 100%; */
   position: absolute;
-  top: 0px;
-  height: 100vh;
+  top: 30px;
+  /* height: 100vh; */
   left: 0px;
   transition: 1s all;
 }
 
-.gender-transitions {
-  padding: 15px 0 0;
+.transition-scroll-legend {
+  position: absolute;
+  top: 0px;
 }
