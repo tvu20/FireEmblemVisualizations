@@ -15,7 +15,7 @@
 }
 
 .gender-article-section-intro {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
 
 .gender-intro.banner {
   min-height: 80vh;
-  text-align: center;
+  text-align: justify;
 }
 
 .gender-intro h1 {
@@ -68,6 +68,10 @@
 .gender-intro-paragraphs {
   max-width: 70vw;
   margin-top: 50px;
+}
+
+.gender-intro-paragraphs li {
+  font-size: 18px;
 }
 
 .gender-character-bg-container {

@@ -23,10 +23,11 @@
 
 .rel-intro.banner {
   min-height: 80vh;
-  text-align: center;
+  text-align: justify;
 }
 
 .rel-intro h1 {
+  max-width: 70vw;
   padding: 0 20px;
   margin: 50px 0 0px;
   text-align: center;

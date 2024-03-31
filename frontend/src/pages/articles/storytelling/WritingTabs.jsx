@@ -70,7 +70,12 @@ function WritingTabs(props) {
   return (
     <div className="writing-style-tabs">
       <ul className="writing-style-tabs-titles">{listTitles}</ul>
-      <div className="writing-style-tab-content">{listContent}</div>
+      <div
+        className="writing-style-tab-content"
+        style={{ paddingBottom: "20px", borderBottom: "1px solid black" }}
+      >
+        {listContent}
+      </div>
     </div>
   );
 }

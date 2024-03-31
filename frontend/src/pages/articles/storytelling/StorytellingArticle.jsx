@@ -58,7 +58,10 @@ function StorytellingArticle() {
 
         <WritingTabs />
 
-        <div className="story-article-section-intro">
+        <div
+          className="story-article-section-intro"
+          style={{ paddingTop: "10px" }}
+        >
           <p>
             These metrics suggest to us that while the overall complexity of the
             writing structure has increased over the series, the actual reading
@@ -147,7 +150,10 @@ function StorytellingArticle() {
           </p>
         </div>
 
-        <div className="story-article-section-intro">
+        <div
+          className="story-article-section-intro"
+          style={{ marginBottom: "100px" }}
+        >
           <h2>Part 3: Shifting Focus to Storytelling</h2>
           <p>
             Across different forms of media, certain common storytelling
@@ -157,6 +163,24 @@ function StorytellingArticle() {
             Emblem due to the script nature of its written textual content. In
             this section, we will look at two methods to determine what some of
             the most important moments are in each game’s narrative.
+          </p>
+          <p>
+            When analyzing a line of spoken text, emotion plays an important
+            role in helping us understand the meaning and intensity behind what
+            the speaker is saying. We can map the most heightened and important
+            emotional moments in a story by determining the amount of
+            emotionally charged lines in each chapter and to what extent this
+            amount changes over time. In order to map the emotions within each
+            line of dialogue spanning every game in the series, I developed a
+            machine learning model to predict an emotion label based on a piece
+            of text.
+          </p>
+          <p>
+            This model is familiar with six distinct emotion labels: joy,
+            sadness, anger, fear, surprise, and the “neutral” emotion, where the
+            speaker is conveying information without any emotional intent. We
+            can see how the model predicts each of these categories through the
+            following examples.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ import temp from "../../../assets/relationships/fe7-eliwood-supports.png";
 import PairingPopups from "./PairingPopups";
 
 function PairScroll(props) {
-  const [currentImage, setCurrentImage] = useState("");
+  const [currentImage, setCurrentImage] = useState(pairingImages[1]);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
   const onStepEnter = ({ data }) => {
