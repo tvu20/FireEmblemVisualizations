@@ -6,7 +6,7 @@ import "./dev.css";
 function DevScroll(props) {
   const { updateYear } = props;
   const [currentImage, setCurrentImage] = useState("");
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [, setCurrentStepIndex] = useState(0);
 
   const onStepEnter = ({ data }) => {
     setCurrentStepIndex(data.id);
