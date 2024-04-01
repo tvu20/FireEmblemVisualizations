@@ -28,7 +28,7 @@ function RelationshipsArticle() {
             </p>
             <p>
               This is the philosophy behind the{" "}
-              <Description tag="support">Support</Description> mechanics in the
+              <Description tag="support">Support</Description> mechanics in the{" "}
               <i>Fire Emblem</i> franchise: since each game has a large cast of
               playable characters, the franchise uses the Support system to show
               private conversations between pairs of characters in an effort to
@@ -59,44 +59,80 @@ function RelationshipsArticle() {
         <SocialNetworks />
 
         <PairingNetworks />
-        <p>
-          LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
-          Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
-          number of characters, words, sentences or paragraphs, and hit
-          generate! GENERATED LOREM IPSUM 3 PARAGRAPHS COPY Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque
-          viverra mauris in aliquam. Aliquam vestibulum morbi blandit cursus
-          risus at ultrices. Id semper risus in hendrerit. Vitae tortor
-          condimentum lacinia quis vel. Duis convallis convallis tellus id
-          interdum. Ullamcorper sit amet risus nullam. In hendrerit gravida
-          rutrum quisque non tellus orci. Placerat vestibulum lectus mauris
-          ultrices eros in cursus. Vestibulum sed arcu non odio euismod. Tellus
-          in hac habitasse platea dictumst vestibulum rhoncus. Scelerisque purus
-          semper eget duis at tellus at urna. Nisi est sit amet facilisis magna.
-          Elit ullamcorper dignissim cras tincidunt lobortis. Porta non pulvinar
-          neque laoreet suspendisse interdum consectetur. Accumsan sit amet
-          nulla facilisi morbi tempus iaculis urna id. Faucibus pulvinar
-          elementum integer enim neque volutpat ac. Eget gravida cum sociis
-          natoque penatibus et. Ullamcorper eget nulla facilisi etiam dignissim
-          diam. Nulla malesuada pellentesque elit eget. Justo eget magna
-          fermentum iaculis eu non diam phasellus vestibulum. Dolor sit amet
-          consectetur adipiscing elit duis tristique. Purus faucibus ornare
-          suspendisse sed nisi lacus sed viverra tellus. Feugiat in ante metus
-          dictum at tempor commodo ullamcorper a. Mauris ultrices eros in cursus
-          turpis massa tincidunt. Felis bibendum ut tristique et egestas quis
-          ipsum. A cras semper auctor neque. At varius vel pharetra vel turpis
-          nunc. Vel facilisis volutpat est velit egestas dui id ornare arcu. Eu
-          tincidunt tortor aliquam nulla facilisi. Vestibulum mattis ullamcorper
-          velit sed ullamcorper. Etiam dignissim diam quis enim lobortis. Dis
-          parturient montes nascetur ridiculus mus. At in tellus integer feugiat
-          scelerisque varius morbi enim nunc. Habitant morbi tristique senectus
-          et netus et malesuada fames ac. Amet mattis vulputate enim nulla
-          aliquet porttitor lacus. Justo nec ultrices dui sapien eget. Quam
-          lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
-          2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
-          GENERATORS SHARE THE LOREM WA SAI
-        </p>
+        <div className="gender-article-section-methods">
+          <h2>METHODS & NOTES</h2>
+          <p>
+            Character support data was scraped from{" "}
+            <a
+              href="https://fireemblemwiki.org/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fire Emblem Wiki
+            </a>{" "}
+            for all the games with the support system present. The support lists
+            were initially notated as adjacency matrices and then re-formatted
+            into nodes and links for the network graphs.
+          </p>
+          <p>
+            Character paired ending data and support conversations were sampled
+            from <i>Fire Emblem Wiki</i> and{" "}
+            <a
+              href="https://serenesforest.net/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Serenes Forest
+            </a>
+            . Each pairing, represented as a link in the social network, was
+            manually classified as either "romantic", "platonic", "familial", or
+            "ambiguous" based on verbage used in either the pair's highest
+            support conversation or their paired ending.{" "}
+          </p>
+          <p>
+            Any paired endings mentioning marriage or children were classified
+            as romantic, and any couples that confessed their love to each other
+            or made a similar declaration of romantic intent were categorized as
+            such. Paired endings that explicitly described the relationship
+            between two characters as “friendship” were classified as platonic.
+            Additionally, paired endings between two characters of a significant
+            age gap were also classified as platonic if the two characters were
+            not already related. The “ambiguous” label was reserved for pairings
+            that could plausibly be taken as romantic or platonic. This applied
+            to paired endings that did not describe the relationship between two
+            characters as a “friendship” but rather used terms such as
+            “partnership”, “close bond”, or described the two characters
+            choosing to spend the rest of their lives together with no mention
+            of other romantic relationships.{" "}
+          </p>
+          <p>
+            d3 was used in order to build the network graph simulations for this
+            article. In order to visualize the relative distance between each
+            node in the network,{" "}
+            <a
+              href="https://github.com/d3/d3-force"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              d3-force
+            </a>{" "}
+            was used to apply a force-based clustering algorithm to the graph.
+            This library uses Dwyer’s implementation to calculate the
+            force-directed graph layout, and uses Verlet integration for
+            particle positioning. The relative position of each node is
+            calculated using the sum of the forces acting on each node by all
+            other nodes, the force pulling or pushing between two linked nodes,
+            and the force pulling each node to a focal point. Variations of
+            these networks were created by normalizing the link lengths and
+            centering nodes of different gender categories to particular focal
+            points on the graph.
+          </p>
+          <p></p>
+        </div>
       </div>
       <Footer vertical={false} />
     </>

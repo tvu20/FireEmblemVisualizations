@@ -207,44 +207,64 @@ function GenderArticle() {
         <GenderPartThree />
 
         <GenderPartFour />
-        <p>
-          LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
-          Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
-          number of characters, words, sentences or paragraphs, and hit
-          generate! GENERATED LOREM IPSUM 3 PARAGRAPHS COPY Lorem ipsum dolor
-          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Eget nunc scelerisque
-          viverra mauris in aliquam. Aliquam vestibulum morbi blandit cursus
-          risus at ultrices. Id semper risus in hendrerit. Vitae tortor
-          condimentum lacinia quis vel. Duis convallis convallis tellus id
-          interdum. Ullamcorper sit amet risus nullam. In hendrerit gravida
-          rutrum quisque non tellus orci. Placerat vestibulum lectus mauris
-          ultrices eros in cursus. Vestibulum sed arcu non odio euismod. Tellus
-          in hac habitasse platea dictumst vestibulum rhoncus. Scelerisque purus
-          semper eget duis at tellus at urna. Nisi est sit amet facilisis magna.
-          Elit ullamcorper dignissim cras tincidunt lobortis. Porta non pulvinar
-          neque laoreet suspendisse interdum consectetur. Accumsan sit amet
-          nulla facilisi morbi tempus iaculis urna id. Faucibus pulvinar
-          elementum integer enim neque volutpat ac. Eget gravida cum sociis
-          natoque penatibus et. Ullamcorper eget nulla facilisi etiam dignissim
-          diam. Nulla malesuada pellentesque elit eget. Justo eget magna
-          fermentum iaculis eu non diam phasellus vestibulum. Dolor sit amet
-          consectetur adipiscing elit duis tristique. Purus faucibus ornare
-          suspendisse sed nisi lacus sed viverra tellus. Feugiat in ante metus
-          dictum at tempor commodo ullamcorper a. Mauris ultrices eros in cursus
-          turpis massa tincidunt. Felis bibendum ut tristique et egestas quis
-          ipsum. A cras semper auctor neque. At varius vel pharetra vel turpis
-          nunc. Vel facilisis volutpat est velit egestas dui id ornare arcu. Eu
-          tincidunt tortor aliquam nulla facilisi. Vestibulum mattis ullamcorper
-          velit sed ullamcorper. Etiam dignissim diam quis enim lobortis. Dis
-          parturient montes nascetur ridiculus mus. At in tellus integer feugiat
-          scelerisque varius morbi enim nunc. Habitant morbi tristique senectus
-          et netus et malesuada fames ac. Amet mattis vulputate enim nulla
-          aliquet porttitor lacus. Justo nec ultrices dui sapien eget. Quam
-          lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
-          2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
-          GENERATORS SHARE THE LOREM WA SAI
-        </p>
+        <div className="gender-article-section-methods">
+          <h2>METHODS & NOTES</h2>
+          <p>
+            To determine character counts, a list of characters appearing in
+            each game was scraped from{" "}
+            <a
+              href="https://fireemblemwiki.org/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fire Emblem Wiki
+            </a>{" "}
+            and categorized as either playable or NPC. Class data was also
+            collected during this scraping process.
+          </p>
+          <p>
+            In order to collect line count data, the full script of each game in
+            the dataset was collected and scraped from various sources including
+            Fire Emblem Wiki and{" "}
+            <a
+              href="https://serenesforest.net/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Serenes Forest
+            </a>
+            . Following collection of all the scripts, line counts for each
+            character in the game was tallied.
+          </p>
+          <p>
+            This article only categorizes characters as male, female, or player
+            chosen (the avatar character). This does not encompass anywhere near
+            all the gender identities that people identify with today, but is a
+            limitation of the data from the series’ history.
+          </p>
+          <p>
+            For each pair of dialogue in a game's script, the gender of the
+            first and second speaker were collected and tallied. This data was
+            used to build the transition graphs, which were constructed using a
+            Sankey graph in D3.{" "}
+          </p>
+          <p>
+            Fire Emblem{" "}
+            <Description tag="FE17">
+              <i>Engage</i>
+            </Description>{" "}
+            was excluded from this dataset, as at the time of data collection
+            the game's full script was not yet publically available.{" "}
+          </p>
+          <p>
+            This article only categorizes characters as male, female, or player
+            chosen (the avatar character). This does not encompass anywhere near
+            all the gender identities that people identify with today, but is a
+            limitation of the data from the series’ history.{" "}
+          </p>
+        </div>
       </div>
       <Footer vertical={false} />
     </>

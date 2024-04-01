@@ -86,6 +86,30 @@ function DevelopmentArticle() {
         </div>
 
         <DevTimeline />
+
+        <div className="gender-article-section-methods">
+          <h2>METHODS & NOTES</h2>
+          <p>
+            The information presented in this article was collected from a
+            variety of overview articles and developer interviews. All major
+            “advancements” were categorized into one of three categories based
+            on the primary motivation stated by the game developers.
+          </p>
+          <p>
+            All photos of Nintendo consoles are attributed to the{" "}
+            <a
+              href="https://commons.wikimedia.org/wiki/User:Evan-Amos"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Vanamo Online Game Museum on Wikimedia Commons
+            </a>
+            , created by user Evan-Amos. Photos of gameplay or promotional
+            material are taken from Wikipedia and in-game screenshots.
+          </p>
+        </div>
         {/* <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the

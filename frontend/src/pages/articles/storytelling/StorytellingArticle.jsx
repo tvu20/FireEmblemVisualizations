@@ -223,7 +223,7 @@ function StorytellingArticle() {
 
         {/* <CategoryTabs /> */}
 
-        <div className="story-article-section-intro">
+        {/* <div className="story-article-section-intro">
           <h2>Part 5: Complexity of Narrative and Target Demographic</h2>
           <p>
             We can see that every narrative shares the common characteristic of
@@ -231,8 +231,167 @@ function StorytellingArticle() {
             methods employed throughout the series to cater to different needs!
             Let’s see exactly why this is, based on the developers’ intentions.
           </p>
+        </div> */}
+        {/* <NarrativeCards /> */}
+        <div className="gender-article-section-methods">
+          <h2>METHODS & NOTES</h2>
+          <p>
+            In order to perform textual analysis on each of the games in the
+            series, the full script of each game in the dataset was collected
+            and scraped from various sources including{" "}
+            <a
+              href="https://fireemblemwiki.org/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Fire Emblem Wiki
+            </a>
+            ,{" "}
+            <a
+              href="https://serenesforest.net/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Serenes Forest
+            </a>
+            , and the localization efforts of various individuals. Since not all
+            games in the series have been officially localized into English,
+            translated versions of all the Japanese-only titles were collected
+            by scraping the script data from at least three different sources
+            and manually comparing them to ensure that no content was lost.
+            Following the collection of all the scripts, various forms of text
+            analysis were run on the scripts to analyze writing style metrics.
+          </p>
+          <p>
+            Word prevalence data was computed by{" "}
+            <a
+              href="https://tamu.libguides.com/c.php?g=1269483&p=9417812"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cross-referencing the words in the game scripts with the Google
+              Books Ngram Corpus.
+            </a>
+            This method was borrowed from{" "}
+            <a
+              href="<https://observablehq.com/@stvkas/prevalence-of-wordle-words>"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Steve Kasica on Observable
+            </a>
+            , who used a similar method to calculate the prevalence of words
+            used in Wordle.
+          </p>
+          <p>
+            Reading level/writing complexity was measured by calculating two
+            metrics for each game’s script: the average length of sentences and
+            the average number of characters per word. In addition to
+            calculating this for each game in the dataset, readability was
+            calculated for a variety of other sources as well. Most of the
+            pieces of prose writing used are in the public domain and were taken
+            from{" "}
+            <a
+              href="https://www.gutenberg.org/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Project Gutenberg
+            </a>
+            . Movie and play scripts used were publically available online. The
+            scripts of the video games featured in this chart were collected
+            from a variety of different sources, most commonly{" "}
+            <a
+              href="https://gamefaqs.gamespot.com/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GameFAQs
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://game-scripts-wiki.blogspot.com/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Game Scripts Wiki
+            </a>
+            .
+          </p>
+          <p>
+            To analyze the sentiment and emotion of each line in dialogue, I
+            trained two predictors: the first, known as the emotion predictor,
+            to classify a piece of text as one of six labels (joy, sadness,
+            anger, surprise, fear, neutral); and the second, known as the
+            polarity predictor, to classify text as one of three sentiment
+            labels (positive, negative, neutral). Training of the models was
+            performed using{" "}
+            <a
+              href="https://github.com/amaiya/ktrain?tab=readme-ov-file"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ktrain
+            </a>
+            , a lightweight wrapper for TensorFlow Keras, and the{" "}
+            <a
+              href="https://nbviewer.org/github/amaiya/ktrain/blob/develop/tutorials/tutorial-A3-huggingfacetransformers.ipynb"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hugging Face transformers library
+            </a>{" "}
+            for text classification. Training was performed in Google Colab
+            using a T4-GPU. Prior to training, approximately 4,000 arbitrarily
+            chosen lines of dialogue spanning all 16 games in the dataset were
+            labeled as one of the three polarity labels and one of the six
+            emotion labels. The set of labeled lines was split 80:20 into a
+            training and validation set. For each type of label, a transformer
+            model was trained and evaluated using the ktrain learner fit and
+            validate methods. Both predictors achieved over 75% accuracy on
+            unseen datapoints. Following this, the predictors were quantized and
+            then used to predict an emotion and sentiment label for each line of
+            dialogue in the dataaset. The ktrain predictor API was also used to
+            explain the label assignments for various inputs, highlighting which
+            words contributed the most to the label assignment and identifying
+            bias. Emotion and sentiment graphs were initially constructed using
+            d3 and then converted to reusable PNG files. Chapter summary data
+            was collected on Fire Emblem Wiki.{" "}
+          </p>
+          <p>
+            The 3-Act structure discussed in this article is based on{" "}
+            <a
+              href="https://www.jessicabrody.com/2022/08/what-is-save-the-cat-and-why-do-so-many-writers-love-it/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Save The Cat
+            </a>
+            , a commonly used story structure and plotting method used in many
+            Hollywood screenplays and novels. The 4-Act structure discussed in
+            this article is based off the{" "}
+            <a
+              href="https://www.jessicabrody.com/2022/08/what-is-save-the-cat-and-why-do-so-many-writers-love-it/"
+              className="highlight"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              4-Act Narrative Structure
+            </a>
+            , a modified form of the traditional Hollywood three-act that
+            emphasis symmetry in storytelling and focuses around a midpoint.{" "}
+          </p>
         </div>
-        <NarrativeCards />
       </div>
       <Footer vertical={false} />
     </>

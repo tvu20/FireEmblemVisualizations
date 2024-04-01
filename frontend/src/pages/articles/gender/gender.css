@@ -14,7 +14,8 @@
   --description-color: #c88eed;
 }
 
-.gender-article-section-intro {
+.gender-article-section-intro,
+.gender-article-section-methods {
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,32 @@
 .gender-article-section-intro h2,
 .gender-article-section-intro p {
   max-width: 70vw;
+}
+
+.gender-article-section-methods h2,
+.gender-article-section-methods p {
+  max-width: 70vw;
+}
+
+.gender-article-section-methods p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.gender-article-section-methods a,
+highlight {
+  background-position: 0 0.9rem !important;
+}
+
+.gender-article-section-methods a.highlight:hover {
+  background-position: 0 !important;
+}
+
+.gender-article-section-methods h2 {
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .gender-intro {
