@@ -12,7 +12,7 @@
 }
 
 .about-page__content {
-  margin: 100px 50px 80px 60px;
+  margin: 120px 50px 80px 60px;
   --description-color: #709ae6;
 }
 
@@ -40,4 +40,5 @@ li {
   flex: 35%;
   height: 100vh;
   overflow-y: scroll;
+  background-color: var(--main-color);
 }
