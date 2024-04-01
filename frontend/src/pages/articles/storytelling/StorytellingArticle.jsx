@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 import WritingTabs from "./WritingTabs";
-import NarrativeCards from "./NarrativeCards";
+// import NarrativeCards from "./NarrativeCards";
 
 import "./storytelling.css";
 import EmotionLabels from "./EmotionLabels";
