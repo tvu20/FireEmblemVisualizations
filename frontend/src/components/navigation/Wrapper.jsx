@@ -8,7 +8,7 @@ function Wrapper() {
   const { width } = useWindowDimensions();
 
   // console.log(width);
-  return <>{width > 750 ? <Outlet /> : <MobileBanner />}</>;
+  return <>{width > 800 ? <Outlet /> : <MobileBanner />}</>;
 }
 
 export default Wrapper;
