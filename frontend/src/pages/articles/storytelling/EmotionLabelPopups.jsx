@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./storytelling.css";
-import Description from "../../../components/articles/Description";
+// import Description from "../../../components/articles/Description";
 
 function EmotionLabelPopups(props) {
   const { id } = props;

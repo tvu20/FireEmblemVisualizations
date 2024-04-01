@@ -52,7 +52,6 @@ function WordPrevalence(props) {
       .append("div")
       .attr("class", "examples")
       .style("opacity", 0);
-    let enterTimeout, leaveTimeout;
 
     // can be sliders later
     // const domainMax = 50e-5;

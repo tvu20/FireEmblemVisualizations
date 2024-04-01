@@ -74,10 +74,10 @@ function EmotionChapter(props) {
       .outerRadius(radius * 0.8)
       .innerRadius(radius * 0.4);
 
-    const outerArc = d3
-      .arc()
-      .innerRadius(radius * 0.9)
-      .outerRadius(radius * 0.9);
+    // const outerArc = d3
+    //   .arc()
+    //   .innerRadius(radius * 0.9)
+    //   .outerRadius(radius * 0.9);
 
     g.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
