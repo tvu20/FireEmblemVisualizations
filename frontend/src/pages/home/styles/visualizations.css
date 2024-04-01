@@ -1,7 +1,8 @@
 .home-viz {
   color: white;
   text-align: center;
-  margin: 50px 30px;
+  margin: 50px 30px 0;
+  padding-bottom: 100px;
 }
 
 .home-viz h2 {

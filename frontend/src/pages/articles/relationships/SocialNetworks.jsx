@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Scrollama, Step } from "react-scrollama";
+import { Step } from "react-scrollama";
 
 import Description from "../../../components/articles/Description";
 import RelScroll from "./RelScroll";
@@ -9,7 +9,6 @@ import "./relationships.css";
 function SocialNetworks() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
 
   const onStepExit = ({ data, direction }) => {
     if (data.id === "end" && direction === "down") {

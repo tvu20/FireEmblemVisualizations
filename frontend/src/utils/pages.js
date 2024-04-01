@@ -16,6 +16,10 @@ import bar from "../assets/viz/bar.png";
 import story from "../assets/viz/story.png";
 import cl from "../assets/viz/classes.png";
 
+import gender from "../assets/viz/gender-thumbnail.PNG";
+import rel from "../assets/viz/rel-thumbnail.PNG";
+import storytell from "../assets/viz/story-thumbnail.PNG";
+
 const visualizations = [
   {
     name: "Gender and Line Counts",
@@ -111,10 +115,30 @@ const visualizations = [
 
 export const getArticles = () => {
   return [
-    { name: "Gender", url: "/article/gender" },
-    { name: "Relationships", url: "/article/relationships" },
-    { name: "Storytelling", url: "/article/storytelling" },
-    { name: "Development", url: "/article/development" },
+    {
+      name: "Gender",
+      url: "/article/gender",
+      desc: "How has the representation of female characters and gender changed throughout the series? ",
+      thumbnail: gender,
+    },
+    {
+      name: "Relationships",
+      url: "/article/relationships",
+      desc: "How have the relationship networks between characters changed over time, and how has this been impacted by the inclusion of queer characters?",
+      thumbnail: rel,
+    },
+    {
+      name: "Storytelling",
+      url: "/article/storytelling",
+      desc: "How has the writing in the series evolved from a style and storytelling standpoint? How do we tell a story, and how has this changed over time?",
+      thumbnail: storytell,
+    },
+    {
+      name: "Development",
+      url: "/article/development",
+      desc: "How have technological advancements, player accessibility, and target demographics changed the way developers approach creating games for the series? What mechanical aspects of the games have evolved over the series’ lifespan and why?",
+      thumbnail: gender,
+    },
   ];
 };
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Scrollama, Step } from "react-scrollama";
+import { Step } from "react-scrollama";
 
 import Description from "../../../components/articles/Description";
 import PairScroll from "./PairScroll";

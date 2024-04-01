@@ -89,3 +89,36 @@
   margin-top: 0;
   font-size: 38px;
 }
+
+.article-grid__item {
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.article-grid__item a {
+  text-decoration: none;
+  /* color: white; */
+  color: black;
+  height: 100%;
+}
+
+.article-grid__item img {
+  max-width: 100%;
+}
+
+.article-grid__item h6 {
+  font-weight: 700;
+  font-size: 25px;
+  font-family: var(--font-ibarra);
+  margin: 10px 0;
+}
+
+.article-grid__item p {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}

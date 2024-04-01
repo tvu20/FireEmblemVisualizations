@@ -9,7 +9,7 @@ import legend from "../../../assets/relationships/legend-colors.png";
 
 function RelScroll(props) {
   const [currentImage, setCurrentImage] = useState(supportImages[0]);
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [, setCurrentStepIndex] = useState(0);
 
   const onStepEnter = ({ data }) => {
     setCurrentStepIndex(data);

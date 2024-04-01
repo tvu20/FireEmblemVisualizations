@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./relationships.css";
-import Description from "../../../components/articles/Description";
 
 function PairingPopups(props) {
   const { id } = props;
