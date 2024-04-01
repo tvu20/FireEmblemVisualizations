@@ -1,0 +1,479 @@
+.gender-article {
+  background-image: var(--gender-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* background: #fcdee7; */
+  padding: 100px 0 50px;
+  /* padding: 100px 20px 50px; */
+  color: #301a1e;
+
+  --description-color: #c88eed;
+}
+
+.gender-article-section-intro,
+.gender-article-section-methods {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.gender-article-section-intro ul,
+.gender-article-section-intro li {
+  margin: 0;
+  font-size: 18px;
+}
+
+.gender-article-section-intro.left-aligned {
+  text-align: left;
+}
+
+.gender-article-section-intro h2,
+.gender-article-section-intro p {
+  max-width: 70vw;
+}
+
+.gender-article-section-methods h2,
+.gender-article-section-methods p {
+  max-width: 70vw;
+}
+
+.gender-article-section-methods p {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.gender-article-section-methods a,
+highlight {
+  background-position: 0 0.9rem !important;
+}
+
+.gender-article-section-methods a.highlight:hover {
+  background-position: 0 !important;
+}
+
+.gender-article-section-methods h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.gender-intro {
+  margin: 0 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gender-intro.banner {
+  min-height: 80vh;
+  text-align: justify;
+}
+
+.gender-intro h1 {
+  max-width: 70vw;
+  padding: 0 20px;
+  margin: 50px 0 0px;
+  text-align: center;
+}
+
+.gender-intro details {
+  width: 70vw;
+  text-align: left;
+}
+
+.gender-intro summary {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.gender-intro-paragraphs {
+  max-width: 70vw;
+  margin-top: 50px;
+}
+
+.gender-intro-paragraphs li {
+  font-size: 18px;
+}
+
+.gender-character-bg-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 15px 20px 0;
+  position: sticky;
+  top: 0;
+}
+
+.gender-character-counts,
+.gender-female-mainchars {
+  padding: 15px 50px 0;
+}
+
+.gender-character-image-container {
+  font-family: "Ibarra Real Nova", serif;
+  height: 24vh;
+  width: calc(100% * (1 / 4) - 10px - 1px);
+  /* margin: 10px 0; */
+  /* flex: 0 0 21%; */
+  /* margin: 10px 20px; */
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  opacity: 0.2;
+  transition: all 0.5s;
+}
+
+.gender-character-image-container img {
+  margin-top: 5px;
+  width: 80%;
+  height: 70%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.gender-character-image-container p {
+  margin: 10px 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gcc-step-1,
+#gcc-game-12.gcc-step-2,
+#gcc-game-13.gcc-step-2,
+#gcc-game-15.gcc-step-2,
+#gcc-game-11.gcc-step-3,
+#gcc-game-12.gcc-step-3,
+#gcc-game-13.gcc-step-3,
+#gcc-game-15.gcc-step-3,
+#gcc-game-12.gcc-step-4,
+#gcc-game-13.gcc-step-4,
+#gcc-game-1.gcc-npc-step-5,
+#gcc-game-14.gcc-npc-step-5,
+#gcc-game-0.gcc-npc-step-6,
+#gcc-game-3.gcc-npc-step-6,
+#gcc-game-4.gcc-npc-step-6,
+#gcc-game-5.gcc-npc-step-6,
+#gcc-game-6.gcc-npc-step-6,
+#gcc-game-7.gcc-npc-step-6,
+#gcc-game-10.gcc-npc-step-6,
+#gcc-game-11.gcc-npc-step-6,
+#gcc-game-12.gcc-npc-step-6,
+#gcc-game-13.gcc-npc-step-6 {
+  opacity: 1;
+}
+
+.gender-step-single-col {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gender-step-single-col.half-width {
+  width: 50vw;
+}
+
+.gcc-short-col {
+  height: 50vh;
+}
+
+.gender-character-tapewrapper {
+  max-width: 80vw;
+  z-index: 5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-align: center;
+  line-height: 2;
+}
+
+.gender-character-tapewrapper span {
+  padding: 14px 10px 11px;
+  box-shadow: 15px 0 transparent, -15px 0 transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: rgba(255, 226, 228, 0.85);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.gender-character-tapewrapper.addendum {
+  margin-top: 20px;
+  z-index: 0;
+}
+
+.gender-lord-overview {
+  padding: 15px 50px 0;
+}
+
+.gender-lordoverview-bg-container {
+  /* border: 1px solid blue; */
+  height: 0px;
+  padding: 15px 20px 0;
+  position: sticky;
+  top: 0;
+  transition: all 1s;
+}
+
+.gender-lordoverview-img-container {
+  /* border: 1px solid red; */
+  height: 15vh;
+  position: absolute;
+  /* position: absolute; */
+  /* top: 0px;
+  left: 10px; */
+  transition: all 1.5s;
+}
+
+.gender-lordoverview-img-container.glo-step-2 {
+  top: 50px;
+  left: 100px;
+}
+
+.gender-lordoverview-img-container img {
+  height: 100%;
+}
+
+.glo-gender-M.glo-step-3,
+.glo-gender-A.glo-step-3 {
+  opacity: 0.2;
+}
+
+/* FEMALE LORDS SECTION */
+
+.female-lords-explanation {
+  text-align: center;
+  margin: 0px;
+}
+
+.female-lords-explanation p {
+  position: relative;
+  top: 90px;
+}
+
+.female-lords-horizontal-scroll {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 90vh;
+
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+.female-lords-item {
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  padding: 1rem;
+  min-width: 80vw;
+  /* height: 100vh; */
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.female-lords-card {
+  width: 85%;
+  background-color: white;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  text-align: left;
+  padding: 50px 40px;
+
+  display: flex;
+}
+
+.female-lords-detail {
+  flex: 65%;
+}
+
+.female-lords-detail h3 {
+  font-family: "Yeseva One", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 35px;
+  margin: 0;
+  color: #873363;
+}
+
+.female-lords-detail h4 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.female-lords-detail h5 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #873363;
+  margin: 0;
+}
+
+.female-lords-detail p {
+  font-size: 14px;
+}
+
+.female-lords-images {
+  flex: 35%;
+  height: 100%;
+  /* width: 35%; */
+  margin-left: 30px;
+}
+
+.female-lords-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.gender-femalemain-bg-container {
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  transition: all 1.5s;
+}
+
+.gender-femalemain-image-container {
+  /* border: 1px solid blue; */
+  width: 80px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 1s;
+}
+
+.gender-femalemain-image-container img {
+  margin-top: 5px;
+  /* width: 80%; */
+  height: 60%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.gender-femalemain-image-container p {
+  margin: 10px 20px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gfm-step-2,
+.gfm-step-3,
+.gfm-step-4 {
+  opacity: 0.2;
+}
+
+.gfm-family.gfm-step-2,
+.gfm-love.gfm-step-3,
+.gfm-princess.gfm-step-4 {
+  opacity: 1;
+}
+
+.gender-line-tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gender-line-tabs-titles {
+  width: 80vw;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.gender-line-tab-content {
+  width: 80vw;
+  /* background-color: #f5f5f5; */
+  padding: 5px;
+  margin: 0;
+}
+
+.gender-line-tab-content img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.gender-line-tab-title {
+  /* font-family: "Ibarra Real Nova", serif; */
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: var(--box-shadow); */
+  display: inline-block;
+  padding: 10px 15px;
+  /* color: #c7c6c2; */
+  cursor: pointer;
+  margin: 0 8px 10px;
+  /* margin-left: 1px; */
+  box-sizing: border-box;
+}
+
+.gender-line-tab-title--active {
+  background-color: #f5f5f5;
+  color: #873363;
+  font-weight: 700;
+}
+
+.gender-transitions-bg-container {
+  position: sticky;
+  height: 100vh;
+  top: 30px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  transition: all 1.5s;
+  overflow-x: scroll;
+}
+
+.gender-transitions-img-container {
+  position: relative;
+  /* position: absolute; */
+  /* top: 0px; */
+  width: 90vw;
+  /* height: 100vh; */
+  /* left: 0px; */
+  transition: 1s all;
+}
+
+.gender-transitions-image {
+  width: 100%;
+  /* height: 100%; */
+  position: absolute;
+  top: 30px;
+  /* height: 100vh; */
+  left: 0px;
+  transition: 1s all;
+}
+
+.transition-scroll-legend {
+  position: absolute;
+  top: 0px;
+}

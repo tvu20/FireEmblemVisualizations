@@ -7,7 +7,7 @@ import MobileBanner from "../MobileBanner";
 function Wrapper() {
   const { width } = useWindowDimensions();
 
-  console.log(width);
+  // console.log(width);
   return <>{width > 750 ? <Outlet /> : <MobileBanner />}</>;
 }
 

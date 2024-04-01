@@ -13,11 +13,16 @@ function SentimentAcrossGamesCombined(props) {
   useEffect(() => {
     if (!data) return;
 
+    d3.selectAll(".sentimentacrossgames-leftchart > g").remove();
+
     // d3.selectAll("svg > *").remove();
 
     // set the dimensions and margins of the graph
     var margin = { top: 30, right: 30, bottom: 30, left: 30 },
-      width = 600 - margin.left - margin.right,
+      width =
+        (windowWidth < 1000 ? windowWidth * 0.8 : windowWidth * 0.4) -
+        margin.left -
+        margin.right,
       height = 400 - margin.top - margin.bottom;
 
     const sumstat = Object.keys(data).map((key) => ({
@@ -47,7 +52,25 @@ function SentimentAcrossGamesCombined(props) {
 
     // Add Y axis
     var y = d3.scaleLinear().domain([-100, 100]).range([height, 0]);
-    svg.append("g").call(d3.axisLeft(y));
+    svg
+      .append("g")
+      .call(d3.axisLeft(y))
+      .selectAll("text")
+      .style("visibility", "hidden");
+
+    svg
+      .append("g")
+      .attr("transform", `translate(20,${height - margin.bottom})`)
+      .call((g) =>
+        g
+          .append("text")
+          .attr("x", width - margin.right)
+          .attr("y", margin.bottom - 2)
+          .attr("fill", "currentColor")
+          .attr("font-size", "13px")
+          .attr("text-anchor", "end")
+          .text("Story progression →")
+      );
 
     // // color palette
     // var res = sumstat.map(function (d) {
@@ -125,7 +148,7 @@ function SentimentAcrossGamesCombined(props) {
 
   return (
     <>
-      <svg ref={ref} style={{ border: "1px solid red" }} />
+      <svg className="sentimentacrossgames-leftchart" ref={ref} />
     </>
   );
 }

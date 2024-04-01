@@ -45,7 +45,7 @@ function EmotionGame(props) {
           style={{ color: emotionColor[item] }}
         >
           <div className="flex-legend-item-square"></div>
-          <p>{item}</p>
+          <p style={{ margin: "0px" }}>{item}</p>
         </div>
       );
     });
@@ -58,8 +58,8 @@ function EmotionGame(props) {
     d3.selectAll(".emotion-label").remove();
 
     // const margin = { top: 20, right: 30, bottom: 20, left: 30 };
-    const width = 1000;
-    const height = 550;
+    const width = Math.min(windowWidth * 0.85, 1000);
+    const height = 600;
     const graphMargin = 40;
 
     const svg = d3
@@ -115,7 +115,7 @@ function EmotionGame(props) {
       d3.selectAll(".myArea").style("opacity", 0.2);
       d3.select(this)
         .style("opacity", 1)
-        .style("fill-opacity", 0.75)
+        .style("fill-opacity", 1)
         .style("transition", "opacity 0.3s")
         .style("stroke", (d) => emotionColor[d.key]);
     };
@@ -123,7 +123,7 @@ function EmotionGame(props) {
     const mouseleave = function (d) {
       d3.selectAll(".myArea")
         .style("opacity", 1)
-        .style("fill-opacity", 0.6)
+        .style("fill-opacity", 0.9)
         .style("stroke", "none");
     };
 
@@ -137,7 +137,7 @@ function EmotionGame(props) {
       .style("fill", function (d) {
         return emotionColor[d.key];
       })
-      .style("fill-opacity", 0.6)
+      .style("fill-opacity", 0.9)
       .attr("d", area)
       .style("opacity", 0)
       .on("mouseover", mouseover)

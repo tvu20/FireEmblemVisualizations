@@ -34,3 +34,9 @@ def get_gender_char_counts():
     f = open(os.path.join(app.root_path, "gender", "char_counts.json"), "r")
     response = json.load(f)
     return response
+
+@app.route('/api/gender/class-timeline')
+def get_class_timeline():
+    f = open(os.path.join(app.root_path, "gender", "class_timeline.json"), "r")
+    response = json.load(f)
+    return response

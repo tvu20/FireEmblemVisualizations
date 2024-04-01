@@ -1,0 +1,270 @@
+.gender-lordoverview-bg-container {
+  --top-margin: 5vh;
+  --row-one: 5vh;
+  --row-two: 20vh;
+  --row-three: 35vh;
+  --row-four: 50vh;
+  --row-five: 65vh;
+  --row-six: 80vh;
+  --col-one: 55vw;
+  --col-two: 65vw;
+  --col-three: 75vw;
+  --col-four: 85vw;
+
+  --last-col-one: 60vw;
+  --last-col-two: 70vw;
+  --last-col-three: 80vw;
+
+  --male-row-one: 5vh;
+  --male-row-two: 15vh;
+  --male-row-three: 25vh;
+  --male-row-four: 35vh;
+
+  --male-col-one: 60vw;
+  --male-col-two: 66.6vw;
+  --male-col-three: 73.3vw;
+  --male-col-four: 80vw;
+
+  --female-row-one: 50vh;
+  --female-row-two: 60vh;
+
+  --avatar-row: 80vh;
+}
+
+/* FIRST STEP */
+
+.glo-step-1 {
+  filter: grayscale(1);
+}
+
+#gender-lord-Marth.glo-step-1 {
+  top: var(--row-one);
+  left: var(--col-one);
+}
+
+#gender-lord-Alm.glo-step-1 {
+  top: var(--row-one);
+  left: var(--col-two);
+}
+
+#gender-lord-Celica.glo-step-1 {
+  top: var(--row-one);
+  left: var(--col-three);
+}
+
+#gender-lord-Sigurd.glo-step-1 {
+  top: var(--row-one);
+  left: var(--col-four);
+}
+
+#gender-lord-Seliph.glo-step-1 {
+  top: var(--row-two);
+  left: var(--col-one);
+}
+
+#gender-lord-Leif.glo-step-1 {
+  top: var(--row-two);
+  left: var(--col-two);
+}
+
+#gender-lord-Roy.glo-step-1 {
+  top: var(--row-two);
+  left: var(--col-three);
+}
+
+#gender-lord-Eliwood.glo-step-1 {
+  top: var(--row-two);
+  left: var(--col-four);
+}
+
+#gender-lord-Lyn.glo-step-1 {
+  top: var(--row-three);
+  left: var(--col-one);
+}
+
+#gender-lord-Hector.glo-step-1 {
+  top: var(--row-three);
+  left: var(--col-two);
+}
+
+#gender-lord-Eirika.glo-step-1 {
+  top: var(--row-three);
+  left: var(--col-three);
+}
+
+#gender-lord-Ephraim.glo-step-1 {
+  top: var(--row-three);
+  left: var(--col-four);
+}
+
+#gender-lord-Ike.glo-step-1 {
+  top: var(--row-four);
+  left: var(--col-one);
+}
+
+#gender-lord-Micaiah.glo-step-1 {
+  top: var(--row-four);
+  left: var(--col-two);
+}
+
+#gender-lord-Kris.glo-step-1 {
+  top: var(--row-four);
+  left: var(--col-three);
+}
+
+#gender-lord-Chrom.glo-step-1 {
+  top: var(--row-four);
+  left: var(--col-four);
+}
+
+#gender-lord-Robin.glo-step-1 {
+  top: var(--row-five);
+  left: var(--col-one);
+}
+
+#gender-lord-Lucina.glo-step-1 {
+  top: var(--row-five);
+  left: var(--col-two);
+}
+
+#gender-lord-Corrin.glo-step-1 {
+  top: var(--row-five);
+  left: var(--col-three);
+}
+
+#gender-lord-Byleth.glo-step-1 {
+  top: var(--row-five);
+  left: var(--col-four);
+}
+
+#gender-lord-Edelgard.glo-step-1 {
+  top: var(--row-six);
+  left: var(--last-col-one);
+}
+
+#gender-lord-Dimitri.glo-step-1 {
+  top: var(--row-six);
+  left: var(--last-col-two);
+}
+
+#gender-lord-Claude.glo-step-1 {
+  top: var(--row-six);
+  left: var(--last-col-three);
+}
+
+/* REMAINING STEPs */
+
+#gender-lord-Marth {
+  top: var(--male-row-one);
+  left: var(--male-col-one);
+}
+
+#gender-lord-Alm {
+  top: var(--male-row-one);
+  left: var(--male-col-two);
+}
+
+#gender-lord-Celica {
+  top: var(--female-row-one);
+  left: var(--male-col-one);
+}
+
+#gender-lord-Sigurd {
+  top: var(--male-row-one);
+  left: var(--male-col-three);
+}
+
+#gender-lord-Seliph {
+  top: var(--male-row-one);
+  left: var(--male-col-four);
+}
+
+#gender-lord-Leif {
+  top: var(--male-row-two);
+  left: var(--male-col-one);
+}
+
+#gender-lord-Roy {
+  top: var(--male-row-two);
+  left: var(--male-col-two);
+}
+
+#gender-lord-Eliwood {
+  top: var(--male-row-two);
+  left: var(--male-col-three);
+}
+
+#gender-lord-Lyn {
+  top: var(--female-row-one);
+  left: var(--male-col-two);
+}
+
+#gender-lord-Hector {
+  top: var(--male-row-two);
+  left: var(--male-col-four);
+}
+
+#gender-lord-Eirika {
+  top: var(--female-row-one);
+  left: var(--male-col-three);
+}
+
+#gender-lord-Ephraim {
+  top: var(--male-row-three);
+  left: var(--male-col-one);
+}
+
+#gender-lord-Ike {
+  top: var(--male-row-three);
+  left: var(--col-two);
+}
+
+#gender-lord-Micaiah {
+  top: var(--female-row-one);
+  left: var(--male-col-four);
+}
+
+#gender-lord-Kris {
+  top: var(--avatar-row);
+  left: var(--male-col-one);
+}
+
+#gender-lord-Chrom {
+  top: var(--male-row-three);
+  left: var(--col-three);
+}
+
+#gender-lord-Robin {
+  top: var(--avatar-row);
+  left: var(--male-col-two);
+}
+
+#gender-lord-Lucina {
+  top: var(--female-row-two);
+  left: var(--male-col-two);
+}
+
+#gender-lord-Corrin {
+  top: var(--avatar-row);
+  left: var(--male-col-three);
+}
+
+#gender-lord-Byleth {
+  top: var(--avatar-row);
+  left: var(--male-col-four);
+}
+
+#gender-lord-Edelgard {
+  top: var(--female-row-two);
+  left: var(--male-col-three);
+}
+
+#gender-lord-Dimitri {
+  top: var(--male-row-three);
+  left: var(--male-col-four);
+}
+
+#gender-lord-Claude {
+  top: var(--male-row-three);
+  left: 70vw;
+}

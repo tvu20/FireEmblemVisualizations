@@ -1,0 +1,234 @@
+.gt-curve {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.gt-step-1#gt-0 {
+  opacity: 1;
+}
+
+.gt-step-2#gt-1 {
+  opacity: 1;
+}
+
+.gt-step-3#gt-2 {
+  opacity: 1;
+}
+
+.gt-step-4#gt-4 {
+  opacity: 1;
+}
+
+.gt-step-5#gt-3 {
+  opacity: 1;
+}
+
+.gt-step-6#gt-11 {
+  opacity: 1;
+}
+
+.gt-step-7#gt-5 {
+  opacity: 1;
+}
+
+.gt-step-8#gt-6 {
+  opacity: 1;
+}
+
+.gt-step-9#gt-7 {
+  opacity: 1;
+}
+
+.gt-step-10#gt-8 {
+  opacity: 1;
+}
+
+.gt-step-11#gt-9 {
+  opacity: 1;
+}
+
+.gt-step-12#gt-10 {
+  opacity: 1;
+}
+
+/* LEGEND */
+
+.transition-legend-item {
+  transition: all 1s;
+}
+
+.transition-legend-item .flex-legend-item-square {
+  color: #c9b3bc;
+  transition: all 1s;
+}
+
+.transition-legend-item p {
+  color: #c9b3bc;
+  transition: all 1s;
+}
+
+#transition-mm.tlegend-step-1 .flex-legend-item-square,
+#transition-mm.tlegend-step-2 .flex-legend-item-square,
+#transition-mm.tlegend-step-3 .flex-legend-item-square,
+#transition-mm.tlegend-step-5 .flex-legend-item-square,
+#transition-mm.tlegend-step-6 .flex-legend-item-square,
+#transition-mm.tlegend-step-8 .flex-legend-item-square,
+#transition-mm.tlegend-step-9 .flex-legend-item-square,
+#transition-mm.tlegend-step-10 .flex-legend-item-square,
+#transition-mm.tlegend-step-11 .flex-legend-item-square,
+#transition-mm.tlegend-step-12 .flex-legend-item-square {
+  color: #5a89b9;
+}
+
+#transition-mm.tlegend-step-1 p,
+#transition-mm.tlegend-step-2 p,
+#transition-mm.tlegend-step-3 p,
+#transition-mm.tlegend-step-5 p,
+#transition-mm.tlegend-step-6 p,
+#transition-mm.tlegend-step-8 p,
+#transition-mm.tlegend-step-9 p,
+#transition-mm.tlegend-step-10 p,
+#transition-mm.tlegend-step-11 p,
+#transition-mm.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-mf.tlegend-step-1 .flex-legend-item-square,
+#transition-mf.tlegend-step-2 .flex-legend-item-square,
+#transition-mf.tlegend-step-3 .flex-legend-item-square,
+#transition-mf.tlegend-step-4 .flex-legend-item-square,
+#transition-mf.tlegend-step-6 .flex-legend-item-square,
+#transition-mf.tlegend-step-8 .flex-legend-item-square,
+#transition-mf.tlegend-step-9 .flex-legend-item-square,
+#transition-mf.tlegend-step-10 .flex-legend-item-square,
+#transition-mf.tlegend-step-11 .flex-legend-item-square,
+#transition-mf.tlegend-step-12 .flex-legend-item-square {
+  color: #8c6bb7;
+}
+
+#transition-mf.tlegend-step-1 p,
+#transition-mf.tlegend-step-2 p,
+#transition-mf.tlegend-step-3 p,
+#transition-mf.tlegend-step-4 p,
+#transition-mf.tlegend-step-6 p,
+#transition-mf.tlegend-step-8 p,
+#transition-mf.tlegend-step-9 p,
+#transition-mf.tlegend-step-10 p,
+#transition-mf.tlegend-step-11 p,
+#transition-mf.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-fm.tlegend-step-1 .flex-legend-item-square,
+#transition-fm.tlegend-step-2 .flex-legend-item-square,
+#transition-fm.tlegend-step-3 .flex-legend-item-square,
+#transition-fm.tlegend-step-4 .flex-legend-item-square,
+#transition-fm.tlegend-step-6 .flex-legend-item-square,
+#transition-fm.tlegend-step-8 .flex-legend-item-square,
+#transition-fm.tlegend-step-9 .flex-legend-item-square,
+#transition-fm.tlegend-step-10 .flex-legend-item-square,
+#transition-fm.tlegend-step-11 .flex-legend-item-square,
+#transition-fm.tlegend-step-12 .flex-legend-item-square {
+  color: #b87fc6;
+}
+
+#transition-fm.tlegend-step-1 p,
+#transition-fm.tlegend-step-2 p,
+#transition-fm.tlegend-step-3 p,
+#transition-fm.tlegend-step-4 p,
+#transition-fm.tlegend-step-6 p,
+#transition-fm.tlegend-step-8 p,
+#transition-fm.tlegend-step-9 p,
+#transition-fm.tlegend-step-10 p,
+#transition-fm.tlegend-step-11 p,
+#transition-fm.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-ff.tlegend-step-2 .flex-legend-item-square,
+#transition-ff.tlegend-step-3 .flex-legend-item-square,
+#transition-ff.tlegend-step-5 .flex-legend-item-square,
+#transition-ff.tlegend-step-6 .flex-legend-item-square,
+#transition-ff.tlegend-step-8 .flex-legend-item-square,
+#transition-ff.tlegend-step-9 .flex-legend-item-square,
+#transition-ff.tlegend-step-10 .flex-legend-item-square,
+#transition-ff.tlegend-step-11 .flex-legend-item-square,
+#transition-ff.tlegend-step-12 .flex-legend-item-square {
+  color: #c66a8e;
+}
+
+#transition-ff.tlegend-step-2 p,
+#transition-ff.tlegend-step-3 p,
+#transition-ff.tlegend-step-5 p,
+#transition-ff.tlegend-step-6 p,
+#transition-ff.tlegend-step-8 p,
+#transition-ff.tlegend-step-9 p,
+#transition-ff.tlegend-step-10 p,
+#transition-ff.tlegend-step-11 p,
+#transition-ff.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-ma.tlegend-step-6 .flex-legend-item-square,
+#transition-ma.tlegend-step-7 .flex-legend-item-square,
+#transition-ma.tlegend-step-9 .flex-legend-item-square,
+#transition-ma.tlegend-step-11 .flex-legend-item-square,
+#transition-ma.tlegend-step-12 .flex-legend-item-square {
+  color: #55a395;
+}
+
+#transition-ma.tlegend-step-6 p,
+#transition-ma.tlegend-step-7 p,
+#transition-ma.tlegend-step-9 p,
+#transition-ma.tlegend-step-11 p,
+#transition-ma.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-am.tlegend-step-6 .flex-legend-item-square,
+#transition-am.tlegend-step-7 .flex-legend-item-square,
+#transition-am.tlegend-step-9 .flex-legend-item-square,
+#transition-am.tlegend-step-11 .flex-legend-item-square,
+#transition-am.tlegend-step-12 .flex-legend-item-square {
+  color: #8ab47e;
+}
+
+#transition-am.tlegend-step-6 p,
+#transition-am.tlegend-step-7 p,
+#transition-am.tlegend-step-9 p,
+#transition-am.tlegend-step-11 p,
+#transition-am.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-fa.tlegend-step-6 .flex-legend-item-square,
+#transition-fa.tlegend-step-7 .flex-legend-item-square,
+#transition-fa.tlegend-step-9 .flex-legend-item-square,
+#transition-fa.tlegend-step-11 .flex-legend-item-square,
+#transition-fa.tlegend-step-12 .flex-legend-item-square {
+  color: #d87d5d;
+}
+
+#transition-fa.tlegend-step-6 p,
+#transition-fa.tlegend-step-7 p,
+#transition-fa.tlegend-step-9 p,
+#transition-fa.tlegend-step-11 p,
+#transition-fa.tlegend-step-12 p {
+  color: black;
+}
+
+#transition-af.tlegend-step-6 .flex-legend-item-square,
+#transition-af.tlegend-step-7 .flex-legend-item-square,
+#transition-af.tlegend-step-9 .flex-legend-item-square,
+#transition-af.tlegend-step-11 .flex-legend-item-square,
+#transition-af.tlegend-step-12 .flex-legend-item-square {
+  color: #d99e5e;
+}
+
+#transition-af.tlegend-step-6 p,
+#transition-af.tlegend-step-7 p,
+#transition-af.tlegend-step-9 p,
+#transition-af.tlegend-step-11 p,
+#transition-af.tlegend-step-12 p {
+  color: black;
+}

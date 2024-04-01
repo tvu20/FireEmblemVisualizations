@@ -169,7 +169,7 @@
     {
       "chapter": 25,
       "short": ["19: Mind", "control", "and death"],
-      "translate": 33,
+      "translate": 20,
       "name": "Chapter 19: Dragon's Gate",
       "description": "Eliwood and co. finally arrive at the Dragon’s Gate. Ninian is kidnapped by Ephidel, who then launches an attack on the party. At the end of the battle, Eliwood finds a mind-controlled Ninian and loses a close ally."
     },
@@ -183,7 +183,7 @@
     {
       "chapter": 43,
       "short": ["31:", "Final", "stand"],
-      "translate": 33,
+      "translate": 20,
       "name": "Chapter 31: Light",
       "description": "In their final battle, the party battles evil sorceror Nergal and the Fire Dragons. A beloved character is revived while another passes away at the end of the fight. "
     }
@@ -236,7 +236,7 @@
     {
       "chapter": 11,
       "short": ["11: Escape!"],
-      "translate": 7,
+      "translate": 20,
       "name": "Chapter 11: Blood Runs Red",
       "description": "The party attempts to escape by boat. Ike witnesses the racism and apathy of the civilians in the ocean harbour."
     },
@@ -273,14 +273,14 @@
     {
       "chapter": 30,
       "short": ["3E: Apocalypse"],
-      "translate": 7,
+      "translate": 20,
       "name": "Part 3, Endgame: From Pain, Awakening",
       "description": "Micaiah reveals the truth behind her actions and is asked to sacrifice Pelleas for the sake of their nation. Micaiah’s and Ike’s armies face off in a chaotic, violent showdown. The goddess Ashera is awakened by their actions and turns everyone to stone."
     },
     {
       "chapter": 38,
       "short": ["4E.1:", "Endgame", "begins"],
-      "translate": 33,
+      "translate": 20,
       "name": "Part 4, Endgame: Rebirth (Part 1)",
       "description": "Ike and company enter the Tower of Guidance, preparing for their final battles. They face off against the corrupt leaders of the nation of Begnion, and Micaiah frees her nation for once and for all."
     }
@@ -294,14 +294,14 @@
       "description": "Prince Marth is shocked to find himself surrounded by Gra soldiers, who have invaded his castle in the middle of the night. He is able to escape to a forest near his kingdom’s borders, but the rest of his family has been tragically murdered with the exception of his sister Elice, who has been taken hostage."
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "short": ["11: Seige", "of the palace"],
       "translate": 20,
       "name": "Chapter 11: Knorda Market",
       "description": "Princess Nyna recalls how her family was murdered by the empire. Marth initiates a siege of the palace."
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "short": ["19: Saving", "the dragon"],
       "translate": 20,
       "name": "Chapter 19: Manakete Princess",
@@ -425,7 +425,7 @@
     {
       "chapter": 21,
       "short": ["21:", "Long", "lost", "friend"],
-      "translate": 50,
+      "translate": 20,
       "name": "Chapter 21: Our Chosen Paths",
       "description": "Before the final battle, Dimitri and Byleth meet Edelgard at a neutral place, but are unable to reach an agreement about the future. Dimitri and Edelgard reminisce on their past as long-lost childhood friends. Byleth visits their father's grave."
     }
@@ -455,7 +455,7 @@
     {
       "chapter": 18,
       "short": ["18: Missile", "rain"],
-      "translate": 27,
+      "translate": 20,
       "name": "Chapter 18: The Golden Scheme",
       "description": "Claude’s army infiltrates Fort Merceus by disguising themselves as Imperial soldiers and opening the gates from the inside. The Death Knight, the commander of the fort, urges Claude’s allies to flee before ballistic missiles shoot down from the sky, obliterating the force. "
     }
@@ -485,7 +485,7 @@
     {
       "chapter": 18,
       "short": ["18:", "Last", "stand"],
-      "translate": 27,
+      "translate": 20,
       "name": "Chapter 18: Field of Revenge",
       "description": "Edelgard and Byleth march on Tailtean Plains and face off with Dimitri, who makes his last stand against Edelgard’s invasion. Dimitri’s retainer, Dedue, sacrifices himself by turning into a Demonic Beast. Dimitri blames his family’s massacre on Edelgard before being executed by her."
     }

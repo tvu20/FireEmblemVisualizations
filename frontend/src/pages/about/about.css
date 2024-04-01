@@ -1,0 +1,44 @@
+.about-page {
+  display: flex;
+}
+
+.about-page__left {
+  border-right: 1px solid white;
+  flex: 65%;
+  overflow-y: scroll;
+  height: 100vh;
+  background-color: var(--main-color);
+  color: white;
+}
+
+.about-page__content {
+  margin: 120px 50px 80px 60px;
+  --description-color: #709ae6;
+}
+
+.about-page__content h2 {
+  font-size: 40px;
+}
+
+.about-page__content h3 {
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.about-page__content p,
+li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-page__content li {
+  margin-bottom: 10px;
+}
+
+.about-page__right {
+  flex: 35%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: var(--main-color);
+}

@@ -1,3 +1,22 @@
+export const gameFullTitles = [
+  "Shadow Dragon and the Blade of Light (1990)",
+  "Gaiden (1992)",
+  "Mystery of the Emblem (1994)",
+  "Genealogy of the Holy War (1996)",
+  "Thracia 776 (1999)",
+  "The Binding Blade (2002)",
+  "The Blazing Blade (2003)",
+  "The Sacred Stones (2004)",
+  "Path of Radiance (2005)",
+  "Radiant Dawn (2007)",
+  "Shadow Dragon (2008)",
+  "New Mystery of the Emblem (2010)",
+  "Awakening (2012)",
+  "Fates (2015)",
+  "Echoes: Shadows of Valentia (2017)",
+  "Three Houses (2019)",
+];
+
 export const getGameTitles = () => {
   return [
     "FE1",
@@ -108,6 +127,9 @@ export const getGameShortenedTitleFromCode = (tag) => {
     FE14: "Fates",
     FE15: "Echoes",
     FE16: "Three Houses",
+    FE14B: "Fates: Birthright",
+    FE14C: "Fates: Conquest",
+    FE16A: "Three Houses (Azure Moon)",
   };
 
   if (tag in arr) {
@@ -158,6 +180,9 @@ export const getYearFromCode = (tag) => {
     FE14: "2015",
     FE15: "2017",
     FE16: "2019",
+    FE16AM: "2019",
+    FE16CF: "2019",
+    FE16VW: "2019",
   };
 
   return arr[tag];

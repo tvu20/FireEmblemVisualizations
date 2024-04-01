@@ -20,10 +20,8 @@ function WordPrevalence(props) {
 
     // set the dimensions and margins of the graph
     var margin = { top: 25, right: 60, bottom: 35, left: 60 };
-    const width = 800;
-    const height = 500;
-    //   width = 800 - margin.left - margin.right,
-    //   height = 700 - margin.top - margin.bottom;
+    const width = Math.min(windowWidth * 0.85, 1000);
+    const height = Math.max(width * 0.6, 500);
 
     const svg = d3
       .select(ref.current)
@@ -32,10 +30,6 @@ function WordPrevalence(props) {
       .attr("width", width)
       .attr("height", height)
       .attr("viewbox", [0, 0, width, height]);
-    //   .attr("width", width + margin.left + margin.right)
-    //   .attr("height", height + margin.top + margin.bottom)
-    //   .append("g")
-    //   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // ----------------
     // Create a tooltip
@@ -57,7 +51,7 @@ function WordPrevalence(props) {
       .select(ref.current)
       .append("div")
       .attr("class", "examples")
-      .style("display", "none");
+      .style("opacity", 0);
     let enterTimeout, leaveTimeout;
 
     // can be sliders later
@@ -116,9 +110,10 @@ function WordPrevalence(props) {
         g
           .append("text")
           .attr("x", width - margin.right)
-          .attr("y", margin.bottom - 2)
+          .attr("y", margin.bottom - 1)
           .attr("fill", "currentColor")
           .attr("text-anchor", "end")
+          .attr("font-size", "13px")
           .text("Prevalence →")
       );
 
@@ -141,6 +136,7 @@ function WordPrevalence(props) {
           .attr("y", 10)
           .attr("fill", "currentColor")
           .attr("text-anchor", "start")
+          .attr("font-size", "13px")
           .text("↑ Count")
       );
 
@@ -185,66 +181,34 @@ function WordPrevalence(props) {
       .data(bins)
       .call(drawBars("transparent"))
       .on("mouseenter", (event) => {
-        clearTimeout(enterTimeout);
-        clearTimeout(leaveTimeout);
-        enterTimeout = setTimeout(() => {
-          const bin = d3.select(event.target).datum();
-          const exampleWords = Array.from(
-            d3.group(bin, (d) => d.set),
-            ([key, val]) =>
-              val.sort((a, b) => d3.ascending(a.day, b.day)).slice(0, 10)
-          )
-            .reduce((prev, curr) => [...prev, ...curr])
-            .map((d) => ({
-              set: d.set,
-              word: d.word,
-            }));
+        const bin = d3.select(event.target).datum();
+        const exampleWords = Array.from(
+          d3.group(bin, (d) => d.set),
+          ([key, val]) =>
+            val.sort((a, b) => d3.ascending(a.day, b.day)).slice(0, 10)
+        )
+          .reduce((prev, curr) => [...prev, ...curr])
+          .map((d) => ({
+            set: d.set,
+            word: d.word,
+          }));
 
-          examples
-            .style("display", "block")
-            .html(tooltipTemplate(bin, exampleWords));
+        examples.style("opacity", 1).html(tooltipTemplate(bin, exampleWords));
 
-          const bbox = examples.node().getBoundingClientRect();
-          const x_mu = (xScale(bin.x0) + xScale(bin.x1)) / 2;
-          const leftExtent = x_mu - bbox.width / 2 - margin.left;
-          const point = (leftExtent > 0 ? 0.5 : x_mu / bbox.width) * 100 + 8;
-
-          examples
-            .transition(750)
-            .style(
-              "clip-path",
-              `polygon(0% 0%, 100% 0%, 100% 90%, ${
-                point - 5
-              }% 90%, ${point}% 100%, ${point + 5}% 90%, 0% 90%)`
-            )
-
-            // .style("left", )
-            .style(
-              "left",
-              `${
-                leftExtent > 0
-                  ? xScale(bin.x0) -
-                    bbox.width / 2 +
-                    (xScale(bin.x1) - xScale(bin.x0)) / 2
-                  : 0
-                //   ? (xScale(bin.x1) + xScale(bin.x0)) / 2 -
-                //     bbox.width / 2 +
-                //     xScale(bin.x1) -
-                //     xScale(bin.x0)
-                // (xScale(bin.x1) - xScale(bin.x0))
-                //   ? xScale(bin.x0) -
-                //     bbox.width / 2 +
-                //     (xScale(bin.x1) - xScale(bin.x0)) / 2
-                // 0
-              }px`
-            )
-            .style("top", yScale(bin.length) + 100 + "px");
-          // .style("top", `${yScale(bin.length) - bbox.height - 5}px`);
-        }, 250);
+        // const bbox = examples.node().getBoundingClientRect();
+        // const x_mu = (xScale(bin.x0) + xScale(bin.x1)) / 2;
+        // const leftExtent = x_mu - bbox.width / 2 - margin.left;
+        // const point = (leftExtent > 0 ? 0.5 : x_mu / bbox.width) * 100 + 8;
+      })
+      .on("mousemove", (event) => {
+        examples
+          .style("left", event.pageX + 20 + "px")
+          .style("top", event.pageY + "px");
       })
       .on("mouseleave", (event) => {
-        clearTimeout(enterTimeout);
-        leaveTimeout = setTimeout(() => examples.style("display", "none"), 250);
+        examples.style("opacity", 0);
+        // clearTimeout(enterTimeout);
+        // leaveTimeout = setTimeout(() => examples.style("display", "none"), 250);
       });
 
     // removes tooltip when leaving a page
@@ -269,7 +233,7 @@ function WordPrevalence(props) {
       });
   }, [game]);
 
-  return <div ref={ref} style={{ border: "1px solid red" }} />;
+  return <div ref={ref} style={{ marginBottom: "20px" }} />;
 }
 
 export default WordPrevalence;

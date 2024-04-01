@@ -1,6 +1,30 @@
 .characters-bar__container {
-  width: 90vw;
+  width: 60vw;
   overflow-x: auto;
   overflow-y: hidden;
   white-space: nowrap;
+}
+
+.characterbar-box {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.charInfo {
+  width: 25vw;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  padding: 30px 20px;
+}
+
+.charInfo img {
+  width: 100px;
+}
+.charInfo h1 {
+  margin-top: 10px;
+}
+.charInfo p {
+  margin: 0;
 }

@@ -63,16 +63,7 @@ function MostCommonWords(props) {
       .select("body")
       .append("div")
       .style("opacity", 0)
-      .attr("class", "tooltip mostcommonwords-tooltip")
-      .style("position", "absolute")
-      .style("top", 0)
-      .style("background-color", "white")
-      .style("border-radius", "5px")
-      .style("font-size", "14px")
-      .style(
-        "box-shadow",
-        "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-      );
+      .attr("class", "tooltip mostcommonwords-tooltip");
 
     // This function takes the output of 'layout' above and draw the words
     // Wordcloud features that are THE SAME from one word to the other can be here
@@ -118,12 +109,12 @@ function MostCommonWords(props) {
           .attr("font-weight", "bold");
 
         let tooltipContent =
-          `<span style="font-weight: bold; color: ${textColor(
+          `<span style="font-family: 'Ibarra Real Nova', serif; font-weight: 700; font-size: 18px; color: ${textColor(
             d.srcElement.__data__.pos
           )}">` +
           pos(d.srcElement.__data__.pos).toUpperCase() +
-          "</span> <br/><br/>" +
-          d.srcElement.__data__.samples.join("</p> <br /> <p>");
+          "</span> <br /><br/>" +
+          d.srcElement.__data__.samples.join("<br /> <br/>");
 
         const re = new RegExp(d.srcElement.__data__.text, "gi");
 
@@ -134,7 +125,7 @@ function MostCommonWords(props) {
           )}; color: white">$&</mark>`
         );
 
-        tooltip.html("<p>" + tooltipContent + "</p>").style("opacity", 1);
+        tooltip.html(tooltipContent).style("opacity", 1);
       }
 
       function handleMouseMove(d, i) {
@@ -196,7 +187,7 @@ function MostCommonWords(props) {
       });
   }, []);
 
-  return <svg ref={ref} style={{ border: "1px solid red" }} />;
+  return <svg ref={ref} />;
 }
 
 export default MostCommonWords;

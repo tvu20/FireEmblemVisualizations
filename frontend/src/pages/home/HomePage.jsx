@@ -4,6 +4,7 @@ import NavBar from "../../components/navigation/NavBar";
 import Footer from "../../components/navigation/Footer";
 
 import Visualizations from "./Visualizations";
+import Articles from "./Articles.jsx";
 
 import bannerLogo from "../../assets/banner-logo.png";
 import bannerImg from "../../assets/sprites-v1.png";
@@ -35,9 +36,23 @@ function HomePage() {
           />
         </div>
 
+        {/* <section
+          className="rel-timeline-intro left-aligned"
+          style={{ color: "white", fontWeight: 700 }}
+        >
+          <p>
+            A collection of visual essays and interactive data visualizations
+            examining the intersection between technology, culture,
+            storytelling, and video games through the lens of the Fire Emblem
+            series.
+          </p>
+        </section> */}
+
+        <Articles />
+
         <Visualizations />
 
-        <p>
+        {/* <p>
           LOREM IPSUM FONT GENERATOR IMAGES PLUGINS GENERATORS ENGLISH Lorem
           Ipsum Generator Generate Lorem Ipsum placeholder text. Select the
           number of characters, words, sentences or paragraphs, and hit
@@ -74,7 +89,7 @@ function HomePage() {
           lacus suspendisse faucibus interdum. Potenti nullam ac tortor vitae. ©
           2015 — 2023 PRIVACY POLICY SITEMAP FONT GENERATOR IMAGES PLUGINS
           GENERATORS SHARE THE LOREM WA SAI
-        </p>
+        </p> */}
       </div>
       <Footer vertical={false} />
       {/* <Footer vertical={true} /> */}

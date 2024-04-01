@@ -10,11 +10,16 @@ import "./characters.css";
 function CharacterBarPage() {
   return (
     <VizWrapper color={getColor("characters")} navColor={"#240607"}>
-      <div className="character-page characterbar">
-        <h1>Characters</h1>
-        <p>Some description here.</p>
+      <div className="article character-page characterbar">
+        <h1>Character Bar Chart</h1>
+        <p>See the full list of Fire Emblem characters.</p>
         <CharacterBar />
-        {/* </VizWrapper> */}
+        <p>
+          Who exactly are the characters that make up the casts of each game?
+          Scroll horizontally to see the full roster of playable characters
+          across each game, and click on a particular character’s icon to learn
+          more about them!
+        </p>
       </div>
     </VizWrapper>
   );

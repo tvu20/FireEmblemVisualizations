@@ -220,10 +220,15 @@ function GenderLineCounts() {
     const width = 470;
     const height = 600;
 
+    // const colors = {
+    //   m: d3.rgb(10, 195, 215),
+    //   f: d3.rgb(227, 123, 168),
+    //   a: d3.rgb(169, 103, 201),
+    // };
     const colors = {
-      m: d3.rgb(10, 195, 215),
-      f: d3.rgb(227, 123, 168),
-      a: d3.rgb(169, 103, 201),
+      m: d3.rgb(90,148,185),
+      f: d3.rgb(195,120,150),
+      a: d3.rgb(233,187,108),
     };
 
     const svg = d3
@@ -244,7 +249,7 @@ function GenderLineCounts() {
       //--------------------------- Distribution of each term in a 4x4 matrix
       const dots = group
         .append("g")
-        .style("border", "1px solid red")
+        // .style("border", "1px solid red")
         .attr("transform", function () {
           return "translate(" + 120 * col + "," + 150 * row + ")rotate(0)";
         });
@@ -253,6 +258,7 @@ function GenderLineCounts() {
       // only using pcs right now
 
       // I REVERSED ALL THE F AND M SO FEMALE WOULD BE ON THE BOTTOM
+      // const balls = value.npcs;
       const balls = value.pcs;
       const balls_per_row = 10;
       let balls_F = balls.M;
@@ -415,15 +421,21 @@ function GenderLineCounts() {
   }, []);
 
   return (
-    <>
-      <select id="selectButton">
-        <option value="fpc">Playable Characters</option>
-        <option value="npc">Non-Playable Characters</option>
-        <option value="combined">All Characters</option>
-      </select>
-      <svg ref={ref} style={{ border: "1px solid red" }} />
-      <svg ref={ref2} style={{ border: "1px solid red" }} />
-    </>
+    <div className="gendercharcounts-container">
+      <div className="gendercharcounts-leftchart">
+        <select
+          id="selectButton"
+          className="select-dropdown"
+          style={{ marginLeft: "50px" }}
+        >
+          <option value="fpc">Playable Characters</option>
+          <option value="npc">Non-Playable Characters</option>
+          <option value="combined">All Characters</option>
+        </select>
+        <svg ref={ref} />
+      </div>
+      <svg className="gendercharcounts-rightchart" ref={ref2} />
+    </div>
   );
 }
 

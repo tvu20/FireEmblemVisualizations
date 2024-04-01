@@ -13,6 +13,23 @@ function EmotionChapter(props) {
   const ref = useRef();
   const { width: windowWidth } = useWindowDimensions();
 
+  const showLegend = () => {
+    return ["neutral", "anger", "fear", "sadness", "surprise", "joy"].map(
+      (item, key) => {
+        return (
+          <div
+            className="flex-legend-item"
+            key={key}
+            style={{ color: emotionColor[item] }}
+          >
+            <div className="flex-legend-item-square"></div>
+            <p style={{ margin: "0px" }}>{item}</p>
+          </div>
+        );
+      }
+    );
+  };
+
   useEffect(() => {
     if (!data) return;
 
@@ -35,7 +52,6 @@ function EmotionChapter(props) {
       .attr("viewBox", [0, 0, width, height])
       .attr("width", width)
       .attr("height", height)
-      .attr("style", "max-width: 100%; height: auto; border: 1px solid red")
       .attr("id", "the-chart");
 
     const g = svg.append("g");
@@ -109,71 +125,71 @@ function EmotionChapter(props) {
 
       slice.exit().remove();
 
-      /* ------- TEXT LABELS -------*/
+      // /* ------- TEXT LABELS -------*/
 
-      const text = g.select(".labels").selectAll("text").data(pie(data), key);
+      // const text = g.select(".labels").selectAll("text").data(pie(data), key);
 
-      function midAngle(d) {
-        return d.startAngle + (d.endAngle - d.startAngle) / 2;
-      }
+      // function midAngle(d) {
+      //   return d.startAngle + (d.endAngle - d.startAngle) / 2;
+      // }
 
-      text
-        .enter()
-        .append("text")
-        .attr("dy", ".35em")
-        .text(function (d) {
-          return d.data.label;
-        })
-        .merge(text)
-        .transition()
-        .duration(1000)
-        .attrTween("transform", function (d) {
-          this._current = this._current || d;
-          const interpolate = d3.interpolate(this._current, d);
-          this._current = interpolate(0);
-          return function (t) {
-            const d2 = interpolate(t);
-            const pos = outerArc.centroid(d2);
-            pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
-            return "translate(" + pos + ")";
-          };
-        })
-        .styleTween("text-anchor", function (d) {
-          this._current = this._current || d;
-          const interpolate = d3.interpolate(this._current, d);
-          this._current = interpolate(0);
-          return function (t) {
-            const d2 = interpolate(t);
-            return midAngle(d2) < Math.PI ? "start" : "end";
-          };
-        });
+      // text
+      //   .enter()
+      //   .append("text")
+      //   .attr("dy", ".35em")
+      //   .text(function (d) {
+      //     return d.data.label;
+      //   })
+      //   .merge(text)
+      //   .transition()
+      //   .duration(1000)
+      //   .attrTween("transform", function (d) {
+      //     this._current = this._current || d;
+      //     const interpolate = d3.interpolate(this._current, d);
+      //     this._current = interpolate(0);
+      //     return function (t) {
+      //       const d2 = interpolate(t);
+      //       const pos = outerArc.centroid(d2);
+      //       pos[0] = radius * (midAngle(d2) < Math.PI ? 1 : -1);
+      //       return "translate(" + pos + ")";
+      //     };
+      //   })
+      //   .styleTween("text-anchor", function (d) {
+      //     this._current = this._current || d;
+      //     const interpolate = d3.interpolate(this._current, d);
+      //     this._current = interpolate(0);
+      //     return function (t) {
+      //       const d2 = interpolate(t);
+      //       return midAngle(d2) < Math.PI ? "start" : "end";
+      //     };
+      //   });
 
-      text.exit().remove();
+      // text.exit().remove();
 
       /* ------- SLICE TO TEXT POLYLINES -------*/
 
-      const polyline = g
-        .select(".lines")
-        .selectAll("polyline")
-        .data(pie(data), key);
+      // const polyline = g
+      //   .select(".lines")
+      //   .selectAll("polyline")
+      //   .data(pie(data), key);
 
-      polyline
-        .join("polyline")
-        .transition()
-        .duration(1000)
-        .attrTween("points", function (d) {
-          this._current = this._current || d;
-          const interpolate = d3.interpolate(this._current, d);
-          this._current = interpolate(0);
-          return function (t) {
-            const d2 = interpolate(t);
-            const pos = outerArc.centroid(d2);
-            pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
-            return [arc.centroid(d2), outerArc.centroid(d2), pos];
-          };
-        });
+      // polyline
+      //   .join("polyline")
+      //   .transition()
+      //   .duration(1000)
+      //   .attrTween("points", function (d) {
+      //     this._current = this._current || d;
+      //     const interpolate = d3.interpolate(this._current, d);
+      //     this._current = interpolate(0);
+      //     return function (t) {
+      //       const d2 = interpolate(t);
+      //       const pos = outerArc.centroid(d2);
+      //       pos[0] = radius * 0.95 * (midAngle(d2) < Math.PI ? 1 : -1);
+      //       return [arc.centroid(d2), outerArc.centroid(d2), pos];
+      //     };
+      //   });
 
-      polyline.exit().remove();
+      // polyline.exit().remove();
     }
 
     // When the button is changed, run the updateChart function
@@ -222,15 +238,11 @@ function EmotionChapter(props) {
 
   return (
     <>
-      <button id="selectButton" disabled={!chapter}>
+      <button className="select-button" id="selectButton" disabled={!chapter}>
         Submit
       </button>
-      {/* <select id="selectButton">
-        <option value="fpc">Playable Characters</option>
-        <option value="npc">Non-Playable Characters</option>
-        <option value="combined">All Characters</option>
-      </select> */}
-      <svg ref={ref} style={{ border: "1px solid red" }} />
+      <div className="flex-legend">{showLegend()}</div>
+      <svg ref={ref} />
     </>
   );
 }

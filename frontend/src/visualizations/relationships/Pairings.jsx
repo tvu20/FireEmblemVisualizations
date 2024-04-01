@@ -78,12 +78,6 @@ function Pairings(props) {
           return o.index === d.srcElement.__data__.index ? 1.2 : 0;
         });
 
-        // node.style("border", function (o) {
-        //   return o.index === d.srcElement.__data__.index
-        //     ? "1px solid white"
-        //     : "";
-        //   // return isConnected(d, o) ? 1 : opacity;
-        // });
         textElems.style("visibility", function (o) {
           return isConnected(d, o) || o.index === d.srcElement.__data__.index
             ? "visible"
@@ -146,16 +140,16 @@ function Pairings(props) {
 
     // Specify the color scale.
     const color = (gender) => {
-      if (gender === "M") return "#1f77b4";
-      else if (gender === "F") return "#e377c2";
-      else return "white";
+      if (gender === "M") return "#377dab";
+      else if (gender === "F") return "#ad617c";
+      else return "#c19a57";
     };
 
     const linkColor = (category) => {
       if (category === "Romantic") return "#eb2d43";
       else if (category === "Related") return "#edd642";
-      else if (category === "Ambiguous") return "white";
-      else return "#16b588";
+      else if (category === "Ambiguous") return "#776ff0";
+      else return "#5cc6a3";
     };
 
     // Create a simulation with several forces.

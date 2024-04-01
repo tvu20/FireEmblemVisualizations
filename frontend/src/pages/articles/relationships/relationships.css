@@ -1,0 +1,217 @@
+.rel-article {
+  background-image: var(--relationships-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* background: #082040; */
+  color: #c6d0d8;
+  padding: 100px 0 50px;
+  /* padding: 100px 20px 50px; */
+
+  --description-color: #385f83;
+}
+
+.rel-intro {
+  margin: 0 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rel-intro.banner {
+  min-height: 80vh;
+  text-align: justify;
+}
+
+.rel-intro h1 {
+  max-width: 70vw;
+  padding: 0 20px;
+  margin: 50px 0 0px;
+  text-align: center;
+}
+
+.rel-intro-paragraphs {
+  max-width: 70vw;
+  margin-top: 50px;
+}
+
+.rel-timeline {
+  /* border: 1px solid red; */
+  margin-bottom: 200px;
+}
+
+.rel-timeline-intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.rel-timeline-intro.left-aligned {
+  text-align: left;
+}
+
+.rel-timeline-intro p,
+.rel-timeline-intro h2 {
+  max-width: 70vw;
+}
+
+.rel-scroll-container {
+  padding: 15px 0 0;
+  /* padding: 15px 50px 0; */
+}
+
+/* .rel-scroll-container {
+  margin: 40vh 0 20vh;
+  display: flex;
+  justify-content: space-between;
+} */
+
+.rel-scroll-graphic {
+  /* border: 1px solid blue; */
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  /* border: 1px solid blue;
+  flex-basis: 40%;
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.rel-scroll-graphic img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right;
+  transition: all 1s;
+}
+
+.rel-scroll-legend-color {
+  position: absolute;
+  width: 110% !important;
+  top: 0px;
+  right: 0px;
+}
+
+/* .rel-scroll-graphic img {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+} */
+
+.rel-scroller {
+  width: 40vw;
+  position: relative;
+  padding-left: 50px;
+  z-index: 5;
+}
+
+.rel-scroller-step {
+  width: 40vw;
+  /* border: 1px solid yellow;
+  background: rgba(0, 0, 0, 0.3); */
+  margin: 0 auto 300px auto;
+  /* margin: 100px 0; */
+  padding: 40px 0;
+  /* border: 1px solid #333; */
+}
+
+.rel-scroller-step p {
+  text-align: left;
+  padding: 1rem;
+  font-size: 18px;
+  line-height: 1.8;
+  /* font-size: 1.8rem; */
+  margin: 0;
+}
+
+.rel-scroller-step:last-child {
+  margin-bottom: 0;
+}
+
+.rel-tapewrapper {
+  max-width: 80vw;
+  z-index: 5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  /* text-align: center; */
+  line-height: 2;
+}
+
+.rel-tapewrapper span {
+  padding: 14px 10px 11px;
+  box-shadow: 15px 0 transparent, -15px 0 transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: rgba(0, 31, 58, 0.8);
+  font-size: 18px;
+  /* font-weight: 500; */
+  /* text-align: left; */
+}
+
+.rel-tapewrapper.addendum {
+  margin-top: 20px;
+  z-index: 0;
+}
+
+.rel-tapewrapper li {
+  line-height: 2;
+}
+
+.rel-scroll-popup-container {
+  /* border: 1px solid green; */
+  position: sticky;
+  width: 50vw;
+  height: 0;
+  padding-left: 50vw;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rel-scroll-popup {
+  /* border: 1px solid yellow; */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
+  color: black;
+  width: 35vw;
+  padding: 20px 35px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.rel-scroll-popup p {
+  margin: 15px 0;
+  line-height: 1.3;
+}
+
+.rel-scroll-popup.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.rel-scroll-popup-label {
+  margin: 0 0 20px !important;
+  font-size: 15px;
+  text-decoration: underline;
+  font-family: "Ibarra Real Nova", serif;
+  color: #97327e;
+  font-weight: 600;
+}

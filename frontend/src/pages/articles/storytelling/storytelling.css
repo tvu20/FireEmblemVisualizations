@@ -1,0 +1,420 @@
+.story-article {
+  background-image: var(--sentiment-gradient);
+  background-repeat: no-repeat;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background: #8adbb2; */
+  color: #172e2c;
+  padding: 100px 0 50px;
+  /* padding: 100px 20px 50px; */
+
+  --description-color: #dab26e;
+}
+
+.story-article-section-intro {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.story-article-section-intro.left-aligned {
+  text-align: left;
+}
+
+.story-article-section-intro h2,
+.story-article-section-intro p {
+  max-width: 70vw;
+}
+
+.story-intro {
+  margin: 0 80px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story-intro.banner {
+  min-height: 81vh;
+  text-align: justify;
+}
+
+.story-intro h1 {
+  padding: 0 20px;
+  margin: 50px 0 0px;
+  text-align: center;
+  max-width: 70vw;
+}
+
+.story-intro-paragraphs {
+  margin-top: 50px;
+  max-width: 70vw;
+}
+
+.story-scroll-container {
+  padding: 15px 0 0;
+}
+
+.story-scroller {
+  width: 40vw;
+  position: relative;
+  padding-left: 50px;
+  z-index: 5;
+}
+
+.story-scroll-popup-container {
+  /* border: 1px solid green; */
+  position: sticky;
+  width: 50vw;
+  height: 0;
+  padding-left: 50vw;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-scroll-popup {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
+  color: black;
+  width: 35vw;
+  padding: 20px 35px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.story-scroll-popup p {
+  margin: 15px 0;
+  line-height: 1.3;
+}
+
+.story-scroll-popup.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.story-scroll-popup-label {
+  margin: 0;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.story-timeline {
+  /* border: 1px solid red; */
+  margin-bottom: 100px;
+}
+
+.story-timeline-intro {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 80px;
+}
+
+.story-timeline-intro.left-aligned {
+  text-align: left;
+}
+
+.story-timeline-intro p,
+.story-timeline-intro h2,
+.story-timeline-intro details {
+  max-width: 70vw;
+}
+
+.story-timeline-intro summary {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.story-scroller-step {
+  width: 40vw;
+  /* background: rgba(255, 255, 255, 0.8); */
+  margin: 0 auto 250px auto;
+  /* margin: 100px 0; */
+  padding: 40px 0;
+  /* border: 1px solid #333; */
+}
+
+.story-scroller-step-spacer {
+  width: 40vw;
+  height: 100vh;
+}
+
+.story-scroller.fullscreen {
+  width: 100%;
+  padding: 0;
+}
+
+.story-scroller-step p {
+  text-align: left;
+  padding: 1rem;
+  font-size: 18px;
+  line-height: 1.8;
+  /* font-size: 1.8rem; */
+  margin: 0;
+  /* background-color: #8adbb2; */
+}
+
+.story-scroller-step:last-child {
+  margin-bottom: 0;
+}
+
+.story-tapewrapper {
+  max-width: 80vw;
+  z-index: 5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  /* text-align: center; */
+  line-height: 2;
+}
+
+.story-tapewrapper h5 {
+  margin: 0;
+}
+
+.story-tapewrapper h5 span {
+  font-family: "Ibarra Real Nova", serif;
+  margin: 0;
+  font-size: 25px;
+}
+
+.story-tapewrapper span {
+  padding: 14px 10px 11px;
+  box-shadow: 15px 0 transparent, -15px 0 transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-color: rgba(150, 227, 195, 0.85);
+  font-size: 18px;
+  /* font-weight: 500; */
+  /* text-align: left; */
+}
+
+.story-tapewrapper.addendum {
+  margin-top: 20px;
+  z-index: 0;
+}
+
+.label-text {
+  font-style: italic;
+}
+
+.label-pos {
+  background-color: rgba(72, 252, 66, 0.4);
+}
+
+.label-pos-high {
+  background-color: #48fc42;
+}
+
+.label-neg {
+  background-color: rgba(252, 88, 88, 0.4);
+}
+
+.story-scroll-graphic {
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.story-scroll-graphic img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  transition: all 1s;
+}
+
+.story-scroll-emotion-container {
+  /* border: 1px solid green; */
+  position: sticky;
+  width: 100vw;
+  height: 0;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-scroll-emotion-container img {
+  width: 100%;
+  position: relative;
+}
+
+.story-scroll-emotion-popup {
+  color: black;
+  width: 100vw;
+  /* padding: 30px; */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.story-scroll-emotion-popup.visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.story-scroll-emotion-card {
+  position: absolute;
+  top: 0px;
+  width: 28vw;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--box-shadow);
+}
+
+.story-scroll-emotion-card p,
+.story-scroll-emotion-card h4 {
+  margin: 10px 20px;
+}
+
+.story-scroll-emotion-card p {
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.story-scroll-emotion-card h4 {
+  font-size: 20px;
+  font-family: "Ibarra Real Nova", serif;
+  margin-top: 25px;
+  color: #10258f;
+}
+
+.story-sentiment-graph-full {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.story-sentiment-graph-full img {
+  width: 100%;
+  max-width: 1200px;
+  object-fit: contain;
+}
+
+.writing-style-tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.writing-style-tabs-titles {
+  width: 80vw;
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.writing-style-tab-content {
+  width: 70vw;
+  /* background-color: #f5f5f5; */
+  padding: 5px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.writing-style-tab-content img {
+  width: 80%;
+  object-fit: contain;
+}
+
+.writing-style-tab-title {
+  /* font-family: "Ibarra Real Nova", serif; */
+  background-color: #fff;
+  border-radius: 8px;
+  /* box-shadow: var(--box-shadow); */
+  display: inline-block;
+  padding: 10px 15px;
+  /* color: #c7c6c2; */
+  cursor: pointer;
+  margin: 0 8px 10px;
+  /* margin-left: 1px; */
+  box-sizing: border-box;
+}
+
+.writing-style-tab-title--active {
+  background-color: #f5f5f5;
+  color: #244a2e;
+  font-weight: 700;
+}
+
+.story-step-single-col {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-step-single-col.half-width {
+  width: 50vw;
+}
+
+.sc-short-col {
+  height: 50vh;
+}
+
+.story-step-single-col .story-tapewrapper {
+  text-align: center;
+}
+
+.story-categories {
+  padding: 15px 0 0;
+}
+
+.narrative-cards-detail {
+  flex: 65%;
+}
+
+.narrative-cards-detail h3 {
+  font-family: "Yeseva One", serif;
+  /* text-transform: uppercase; */
+  font-weight: 400;
+  font-size: 35px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: #244a2e;
+}
+
+.narrative-cards-detail h4 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.narrative-cards-detail h5 {
+  font-family: "Ibarra Real Nova", serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #244a2e;
+  margin: 0;
+}
+
+.narrative-cards-detail p {
+  margin: 20px 0;
+  font-size: 14px;
+}
