@@ -139,9 +139,11 @@ function EmotionLabels() {
               >
                 <span>
                   This is the emotion graph for{" "}
-                  <Description tag="FE9">Path of Radiance</Description>,
-                  excluding the neutral tag category. The most significant peaks
-                  in the graph correspond to the story's most important
+                  <Description tag="FE9">
+                    <i>Path of Radiance</i>
+                  </Description>
+                  , excluding the neutral tag category. The most significant
+                  peaks in the graph correspond to the story's most important
                   emotional beats.
                 </span>
               </div>
@@ -263,11 +265,13 @@ function EmotionLabels() {
         <div className="story-timeline-intro left-aligned">
           <p>
             This is an example of a sentiment curve, taken from{" "}
-            <Description tag="FE9">Path of Radiance</Description>. This game's
-            sentiment curve is heavily skewed negative, as are the curves for
-            the rest of the games. This makes sense for a series about wars -
-            there are very few points in time where there are more positive than
-            negative dialogue lines.
+            <Description tag="FE9">
+              <i>Path of Radiance</i>
+            </Description>
+            . This game's sentiment curve is heavily skewed negative, as are the
+            curves for the rest of the games. This makes sense for a series
+            about wars - there are very few points in time where there are more
+            positive than negative dialogue lines.
           </p>
           <p>
             There are a few points where many games will display a peak in
@@ -284,13 +288,18 @@ function EmotionLabels() {
           </p>
           <details>
             <summary>A short note before we continue</summary>
-            For the rest of this analysis, we have excluded data from{" "}
-            <Description tag="FE2">Gaiden</Description> and{" "}
-            <Description tag="FE15">Echoes</Description> due to both games
-            having a unique narrative structure of only 5 acts. However, if we
-            look at the storylines of these games without sentiment data, we can
-            still see patterns from the rest of the series reflected within the
-            Gaiden storyline.
+            For the rest of this analysis, I have excluded data from{" "}
+            <Description tag="FE2">
+              <i>Gaiden</i>
+            </Description>{" "}
+            and{" "}
+            <Description tag="FE15">
+              <i>Echoes</i>
+            </Description>{" "}
+            due to both games having a unique narrative structure of only 5
+            acts. However, if we look at the storylines of these games without
+            sentiment data, we can still see patterns from the rest of the
+            series reflected within the <i>Gaiden</i> storyline.
           </details>
         </div>
       </section>

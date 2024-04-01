@@ -18,7 +18,12 @@ function DevelopmentArticle() {
               <Description tag="RPG">RPG</Description> genre, it is considered
               by many historians to be the franchise that set the archetype for
               the whole genre,{" "}
-              <a className="highlight" href="https://google.com">
+              <a
+                className="highlight"
+                href="https://en.wikipedia.org/wiki/Tactical_role-playing_game#:~:text=Developed%20by%20Intelligent%20Systems%20and,earlier%20RPGs%20and%20strategy%20games."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 establishing core gameplay elements that are still used in many
                 tactical RPGs today
               </a>

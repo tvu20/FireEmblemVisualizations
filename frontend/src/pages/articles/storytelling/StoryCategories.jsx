@@ -96,24 +96,28 @@ function StoryCategories() {
         >
           <img src={act4ex} alt="three act structure" />
         </div>
-        <div id="dotted-1" className={`sentiment-curve-dottedline senti-step-${step}`}></div>
-        <div id="dotted-2" className={`sentiment-curve-dottedline senti-step-${step}`}></div>
-        <div id="dotted-3" className={`sentiment-curve-dottedline senti-step-${step}`}></div>
-        <div id="dotted-4" className={`sentiment-curve-dottedline senti-step-${step}`}></div>
+        <div
+          id="dotted-1"
+          className={`sentiment-curve-dottedline senti-step-${step}`}
+        ></div>
+        <div
+          id="dotted-2"
+          className={`sentiment-curve-dottedline senti-step-${step}`}
+        ></div>
+        <div
+          id="dotted-3"
+          className={`sentiment-curve-dottedline senti-step-${step}`}
+        ></div>
+        <div
+          id="dotted-4"
+          className={`sentiment-curve-dottedline senti-step-${step}`}
+        ></div>
       </>
     );
   };
 
   return (
     <>
-      <div className="story-step-single-col sc-short-col">
-        <div className="story-tapewrapper">
-          <span>
-            How about significant female characters that don’t assume the roles
-            of lords within their own games?
-          </span>
-        </div>
-      </div>
       <section className="story-categories">
         <div
           className="sentiment-curves-bg-container"
@@ -173,7 +177,10 @@ function StoryCategories() {
               </div>
               <div className="story-tapewrapper addendum">
                 <span>
-                  Games: Mystery of the Emblem, Awakening, Binding Blade
+                  Games:{" "}
+                  <Description tag="FE3">Mystery of the Emblem</Description>,{" "}
+                  <Description tag="FE13">Awakening</Description>,{" "}
+                  <Description tag="FE6">Binding Blade</Description>
                 </span>
               </div>
               <div className="story-tapewrapper addendum">
@@ -195,8 +202,12 @@ function StoryCategories() {
               </div>
               <div className="story-tapewrapper addendum">
                 <span>
-                  Games: Fates Birthright, Fates Conquest, Thracia 776, Path of
-                  Radiance
+                  Games:{" "}
+                  <Description tag="FE14">
+                    Fates Birthright/Conquest
+                  </Description>
+                  , <Description tag="FE5">Thracia 776</Description>,{" "}
+                  <Description tag="FE9">Path of Radiance</Description>
                 </span>
               </div>
               <div className="story-tapewrapper addendum">
@@ -218,7 +229,11 @@ function StoryCategories() {
                 </h5>
               </div>
               <div className="story-tapewrapper addendum">
-                <span>Games: Blazing Blade, Sacred Stones, Shadow Dragon</span>
+                <span>
+                  Games: <Description tag="FE7">Blazing Blade</Description>,{" "}
+                  <Description tag="FE8">Sacred Stones</Description>,{" "}
+                  <Description tag="FE1">Shadow Dragon</Description>
+                </span>
               </div>
               <div className="story-tapewrapper addendum">
                 <span>
@@ -241,7 +256,10 @@ function StoryCategories() {
               </div>
               <div className="story-tapewrapper addendum">
                 <span>
-                  Games: Genealogy of the Holy War, Radiant Dawn, Three Houses
+                  Games:{" "}
+                  <Description tag="FE4">Genealogy of the Holy War</Description>
+                  , <Description tag="FE10">Radiant Dawn</Description>,{" "}
+                  <Description tag="FE16">Three Houses</Description>
                 </span>
               </div>
               <div className="story-tapewrapper addendum">

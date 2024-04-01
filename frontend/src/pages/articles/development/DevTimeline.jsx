@@ -349,10 +349,11 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Shadow Dragon and the Blade of Light{" "}
-                  <Description tag="FE1">(FE1)</Description> is released as a
-                  Japan-exclusive title on the Famicom, developed by gaming
-                  company{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>{" "}
+                  is released as a Japan-exclusive title on the Famicom,
+                  developed by gaming company{" "}
                   <Description tag="IS">Intelligent Systems</Description> (IS)
                   and led by creator{" "}
                   <Description tag="Kaga">Shouzou Kaga.</Description> Kaga
@@ -387,8 +388,11 @@ function DevTimeline() {
               </div>
               <div className="dev-tapewrapper addendum">
                 <span>
-                  Even with compromises made, the text content in FE1 still
-                  exceeded the limits of the Famicom game cartridges, so{" "}
+                  Even with compromises made, the text content in{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>{" "}
+                  still exceeded the limits of the Famicom game cartridges, so{" "}
                   <Description tag="IS">IS</Description> created a new chip for
                   the cartridge with Nintendo’s help that could processes and
                   display Japanese text, using the portion of memory originally
@@ -437,13 +441,19 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Fire Emblem <Description tag="FE2">Gaiden</Description> is
-                  released as a sequel to FE1. This was the first game in the
-                  series to feature gameplay between battles in the form of a
-                  navigable map. <Description tag="Kaga">Kaga </Description>{" "}
-                  deliberately designed Gaiden to address issues with the first
-                  game, removing some of the more strategic elements of gameplay
-                  while adding the navigable map and more role-playing elements.{" "}
+                  <Description tag="FE2">
+                    <i>Fire Emblem Gaiden</i>
+                  </Description>{" "}
+                  was released as a sequel to{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>{" "}
+                  in 1992. This was the first game in the series to feature
+                  gameplay between battles in the form of a navigable map.{" "}
+                  <Description tag="Kaga">Kaga </Description> deliberately
+                  designed <i>Gaiden</i> to address issues with the first game,
+                  removing some of the more strategic elements of gameplay while
+                  adding the navigable map and more role-playing elements.{" "}
                 </span>
               </div>
               <div className="dev-tapewrapper addendum">
@@ -453,9 +463,9 @@ function DevTimeline() {
                   <span className="dev-scroller-category cat-one">
                     developed the MMC4 chip,
                   </span>{" "}
-                  which was used exclusively for some Fire Emblem titles. This
-                  allowed the company to have a little more leeway with storage
-                  in this game’s development.{" "}
+                  which was used exclusively for some <i>Fire Emblem</i> titles.
+                  This allowed the company to have a little more leeway with
+                  storage in this game’s development.{" "}
                 </span>
               </div>
             </div>
@@ -497,21 +507,24 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Fire Emblem:{" "}
-                  <Description tag="FE3">Mystery of the Emblem</Description> is
-                  released as the third installment in the series. Due to
-                  increased hardware capabilities, the team was able to improve
-                  the content and graphical quality,{" "}
+                  <Description tag="FE3">
+                    <i>Mystery of the Emblem</i>
+                  </Description>{" "}
+                  was released in 1994 as the third installment in the series.
+                  Due to increased hardware capabilities, the team was able to
+                  improve the content and graphical quality,{" "}
                   <span className="dev-scroller-category cat-one">
                     featuring significantly more depth and texture in the
                     in-game art.
                   </span>{" "}
                   The developers were able to include an upgraded version of{" "}
-                  <Description tag="FE1">FE1</Description> as well as an
-                  original storyline in the game; however, due to some space
-                  limitations,{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light</i>
+                  </Description>{" "}
+                  as well as an original storyline in the game; however, due to
+                  some space limitations,{" "}
                   <span className="dev-scroller-category cat-one">
-                    characters in the original version of FE1 were cut.
+                    characters in the original story were cut.
                   </span>
                 </span>
               </div>
@@ -527,13 +540,15 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <Description tag="FE4">Genealogy of the Holy War</Description>{" "}
-                  is released. This was the first game in the series to depart
-                  the continent of Archanea, where the three previous games were
-                  set, as <Description tag="Kaga">Kaga</Description> felt that
-                  he had completed that story and wanted to create a large-scale
-                  historical drama without being confined to Archanea. The
-                  development of this game placed{" "}
+                  <Description tag="FE4">
+                    <i>Genealogy of the Holy War</i>
+                  </Description>{" "}
+                  was released in 1996. This was the first game in the series to
+                  depart the continent of Archanea, where the three previous
+                  games were set, as <Description tag="Kaga">Kaga</Description>{" "}
+                  felt that he had completed that story and wanted to create a
+                  large-scale historical drama without being confined to
+                  Archanea. The development of this game placed{" "}
                   <span className="dev-scroller-category cat-two">
                     a much greater emphasis on the story of the game
                   </span>{" "}
@@ -552,7 +567,7 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Genealogy was the first game to feature character
+                  <i>Genealogy</i> was the first game to feature character
                   relationships as a{" "}
                   <Description tag="support">core part</Description> of
                   gameplay, which has carried on as a recurring theme in the
@@ -579,10 +594,12 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <Description tag="FE5">Thracia 776</Description> was released
-                  in 1999. Kaga took the opposite approach to this game: Since
-                  the strategic elements of Genealogy had suffered due to the
-                  goal of creating a complex, epic story,{" "}
+                  <Description tag="FE5">
+                    <i>Thracia 776</i>
+                  </Description>{" "}
+                  was released in 1999. Kaga took the opposite approach to this
+                  game: Since the strategic elements of Genealogy had suffered
+                  due to the goal of creating a complex, epic story,{" "}
                   <Description tag="Kaga">Kaga</Description> switched his focus
                   to the gameplay, deliberately giving characters little buildup
                   or backstory. Additional elements such as different types of
@@ -636,9 +653,9 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <i>Super Smash Bros. Melee</i> was released featuring two
-                  playable characters from the Fire Emblem series: Marth, the
-                  protagonist from the{" "}
+                  <i>Super Smash Bros. Melee</i> was released in 2001 featuring
+                  two playable characters from the <i>Fire Emblem</i> series:
+                  Marth, the protagonist from the{" "}
                   <Description tag="FE1">first</Description> and{" "}
                   <Description tag="FE3">third</Description> games; and Roy, the
                   protagonist of the unreleased{" "}
@@ -668,7 +685,9 @@ function DevTimeline() {
                   system, which would have provided better hardware capabilities
                   and data storage, FE6 was changed to be a game for the Game
                   Boy Advance (GBA) and was released in 2002 as{" "}
-                  <Description tag="FE6">The Binding Blade.</Description>
+                  <Description tag="FE6">
+                    <i>The Binding Blade.</i>
+                  </Description>
                 </span>
               </div>
             </div>
@@ -692,7 +711,10 @@ function DevTimeline() {
                 </span>
               </div>
               <div className="dev-tapewrapper addendum">
-                <span className="dev-scroller-step-quote">
+                <span
+                  className="dev-scroller-step-quote"
+                  style={{ color: "#10258f" }}
+                >
                   “In order to play stress-free, you need a certain level of
                   screen display ability and a minimum amount of data that can
                   be handled. The performance of previous portable devices
@@ -747,13 +769,17 @@ function DevTimeline() {
                   </span>{" "}
                   released as <i>Fire Emblem</i> in the West. It has since been
                   rebranded with its original Japanese subtitle:{" "}
-                  <Description tag="FE7">The Blazing Blade.</Description> Since
-                  this release, all Fire Emblem games with the exception of New
-                  Mystery of the Emblem{" "}
-                  <Description tag="FE12">(FE12)</Description> have been
-                  localized as well. Localization was performed by the company
-                  Treehouse, which has localized the majority of other Fire
-                  Emblem titles to date.
+                  <Description tag="FE7">
+                    <i>The Blazing Blade</i>.
+                  </Description>{" "}
+                  Since this release, all <i>Fire Emblem</i> games with the
+                  exception of{" "}
+                  <Description tag="FE12">
+                    <i>New Mystery of the Emblem</i>
+                  </Description>{" "}
+                  have been localized as well. Localization was performed by the
+                  company Treehouse, which has localized the majority of other
+                  <i>Fire Emblem</i> titles to date.
                 </span>
               </div>
             </div>
@@ -770,10 +796,10 @@ function DevTimeline() {
                 <span>
                   Since the difficulty of previous games had been off-putting to
                   new players, Nintendo attempted to improve the new player
-                  experience in order to propel Fire Emblem into becoming a
-                  major series. <i>The Blazing Blade</i> was the first in the
-                  series to feature a{" "}
-                  <Description tag="NGPlus">“New Game+”</Description> mode, or{" "}
+                  experience in order to propel <i>Fire Emblem</i> into becoming
+                  a major series. <i>The Blazing Blade</i> was the first in the
+                  series to feature a "
+                  <Description tag="NGPlus">New Game+</Description>" mode, or{" "}
                   <span className="dev-scroller-category cat-two">
                     additional content unlocked following completion of the
                     game’s story:
@@ -800,11 +826,16 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <Description tag="FE8">Sacred Stones</Description> was
-                  released as the eighth mainline title in the series. It shared
-                  very similar graphics, animations, and gameplay features to
-                  the rest of the GBA games, while bringing back the navigable
-                  map system from <Description tag="FE2">Gaiden.</Description>{" "}
+                  <Description tag="FE8">
+                    <i>Sacred Stones</i>
+                  </Description>{" "}
+                  was released as the eighth mainline title in the series. It
+                  shared very similar graphics, animations, and gameplay
+                  features to the rest of the GBA games, while bringing back the
+                  navigable map system from{" "}
+                  <Description tag="FE2">
+                    <i>Gaiden</i>.
+                  </Description>{" "}
                   This was also the first game in the series to feature optional
                   dungeons and skirmishes, allowing players to gain additional
                   points. This was another feature designed to decrease the
@@ -834,7 +865,7 @@ function DevTimeline() {
                 Improvements
               </h2>
               <p>
-                The Fire Emblem series returned to home consoles with the
+                The <i>Fire Emblem</i> series returned to home consoles with the
                 Tellius duology: a pair of games featuring a continuous
                 storyline and many of the same characters. The first game in the
                 duology was released on the GameCube, a home console released in
@@ -856,13 +887,15 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  The release of Path of Radiance{" "}
-                  <Description tag="FE9">(FE9)</Description> for the GameCube
-                  marked the return of the Fire Emblem to home consoles. This
-                  game brought many significant technological advances and
-                  features that were maintained in all subsequent non-remakes in
-                  the series going forwards. Notably, FE9 was the first game in
-                  the series with{" "}
+                  The release of{" "}
+                  <Description tag="FE9">
+                    <i>Path of Radiance</i>
+                  </Description>{" "}
+                  for the GameCube marked the return of <i>Fire Emblem</i> to
+                  home consoles. This game brought many significant
+                  technological advances and features that were maintained in
+                  all subsequent non-remakes in the series going forwards.
+                  Notably, FE9 was the first game in the series with{" "}
                   <span className="dev-scroller-category cat-one">
                     3D graphics and animation, full motion cutscenes, and voice
                     acting.
@@ -881,7 +914,7 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Following the success of Fire Emblem overseas, the team
+                  Following the success of <i>Fire Emblem</i> overseas, the team
                   decided to return to development for home consoles. The new
                   graphics processor of the GameCube allowed the team to{" "}
                   <span className="dev-scroller-category cat-one">
@@ -923,11 +956,13 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <Description tag="FE10">Radiant Dawn</Description> was
-                  released for the Wii in 2007, continuing the trend of home
+                  <Description tag="FE10">
+                    <i>Radiant Dawn</i>
+                  </Description>{" "}
+                  was released for the Wii in 2007, continuing the trend of home
                   console releases. The devs took advantage of the Wii’s ability
-                  to read GameCube memory cards: Radiant Dawn was designed as a
-                  direct sequel to{" "}
+                  to read GameCube memory cards: <i>Radiant Dawn</i> was
+                  designed as a direct sequel to{" "}
                   <Description tag="FE9">Path of Radiance,</Description> and
                   players could{" "}
                   <span className="dev-scroller-category cat-one">
@@ -979,11 +1014,15 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Shadow Dragon is released as the first official remake in the
-                  franchise. It is based off of the{" "}
-                  <Description tag="FE11">first title </Description> in the
-                  series, <i>Shadow Dragon and the Blade of Light,</i> and marks
-                  the return of the franchise to portable systems.{" "}
+                  <Description tag="FE11">
+                    <i>Shadow Dragon</i>
+                  </Description>{" "}
+                  was released as the first official remake in the franchise in
+                  2008. It is based off of the first title in the series,{" "}
+                  <Description tag="FE1">
+                    <i>Shadow Dragon and the Blade of Light,</i>
+                  </Description>{" "}
+                  and marks the return of the franchise to portable systems.{" "}
                   <Description tag="IS">Intelligent Systems</Description> chose
                   to develop a remake instead of a new entry so{" "}
                   <span className="dev-scroller-category cat-three">
@@ -1023,10 +1062,12 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  New Mystery of the Emblem was released as the{" "}
-                  <Description tag="FE12">twelfth entry</Description> in the
-                  series and the second remake. The major development featured
-                  in this game was the inclusion of a customizable{" "}
+                  <Description tag="FE12">
+                    <i>New Mystery of the Emblem</i>
+                  </Description>{" "}
+                  was released as the twelfth entry in the series and the second
+                  remake. The major development featured in this game was the
+                  inclusion of a customizable{" "}
                   <Description tag="avatar">Avatar</Description> character:{" "}
                   <span className="dev-scroller-category cat-two">
                     players could give the avatar a custom name, gender,
@@ -1053,9 +1094,9 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  The second major development introduced by New Mystery was{" "}
-                  <Description tag="casual">“Casual Mode”:</Description> a new
-                  gameplay feature to turn off permadeath, or to{" "}
+                  The second major development introduced by <i>New Mystery</i>{" "}
+                  was <Description tag="casual">"Casual Mode"</Description>: a
+                  new gameplay feature to turn off permadeath, or to{" "}
                   <span className="dev-scroller-category cat-three">
                     let players keep fallen characters in battle.
                   </span>{" "}
@@ -1110,8 +1151,11 @@ function DevTimeline() {
                   <Description tag="IS">IS</Description> an ultimatum: if their
                   next title failed to sell 250,000 units, it would be the end
                   of the franchise. Therefore, the thirteenth entry in the
-                  series, <Description tag="FE13">Awakening,</Description> was
-                  designed as a possible final entry for the series,{" "}
+                  series,{" "}
+                  <Description tag="FE13">
+                    <i>Awakening</i>,
+                  </Description>{" "}
+                  was designed as a possible final entry for the series,{" "}
                   <span className="dev-scroller-category cat-two">
                     incorporating many design, story, and gameplay elements from
                     previous games.
@@ -1192,9 +1236,11 @@ function DevTimeline() {
                   There was a huge emphasis on accessibility to newcomers: the
                   developers retained the{" "}
                   <Description tag="casual">Casual Mode</Description> from{" "}
-                  <Description tag="FE12">New Emblem</Description> despite
-                  pushback to make the game easier to play and user-friendly.
-                  They also spent a lot of time on{" "}
+                  <Description tag="FE12">
+                    <i>New Mystery</i>
+                  </Description>{" "}
+                  despite pushback to make the game easier to play and
+                  user-friendly. They also spent a lot of time on{" "}
                   <span className="dev-scroller-category cat-three">
                     making the UI and graphics easier for players to understand.
                   </span>
@@ -1204,7 +1250,7 @@ function DevTimeline() {
                 <span>
                   Additionally, the developers were able to include more battle
                   gameplay content through various means: a new feature
-                  introduced in Awakening was <i>paralogues,</i> a form of
+                  introduced in <i>Awakening</i> was paralogues, a form of
                   optional battles{" "}
                   <span className="dev-scroller-category cat-two">
                     that would allow players to learn more about the world while
@@ -1232,27 +1278,32 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  <Description tag="FE14">Fates</Description> was released in
-                  2015 as the fourteenth entry and the second on the 3DS
-                  console. This was the first (and only to date) game in the
-                  series to be bundled into different versions following
-                  different storylines: Birthright and Conquest were released as
-                  two unique physical versions, while Revelation was released as
-                  a third DLC route.{" "}
+                  <Description tag="FE14">
+                    <i>Fates</i>
+                  </Description>{" "}
+                  was released in 2015 as the fourteenth entry and the second on
+                  the 3DS console. This was the first (and only to date) game in
+                  the series to be bundled into different versions following
+                  different storylines: <i>Birthright</i> and <i>Conquest</i>{" "}
+                  were released as two unique physical versions, while{" "}
+                  <i>Revelation</i> was released as a third DLC route.{" "}
                 </span>
               </div>
               <div className="dev-tapewrapper addendum">
                 <span>
                   The developers wanted to{" "}
                   <span className="dev-scroller-category cat-two">
-                    distinguish the routes of Fates through gameplay as well as
-                    story:
+                    distinguish the routes of <i>Fates</i> through gameplay as
+                    well as story:
                   </span>{" "}
-                  Birthright was designed as a beginner-friendly route borrowing
-                  many mechanics from{" "}
-                  <Description tag="FE13">Awakening,</Description> while
-                  Conquest provided more varied objectives and complex strategic
-                  elements.
+                  <i>Birthright</i> was designed as a beginner-friendly route
+                  borrowing many mechanics from{" "}
+                  <Description tag="FE13">
+                    <i>Awakening</i>,
+                  </Description>{" "}
+                  while
+                  <i>Conquest</i> provided more varied objectives and complex
+                  strategic elements.
                 </span>
               </div>
             </div>
@@ -1267,8 +1318,8 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  The most prominent new gameplay feature of Fates was the
-                  inclusion of My Castle: a “home base” where players could{" "}
+                  The most prominent new gameplay feature of <i>Fates</i> was
+                  the inclusion of My Castle: a “home base” where players could{" "}
                   <span className="dev-scroller-category cat-two">
                     interact with members of their roster and obtain power-ups
                     through minigames.
@@ -1292,16 +1343,18 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Fire Emblem Echoes: Shadows of Valentia was released as the
-                  third remake of the series and the{" "}
                   <Description tag="FE15">
-                    fifteenth mainline entry,
+                    <i>Fire Emblem Echoes: Shadows of Valentia</i>
                   </Description>{" "}
-                  focusing on the storyline and gameplay from Fire Emblem:{" "}
-                  <Description tag="FE2">Gaiden.</Description>
+                  was released as the third remake of the series and the
+                  fifteenth mainline entry, focusing on the storyline and
+                  gameplay from{" "}
+                  <Description tag="FE2">
+                    <i>Gaiden</i>.
+                  </Description>
                   The developers retained many of the unique mechanics of Gaiden
                   while also bringing back modern series stables such as{" "}
-                  <Description tag="casual">Casual mode.</Description>{" "}
+                  <Description tag="casual">casual mode.</Description>{" "}
                   Additionally, the game introduced a first-person dungeon
                   crawling mode similar to traditional action-adventure RPGs.
                 </span>
@@ -1318,7 +1371,7 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Echoes introduced the <i>turnwheel</i> mechanic to the series:
+                  <i>Echoes</i> introduced the turnwheel mechanic to the series:
                   players had{" "}
                   <span className="dev-scroller-category cat-three">
                     the ability to rewind actions during battles, making the
@@ -1377,21 +1430,22 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Fire Emblem:{" "}
-                  <Description tag="FE16">Three Houses</Description> was
-                  released on the Switch as the sixteenth mainline entry in the
-                  series, marking the series’ return to home consoles. The staff
-                  wanted to create a game that felt fresh to mark the series’
-                  development, so they{" "}
+                  <Description tag="FE16">
+                    <i>Three Houses</i>
+                  </Description>{" "}
+                  was released on the Switch as the sixteenth mainline entry in
+                  the series, marking the series’ return to home consoles. The
+                  staff wanted to create a game that felt fresh to mark the
+                  series’ development, so they{" "}
                   <span className="dev-scroller-category cat-two">
                     heavily expanded role-playing game mechanics beyond the
                     tactical battles:
                   </span>{" "}
-                  in particular, the My Castle system from Fates was expanded
-                  into a full navigable base called the monastery, featuring
-                  minigames, character interactions, and increased social
-                  aspects. Additionally, the story was split into four distinct
-                  routes,{" "}
+                  in particular, the My Castle system from <i>Fates</i> was
+                  expanded into a full navigable base called the monastery,
+                  featuring minigames, character interactions, and increased
+                  social aspects. Additionally, the story was split into four
+                  distinct routes,{" "}
                   <span className="dev-scroller-category cat-two">
                     providing further complexity to the world and gameplay-story
                     integration.
@@ -1410,17 +1464,22 @@ function DevTimeline() {
             <div className="dev-scroller-step">
               <div className="dev-tapewrapper">
                 <span>
-                  Fire Emblem <Description tag="FE17">Engage,</Description> the
-                  latest title in the series, was designed as an anniversary
+                  <Description tag="FE17">
+                    <i>Engage</i>,
+                  </Description>{" "}
+                  the latest title in the series, was designed as an anniversary
                   game celebrating main characters from previous titles. One of
-                  the main goals of Engage was to create a very different
+                  the main goals of <i>Engage</i> was to create a very different
                   experience from{" "}
-                  <Description tag="FE16">Three Houses,</Description> with{" "}
+                  <Description tag="FE16">
+                    <i>Three Houses</i>,
+                  </Description>{" "}
+                  with{" "}
                   <span className="dev-scroller-category cat-three">
                     a much more simple story that could appeal to a broad
                     audience and many age-ranges
                   </span>{" "}
-                  as opposed to a heavy war story. Engage also{" "}
+                  as opposed to a heavy war story. <i>Engage</i> also{" "}
                   <span className="dev-scroller-category cat-three">
                     returned to a linear narrative structure instead of
                     branching paths
