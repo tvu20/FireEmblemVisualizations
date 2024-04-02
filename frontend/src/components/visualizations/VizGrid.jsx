@@ -10,7 +10,7 @@ function VizGrid(props) {
   const visualizations = getVisualizations();
 
   const createGrid = () => {
-    console.log(visualizations.slice(8));
+    // console.log(visualizations.slice(8));
     if (limit) {
       return visualizations.slice(0, 8).map((v) => (
         <div key={v.name} className="viz-grid__item">
@@ -28,7 +28,12 @@ function VizGrid(props) {
     }
     return visualizations.map((v) => (
       <div key={v.name} className="viz-grid__item">
-        <Link to={v.url}>
+        <Link
+          to={v.url}
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
           <img src={v.thumbnail} alt={v.name}></img>
           <h6>{v.name}</h6>
         </Link>

@@ -11,7 +11,13 @@ function Visualizations() {
       <h2>Visualizations</h2>
       <h3>Choose one of these interactive visualizations to explore!</h3>
       <VizGrid limit />
-      <Link className="home-viz__button" to="/viz">
+      <Link
+        className="home-viz__button"
+        to="/viz"
+        onClick={() => {
+          window.scroll(0, 0);
+        }}
+      >
         See more
       </Link>
     </div>

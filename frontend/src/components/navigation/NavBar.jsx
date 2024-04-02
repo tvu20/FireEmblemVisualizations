@@ -27,7 +27,12 @@ function NavBar(props) {
   const mobileMenu = () => {
     return (
       <>
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
           <h4
             className={showLinks ? "hide" : ""}
             style={{
