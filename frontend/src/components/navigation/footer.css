@@ -1,6 +1,6 @@
 footer {
   display: flex;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   background: var(--main-color);
   padding: 40px 0px;
   color: white;

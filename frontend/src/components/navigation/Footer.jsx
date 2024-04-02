@@ -95,7 +95,7 @@ function Footer(props) {
               Visualizations
             </Link>
             <Link to="/about">About the project</Link>
-            <Link to="/intro">What is FE?</Link>
+            <Link to="/what-is-fe">What is FE?</Link>
           </div>
           <div>
             <h6>ARTICLES</h6>
