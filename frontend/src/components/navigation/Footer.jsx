@@ -67,7 +67,7 @@ function Footer(props) {
     <footer className={vertical ? "footer-vertical" : "footer-horizontal"}>
       <div className="footer__left">
         <h4>Created by Giao Vu Dinh</h4>
-        <p>Senior Independent Thesis Work for Spring 2024</p>
+        <p>Senior Independent Thesis Work, 2023-2024</p>
         <img src={footerOne} alt="sprites running border" />
         <h5>
           Special thanks to Tim Szetela, Adam Finkelstein, and the Princeton
@@ -95,7 +95,8 @@ function Footer(props) {
               Visualizations
             </Link>
             <Link to="/about">About the project</Link>
-            <Link to="/what-is-fe">What is FE?</Link>
+            <Link to="/what-is-fe">What is Fire Emblem?</Link>
+            <Link to="/credits">Credits</Link>
           </div>
           <div>
             <h6>ARTICLES</h6>
@@ -109,11 +110,13 @@ function Footer(props) {
             <a href="https://github.com/tvu20/FireEmblemTextCorpus">
               Text Corpus
             </a>
+            <a href="https://drive.google.com/file/d/1rrZtRCRVQZJ9grFDnioefNDvUXXhA1Ay/view?usp=share_link">
+              Writeup
+            </a>
             {!vertical && createContactSection()}
           </div>
           {vertical && createContactSection()}
         </div>
-        <img src={footerTwo} alt="sprites running border" />
       </div>
     </footer>
   );

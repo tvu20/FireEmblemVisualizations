@@ -14,6 +14,7 @@ function Menu(props) {
       className={`menu ${!display ? "hide" : ""}`}
     >
       <div className="menu__left">
+        {/* <div style={{ maxWidth: "700px" }}> */}
         <img src={sprites} alt="sprites running border" />
         <h1>FIRE EMBLEM: Evolution of a Video Game Series</h1>
         <p>
@@ -35,27 +36,36 @@ function Menu(props) {
             window.scroll(0, 0);
           }}
         >
-          Explore
+          Visualizations
         </Link>
+        {/* </div> */}
       </div>
       <div className="menu__right">
+        <Link className="menu__link-large" to="/">
+          Homepage
+        </Link>
         <Link className="menu__link-large" to="/about">
           About the project
         </Link>
         <Link className="menu__link-large" to="/what-is-fe">
           What is Fire Emblem?
         </Link>
-        <a
-          className="menu__link-large"
-          href="https://github.com/tvu20/FireEmblemVisualizations"
-        >
-          Project Repository
-        </a>
+        <Link className="menu__link-large" to="/credits">
+          Credits
+        </Link>
         <h2>Related Links</h2>
         <div className="menu__link-collection">
-          <a href="google.com">Writeup</a>
+          <a href="https://github.com/tvu20/FireEmblemVisualizations">
+            Project Code
+          </a>{" "}
           <br />
-          <a href="google.com">Data collection</a>
+          <a href="https://drive.google.com/file/d/1rrZtRCRVQZJ9grFDnioefNDvUXXhA1Ay/view?usp=share_link">
+            Writeup
+          </a>
+          <br />
+          <a href="https://github.com/tvu20/FireEmblemTextCorpus">
+            Data collection
+          </a>
         </div>
 
         <h2>My Profile</h2>

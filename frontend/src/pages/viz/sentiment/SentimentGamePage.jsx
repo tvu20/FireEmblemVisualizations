@@ -28,7 +28,11 @@ function SentimentGamePage() {
     });
   };
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="article sentiment-page sentiment-game">
         <h1>Sentiment in a Game</h1>
         <p>
@@ -72,17 +76,19 @@ function SentimentGamePage() {
           <br />
           <br />
           The following bar graphs represent the polarity (positive/negative
-          emotion) of dialogue lines across each chapter of each game. Select a
-          game in the dropdown to visualize how the amount of positive and
-          negative lines change over the course of the game. Bars above the
-          horizontal line represent the quantity of lines with positive emotions
-          and bars below the line represent lines with negative emotions.
-          Additionally, the curved line represents the overall sentiment journey
-          taken throughout a game - a lower value at a certain position on the
-          graph means that the overall sentiment at that point in time was more
-          negative. You might notice that for almost all games, the sentiment
-          curve skews heavily negative - this is to be expected for a series of
-          games about wars!
+          emotion) of dialogue lines across each chapter of each game.{" "}
+          <span className="viz__highlight">
+            Select a game in the dropdown to visualize how the amount of
+            positive and negative lines change over the course of the game.
+          </span>{" "}
+          Bars above the horizontal line represent the quantity of lines with
+          positive emotions and bars below the line represent lines with
+          negative emotions. Additionally, the curved line represents the
+          overall sentiment journey taken throughout a game - a lower value at a
+          certain position on the graph means that the overall sentiment at that
+          point in time was more negative. You might notice that for almost all
+          games, the sentiment curve skews heavily negative - this is to be
+          expected for a series of games about wars!
         </p>
       </div>
     </VizWrapper>

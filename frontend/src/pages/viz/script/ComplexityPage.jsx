@@ -9,7 +9,7 @@ import "./script.css";
 
 function ComplexityPage() {
   return (
-    <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("script")} navColor={"#3b2708"} icon={"DEV"}>
       <div className="article script-page complexity-words">
         <h1>Language Complexity</h1>
         <p>
@@ -37,9 +37,12 @@ function ComplexityPage() {
           which inhabit the same video game genre that <i>Fire Emblem</i> does.
           <br />
           <br />
-          Check each respective box to show or hide the datapoints corresponding
-          to a category of media. Hover over a particular datapoint to learn
-          more about the specific piece of text-based media being represented!
+          <span className="viz__highlight">
+            Check each respective box to show or hide the datapoints
+            corresponding to a category of media. Hover over a particular
+            datapoint to learn more about the specific piece of text-based media
+            being represented!
+          </span>{" "}
           We can see that all the <i>Fire Emblem</i> games have relatively
           similar language complexity metrics, and share similar values with
           other types of video games and scripts.

@@ -10,7 +10,7 @@ import Description from "../../../components/articles/Description";
 
 function GenderLineCountsPage() {
   return (
-    <VizWrapper color={getColor("gender")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("gender")} navColor={"#3b2708"} icon={"GENDER"}>
       <div className="article gender-page genderlinecounts">
         <h1>Gender Line Counts</h1>
         <p>
@@ -30,8 +30,11 @@ function GenderLineCountsPage() {
           onwards brings the introduction of the{" "}
           <Description tag="avatar">Avatar character</Description> - a
           customizable player stand-in unit that can appear either in their male
-          or female incarnation. Hover over each bar to see the line
-          distribution percentage for a particular game.
+          or female incarnation.{" "}
+          <span className="viz__highlight">
+            Hover over each bar to see the line distribution percentage for a
+            particular game.
+          </span>
         </p>
       </div>
     </VizWrapper>

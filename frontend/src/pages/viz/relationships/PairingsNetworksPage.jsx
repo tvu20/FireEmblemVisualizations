@@ -13,7 +13,11 @@ function PairingsNetworksPage() {
   const [linkConstrain, setLinkConstrain] = useState(true);
   const [sortGender, setSortGender] = useState(true);
   return (
-    <VizWrapper color={getColor("relationships")} navColor={"white"}>
+    <VizWrapper
+      color={getColor("relationships")}
+      navColor={"white"}
+      icon={"RELATIONSHIPS"}
+    >
       <div className="article relationship-page support-networks">
         <h1>Pairing Networks</h1>
         <p>Visualize the support relationships social networks in each game.</p>
@@ -76,16 +80,18 @@ function PairingsNetworksPage() {
           <br />
           This series of network graphs illustrates the available paired endings
           between characters in each game where the pairing mechanic is
-          available. Select a game in the dropdown menu to visualize its
-          relationships. These graphs are modeled off of social network graphs,
-          with each node (dot) of the graph representing a character and links
-          between nodes representing the presence of a support between two
-          characters. The color of the node represents the gender of the
-          character - pink and blue for female and male, and yellow for Avatar
-          (customizable) characters. The link color corresponds to the type of
-          relationship - early games only feature romantic (red/pink)
-          relationships, while other categories of relationships are available
-          from{" "}
+          available.{" "}
+          <span className="viz__highlight">
+            Select a game in the dropdown menu to visualize its relationships.
+          </span>{" "}
+          These graphs are modeled off of social network graphs, with each node
+          (dot) of the graph representing a character and links between nodes
+          representing the presence of a support between two characters. The
+          color of the node represents the gender of the character - pink and
+          blue for female and male, and yellow for Avatar (customizable)
+          characters. The link color corresponds to the type of relationship -
+          early games only feature romantic (red/pink) relationships, while
+          other categories of relationships are available from{" "}
           <Description tag="FE7">
             <i>The Blazing Blade</i>
           </Description>{" "}
@@ -93,13 +99,22 @@ function PairingsNetworksPage() {
           platonic/romantic (purple).
           <br />
           <br />
-          Hover over any node to better visualize supports for a certain
-          character, or drag nodes around to view different angles of the graph.
-          And for some different viewing experiences, check the first box to see
-          what the graph looks like with normalized links (each link between
-          characters must remain the same length!), and the second box to group
-          character nodes based on gender (this makes it easier to see
-          relationships between same-gender vs different-gender pairings!).
+          <span className="viz__highlight">
+            Hover over any node to better visualize supports for a certain
+            character, or drag nodes around to view different angles of the
+            graph.
+          </span>{" "}
+          And for some different viewing experiences,{" "}
+          <span className="viz__highlight">
+            check the first box to see what the graph looks like with normalized
+            links
+          </span>{" "}
+          (each link between characters must remain the same length!), and{" "}
+          <span className="viz__highlight">
+            the second box to group character nodes based on gender
+          </span>{" "}
+          (this makes it easier to see relationships between same-gender vs
+          different-gender pairings!).
         </p>
       </div>
     </VizWrapper>

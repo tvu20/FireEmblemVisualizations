@@ -10,7 +10,11 @@ import "./sentiment.css";
 
 function SentimentAcrossGamesPage() {
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="article sentiment-page sentimentacrossgames">
         <h1>Sentiment Across Games</h1>
         <p>

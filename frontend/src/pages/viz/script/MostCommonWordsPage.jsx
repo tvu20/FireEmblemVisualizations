@@ -9,7 +9,7 @@ import "./script.css";
 
 function MostCommonWordsPage() {
   return (
-    <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("script")} navColor={"#3b2708"} icon={"DEV"}>
       <div className="article script-page mostcommonwords">
         <h1>Most Common Words</h1>
         <p>See the most commonly used words across the series’ history.</p>
@@ -21,11 +21,12 @@ function MostCommonWordsPage() {
           game and compiled the top 120 words in this word cloud. Each word is
           colored according to what part of speech it is, with character and
           place names from the franchise being distinguished as particular types
-          of words as well. Hover over any word to learn more about its
-          categorization and see a sample of sentences using it throughout the
-          series!
+          of words as well.{" "}
+          <span className="viz__highlight">
+            Hover over any word to learn more about its categorization and see a
+            sample of sentences using it throughout the series!
+          </span>
         </p>
-        {/* </VizWrapper> */}
       </div>
     </VizWrapper>
   );

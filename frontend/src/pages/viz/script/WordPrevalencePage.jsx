@@ -28,7 +28,7 @@ function WordPrevalencePage() {
     });
   };
   return (
-    <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("script")} navColor={"#3b2708"} icon={"DEV"}>
       <div className="article script-page wordprevalence">
         <h1>Word Prevalence</h1>
         <p>
@@ -61,9 +61,11 @@ function WordPrevalencePage() {
             cross-referencing the words in the game scripts with the Google
             Books Ngram Corpus.
           </a>{" "}
-          Select a game from the dropdown to see its word prevalence data, and
-          hover over any bucket in the histogram to see a list of sample words
-          in the bucket!
+          <span className="viz__highlight">
+            Select a game from the dropdown to see its word prevalence data, and
+            hover over any bucket in the histogram to see a list of sample words
+            in the bucket!
+          </span>
         </p>
       </div>
     </VizWrapper>

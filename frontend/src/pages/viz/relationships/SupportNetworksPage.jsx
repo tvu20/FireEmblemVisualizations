@@ -12,7 +12,11 @@ function SupportNetworksPage() {
   const [game, setGame] = useState("FE6");
   const [linkConstrain, setLinkConstrain] = useState(false);
   return (
-    <VizWrapper color={getColor("relationships")} navColor={"white"}>
+    <VizWrapper
+      color={getColor("relationships")}
+      navColor={"white"}
+      icon={"RELATIONSHIPS"}
+    >
       <div className="article relationship-page support-networks">
         <h1>Support Networks</h1>
         <p>Visualize the support relationships social networks in each game.</p>
@@ -58,20 +62,28 @@ function SupportNetworksPage() {
           <br />
           This series of network graphs illustrates the available support
           relationships between characters in each game where the support system
-          is available. Select a game in the dropdown menu to visualize its
-          relationships. These graphs are modeled off of social network graphs,
-          with each node (dot) of the graph representing a character and the
-          links between nodes representing the presence of a support between two
-          characters. The color of a node represents the gender of the
-          corresponding character: pink and blue for female and male, and yellow
-          for Avatar (customizable) characters.
+          is available.{" "}
+          <span className="viz__highlight">
+            Select a game in the dropdown menu to visualize its relationships.
+          </span>{" "}
+          These graphs are modeled off of social network graphs, with each node
+          (dot) of the graph representing a character and the links between
+          nodes representing the presence of a support between two characters.
+          The color of a node represents the gender of the corresponding
+          character: pink and blue for female and male, and yellow for Avatar
+          (customizable) characters.
           <br />
           <br />
-          Hover over any node to better visualize supports for a certain
-          character, or drag nodes around to view different angles of the graph.
-          For a different viewing experience, check the box to see what the
-          graph looks like with normalized links (each link between characters
-          must remain the same length!).
+          <span className="viz__highlight">
+            Hover over any node to better visualize supports for a certain
+            character, or drag nodes around to view different angles of the
+            graph.
+          </span>{" "}
+          For a different viewing experience,{" "}
+          <span className="viz__highlight">
+            check the box to see what the graph looks like with normalized links
+          </span>{" "}
+          (each link between characters must remain the same length!).
         </p>
       </div>
     </VizWrapper>

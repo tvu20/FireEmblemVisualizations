@@ -54,7 +54,11 @@ function EmotionChapterPage() {
   };
 
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="article sentiment-page emotion-game">
         <h1>Emotions in a Game</h1>
         <p>See the distribution of emotion in a single chapter.</p>
@@ -110,8 +114,10 @@ function EmotionChapterPage() {
         </div>
         <EmotionChapter chapter={chapter} />
         <p>
-          Input a particular chapter from a game in the franchise to see its
-          distribution of emotions across dialogue lines!{" "}
+          <span className="viz__highlight">
+            Input a particular chapter from a game in the franchise
+          </span>{" "}
+          to see its distribution of emotions across dialogue lines!{" "}
         </p>
       </div>
     </VizWrapper>

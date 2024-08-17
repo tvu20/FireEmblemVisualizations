@@ -19,6 +19,7 @@ import cl from "../assets/viz/classes.png";
 import gender from "../assets/viz/gender-thumbnail.PNG";
 import rel from "../assets/viz/rel-thumbnail.PNG";
 import storytell from "../assets/viz/story-thumbnail.PNG";
+import dev from "../assets/viz/dev-thumbnail.png";
 
 const visualizations = [
   {
@@ -136,8 +137,8 @@ export const getArticles = () => {
     {
       name: "Development",
       url: "/article/development",
-      desc: "How have technological advancements, player accessibility, and target demographics changed the way developers approach creating games for the series? What mechanical aspects of the games have evolved over the series’ lifespan and why?",
-      thumbnail: gender,
+      desc: "How have technological advancements, player accessibility, and target demographics changed the way developers approach creating games for the series from a mechanical perspective?",
+      thumbnail: dev,
     },
   ];
 };

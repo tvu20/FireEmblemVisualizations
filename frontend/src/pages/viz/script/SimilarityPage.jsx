@@ -10,7 +10,7 @@ import Description from "../../../components/articles/Description";
 
 function SimilarityPage() {
   return (
-    <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("script")} navColor={"#3b2708"} icon={"DEV"}>
       <div className="article script-page similarity-media">
         <h1>Similarity Across Media</h1>
         <p>
@@ -70,9 +70,11 @@ function SimilarityPage() {
           scores of other <i>Fire Emblem</i> games are always represented as
           blue lines. Lines closer to the right of the graph represent higher
           similarity scores; we can see that TD-IDF similarity scores are
-          generally much higher than Jaccard similarity scores. Hover over a
-          particular vertical bar in a graph to learn about the specific piece
-          of media associated with it.
+          generally much higher than Jaccard similarity scores.{" "}
+          <span className="viz__highlight">
+            Hover over a particular vertical bar in a graph to learn about the
+            specific piece of media associated with it.
+          </span>
         </p>
       </div>
     </VizWrapper>

@@ -2,8 +2,23 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Menu from "./Menu";
+import icon from "../../assets/favicons/default.png";
+import gender from "../../assets/favicons/gender.png";
+import rel from "../../assets/favicons/relationships.png";
+import dev from "../../assets/favicons/dev.png";
+import senti from "../../assets/favicons/senti.png";
+import char from "../../assets/favicons/char.png";
 
 import "./navbar.css";
+
+const ICONS = {
+  GENDER: gender,
+  RELATIONSHIPS: rel,
+  DEV: dev,
+  SENTIMENT: senti,
+  CHARACTER: char,
+  DEFAULT: icon,
+};
 
 function NavBar(props) {
   //   const { pathname } = useLocation();
@@ -24,6 +39,20 @@ function NavBar(props) {
   //   ));
   // };
 
+  const createSprite = () => {
+    let icontype = props.icon;
+    if (!icontype) {
+      icontype = "DEFAULT";
+    }
+    return (
+      <img
+        className={showLinks ? "hide" : ""}
+        src={ICONS[icontype]}
+        alt="sprites running border"
+      />
+    );
+  };
+
   const mobileMenu = () => {
     return (
       <>
@@ -33,15 +62,26 @@ function NavBar(props) {
             window.scroll(0, 0);
           }}
         >
-          <h4
-            className={showLinks ? "hide" : ""}
-            style={{
-              zIndex: 3,
-              color: props.navColor ? props.navColor : "white",
-            }}
-          >
-            Giao Vu Dinh | <b>Princeton University</b>
-          </h4>
+          <div className="nav__logo">
+            {createSprite()}
+            {/* <img
+              className={showLinks ? "hide" : ""}
+              src={icon}
+              alt="sprites running border"
+            /> */}
+            <h4
+              className={showLinks ? "hide" : ""}
+              style={{
+                zIndex: 3,
+                color: props.navColor ? props.navColor : "white",
+              }}
+            >
+              Fire Emblem
+              <br />
+              <span className="nav__differentfont">Visualizations</span>
+              {/* Giao Vu Dinh | <b>Princeton University</b> */}
+            </h4>
+          </div>
         </Link>
         {/* <input
           id="burger"

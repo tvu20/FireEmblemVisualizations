@@ -10,7 +10,7 @@ import "./script.css";
 
 function WordCountsPage() {
   return (
-    <VizWrapper color={getColor("script")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("script")} navColor={"#3b2708"} icon={"DEV"}>
       <div className="article script-page wordcounts">
         <h1>Word Counts</h1>
         <p>See how the word count of each game has changed over time.</p>
@@ -31,10 +31,13 @@ function WordCountsPage() {
           each game being color-coded by its console era.
           <br />
           <br />
-          Check the box to order the graph either chronologically or by word
-          count to better see the relationships over time! Drag your mouse over
-          a portion of the graph to zoom in on a particular section; double
-          click anywhere on the graph to return to the initial graph size.
+          <span className="viz__highlight">
+            Check the box to order the graph either chronologically or by word
+            count to better see the relationships over time! Drag your mouse
+            over a portion of the graph to zoom in on a particular section;
+            double click anywhere on the graph to return to the initial graph
+            size.
+          </span>
         </p>
       </div>
     </VizWrapper>

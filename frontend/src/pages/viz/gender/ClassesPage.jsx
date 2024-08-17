@@ -10,7 +10,7 @@ import Description from "../../../components/articles/Description";
 
 function ClassesPage() {
   return (
-    <VizWrapper color={getColor("gender")} navColor={"#123622"}>
+    <VizWrapper color={getColor("gender")} navColor={"#123622"} icon={"GENDER"}>
       <div className="article gender-page gendertransitions">
         <h1>Timeline of Classes</h1>
         <p>
@@ -37,12 +37,16 @@ function ClassesPage() {
           class. For each game in which the class is available, it is marked by
           a colored rectangle representing the gender restriction: blue for
           male-only, pink for female-only, and yellow for available to all
-          units. Hover over each rectangle to learn more about a class during a
-          specific period of time. We can see a general trend of more classes
-          becoming gender-neutral throughout the course of the series: the
-          number of male-only classes decreases over time, while the number of
-          gender-neutral classes increases over time. Surprisingly, the number
-          of female-exclusive classes does not significantly change over time.
+          units.{" "}
+          <span className="viz__highlight">
+            Hover over each rectangle to learn more about a class during a
+            specific period of time.
+          </span>{" "}
+          We can see a general trend of more classes becoming gender-neutral
+          throughout the course of the series: the number of male-only classes
+          decreases over time, while the number of gender-neutral classes
+          increases over time. Surprisingly, the number of female-exclusive
+          classes does not significantly change over time.
         </p>
       </div>
     </VizWrapper>

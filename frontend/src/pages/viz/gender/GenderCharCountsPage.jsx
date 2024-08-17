@@ -10,7 +10,7 @@ import Description from "../../../components/articles/Description";
 
 function GenderCharCountsPage() {
   return (
-    <VizWrapper color={getColor("gender")} navColor={"#3b2708"}>
+    <VizWrapper color={getColor("gender")} navColor={"#3b2708"} icon={"GENDER"}>
       <div className="article gender-page gendercharcounts">
         <h1>Character Counts and Gender</h1>
         <p>
@@ -23,12 +23,16 @@ function GenderCharCountsPage() {
           The first graph displays the percentage of total female characters per
           game, depending on character category. The default category, “Playable
           Characters”, only includes female characters that can explicitly be
-          controlled by the player. You can also select either{" "}
-          <Description tag="NPC">“Non-Playable Characters”,</Description>{" "}
-          encompassing all named characters in the game that can’t be controlled
-          in battle gameplay, or “All Characters”, which combines the total of
-          both previous categories. The highest percentage of female characters
-          in any one game is notated.
+          controlled by the player.{" "}
+          <span className="viz__highlight">
+            You can also select either{" "}
+            <Description tag="NPC">“Non-Playable Characters”,</Description>{" "}
+            encompassing all named characters in the game that can’t be
+            controlled in battle gameplay, or “All Characters”, which combines
+            the total of both previous categories.
+          </span>{" "}
+          The highest percentage of female characters in any one game is
+          notated.
           <br /> <br />
           The second visualization is a series of graphs where each represents
           the playable character gender distribution in a single game. Each dot

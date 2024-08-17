@@ -28,7 +28,7 @@ function TransitionsGamePage() {
     });
   };
   return (
-    <VizWrapper color={getColor("gender")} navColor={"#123622"}>
+    <VizWrapper color={getColor("gender")} navColor={"#123622"} icon={"GENDER"}>
       <div className="article gender-page gendertransitions">
         <h1>Transitions in a Game</h1>
         <p>
@@ -54,12 +54,15 @@ function TransitionsGamePage() {
           The left side of the flow diagram represent the number of dialogue
           pairs starting either with male, female, neutral, or avatar speakers,
           while the right side represents the number of dialogue pairs ending
-          with one of these categories. Select a game from the dropdown menu to
-          visualize its transitions and see how these patterns have changed over
-          time. Hover over one of the bars on the left to visualize the flow
-          between the left and right sides of the graph, or hover over one of
-          the gray flows in the center of the graph to see the numerical
-          quantity of transitions per category.
+          with one of these categories.{" "}
+          <span className="viz__highlight">
+            Select a game from the dropdown menu to visualize its transitions
+            and see how these patterns have changed over time. Hover over one of
+            the bars on the left to visualize the flow between the left and
+            right sides of the graph, or hover over one of the gray flows in the
+            center of the graph to see the numerical quantity of transitions per
+            category.
+          </span>
         </p>
       </div>
     </VizWrapper>

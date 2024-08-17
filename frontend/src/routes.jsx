@@ -4,6 +4,7 @@ import Wrapper from "./components/navigation/Wrapper";
 import ErrorPage from "./pages/ErrorPage";
 import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
+import CreditsPage from "./pages/about/CreditsPage";
 import VizPage from "./pages/viz/VizPage";
 
 import GenderLineCountsPage from "./pages/viz/gender/GenderLineCountsPage";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/what-is-fe",
         element: <WhatIsFEPage />,
+      },
+      {
+        path: "/credits",
+        element: <CreditsPage />,
       },
       {
         path: "/viz",

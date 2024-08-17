@@ -17,6 +17,7 @@
   align-items: center;
 
   --description-color: #dab26e;
+  --highlight-color: #4f320f;
 }
 
 .sentiment-page h1 {

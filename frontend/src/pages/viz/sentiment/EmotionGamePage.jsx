@@ -29,7 +29,11 @@ function EmotionGamePage() {
     });
   };
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="article sentiment-page emotion-game">
         <h1>Emotions in a Game</h1>
         <p>
@@ -79,12 +83,17 @@ function EmotionGamePage() {
           represented as gray.
           <br />
           <br />
-          Check the box to remove the neutral dialogue lines, providing a better
-          understanding of the distribution of non-neutral emotions across the
-          storyline. Particularly intense emotional chapters within each game
-          have been labeled with brief descriptions of what occurs; click on the
-          written labels to see the particular chapter title and a longer
-          description of the events that occur.
+          <span className="viz__highlight">
+            Check the box to remove the neutral dialogue lines, providing a
+            better understanding of the distribution of non-neutral emotions
+            across the storyline.
+          </span>{" "}
+          Particularly intense emotional chapters within each game have been
+          labeled with brief descriptions of what occurs;{" "}
+          <span className="viz__highlight">
+            click on the written labels to see the particular chapter title and
+            a longer description of the events that occur.
+          </span>
         </p>
       </div>
     </VizWrapper>

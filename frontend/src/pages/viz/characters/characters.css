@@ -11,6 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  --highlight-color: #622580;
 }
 
 .character-page h1 {

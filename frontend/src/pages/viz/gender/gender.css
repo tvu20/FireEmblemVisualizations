@@ -17,6 +17,7 @@
   align-items: center;
 
   --description-color: #c88eed;
+  --highlight-color: #ad035b;
 }
 
 .gender-page h1 {

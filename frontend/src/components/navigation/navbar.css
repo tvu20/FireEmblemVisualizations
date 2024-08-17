@@ -29,8 +29,14 @@
 }
 
 .navbar h4 {
-  margin-left: 30px;
-  font-weight: 400;
+  margin-left: 5px;
+  font-weight: 300;
+  font-family: "DM Serif Display", serif;
+  line-height: 1.1;
+}
+
+.navbar h4 span.nav__differentfont {
+  font-family: "Silkscreen", sans-serif;
 }
 
 .navbar h4.hide {
@@ -55,6 +61,25 @@
 .navbar__fullscreen.hide {
   top: -150vh;
   pointer-events: none;
+}
+
+.nav__logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav__logo img {
+  width: 45px;
+  /* height: 40px; */
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.nav__logo img.hide {
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
 /* BURGER MENU */

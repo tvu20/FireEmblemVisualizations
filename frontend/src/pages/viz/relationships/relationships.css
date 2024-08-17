@@ -17,6 +17,7 @@
   align-items: center;
 
   --description-color: #385f83;
+  --highlight-color: #b6c5fc;
 }
 
 .relationship-page h1 {

@@ -9,7 +9,11 @@ import "./sentiment.css";
 
 function EmotionIntensityPage() {
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="sentiment-page sentimentacrossgames">
         <h1>Emotion Intensity</h1>
         <p>Some description here.</p>

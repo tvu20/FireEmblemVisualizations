@@ -10,7 +10,11 @@ import Description from "../../../components/articles/Description";
 
 function StoryProgressionPage() {
   return (
-    <VizWrapper color={getColor("sentiment")} navColor={"#123622"}>
+    <VizWrapper
+      color={getColor("sentiment")}
+      navColor={"#123622"}
+      icon={"SENTIMENT"}
+    >
       <div className="article sentiment-page storyprogression">
         <h1>Story Progression</h1>
         <p>
@@ -29,7 +33,14 @@ function StoryProgressionPage() {
           <br />
           In this series of visualizations, I have mapped the key moments,
           stages, and acts of each game as compared with traditional 3 and 4 act
-          structures. Note the only games not currently added are
+          structures.{" "}
+          <span className="viz__highlight">
+            Hover over different elements in the visualization to learn more
+            about them and how they relate to each game!
+          </span>
+          <br />
+          <br />
+          Note that the only games not currently added are{" "}
           <Description tag="FE2">Gaiden</Description>/
           <Description tag="FE15">Echoes</Description> since those games were
           only split into 5 non-linear chapters, making the categorization very

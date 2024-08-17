@@ -23,14 +23,10 @@
   background-position: center;
   background-size: cover;
 
-  padding: 100px 50px 0;
+  padding: 100px 100px 0 70px;
   color: white;
 
   overflow-y: scroll;
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .menu__left img {
@@ -90,6 +86,7 @@
   justify-content: center;
 
   padding-left: 40px;
+  overflow-y: scroll;
 }
 
 .menu__link-large {
@@ -125,4 +122,10 @@
 
 .fe-page-object {
   font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .menu__left {
+    padding: 100px 50px 0;
+  }
 }
