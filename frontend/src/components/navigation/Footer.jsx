@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { getArticles } from "../../utils/pages";
 
 import footerOne from "../../assets/footer-sprites-v1.png";
-import footerTwo from "../../assets/footer-sprites-v2.png";
 import linkedin from "../../assets/linkedin.png";
 import email from "../../assets/email.png";
 import github from "../../assets/github.png";
