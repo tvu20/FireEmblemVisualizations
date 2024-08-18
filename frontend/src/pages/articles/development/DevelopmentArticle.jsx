@@ -1,14 +1,23 @@
 import React from "react";
 
+import NavBar from "../../../components/navigation/NavBar";
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 import DevTimeline from "./DevTimeline";
+
+import getColor from "../../../utils/colors";
 
 import "./dev.css";
 
 function DevelopmentArticle() {
   return (
     <>
+      <NavBar
+        color={getColor("script")}
+        navColor={"#3b2708"}
+        icon={"DEV"}
+        hideLogo
+      />
       <div className="dev-article">
         <div className="dev-intro banner">
           <h1>The Development of the Fire Emblem Series</h1>

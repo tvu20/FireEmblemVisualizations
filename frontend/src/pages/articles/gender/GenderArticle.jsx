@@ -1,5 +1,6 @@
 import React from "react";
 
+import NavBar from "../../../components/navigation/NavBar";
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 
@@ -12,10 +13,17 @@ import GenderPartThree from "./GenderPartThree";
 import GenderPartFour from "./GenderPartFour";
 
 import LineTabs from "./LineTabs";
+import getColor from "../../../utils/colors";
 
 function GenderArticle() {
   return (
     <>
+      <NavBar
+        color={getColor("gender")}
+        navColor={"#123622"}
+        icon={"GENDER"}
+        hideLogo
+      />
       <div className="gender-article">
         <div className="gender-intro banner">
           <h1>The Evolution of Gender Representation Throughout the Series</h1>
@@ -49,8 +57,8 @@ function GenderArticle() {
             </p>
           </section>
           <details>
-            <summary>
-              Before we start, here are a few important disclaimers.
+            <summary className="gender-intro__disclaimer">
+              Before we start, click to read a few important disclaimers.
             </summary>
             Fire Emblem <Description tag="FE17">Engage</Description> is not
             included in this article due to the game's script not being

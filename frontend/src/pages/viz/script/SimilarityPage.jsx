@@ -55,11 +55,11 @@ function SimilarityPage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Term Frequency-Inverse Document Frequency (TD-IDF)
+            Term Frequency-Inverse Document Frequency (TF-IDF)
           </a>
           , which measures the relationship between how many times a given word
           appears in a text and how rare the word is in the corpus. I compiled
-          TD-IDF vectors for each pair of texts and used the Cosine Similarity
+          TF-IDF vectors for each pair of texts and used the Cosine Similarity
           formula to determine the similarity score.
           <br />
           <br />
@@ -69,7 +69,7 @@ function SimilarityPage() {
           <Description tag="FE16">Three Houses</Description>. The similarity
           scores of other <i>Fire Emblem</i> games are always represented as
           blue lines. Lines closer to the right of the graph represent higher
-          similarity scores; we can see that TD-IDF similarity scores are
+          similarity scores; we can see that TF-IDF similarity scores are
           generally much higher than Jaccard similarity scores.{" "}
           <span className="viz__highlight">
             Hover over a particular vertical bar in a graph to learn about the

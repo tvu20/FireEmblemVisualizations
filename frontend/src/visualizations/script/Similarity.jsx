@@ -123,7 +123,7 @@ function Similarity(props) {
         .attr("fill", "currentColor")
         .attr("text-anchor", "end")
         .attr("font-size", "14px")
-        .text("TD-IDF");
+        .text("TF-IDF");
 
       svg
         .append("text")
@@ -273,7 +273,7 @@ function Similarity(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);

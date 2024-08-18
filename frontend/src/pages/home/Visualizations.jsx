@@ -7,9 +7,11 @@ import "./styles/visualizations.css";
 
 function Visualizations() {
   return (
-    <div className="home-viz">
+    <div className="home-viz" style={{ color: "#0b0a12" }}>
       <h2>Visualizations</h2>
-      <h3>Choose one of these interactive visualizations to explore!</h3>
+      <h3>
+        Choose one of these interactive visualizations to explore on your own.
+      </h3>
       <VizGrid limit />
       <Link
         className="home-viz__button"

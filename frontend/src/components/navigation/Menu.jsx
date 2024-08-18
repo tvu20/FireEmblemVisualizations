@@ -42,7 +42,7 @@ function Menu(props) {
       </div>
       <div className="menu__right">
         <Link className="menu__link-large" to="/">
-          Homepage
+          Home
         </Link>
         <Link className="menu__link-large" to="/about">
           About the project
@@ -53,36 +53,78 @@ function Menu(props) {
         <Link className="menu__link-large" to="/credits">
           Credits
         </Link>
+        <h2>Articles</h2>
+        <div className="menu__link-collection">
+          <Link
+            to="/article/gender"
+            onClick={() => {
+              closeWindow();
+              window.scroll(0, 0);
+            }}
+          >
+            Gender
+          </Link>
+          <br />
+          <Link
+            to="/article/development"
+            onClick={() => {
+              closeWindow();
+              window.scroll(0, 0);
+            }}
+          >
+            Development
+          </Link>
+          <br />
+          <Link
+            to="/article/relationships"
+            onClick={() => {
+              closeWindow();
+              window.scroll(0, 0);
+            }}
+          >
+            Relationships
+          </Link>
+          <br />
+          <Link
+            to="/article/storytelling"
+            onClick={() => {
+              closeWindow();
+              window.scroll(0, 0);
+            }}
+          >
+            Storytelling
+          </Link>
+        </div>
         <h2>Related Links</h2>
         <div className="menu__link-collection">
           <a href="https://github.com/tvu20/FireEmblemVisualizations">
             Project Code
           </a>{" "}
           <br />
-          <a href="https://drive.google.com/file/d/1rrZtRCRVQZJ9grFDnioefNDvUXXhA1Ay/view?usp=share_link">
-            Writeup
-          </a>
-          <br />
           <a href="https://github.com/tvu20/FireEmblemTextCorpus">
             Data collection
           </a>
+          <br />
+          <a href="https://drive.google.com/file/d/1rrZtRCRVQZJ9grFDnioefNDvUXXhA1Ay/view?usp=share_link">
+            Writeup
+          </a>
         </div>
 
-        <h2>My Profile</h2>
+        {/* <h2>My Profile</h2>
         <div className="menu__link-collection">
           <a href="google.com">Portfolio</a>
           <br />
           <a href="google.com">Github</a>
           <br />
           <a href="google.com">Linkedin</a>
-        </div>
+        </div> */}
         <h2>Contact Me</h2>
         <div className="menu__link-collection">
           <a
             style={{ textDecoration: "underline" }}
-            href="mailto:tgdinh@princeton.edu"
+            href="mailto:tgdinh@alumni.princeton.edu"
           >
-            tgdinh@princeton.edu
+            tgdinh@alumni.princeton.edu
           </a>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Footer from "../../components/navigation/Footer";
 import Visualizations from "./Visualizations";
 import Articles from "./Articles.jsx";
 
-import bannerLogo from "../../assets/banner-logo.png";
+// import bannerLogo from "../../assets/banner-logo.png";
 import bannerImg from "../../assets/sprites-v1.png";
 
 import getColor from "../../utils/colors.js";
@@ -16,7 +16,7 @@ import "./styles/home.css";
 function HomePage() {
   return (
     <>
-      <NavBar color={getColor("home")} />
+      <NavBar color={getColor("home")} navColor="#0b0a12" />
       <div className="home">
         {/* <div className="home-banner">
         <img src={bannerLogo} alt="logo" className="home-banner_logo" />
@@ -25,7 +25,7 @@ function HomePage() {
         <img src={bannerImg} alt="sprites" className="home-banner_sprites" />
       </div> */}
 
-        <div className="home-banner-v2">
+        {/* <div className="home-banner-v2">
           <img src={bannerLogo} alt="logo" className="home-banner-v2_logo" />
           <h1 className="home-v2-title">Evolution of a Video Game Series</h1>
           <h2 className="home-v2-subtitle">A Data-Driven Story</h2>
@@ -33,6 +33,20 @@ function HomePage() {
             src={bannerImg}
             alt="sprites"
             className="home-banner-v2_sprites"
+          />
+        </div> */}
+
+        <div className="home-banner-v3">
+          {/* <img src={bannerLogo} alt="logo" className="home-banner-v2_logo" /> */}
+          <h1 className="home-v3-title">Fire Emblem</h1>
+          <h1 className="home-v3-title-alt">Visualizations</h1>
+          <h2 className="home-v3-subtitle">
+            Evolution of a Video Game Series: A Data-Driven Story
+          </h2>
+          <img
+            src={bannerImg}
+            alt="sprites"
+            className="home-banner-v3_sprites"
           />
         </div>
 

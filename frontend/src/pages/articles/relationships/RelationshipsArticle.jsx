@@ -1,15 +1,23 @@
 import React from "react";
 
+import NavBar from "../../../components/navigation/NavBar";
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 
 import "./relationships.css";
+import getColor from "../../../utils/colors";
 import SocialNetworks from "./SocialNetworks";
 import PairingNetworks from "./PairingNetworks";
 
 function RelationshipsArticle() {
   return (
     <>
+      <NavBar
+        color={getColor("relationships")}
+        navColor={"white"}
+        icon={"RELATIONSHIPS"}
+        hideLogo
+      />
       <div className="rel-article">
         <div className="rel-intro banner">
           <h1>

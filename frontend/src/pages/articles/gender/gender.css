@@ -102,6 +102,14 @@ highlight {
   font-size: 18px;
 }
 
+.gender-intro__disclaimer {
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ad035b;
+  cursor: pointer;
+}
+
 .gender-character-bg-container {
   display: flex;
   flex-wrap: wrap;
@@ -291,6 +299,7 @@ highlight {
 
 .female-lords-card {
   width: 85%;
+  max-width: 900px;
   background-color: white;
   height: 450px;
   border-radius: 10px;
@@ -299,6 +308,7 @@ highlight {
   padding: 50px 40px;
 
   display: flex;
+  overflow-y: scroll;
 }
 
 .female-lords-detail {

@@ -1,11 +1,13 @@
 import React from "react";
 
+import NavBar from "../../../components/navigation/NavBar";
 import Footer from "../../../components/navigation/Footer";
 import Description from "../../../components/articles/Description";
 import WritingTabs from "./WritingTabs";
 // import NarrativeCards from "./NarrativeCards";
 
 import "./storytelling.css";
+import getColor from "../../../utils/colors";
 import EmotionLabels from "./EmotionLabels";
 import StoryCategories from "./StoryCategories";
 import Complexity from "../../../visualizations/script/Complexity";
@@ -14,6 +16,12 @@ import Similarity from "../../../visualizations/script/Similarity";
 function StorytellingArticle() {
   return (
     <>
+      <NavBar
+        color={getColor("sentiment")}
+        navColor={"#123622"}
+        icon={"SENTIMENT"}
+        hideLogo
+      />
       <div className="story-article">
         <div className="story-intro banner">
           <h1>Narrative Style and Storytelling in the Fire Emblem Series</h1>
@@ -121,7 +129,7 @@ function StorytellingArticle() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              TD-IDF
+              TF-IDF
             </a>
             , which determines the similarity of important terms in a document,
             and{" "}
@@ -152,7 +160,7 @@ function StorytellingArticle() {
         >
           <p>
             The TF-IDF results highlight the similarity between games: each game
-            in the series is over 85% similar in TD-IDF metrics compared to the
+            in the series is over 85% similar in TF-IDF metrics compared to the
             newest game, <i>Three Houses</i>. This is significantly higher than
             all other non-<i>Fire Emblem</i> entries. These results show that
             while there may have been changes in specific word choices or

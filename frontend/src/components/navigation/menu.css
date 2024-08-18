@@ -6,6 +6,7 @@
   /* transition: top 0.5s; */
   top: 0;
   background-color: gray;
+  z-index: 6;
 
   display: flex;
 }
@@ -24,7 +25,8 @@
   background-size: cover;
 
   padding: 100px 100px 0 70px;
-  color: white;
+  /* color: white; */
+  color: #0b0a12;
 
   overflow-y: scroll;
 }
@@ -35,7 +37,7 @@
 
 .menu__left p {
   font-size: 18px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .menu__left .menu__button {
@@ -127,5 +129,9 @@
 @media (max-width: 900px) {
   .menu__left {
     padding: 100px 50px 0;
+  }
+
+  .menu__left p {
+    margin-bottom: 40px;
   }
 }

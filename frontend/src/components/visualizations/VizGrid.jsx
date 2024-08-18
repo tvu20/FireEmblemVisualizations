@@ -10,7 +10,6 @@ function VizGrid(props) {
   const visualizations = getVisualizations();
 
   const createGrid = () => {
-    // console.log(visualizations.slice(8));
     if (limit) {
       return visualizations.slice(0, 8).map((v) => (
         <div key={v.name} className="viz-grid__item">
@@ -41,7 +40,11 @@ function VizGrid(props) {
     ));
   };
 
-  return <div className="viz-grid__container">{createGrid()}</div>;
+  return (
+    <div className="viz__container-outer">
+      <div className="viz-grid__container">{createGrid()}</div>
+    </div>
+  );
 }
 
 export default VizGrid;

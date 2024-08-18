@@ -102,19 +102,21 @@ function NavBar(props) {
   return (
     <>
       <Menu display={showLinks} closeWindow={() => setShowLinks(false)} />
-      <nav
-        className={`navbar ${showLinks ? "hide" : ""}`}
-        style={{
-          background: `linear-gradient(
+      {!props.hideLogo && (
+        <nav
+          className={`navbar ${showLinks ? "hide" : ""}`}
+          style={{
+            background: `linear-gradient(
             180deg,
             rgba(${props.color?.r}, ${props.color?.g}, ${props.color?.b}, 1) 0%,
             rgba(${props.color?.r}, ${props.color?.g}, ${props.color?.b}, 0.9) 45%,
               rgba(0, 212, 255, 0) 100%
           )`,
-        }}
-      >
-        {mobileMenu()}
-      </nav>
+          }}
+        >
+          {mobileMenu()}
+        </nav>
+      )}
       <input
         id="burger"
         type="checkbox"

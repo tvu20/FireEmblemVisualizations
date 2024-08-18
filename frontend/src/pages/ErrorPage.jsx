@@ -1,12 +1,21 @@
 import React from "react";
-// import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
+
+import "../index.css";
 
 function ErrorPage() {
   return (
     <>
-      {/* <NavBar /> */}
-      <div className="body__page-content">
+      <div className="error__page-content">
         <h1>Oops! This page doesn't exist.</h1>
+        <Link
+          to="/"
+          onClick={() => {
+            window.scroll(0, 0);
+          }}
+        >
+          Return to homepage
+        </Link>
       </div>
     </>
   );

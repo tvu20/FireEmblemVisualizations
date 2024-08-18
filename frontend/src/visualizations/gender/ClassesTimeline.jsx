@@ -115,7 +115,7 @@ function ClassesTimeline(props) {
       );
 
     data.forEach((value, index) => {
-      console.log(index);
+      // console.log(index);
 
       const row = svg
         .append("g")
@@ -178,7 +178,7 @@ function ClassesTimeline(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);

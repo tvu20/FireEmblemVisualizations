@@ -1351,7 +1351,7 @@ function DevTimeline() {
                   gameplay from{" "}
                   <Description tag="FE2">
                     <i>Gaiden</i>.
-                  </Description>
+                  </Description>{" "}
                   The developers retained many of the unique mechanics of Gaiden
                   while also bringing back modern series stables such as{" "}
                   <Description tag="casual">casual mode.</Description>{" "}

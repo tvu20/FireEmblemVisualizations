@@ -66,12 +66,10 @@ function Footer(props) {
     <footer className={vertical ? "footer-vertical" : "footer-horizontal"}>
       <div className="footer__left">
         <h4>Created by Giao Vu Dinh</h4>
-        <p>Senior Independent Thesis Work, 2023-2024</p>
+        <p>Published in Spring 2024</p>
+        {/* <p>Senior Independent Thesis Work, 2023-2024</p> */}
         <img src={footerOne} alt="sprites running border" />
-        <h5>
-          Special thanks to Tim Szetela, Adam Finkelstein, and the Princeton
-          University Computer Science Department
-        </h5>
+        {/* <h5>Special thanks to Tim Szetela and Adam Finkelstein</h5> */}
       </div>
       <div className="footer__right">
         <div className="footer__right-grid">

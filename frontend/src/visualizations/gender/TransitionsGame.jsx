@@ -67,7 +67,7 @@ function TransitionsGame(props) {
       .sankey()
       .nodeId((d) => d.name)
       // .nodeAlign(d3.sankeyJustify) // d3.sankeyLeft, etc.
-      .nodeWidth(15)
+      .nodeWidth(20)
       .nodePadding(10)
       .extent([
         [1, 5],
@@ -229,7 +229,7 @@ function TransitionsGame(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, [game]);

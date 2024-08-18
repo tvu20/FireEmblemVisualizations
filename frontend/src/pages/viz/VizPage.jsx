@@ -16,10 +16,12 @@ import "./viz.css";
 function VizPage() {
   return (
     <>
-      <NavBar color={getColor("home")} />
-      <div className="viz">
+      <NavBar color={getColor("home")} navColor="#0b0a12" />
+      <div className="viz" style={{ color: "#0b0a12" }}>
         <h2>Visualizations</h2>
-        <h3>Choose one of these interactive visualizations to explore!</h3>
+        <h3>
+          Choose one of these interactive visualizations to explore on your own.
+        </h3>
         <VizGrid />
       </div>
       <Footer vertical={false} />

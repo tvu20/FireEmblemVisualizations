@@ -18,11 +18,18 @@
 }
 
 .home-viz__button {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* background-color: white; */
   padding: 10px 20px;
   border-radius: 20px;
-  color: rgba(253, 137, 91, 0.8);
+  color: #0b0a12;
+  /* color: rgba(253, 137, 91, 0.8); */
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 16px;
+}
+.home-viz__button:hover {
+  background-color: white;
+  font-weight: bold;
 }

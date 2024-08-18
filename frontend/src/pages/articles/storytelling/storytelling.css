@@ -136,9 +136,9 @@
 .story-scroller-step {
   width: 40vw;
   /* background: rgba(255, 255, 255, 0.8); */
-  margin: 0 auto 250px auto;
+  margin: 0 auto 150px auto;
   /* margin: 100px 0; */
-  padding: 40px 0;
+  padding: 150px 0;
   /* border: 1px solid #333; */
 }
 

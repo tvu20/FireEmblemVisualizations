@@ -66,7 +66,7 @@ function WordPrevalence(props) {
       .value((d) => d.occurrence)(data);
 
     bins = bins.filter((b) => b.length !== 0);
-    console.log(bins);
+    // console.log(bins);
 
     const fmtWord = (d) => `<span class="word ${d.set}">${d.word}</span>`;
 
@@ -227,7 +227,7 @@ function WordPrevalence(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, [game]);

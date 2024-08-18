@@ -118,26 +118,38 @@ export const getArticles = () => {
   return [
     {
       name: "Gender",
+      longname: "Evolution of Gender Representation Throughout the Series",
       url: "/article/gender",
       desc: "How has the representation of female characters and gender changed throughout the series? ",
+      longdesc:
+        "This article examines the evolution of multi gender representation and the portrayal of female and non-binary characters throughout the series’ history through four key metrics: quantity, quality, gameplay integration, and relationships.",
       thumbnail: gender,
     },
     {
       name: "Relationships",
+      longname: "Evolution of Character Relationships and Queer Representation",
       url: "/article/relationships",
       desc: "How have the relationship networks between characters changed over time, and how has this been impacted by the inclusion of queer characters?",
+      longdesc:
+        "An essential gameplay feature of the Fire Emblem series is the Support mechanic, allowing players to dictate close relationships between pairs of characters in their party. This article explores how relationships between characters have changed over time and the evolution of same-sex pairing representation through the lens of social network analysis. ",
       thumbnail: rel,
     },
     {
       name: "Storytelling",
+      longname: "Narrative Style and Storytelling in the Fire Emblem Series",
       url: "/article/storytelling",
-      desc: "How has the writing in the series evolved from a style and storytelling standpoint? How do we tell a story, and how has this changed over time?",
+      desc: "How has the writing in the series evolved from a style and storytelling perspective? How do we tell a story and how has it changed over time?",
+      longdesc:
+        "Known for its blend of strategic gameplay and traditional role-playing game storytelling elements, the Fire Emblem franchise centers a sprawling war-torn continent and a core cast of characters in each of its installments’ narratives. What can we learn about the writing style and storytelling methods of the games using only textual analysis?",
       thumbnail: storytell,
     },
     {
       name: "Development",
+      longname: "Development of the Fire Emblem Series",
       url: "/article/development",
       desc: "How have technological advancements, player accessibility, and target demographics changed the way developers approach creating games for the series from a mechanical perspective?",
+      longdesc:
+        "Known as the archetypal series for the tactical role-playing game genre, Fire Emblem has explored and established many core gameplay elements featured in many other TRPGs today. This article explores how technological advancements, player accessibility, and target demographics have changed the way developers approach creating Fire Emblem games from a gameplay perspective.",
       thumbnail: dev,
     },
   ];

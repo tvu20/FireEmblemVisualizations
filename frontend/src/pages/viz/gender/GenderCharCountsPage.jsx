@@ -42,7 +42,7 @@ function GenderCharCountsPage() {
           <Description tag="avatar">avatar characters</Description> appear in{" "}
           <Description tag="FE12">
             <i>New Mystery</i>
-          </Description>
+          </Description>{" "}
           onwards. Most games in the series hover between 30-40% female playable
           characters, with the highest recorded percentage of female PC being
           50% in <Description tag="FE13">Awakening</Description> and{" "}

@@ -47,7 +47,7 @@ function WordCountsZoom(props) {
     // Compute the layout.
     const hierarchy = d3.hierarchy(data).sum((d) => d.value);
     // .sort((a, b) => b.value - a.value);
-    console.log(hierarchy);
+    // console.log(hierarchy);
     const root = d3.treemap().tile(d3.treemapSlice)(
       // .tile(tile)
       hierarchy
@@ -207,7 +207,7 @@ function WordCountsZoom(props) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(data);
       });
   }, []);

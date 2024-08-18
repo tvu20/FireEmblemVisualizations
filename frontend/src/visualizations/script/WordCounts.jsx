@@ -18,7 +18,7 @@ function WordCounts(props) {
     d3.selectAll("g > *").remove();
 
     // console.log(data);
-    console.log(sortedData);
+    // console.log(sortedData);
 
     // set the dimensions and margins of the graph
     var margin = { top: 30, right: 30, bottom: 70, left: 60 },

@@ -87,3 +87,23 @@ code {
   padding: 0 30px;
   color: white;
 }
+
+.error__page-content {
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--main-gradient);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.error__page-content h1 {
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.error__page-content a {
+  color: var(--main-color);
+  font-size: 20px;
+}

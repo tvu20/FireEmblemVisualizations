@@ -101,7 +101,7 @@ function GenderLineCounts() {
       maxValue.combined = Math.max(maxValue.combined, combined);
     });
 
-    console.log(graphdata);
+    // console.log(graphdata);
 
     // var allGroup = [
     //   ["fpc", "Playable Characters"],
@@ -226,9 +226,9 @@ function GenderLineCounts() {
     //   a: d3.rgb(169, 103, 201),
     // };
     const colors = {
-      m: d3.rgb(90,148,185),
-      f: d3.rgb(195,120,150),
-      a: d3.rgb(233,187,108),
+      m: d3.rgb(90, 148, 185),
+      f: d3.rgb(195, 120, 150),
+      a: d3.rgb(233, 187, 108),
     };
 
     const svg = d3
@@ -239,6 +239,16 @@ function GenderLineCounts() {
     const group = svg
       .append("g")
       .attr("transform", "translate(" + 0 + "," + -350 + ")");
+
+    group
+      .append("text")
+      .attr("x", 5)
+      .attr("y", 370)
+      .text("Playable Characters")
+      .attr("font-family", "Gill Sans, Century Gothic, sans-serif")
+      .attr("font-size", 16)
+      .attr("opacity", 1)
+      .style("fill", "black");
 
     const per_row = 4;
 
@@ -406,7 +416,7 @@ function GenderLineCounts() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setData(
           Object.entries(data)
             // .slice(0, 5)
