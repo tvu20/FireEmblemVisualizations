@@ -9,22 +9,22 @@ import "./styles/articles.css";
 function Articles() {
   const articles = getArticles();
 
-  const createGrid = () => {
-    return articles.map((v) => (
-      <div key={v.name} className="article-grid__item">
-        <Link
-          to={v.url}
-          onClick={() => {
-            window.scroll(0, 0);
-          }}
-        >
-          <img src={v.thumbnail} alt={v.name}></img>
-          <h6>{v.name}</h6>
-          <p>{v.desc}</p>
-        </Link>
-      </div>
-    ));
-  };
+  // const createGrid = () => {
+  //   return articles.map((v) => (
+  //     <div key={v.name} className="article-grid__item">
+  //       <Link
+  //         to={v.url}
+  //         onClick={() => {
+  //           window.scroll(0, 0);
+  //         }}
+  //       >
+  //         <img src={v.thumbnail} alt={v.name}></img>
+  //         <h6>{v.name}</h6>
+  //         <p>{v.desc}</p>
+  //       </Link>
+  //     </div>
+  //   ));
+  // };
 
   const createRows = () => {
     return articles.map((v) => (
